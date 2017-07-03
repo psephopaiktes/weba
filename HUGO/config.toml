@@ -1,0 +1,6 @@
+languageCode = "ja_jp"
+title = "WEBA"
+author = "Akira HIRATA"
+copyright = "© weba 2017"
+baseURL = "http://hirata.blog"
+publishDir = "docs"
