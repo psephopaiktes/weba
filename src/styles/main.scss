@@ -13,7 +13,7 @@
 // header
 ////////////////////////////////////////////////////////////////
 header{
-    .header__logo img{
+    h1 img{
         width: 20rem;
     }
 }
@@ -23,12 +23,21 @@ header{
 ////////////////////////////////////////////////////////////////
 // content
 ////////////////////////////////////////////////////////////////
-.content__posts{
+main{
+    width: 70%;
+}
+.posts{
+    border: .5px solid #f0f0f0;
     li{
-        width: 100%;
-        height: 30rem;
-        margin: 20rem 0;
-        background-color: #f00;
+        border: .5px solid #f0f0f0;
+        height: 30px;
+        margin: 0;
+        z-index: 0;
+    }
+    li:hover{
+        box-shadow: 2px 2px 6px rgba(#000,.2);
+        z-index: 1;
+        transform: scale(1.01,1.05);
     }
 }
 
