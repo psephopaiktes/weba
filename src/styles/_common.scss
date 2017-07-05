@@ -2,14 +2,15 @@
 @import "reset";
 
 
+
 :root{ font-size: 62.5%; }
 
 $base: #fff;
 $main: #223;
 $acce: #fc6;
 
-$mobile: 768px;
-$tablet: 1250px;
+$mobile: 600px;
+$tablet: 1280px;
 
 @mixin max($break) {
     @media screen and ( max-width: $break ){ @content; }
@@ -19,32 +20,32 @@ $tablet: 1250px;
     @media screen and ( min-width: $break ){ @content; }
 }
 
-html{
-    background: $base;
-}
+html{ background: $base }
 body{
     font: 1.6rem/1.7 "游ゴシック","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN",Meiryo,"メイリオ",Helvetica,Arial,Sans-Serif;
     font-weight: 500;
     font-feature-settings : "pwid";
-    background: $base;
 }
 *:hover{ transition: .2s ease }
-ul{ list-style: none }
+ul{
+    list-style: none;
+    padding: 0;
+}
 
 
 
-////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 // responsive
-////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 @include max($tablet) {
     :root{ font-size: 50%; }
-    .wrap{
-        width: 90%;
-    }
 }
 @include max($mobile) {
     :root{ font-size: 40%; }
-    .wrap{
-        width: 95%;
-    }
 }
+
+
+
+////////////////////////////////////////////////////////
+// common component
+////////////////////////////////////////////////////////
