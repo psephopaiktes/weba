@@ -10,7 +10,7 @@
         }
         @keyframes test{
             from{
-                fill: #fff;
+                fill: #fc6;
             }
             to{
                 fill: #fc6;

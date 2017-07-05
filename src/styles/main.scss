@@ -7,15 +7,45 @@
 // header
 ////////////////////////////////////////////////////////
 header{
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+    background: #ccc;
     h1{
-        margin: 0;
+        margin: 8rem auto 0;
+        width: 20rem;
+        text-align: center;
+    }
+    h1 a{
+        text-decoration: none;
     }
     h1 img{
         width: 20rem;
     }
+    h1 p{
+        font-size: 1.4rem;
+        font-weight: 100;
+        letter-spacing: .3em;
+        text-indent: .3em;
+        margin: 2rem 0 0;
+        color: rgba(#000,.8);
+    }
 }
-
-
+header nav{
+    ul{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 4rem auto 0;
+    }
+    li{
+        margin: 0 1rem;
+    }
+    a{
+        color: $main;
+        font-weight: bold;
+    }
+}
 
 ////////////////////////////////////////////////////////
 // content
