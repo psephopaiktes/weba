@@ -4,15 +4,63 @@
 
 
 ////////////////////////////////////////////////////////
-// header
+// about
 ////////////////////////////////////////////////////////
 header{
+    width: 100%;
+    height: 40rem;
+    padding: 1rem;
+    background: #000 url('../images/bg.jpg') 50% 80%;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    &::before{
+        content: "";
+        background: linear-gradient(transparent, #fff);
+        width: 100vw;
+        height: 15rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &::after{
+        content: "";
+        background: linear-gradient(transparent, #fff);
+        width: 100vw;
+        height: 12rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
     h1{
-        margin: 0;
+        margin: calc( 40rem/2 - 5rem) auto 0;
+        width: 20rem;
+        text-align: center;
+    }
+    h1 a{
+        text-decoration: none;
     }
     h1 img{
         width: 20rem;
     }
+    h1 p{
+        font-size: 1.4rem;
+        font-weight: 100;
+        letter-spacing: .3em;
+        text-indent: .3em;
+        margin: 2rem 0 0;
+        color: rgba(#fff,.8);
+        text-shadow: 0 0 .3rem rgba(#000,1);
+    }
+}
+
+
+////////////////////////////////////////////////////////
+// header
+////////////////////////////////////////////////////////
+header{
 }
 
 

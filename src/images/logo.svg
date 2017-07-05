@@ -5,6 +5,17 @@
         .baseFill {
             fill: #fc6;
         }
+        .baseFill{
+            animation: test ease-in-out 1s;
+        }
+        @keyframes test{
+            from{
+                fill: #fff;
+            }
+            to{
+                fill: #fc6;
+            }
+        }
         </style>
     </defs>
 
