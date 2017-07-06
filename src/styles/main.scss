@@ -1,11 +1,7 @@
 @charset "UTF-8";
 @import "common";
 
-body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+
 
 ////////////////////////////////////////////////////////
 // header
@@ -52,12 +48,15 @@ header nav{
     }
 }
 
+
+
 ////////////////////////////////////////////////////////
 // search
 ////////////////////////////////////////////////////////
 .search{
     background: #ffc;
-    width: calc( 120rem -70em -1rem );
+    width: 30rem;
+    float: right;
 }
 
 ////////////////////////////////////////////////////////
@@ -65,7 +64,8 @@ header nav{
 ////////////////////////////////////////////////////////
 main{
     background: #cfc;
-    width: 70em;
+    width: 70rem;
+    float: left;
 }
 .posts{
     border: .5px solid #f0f0f0;
@@ -89,14 +89,15 @@ main{
 ////////////////////////////////////////////////////////
 .follow{
     background: #fcf;
-    width: calc( 120rem -70em -1rem );
+    width: 30rem;
+    float: right;
 }
 
 ////////////////////////////////////////////////////////
 // footer
 ////////////////////////////////////////////////////////
 footer{
-    width: 70em;
+    width: 70rem;
     background: #ccf;
     text-align: center;
     color: $base;
