@@ -16,4 +16,8 @@ $( function(){
 		return false;
 	});
 
+    // fix viewport more than 1920px
+    if( $(window).width() > 1920 )
+        $('meta[name=viewport]').attr('content','width=1920,initial-scale=1"');
+
 });
