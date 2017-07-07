@@ -178,21 +178,47 @@ main{
     width: 90rem;
     float: left;
 }
+
 .posts{
-    background: #ddd;
-    img{display: none}
-    // border: .5px solid #f0f0f0;
-    // li{
-    //     border: .5px solid #f0f0f0;
-    //     height: 30px;
-    //     margin: 0;
-    //     z-index: 0;
-    // }
-    // li:hover{
-    //     box-shadow: 2px 2px 6px rgba(#000,.2);
-    //     z-index: 1;
-    //     transform: scale(1.01,1.05);
-    // }
+    li{ z-index: 0 }
+    li:not(:first-child){ margin-top: 1rem }
+    a{
+        background: #ddd;
+        display: block;
+        width: 100%;
+        height: 16rem;
+        position: relative;
+        padding: 1rem 1rem 1rem 17rem;
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4rem;
+            height: 16rem;
+            background: linear-gradient(transparent, #fff);;
+        }
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16rem;
+            height: 16rem;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+        h3{}
+    }
+    a:hover{
+        box-shadow: .2rem .2rem .6rem rgba($main,.2);
+        z-index: 1;
+        transform: scale(1.01,1.05);
+        img{ filter: grayscale(0) }
+        h3{ color: $acce}
+    }
+    .adsense{
+        background: #ccc;
+    }
 }
 .pager{
     margin: 4rem 0 0;
