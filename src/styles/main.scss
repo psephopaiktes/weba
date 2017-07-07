@@ -111,6 +111,7 @@ header nav{
     margin: 2rem 0 0;
     a{
         display: block;
+        margin-top: 1rem;
         width: 100%;
         height: 6rem;
         padding-left: 7rem;
@@ -164,7 +165,7 @@ header nav{
 }
 
 .follow{
-    background: #fcf;
+    background: #ccc;
     margin: 4rem 0 0;
     width: 28rem;
     float: right;
@@ -174,11 +175,12 @@ header nav{
 // content
 ////////////////////////////////////////////////////////
 main{
-    background: #cfc;
     width: 90rem;
     float: left;
 }
 .posts{
+    background: #ddd;
+    img{display: none}
     // border: .5px solid #f0f0f0;
     // li{
     //     border: .5px solid #f0f0f0;
@@ -192,7 +194,41 @@ main{
     //     transform: scale(1.01,1.05);
     // }
 }
-
+.pager{
+    margin: 4rem 0 0;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    a{
+        text-decoration: none;
+        display: inline-block;
+        background: #ccc;
+        // NOTE: remake color in $ #ccc
+        padding: 0 3rem;
+        height: 4rem;
+        color: #fff;
+        border-radius: .4rem;
+        vertical-align: middle;
+        display: inline-flex;
+        .material-icons{
+            line-height: 4rem;
+            vertical-align: middle;
+            display: inline-flex;
+        }
+    }
+    select{
+        margin-left: 1.6rem;
+        height: 4rem;
+        width: 6rem;
+        outline: none;
+        border: .1rem #ccc solid;
+        color: $main;
+        font-weight: bold;
+    }
+    span{
+        margin-right: 1.6rem;
+        color: #ccc;
+    }
+}
 
 
 ////////////////////////////////////////////////////////
