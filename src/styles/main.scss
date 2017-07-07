@@ -135,6 +135,9 @@ header nav{
         width: 6rem;
         text-align: center;
     }
+    .current .material-icons{
+        background: rgba($main,.1);
+    }
     a:hover .material-icons{
         // background-color: rgba($base,.6);
     }
@@ -146,14 +149,13 @@ header nav{
     margin: 2rem 0 0;
     a{
         display: inline-block;
-        background-color: $main;
-        color: $base;
-        padding: .4rem 1rem;
+        background-color: #eee;
+        color: #333;
+        padding: .3rem 1rem;
         margin: .2rem;
         font-size: 1.4rem;
         border-radius: .4rem;
         text-decoration: none;
-        font-weight: bold;
         opacity: .8;
         &:hover{
             opacity: 1;
