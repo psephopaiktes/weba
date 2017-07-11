@@ -1,26 +1,36 @@
 $( function(){
 
+
+
     console.log('© hirata 2017');
 
+
+
     // go top
-    // $(window).on('scroll', function() {
-    //     if ($(this).scrollTop() > 200)
-    //         $('#gotop').css('right','0');
-    //     else
-    //         $('#gotop').css('right','-8rem');
-    // });
-    // $('#gotop').on('click', function() {
-    //     $(this).css('right','-8rem');
-    //     $('body,html').animate({scrollTop:0}, 'swing');
-    // });
+    $(window).on('load scroll', function() {
+        if ( $(this).scrollTop() > 200 ) $('#gotop').addClass('show');
+        else $('#gotop').removeClass('show');
+    });
+    $('#gotop').on('click', function() {
+        $('body,html').animate({scrollTop:0}, 'swing');
+    });
+
+
 
     // sticky sidebar
-    // $(window).on('scroll', function() {
-    //     if ($(this).scrollTop() > 200)
-    //         $('.search').addClass('sticky');
-    //     else
-    //         $('.search').removeClass('sticky');
-    // }
+    var stopPos = $('.search').offset().top - $('.follow').outerHeight();
+    $(window).on('load scroll', function() {
+        if ( $(this).scrollTop() > stopPos )
+            $('.search').addClass('sticky');
+        else
+            $('.search').removeClass('sticky');
+    });
+
+
+
+    // scroll reveal
+
+
 
     //smooth scroll
     $('a[href^=#]').click(function(){
@@ -32,8 +42,12 @@ $( function(){
         return false;
     });
 
-    // fix viewport more than 1920px
+
+
+    // fix viewport more than 1920px width
     if( $(window).width() > 1920 )
         $('meta[name=viewport]').attr('content','width=1920,initial-scale=1"');
+
+
 
 });
