@@ -16,7 +16,11 @@ $( function(){
 
     // sticky sidebar
     // $(window).on('scroll', function() {
-        // if ($(this).scrollTop() > 200)
+    //     if ($(this).scrollTop() > 200)
+    //         $('.search').addClass('sticky');
+    //     else
+    //         $('.search').removeClass('sticky');
+    // }
 
     //smooth scroll
     $('a[href^=#]').click(function(){

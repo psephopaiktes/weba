@@ -170,8 +170,10 @@ header nav{
 }
 // @include min($tablet) {
     .search.sticky{
-        // position:fixed;
-        // top: 5rem;
+        background: #fcc;
+        position:fixed;
+        top: 8rem;
+        right: calc( 50vw - 60rem );
     }
 // }
 
@@ -181,9 +183,11 @@ header nav{
 // follow
 ///////////////////////////////////////////////////////
 .follow{
-    position: absolute;
-    // NOTE: change sticky
-    top: 2rem; right: 2rem;
+    position:fixed;
+    top: 3rem;
+    right: calc( 50vw - 60rem );
+    // position: absolute;
+    // top: 2rem; right: 2rem;
     transition: 3s ease;
     ul{
         display: flex;
@@ -191,7 +195,7 @@ header nav{
     }
     a{
         display: block;
-        margin-right: 2rem;
+        margin-left: 2rem;
         color: #ccc;
     }
     a:hover{
