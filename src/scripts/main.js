@@ -29,6 +29,16 @@ $( function(){
 
 
     // scroll reveal
+    $('#posts li').each(function(){
+        if ( $(window).scrollTop() > $(this).offset().top - $(window).height()*9/10 )
+            $(this).css({ opacity:1,transform:'translateY(0)' });
+    });
+    $(window).on('load scroll', function() {
+        $('#posts li').each(function(){
+            if ( $(window).scrollTop() > $(this).offset().top - $(window).height()*9/10 )
+                $(this).addClass('inview');
+        });
+    });
 
 
 

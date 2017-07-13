@@ -93,19 +93,19 @@ header nav{
     background: #f0f0f0;
     border-radius: .4rem;
     position: relative;
-    height: 6rem;
+    height: 5.6rem;
     input{
         border: 0;
         width: 100%;
-        padding: 0 2rem 0 6rem;
-        line-height: 6rem;;
+        padding: 0 1.6rem 0 5.6rem;
+        line-height: 5.6rem;;
         outline: 0;
     }
     .material-icons{
         position: absolute;
         top: 0; left: 0;
-        line-height: 6rem;
-        width: 6rem;
+        line-height: 5.6rem;
+        width: 5.6rem;
         text-align: center;
         color: #999;
     }
@@ -116,15 +116,15 @@ header nav{
     margin: 2rem 0 0;
     a{
         display: block;
-        margin-top: 1rem;
+        margin-top: .8rem;
         width: 100%;
-        height: 6rem;
+        height: 5.6rem;
         padding-left: 7rem;
-        line-height: 6rem;
-        border-radius: 3rem;
+        line-height: 5.6rem;
+        border-radius: 2.8rem;
         text-decoration: none;
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: $main;
         vertical-align: bottom;
         position: relative;
@@ -134,18 +134,15 @@ header nav{
         }
     }
     .material-icons{
-        line-height: 6rem;
+        line-height: 5.6rem;
         position: absolute;
         border-radius: 50%;
         left: 0;
-        width: 6rem;
+        width: 5.6rem;
         text-align: center;
     }
     .current .material-icons{
         background: #eee;
-    }
-    a:hover .material-icons{
-        // background-color: rgba($base,.6);
     }
 }
 
@@ -163,6 +160,7 @@ header nav{
         border-radius: .4rem;
         text-decoration: none;
         opacity: .8;
+        box-shadow: .05rem .05rem .2rem rgba(#000,.2);
         &:hover{
             opacity: 1;
         }
@@ -230,6 +228,14 @@ main{
     li{
         width: calc( 50% - 1rem );
         margin: 0 0 2rem;
+        opacity: 0;
+        transition: 0;
+        transform: translateY(2rem);
+        &.inview{
+            transition: .4s ease-out;
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     a{
         border: .1rem solid #eee;
@@ -241,43 +247,42 @@ main{
         color: $main;
         img{
             width: 100%;
-            height: auto;
+            height: 12rem;
             object-fit: cover;
             filter: grayscale(80%) brightness(60%);
         }
         div{
-            padding: 3rem 3rem;
+            padding: 2rem 2.4rem;
         }
         h3{
             margin: 0;
             line-height: 1.4;
+            font-size: 1.6rem;
         }
         span{
         vertical-align: middle;
         display: inline-flex;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.4rem;
         opacity: .7;
-        margin: 3rem .8em 0 0;
+        margin: 1rem .8em 0 0;
             .material-icons{
                 vertical-align: middle;
                 display: inline-flex;
                 margin-right: .2em;
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 line-height: 1.4rem;
             }
         }
         p{
             margin: 1.6rem 0 0;
-            line-height: 1.4;
+            line-height: 1.5;
+            font-size: 1.4rem;
         }
     }
     a:hover{
         background: #f0f0f0;
-        img{
-            filter: grayscale(0) brightness(100%);
-        }
-        h3{ color: $main }
+        img{ filter: grayscale(0) brightness(100%) }
     }
     .adsense{
         background: #ccc;
@@ -323,14 +328,11 @@ main{
 // footer
 ///////////////////////////////////////////////////////
 footer{
-    width: 90rem;
-    padding: 4rem 0 8rem;
-    // text-align: center;
-    color: rgba($main,.8);
+    padding: 12rem 0 4rem;
+    text-align: center;
+    color: rgba($main,.4);
     font-size: 2rem;
-    overflow: auto;
     font-family: 'Trebuchet MS';
-    p{ margin: 0 }
 }
 #gotop{
     display: block;
