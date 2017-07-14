@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+
+
+.wrap{
+    width: 100%;
+    max-width: 60em;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+
+
+header{
+    // background: #ccc;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0 6rem;
+    h1{
+        margin: 0 auto;
+        width: 15rem;
+        height: 4rem;
+    }
+    h1 a{
+        text-decoration: none;
+        display: block;
+    }
+    h1 p{ display: none }
+    button{
+        margin: 0;
+        padding: 0;
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 3rem;
+        border: 0;
+        cursor: pointer;
+        border-radius: .4rem;
+        // background: #f00;
+        .material-icons{
+            font-size: 4rem;
+            line-height: 4rem;
+            text-align: center;
+        }
+        &:hover{
+            background: #f0f0f0;
+        }
+    }
+    #menuButton{
+        left: 0;
+    }
+    #searchButton{
+        right: 0;
+    }
+}
+header .follow{
+    margin: 2rem auto 0;
+    display: flex;
+    display: none;
+    width: 20rem;
+    justify-content: space-around;
+    a{
+        display: block;
+        color: #ccc;
+    }
+    a:hover .twitter{ color: #008FF7 }
+    a:hover .facebook{ color: #27448B }
+    a:hover .feedly{ color: #71C45B }
+    a:hover .rss{ color: #FC3A00 }
+    a:hover .notification{ color: #CF970A }
+    svg{
+        height: 2rem;
+        width: auto;
+        transition: 0;
+    }
+}
+header nav{
+    display: none;
+    ul{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 6rem auto 0;
+    }
+    li{
+        margin: 0 2.4rem;
+    }
+    a{
+        color: #ccc;
+        font-family: 'Trebuchet MS';
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: .1em;
+        transition: .2s;
+        position: relative;
+        display: inline-block;
+    }
+    a::before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        content: '';
+        width: 100%;
+        height: .2rem;
+        background-color: #ccc;
+        transition: .3s;
+        transform: translateX(-50%);
+    }
+    a::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        content: '';
+        width: 0;
+        height: .2rem;
+        background-color: $main;
+        transition: .3s;
+        transform: translateX(-50%);
+    }
+    a:hover{
+        color: $main;
+    }
+    a:hover::after {
+        width: 100%;
+    }
+}
+
+
+/////////////////////////////////////////////
+// search
+/////////////////////////////////////////////
+.search{
+    display: none;
+    width: 28rem;
+    float: right;
+}
+
+.search__box{
+    background: #f0f0f0;
+    border-radius: .4rem;
+    position: relative;
+    height: 5.6rem;
+    input{
+        border: 0;
+        width: 100%;
+        padding: 0 1.6rem 0 5.6rem;
+        line-height: 5.6rem;;
+        outline: 0;
+    }
+    .material-icons{
+        position: absolute;
+        top: 0; left: 0;
+        line-height: 5.6rem;
+        width: 5.6rem;
+        text-align: center;
+        color: #999;
+    }
+    input:focus + .material-icons{ color: $acce }
+}
+
+.search__categories{
+    margin: 2rem 0 0;
+    a{
+        display: block;
+        margin-top: .8rem;
+        width: 100%;
+        height: 5.6rem;
+        padding-left: 7rem;
+        line-height: 5.6rem;
+        border-radius: 2.8rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: $main;
+        vertical-align: bottom;
+        position: relative;
+        letter-spacing: .05em;
+        &:hover,&:active,&:focus{
+            background: lighten($acce,10%);
+        }
+    }
+    .material-icons{
+        line-height: 5.6rem;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        width: 5.6rem;
+        text-align: center;
+    }
+    .current .material-icons{
+        background: #eee;
+    }
+}
+
+.search__tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0 0;
+    a{
+        display: inline-block;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: .2rem 1.2rem;
+        margin: .2rem;
+        font-size: 1.4rem;
+        border-radius: .4rem;
+        text-decoration: none;
+        opacity: .8;
+        box-shadow: .05rem .05rem .2rem rgba(#000,.2);
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+// @include min($tablet) {
+    .search.sticky{
+        position:fixed;
+        top: 8rem;
+        right: calc( 50% - 60rem );
+    }
+// }

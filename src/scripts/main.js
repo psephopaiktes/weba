@@ -18,7 +18,7 @@ $( function(){
 
 
     // sticky sidebar
-    var stopPos = $('.search').offset().top - $('.follow').outerHeight();
+    var stopPos = $('.search').offset().top - parseInt( $('header').css('padding-top') );
     $(window).on('load scroll', function() {
         if ( $(this).scrollTop() > stopPos )
             $('.search').addClass('sticky');

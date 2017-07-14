@@ -35,17 +35,11 @@ ul{
     padding: 0;
 }
 
-.wrap{
-    width: 120rem;
-    overflow: auto;
-    margin: 0 auto;
-}
 
 
-
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////
 // responsive
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////
 @include max($tablet) {
     :root{ font-size: 50%; }
 }
@@ -54,7 +48,39 @@ ul{
 }
 
 
-
-////////////////////////////////////////////////////////
+/////////////////////////////////////////////
 // common component
-////////////////////////////////////////////////////////
+/////////////////////////////////////////////
+main h1{ // page header
+    margin: 0;
+    background: #000;
+    color: #fff;
+}
+
+footer{
+    padding: 4rem 0;
+    color: rgba($main,.4);
+    font-size: 2rem;
+    font-family: 'Trebuchet MS';
+    clear: left;
+}
+#gotop{
+    display: block;
+    width: 8rem;
+    height: 6rem;
+    border-radius: 3rem 0 0 3rem;
+    background: $main;
+    box-shadow: 1px 1px 3px rgba(#000,.2);
+    font-size: 2.4rem;
+    line-height: 6rem;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: -6rem;
+    right: 0;
+    color: $base;
+    opacity: .8;
+    transition: .4s;
+    &:hover,&:active{ background: $acce }
+    &.show{ bottom: 2rem }
+}

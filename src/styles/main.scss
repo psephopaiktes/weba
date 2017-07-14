@@ -1,223 +1,9 @@
 @charset "UTF-8";
 @import "common";
+@import "header-rich";
+// @import "header-simple";
 
 
-
-////////////////////////////////////////////////////////
-// header
-////////////////////////////////////////////////////////
-header{
-    width: 100vw;
-    position: relative;
-    z-index: 0;
-    padding: 8rem 0;
-    h1{
-        margin: 0 auto;
-        width: 20rem;
-        text-align: center;
-    }
-    h1 a{
-        text-decoration: none;
-        display: block;
-    }
-    h1 p{
-        font-size: 1.4rem;
-        font-weight: 100;
-        letter-spacing: .3em;
-        text-indent: .3em;
-        margin: 2rem 0 0;
-        color: rgba(#000,1);
-    }
-}
-header nav{
-    ul{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 4rem auto 0;
-    }
-    li{
-        margin: 0 2rem;
-    }
-    a{
-        color: #ccc;
-        font-family: 'Trebuchet MS';
-        text-decoration: none;
-        font-weight: bold;
-        letter-spacing: .05em;
-        transition: .2s;
-        position: relative;
-        display: inline-block;
-    }
-    a::before {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        content: '';
-        width: 100%;
-        height: .2rem;
-        background-color: #ccc;
-        transition: .3s;
-        transform: translateX(-50%);
-    }
-    a::after {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        content: '';
-        width: 0;
-        height: .2rem;
-        background-color: $main;
-        transition: .3s;
-        transform: translateX(-50%);
-    }
-    a:hover{
-        color: $main;
-    }
-    a:hover::after {
-        width: 100%;
-    }
-}
-
-
-
-///////////////////////////////////////////////////////
-// search
-///////////////////////////////////////////////////////
-.search{
-    width: 28rem;
-    float: right;
-}
-
-.search__box{
-    background: #f0f0f0;
-    border-radius: .4rem;
-    position: relative;
-    height: 5.6rem;
-    input{
-        border: 0;
-        width: 100%;
-        padding: 0 1.6rem 0 5.6rem;
-        line-height: 5.6rem;;
-        outline: 0;
-    }
-    .material-icons{
-        position: absolute;
-        top: 0; left: 0;
-        line-height: 5.6rem;
-        width: 5.6rem;
-        text-align: center;
-        color: #999;
-    }
-    input:focus + .material-icons{ color: $main }
-}
-
-.search__categories{
-    margin: 2rem 0 0;
-    a{
-        display: block;
-        margin-top: .8rem;
-        width: 100%;
-        height: 5.6rem;
-        padding-left: 7rem;
-        line-height: 5.6rem;
-        border-radius: 2.8rem;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.8rem;
-        color: $main;
-        vertical-align: bottom;
-        position: relative;
-        letter-spacing: .05em;
-        &:hover,&:active,&:focus{
-            background-color: #eee;
-        }
-    }
-    .material-icons{
-        line-height: 5.6rem;
-        position: absolute;
-        border-radius: 50%;
-        left: 0;
-        width: 5.6rem;
-        text-align: center;
-    }
-    .current .material-icons{
-        background: #eee;
-    }
-}
-
-.search__tags{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem 0 0;
-    a{
-        display: inline-block;
-        background-color: #eee;
-        color: #333;
-        padding: .3rem 1rem;
-        margin: .2rem;
-        font-size: 1.4rem;
-        border-radius: .4rem;
-        text-decoration: none;
-        opacity: .8;
-        box-shadow: .05rem .05rem .2rem rgba(#000,.2);
-        &:hover{
-            opacity: 1;
-        }
-    }
-}
-// @include min($tablet) {
-    .search.sticky{
-        position:fixed;
-        top: 8rem;
-        right: calc( 50vw - 60rem );
-    }
-// }
-
-
-
-///////////////////////////////////////////////////////
-// follow
-///////////////////////////////////////////////////////
-.follow{
-    position:fixed;
-    height: 8rem; // for stick sidebar function
-    padding: 3rem 0;
-    top: 0;
-    right: calc( 50vw - 60rem );
-    // position: absolute;
-    // top: 2rem; right: 2rem;
-    transition: 3s ease;
-    ul{
-        display: flex;
-        margin: 0;
-    }
-    a{
-        display: block;
-        margin-left: 2rem;
-        color: #ccc;
-    }
-    a:hover{
-    }
-    a:hover .twitter{ color: #008FF7 }
-    a:hover .facebook{ color: #27448B }
-    a:hover .feedly{ color: #71C45B }
-    a:hover .rss{ color: #FC3A00 }
-    a:hover .notification{ color: #CF970A }
-    svg{
-        height: 2.4rem;
-        width: auto;
-        transition: 0;
-    }
-}
-
-///////////////////////////////////////////////////////
-// content
-///////////////////////////////////////////////////////
-main{
-    width: 90rem;
-    float: left;
-}
 
 .posts{
     margin: 0;
@@ -302,13 +88,13 @@ main{
     }
 }
 .pager{
-    margin: 4rem 0 0;
+    // margin: 4rem 0 0;
     line-height: 4rem;
     font-size: 1.6rem;
     a{
         text-decoration: none;
         display: inline-block;
-        background: #ccc;
+        background: #999;
         padding: 0 3rem;
         height: 4rem;
         color: #fff;
@@ -326,44 +112,12 @@ main{
         height: 4rem;
         width: 6rem;
         outline: none;
-        border: .1rem #ccc solid;
+        border: .1rem #999 solid;
         color: $main;
         font-weight: bold;
     }
     span{
         margin-right: 1.6rem;
-        color: #ccc;
+        color: #999;
     }
-}
-
-
-///////////////////////////////////////////////////////
-// footer
-///////////////////////////////////////////////////////
-footer{
-    padding: 12rem 0 4rem;
-    text-align: center;
-    color: rgba($main,.4);
-    font-size: 2rem;
-    font-family: 'Trebuchet MS';
-}
-#gotop{
-    display: block;
-    width: 8rem;
-    height: 6rem;
-    border-radius: 3rem 0 0 3rem;
-    background: $main;
-    box-shadow: 1px 1px 3px rgba(#000,.2);
-    font-size: 2.4rem;
-    line-height: 6rem;
-    text-align: center;
-    text-decoration: none;
-    position: fixed;
-    bottom: -6rem;
-    right: 0;
-    color: $base;
-    opacity: .4;
-    transition: .4s;
-    &:hover,&:active{ opacity: 1 }
-    &.show{ bottom: 2rem }
 }
