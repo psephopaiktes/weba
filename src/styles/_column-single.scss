@@ -2,73 +2,115 @@
 
 
 
+#mask{
+    content: "";
+    display: none;
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(#000,.1);
+    @include max($readable){
+        top: 3rem;
+        height: calc( 100% - 3rem );
+    }
+}
 .wrap{
     width: 100%;
-    max-width: 60em;
-    overflow: auto;
+    max-width: $readable;
+    overflow: visible;
     margin: 0 auto;
+    position: relative;
+}
+main{
+    margin-top: 4rem;
 }
 
 
-
 header{
-    // background: #ccc;
+    background: $base;
     width: 100%;
-    margin: 0 auto;
+    margin: 2rem auto 0;
     position: relative;
-    padding: 2rem 0 6rem;
+    height: 6rem;
+    z-index: 999;
     h1{
         margin: 0 auto;
         width: 15rem;
         height: 4rem;
-    }
-    h1 a{
-        text-decoration: none;
-        display: block;
+        padding-top: 1rem;
+        img{
+            display: block;
+            width: 15rem;
+            height: 4rem;
+        }
     }
     h1 p{ display: none }
     button{
         margin: 0;
         padding: 0;
-        width: 4rem;
-        height: 4rem;
+        width: 6rem;
+        height: 6rem;
         position: absolute;
-        top: 3rem;
+        top: 0;
         border: 0;
         cursor: pointer;
-        border-radius: .4rem;
-        // background: #f00;
+        outline: 0;
         .material-icons{
             font-size: 4rem;
-            line-height: 4rem;
+            line-height: 6rem;
             text-align: center;
         }
-        &:hover{
+        &:hover,&:active{
             background: #f0f0f0;
         }
     }
     #menuButton{
         left: 0;
+        &.on{
+            background: #f0f0f0;
+            .material-icons{
+                transform: rotate(90deg);
+            }
+        }
     }
     #searchButton{
         right: 0;
+        &.on{
+            background: #f0f0f0;
+            .material-icons{
+                transform: rotate(45deg);
+            }
+        }
     }
 }
-header .follow{
-    margin: 2rem auto 0;
-    display: flex;
+
+
+.menu{
     display: none;
-    width: 20rem;
-    justify-content: space-around;
+    z-index: 998;
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    background: $base;
+    box-shadow: 0 1rem 2rem -1rem rgba($main,.8);
+}
+header .follow{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
     a{
         display: block;
-        color: #ccc;
+        margin: 0 1rem;
     }
-    a:hover .twitter{ color: #008FF7 }
-    a:hover .facebook{ color: #27448B }
-    a:hover .feedly{ color: #71C45B }
-    a:hover .rss{ color: #FC3A00 }
-    a:hover .notification{ color: #CF970A }
+    .twitter{ color: #008FF7 }
+    .facebook{ color: #27448B }
+    .feedly{ color: #71C45B }
+    .rss{ color: #FC3A00 }
+    .notification{ color: #CF970A }
     svg{
         height: 2rem;
         width: auto;
@@ -76,53 +118,25 @@ header .follow{
     }
 }
 header nav{
-    display: none;
-    ul{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 6rem auto 0;
-    }
+    ul { margin: 0 }
     li{
-        margin: 0 2.4rem;
+        // margin: 0 2.4rem;
     }
     a{
-        color: #ccc;
+        display: block;
+        width: 100%;
+        height: 6rem;
+        text-align: center;
+        line-height: 6rem;
+        border-top: .1rem solid #f0f0f0;
+        color: $main;
         font-family: 'Trebuchet MS';
         text-decoration: none;
         font-weight: bold;
-        letter-spacing: .1em;
-        transition: .2s;
-        position: relative;
-        display: inline-block;
-    }
-    a::before {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        content: '';
-        width: 100%;
-        height: .2rem;
-        background-color: #ccc;
-        transition: .3s;
-        transform: translateX(-50%);
-    }
-    a::after {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        content: '';
-        width: 0;
-        height: .2rem;
-        background-color: $main;
-        transition: .3s;
-        transform: translateX(-50%);
-    }
-    a:hover{
-        color: $main;
-    }
-    a:hover::after {
-        width: 100%;
+        letter-spacing: .2em;
+        &:hover{
+            background: $acce;
+        }
     }
 }
 
@@ -132,8 +146,15 @@ header nav{
 /////////////////////////////////////////////
 .search{
     display: none;
-    width: 28rem;
-    float: right;
+    background: $base;
+    z-index: 998;
+    width: 100%;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    background: rgba($base,1);
+    box-shadow: 0 1rem 2rem -1rem rgba($main,.8);
+    padding: 3rem;
 }
 
 .search__box{
@@ -163,12 +184,12 @@ header nav{
     margin: 2rem 0 0;
     a{
         display: block;
-        margin-top: .8rem;
         width: 100%;
         height: 5.6rem;
         padding-left: 7rem;
         line-height: 5.6rem;
-        border-radius: 2.8rem;
+        border-radius: .4rem;
+        border-bottom: .1rem solid #f0f0f0;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.8rem;
@@ -177,7 +198,7 @@ header nav{
         position: relative;
         letter-spacing: .05em;
         &:hover,&:active,&:focus{
-            background: lighten($acce,10%);
+            background: $acce;
         }
     }
     .material-icons{
@@ -201,22 +222,27 @@ header nav{
         display: inline-block;
         background-color: #f0f0f0;
         color: #333;
-        padding: .2rem 1.2rem;
-        margin: .2rem;
+        padding: .6rem 1.8rem;
+        margin: .4rem;
         font-size: 1.4rem;
         border-radius: .4rem;
         text-decoration: none;
         opacity: .8;
         box-shadow: .05rem .05rem .2rem rgba(#000,.2);
-        &:hover{
+        &:hover,&:active{
             opacity: 1;
         }
     }
 }
-// @include min($tablet) {
-    .search.sticky{
-        position:fixed;
-        top: 8rem;
-        right: calc( 50% - 60rem );
-    }
-// }
+
+/////////////////////////////////////////////
+// footer
+/////////////////////////////////////////////
+footer{
+    text-align: center;
+    padding: 4rem 0;
+    color: rgba($main,.4);
+    font-size: 2rem;
+    font-family: 'Trebuchet MS';
+    clear: left;
+}

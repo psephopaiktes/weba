@@ -1,30 +1,48 @@
+// style for index, category, tag page
+
 @charset "UTF-8";
 @import "common";
-@import "header-rich";
-// @import "header-simple";
+@include min($tablet) {
+    @import "column-double";
+}
+@include max($tablet) {
+    @import "column-single";
+}
 
-
-
+main h1{
+    line-height: 1;
+    margin: 0 0 3rem;
+    padding-bottom: 1rem;
+    letter-spacing: .05em;
+    border-bottom: .3rem solid $main;
+    @include max($readable) { margin: 0 2rem 3rem }
+    b{
+        color: darken($acce, 20%);
+    }
+}
 .posts{
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+    @include max($readable){ padding: 0 2rem}
     li{
         width: calc( 50% - 1rem );
+        @include max($mobile){ width:100% }
         margin: 0 0 2rem;
         opacity: 0;
         transition: 0;
-        transform: translateY(2rem);
+        transform: translateY(3rem);
         &.inview{
-            transition: .4s ease-out;
+            transition: .6s ease-out;
             opacity: 1;
             transform: translateY(0);
         }
     }
     a{
         border: .1rem solid #eee;
+        border-bottom: .6rem solid #eee;
         display: block;
         width: 100%;
         height: 100%;
@@ -49,6 +67,7 @@
             left: 0;
             object-fit: cover;
             filter: grayscale(80%) brightness(60%);
+            @include max($mobile){ filter: grayscale(0) brightness(100%) }
         }
         .post__info{
             padding: 2rem 2.4rem;
@@ -79,8 +98,10 @@
             font-size: 1.4rem;
         }
     }
-    a:hover{
+    a:hover,a:active{
         background: #f0f0f0;
+        transition: .6s;
+        border-bottom: .6rem solid $acce;
         img{ filter: grayscale(0) brightness(100%) }
     }
     .adsense{
@@ -88,7 +109,10 @@
     }
 }
 .pager{
-    // margin: 4rem 0 0;
+    @include max($tablet){
+        text-align: center;
+        margin-top: 6rem;
+    }
     line-height: 4rem;
     font-size: 1.6rem;
     a{

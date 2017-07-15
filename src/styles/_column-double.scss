@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
 
-
+#mask{
+    display: none;
+}
 .wrap{
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;
-    overflow: auto;
+    overflow: visible;
 }
 main{
     width: 90rem;
@@ -158,7 +160,7 @@ header nav{
         position: relative;
         letter-spacing: .05em;
         &:hover,&:active,&:focus{
-            background: lighten($acce,10%);
+            background: $acce;
         }
     }
     .material-icons{
@@ -170,7 +172,7 @@ header nav{
         text-align: center;
     }
     .current .material-icons{
-        background: #eee;
+        background: $acce;
     }
 }
 
@@ -183,21 +185,31 @@ header nav{
         background-color: #f0f0f0;
         color: #333;
         padding: .2rem 1.2rem;
-        margin: .2rem;
+        margin: .4rem;
         font-size: 1.4rem;
         border-radius: .4rem;
         text-decoration: none;
         opacity: .8;
         box-shadow: .05rem .05rem .2rem rgba(#000,.2);
-        &:hover{
+        &:hover,&:active{
             opacity: 1;
         }
     }
 }
-// @include min($tablet) {
-    .search.sticky{
-        position:fixed;
-        top: 8rem;
-        right: calc( 50% - 60rem );
-    }
-// }
+.search.sticky{
+    position:fixed;
+    top: 8rem;
+    right: calc( 50% - 60rem );
+}
+
+
+/////////////////////////////////////////////
+// footer
+/////////////////////////////////////////////
+footer{
+    padding: 4rem 0;
+    color: rgba($main,.4);
+    font-size: 2rem;
+    font-family: 'Trebuchet MS';
+    clear: left;
+}

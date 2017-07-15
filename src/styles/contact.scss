@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import "common";
+@import "column-single";
+
+
+
+main{
+    @include max($readable) { padding: 0 2rem}
+    h1{
+        line-height: 1;
+        margin: 0;
+        padding-bottom: 1rem;
+        letter-spacing: .05em;
+        border-bottom: .3rem solid $main;
+    }
+    p{
+        font-size: 2rem;
+        letter-spacing: .05em;
+        margin: 0;
+    }
+    .contactList{
+    }
+}

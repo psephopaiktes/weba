@@ -9,6 +9,7 @@ $base: #fff;
 $main: #223;
 $acce: #fc6;
 
+$readable: 60em;
 $mobile: 600px;
 $tablet: 1280px;
 
@@ -51,19 +52,6 @@ ul{
 /////////////////////////////////////////////
 // common component
 /////////////////////////////////////////////
-main h1{ // page header
-    margin: 0;
-    background: #000;
-    color: #fff;
-}
-
-footer{
-    padding: 4rem 0;
-    color: rgba($main,.4);
-    font-size: 2rem;
-    font-family: 'Trebuchet MS';
-    clear: left;
-}
 #gotop{
     display: block;
     width: 8rem;

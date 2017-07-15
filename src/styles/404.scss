@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import "common";
-// @import "header-rich";
-@import "header-simple";
+@import "column-single";
 
 
 
@@ -10,7 +9,8 @@ main{
     background-size: 50%;
     text-align: center;
     font-family: 'Trebuchet MS';
-    padding: 18rem 0;
+    padding: 18rem 0 16rem;
+    @include max($mobile){ padding: 8rem 0 6rem }
     h1{
         color: rgba(#fff,.8);
         font-size: 16rem;
@@ -31,14 +31,15 @@ main{
         }
         a{
             display: block;
+            font-weight: bold;
             margin: 2rem;
-            color: $main;
+            color: $base;
             font-size: 2rem;
             text-decoration: none;
-            border-bottom: .2rem $main solid;
+            border-bottom: .2rem $base solid;
             &:hover{
-                color: $base;
-                border-color: $base;
+                color: $main;
+                border-color: $main;
             }
         }
     }

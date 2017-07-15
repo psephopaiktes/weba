@@ -17,6 +17,44 @@ $( function(){
 
 
 
+    // toggle menu
+    function toggleMenu( target, hide ){
+        if( !$('#'+target+'Button').hasClass('on') ){
+            $('#'+target+'Button').addClass('on');
+            $('#mask').fadeIn(200);
+            $('.'+hide).slideUp(300);
+            $('.'+target).slideDown(300);
+            $('#'+hide+'Button').removeClass('on');
+        }else{
+            $('#'+target+'Button').removeClass('on');
+            $('.'+target).slideUp(300);
+            $('#mask').fadeOut(200);
+        }
+        return;
+    }
+    $('#menuButton').on('click', function(){
+        toggleMenu( 'menu','search' );
+    });
+    $('#searchButton').on('click', function(){
+        toggleMenu( 'search','menu' );
+        setTimeout(function(){
+            $('.search__box input').focus();
+        },300);
+    });
+    $('#mask').on('click', function(){
+        $('#menuButton,#searchButton').removeClass('on');
+        $('.menu,.search').slideUp(300);
+        $('#mask').fadeOut(200);
+    });
+    $(window).on('load scroll', function() {
+        if( $('#mask').css('display') == 'block' )
+            $('.menu,.search').slideUp(300);
+        $('#menuButton,#searchButton').removeClass('on');
+        $('#mask').fadeOut(200);
+    });
+
+
+
     // sticky sidebar
     var stopPos = $('.search').offset().top - parseInt( $('header').css('padding-top') );
     $(window).on('load scroll', function() {
@@ -44,19 +82,19 @@ $( function(){
 
     //smooth scroll
     $('a[href^=#]').click(function(){
-        var speed = 500;
         var href= $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, speed, "swing");
+        $("html, body").animate({scrollTop:position}, 500, "swing");
         return false;
     });
 
 
 
     // fix viewport more than 1920px width
-    if( $(window).width() > 1920 )
+    if( $(window).width() > 1920 ){
         $('meta[name=viewport]').attr('content','width=1920,initial-scale=1"');
+    }
 
 
 

@@ -1,9 +1,37 @@
 @charset "UTF-8";
 @import "common";
-@import "header-rich";
-// @import "header-simple";
-
-
+@include min($tablet) {
+    @import "column-double";
+}
+@include max($tablet) {
+    @import "column-single";
+}
 
 main{
+    padding-right: 2rem;
+    @include max($readable) { padding: 0 2rem}
+    @include max($tablet) { padding: 0}
+    h1{
+        line-height: 1;
+        margin: 0;
+        padding-bottom: 1rem;
+        letter-spacing: .05em;
+        border-bottom: .3rem solid $main;
+    }
+    h2{
+        color: rgba($main,.6);
+        margin: 4.8rem 0 0;
+    }
+    ul{
+        list-style: square;
+        padding-left: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+    li{
+        margin-top: 1.6rem;
+    }
+    a:link{ color: darken($acce,20%) }
+    a:visited{ color: darken($acce,40%) }
+    a:hover,a:active{ color: darken($acce,30%) }
 }
