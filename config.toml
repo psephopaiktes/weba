@@ -8,6 +8,4 @@ publishDir = "docs"
 [Params]
 # 独自変数
 description = "サイトの説明"
-twitter_account = "xxxxxx"
-github_account = "xxxxxx"
 analytics = "UA-01234567-8"

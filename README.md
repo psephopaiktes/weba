@@ -1,5 +1,13 @@
 # weba
 
+## Hugoメモ
+`hugo server -D` :記事ファイル中でdraft = trueになっている記事も表示する。
+`hugo server -w` :ウォッチ
+`hugo new post/20170717_Hello-World` :記事の作成
+`hugo new post/20170717_Hello-World --editor="atom"` :記事の作成。Atomで開く
+`hugo` :deploy
+- docs(public)内に下書きファイルも残るので、公開前に整理すること
+
 ## 構成メモ
 ファイル・フォルダ名 | 役割
 --:|:--
