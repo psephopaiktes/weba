@@ -2,37 +2,41 @@
 <html lang="ja">
 
 <head>
-	<meta name="generator" content="Hugo 0.19" />
-    
+    <!--
+
+    ('A`)y-~  < Hi
+    ﾉ( ﾍ ﾍ
+
+    -->
     <title>WEBA | デザインとフロントエンドのブログ</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="description" content="Web・UXデザインやフロントエンド技術についてのブログです。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="next" href="">
-    
+    <!-- icons-->
     <link rel="shortcut icon" href="images/favicon.ico">
-    
+    <!-- Add to homescreen for Chrome on Android-->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="WEBA">
     <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-    
+    <!-- Add to homescreen for Safari on iOS-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="myTemplate">
     <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-    
+    <!-- Tile icon for Win8 (144x144 + tile color)-->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#fc6">
-    
+    <!-- Color the status bar on mobile devices-->
     <meta name="theme-color" content="#fc6">
-    
+    <!-- Disable tap highlight on IE-->
     <meta name="msapplication-tap-highlight" content="no">
-    
+    <!-- css-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="http://hirata.blog/styles/main.min.css">
-    
-    
+    <link rel="stylesheet" href="styles/404.min.css">
+    <!-- OGP -->
+    <!-- GA-->
     <script async src="scripts/analytics.min.js"></script>
 </head>
 
@@ -41,7 +45,7 @@
 <div id="mask"></div>
 <div class="wrap">
 
-    
+    <!-- header block-->
     <header class="globalHeader">
         <h1><a href="/">
             <img src="images/logo.svg" alt="logo">
@@ -66,7 +70,9 @@
                 <li><a href=""><svg class="feedly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 60">
                     <path class="cls-1" d="M34.74,45.07l3.86,3.85a1.09,1.09,0,0,1,0,1.54l-2.86,2.83a.61.61,0,0,1-.48.19H32.74a.61.61,0,0,1-.47-.19l-2.9-2.87a1.09,1.09,0,0,1,0-1.54l3.82-3.82a1.09,1.09,0,0,1,1.54,0Zm0-15.81,3.86,3.85a1.09,1.09,0,0,1,0,1.54L27.83,45.42a.61.61,0,0,1-.48.19H24.83a.6.6,0,0,1-.47-.19l-2.9-2.89a1.09,1.09,0,0,1,0-1.54L33.23,29.26a1.09,1.09,0,0,1,1.54,0Zm0-15.78,3.86,3.85a1.09,1.09,0,0,1,0,1.54L19.92,37.54a.61.61,0,0,1-.48.19H16.93a.61.61,0,0,1-.47-.19l-2.9-2.91a1.09,1.09,0,0,1,0-1.54L33.23,13.47A1.09,1.09,0,0,1,34.77,13.47ZM39.59,2.31a7.92,7.92,0,0,0-11.18,0l-26,26a7.88,7.88,0,0,0,0,11.16L21.15,58.24A7.16,7.16,0,0,0,25.31,60H42.56a7.93,7.93,0,0,0,4.35-1.83l18.7-18.71a7.88,7.88,0,0,0,0-11.16l-26-26Z"/>
                 </svg></a>
-                
+                <!-- <li><a href=""><svg class="notification" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 60">
+                    <path class="cls-1" d="M25,60a6.17,6.17,0,0,0,6.15-6.15H18.85A6.15,6.15,0,0,0,25,60ZM43.46,41.54V26.15c0-9.45-5-17.35-13.85-19.45V4.62a4.62,4.62,0,0,0-9.23,0V6.71C11.55,8.8,6.54,16.68,6.54,26.15V41.54L.38,47.69v3.08H49.62V47.69Z"/>
+                </svg></a> -->
             </ul>
             <nav><ul>
                 <li><a href="/">HOME</a>
@@ -78,17 +84,17 @@
     </header>
 
 
-    
+    <!-- search block -->
     <aside class="search">
         <div class="search__box">
             <input type="text" placeholder="search">
             <i class="material-icons">search</i>
         </div>
         <ul class="search__categories">
-            <li><a href="./category.html"><i class="material-icons">code</i>Frontend</a>
+            <li><a href=""><i class="material-icons">code</i>Frontend</a>
             <li><a href=""><i class="material-icons">create</i>Design</a>
             <li><a href=""><i class="material-icons">subject</i>Other</a>
-            <li><a href="./archive.html"><i class="material-icons">inbox</i>Archives</a>
+            <li><a href=""><i class="material-icons">inbox</i>Archives</a>
         </ul>
         <ul class="search__tags">
             <li><a href="">Hugo</a>
@@ -98,49 +104,30 @@
             <li><a href="">HTML</a>
             <li><a href="">HTML</a>
         </ul>
-    </aside>
+    </aside><!-- / sidebar block -->
 
-
-    
-    <main><ul class="posts" id="posts">
-
-        
-            <li><a href="http://hirata.blog/post/2017-07-17_hello-world/">
-  <span>2017.07.17</span>AAA
-</a></li>
-
-        
-        <li class="adsense"></li>
-
-    </ul>
-    <nav class="pager">
-        <a href="" class='disable'><i class="material-icons">navigate_before</i></a>
-        <select>
-            <option>1</option>
-            <option selected>2</option>
-            <option>3</option>
-            <option>99</option>
-        </select>
-        <span>&nbsp;&nbsp;/&nbsp;&nbsp;53</span>
-        <a href="">NEXT<i class="material-icons">navigate_next</i></a>
-    </nav>
-    
+    <!-- main content block-->
+    <main>
+        <h1>404</h1>
+        <p>page not found</p>
+        <nav><ul>
+            <li><a href="/">HOME</a>
+            <li><a href="/contact.html">CONTACT</a>
+        </ul></nav>
     </main>
 
-
-    
+    <!-- footer block-->
     <footer class="globalFooter">
         <a id="gotop" href="#top" title="上へスクロール">▲</a>
         <p><small>© hirata 2017</small></p>
     </footer>
 
 
-    
+    <!-- SCRIPTS-->
     <script src="scripts/lib/jquery-3.2.1.min.js"></script>
-    
+    <!-- <script src="scripts/lib/anime.min.js"></script> -->
     <script src="scripts/main.min.js"></script>
 
-</div>
+</div><!-- / wrap -->
 </body>
 </html>
-

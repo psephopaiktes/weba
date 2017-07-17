@@ -1,0 +1,36 @@
+{{ partial "header.html" . }}
+
+    <!-- main content block-->
+    <main><ul class="posts" id="posts">
+
+        {{ range (.Paginator 12).Pages }}
+            {{ .Render "list" }}
+        {{ end }}
+        <li class="adsense"></li>
+
+    </ul>
+    <nav class="pager">
+        <a href="" class='disable'><i class="material-icons">navigate_before</i></a>
+        <select>
+            <option>1</option>
+            <option selected>2</option>
+            <option>3</option>
+            <option>99</option>
+        </select>
+        <span>&nbsp;&nbsp;/&nbsp;&nbsp;53</span>
+        <a href="">NEXT<i class="material-icons">navigate_next</i></a>
+    </nav>
+    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+        <nav class="pagination">
+            {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}">前へ</a>
+            {{ end }}
+            <span class="current-page">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+            {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}">次へ</a>
+            {{ end }}
+        </nav>
+    {{ end }}
+    </main>
+
+{{ partial "footer.html" . }}
