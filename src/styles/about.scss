@@ -1,122 +1,54 @@
 @charset "UTF-8";
 @import "common";
+@import "column-single";
 
 
 
-//////////////////////////////////////////////
-// about
-//////////////////////////////////////////////
-header{
+header img{
+    filter: grayscale(100%) brightness(115%);
+}
+.hero{
     width: 100%;
-    height: 40rem;
-    padding: 1rem;
+    margin: 4rem 0 0;
+    padding: 12rem 0;
     background: #000 url('../images/bg.jpg') 50% 80%;
     background-size: cover;
-    position: relative;
     z-index: 0;
-    &::before{
-        content: "";
-        background: linear-gradient(transparent, #fff);
-        width: 100vw;
-        height: 15rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-    }
-    &::after{
-        content: "";
-        background: linear-gradient(transparent, #fff);
-        width: 100vw;
-        height: 12rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-    }
-    h1{
-        margin: calc( 40rem/2 - 5rem) auto 0;
-        width: 20rem;
-        text-align: center;
-    }
-    h1 a{
-        text-decoration: none;
-    }
-    h1 img{
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    img{
         width: 20rem;
     }
-    h1 p{
+    p{
         font-size: 1.4rem;
         font-weight: 100;
         letter-spacing: .3em;
         text-indent: .3em;
         margin: 2rem 0 0;
-        color: rgba(#fff,.8);
+        color: rgba(#fff,.85);
         text-shadow: 0 0 .3rem rgba(#000,1);
     }
 }
-
-
-//////////////////////////////////////////////
-// header
-//////////////////////////////////////////////
-header{
-}
-
-
-
-//////////////////////////////////////////////
-// content
-//////////////////////////////////////////////
 main{
-    width: 70%;
-}
-.posts{
-    border: .5px solid #f0f0f0;
-    li{
-        border: .5px solid #f0f0f0;
-        height: 30px;
-        margin: 0;
-        z-index: 0;
+    @include max($readable){
+        padding: 0 2rem;
     }
-    li:hover{
-        box-shadow: 2px 2px 6px rgba(#000,.2);
-        z-index: 1;
-        transform: scale(1.01,1.05);
+    h1{
+        line-height: 1;
+        margin: 2rem 0 0;
+        padding-bottom: 1rem;
+        letter-spacing: .1em;
+        border-bottom: .3rem solid $main;
     }
-}
-
-
-
-//////////////////////////////////////////////
-// footer
-//////////////////////////////////////////////
-footer{
-    text-align: center;
-    padding: 4rem 0 3rem;
-    background-color: $main;
-    margin: 6rem 0 0;
-    color: $base;
-    font-size: 2rem;
-    width: 100%;
-}
-#gotop{
-    display: block;
-    width: 5rem; height: 5rem;
-    border: .2rem solid $main;
-    border-radius: .6rem;
-    background-color: $base;
-    box-shadow: 1px 1px 3px rgba(#000,.2);
-    font-size: 2.4rem;
-    line-height: 4.9rem;
-    text-align: center;
-    text-decoration: none;
-    position: fixed;
-    bottom: 1rem; right: 1rem;
-    color: $main;
-    opacity: .4;
-    &:hover,&:active{
-        opacity: .6;
-        transition: .3s;
+    h2{
+        color: rgba($main,.7);
+        margin: 4rem 0 0;
     }
+    p{
+        margin: 1rem 0 0;
+        text-align: justify;
+    }
+    a:link{ color: darken($acce,20%) }
+    a:visited{ color: darken($acce,40%) }
+    a:hover,a:active{ color: darken($acce,30%) }
 }

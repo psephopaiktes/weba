@@ -23,7 +23,7 @@ gulp.task('html', function() {
 
 // SASS
 gulp.task('sass', function() {
-    gulp.src(['./src/styles/**/*.scss', '!./src/styles/**/_*.scss','!./src/styles/lib'])
+    gulp.src(['./src/styles/**/*.scss', '!./src/styles/**/_*.scss','!./src/styles/lib/**/*'])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
@@ -42,7 +42,7 @@ gulp.task('sass', function() {
 
 //Js
 gulp.task('js', function() {
-    gulp.src(['./src/scripts/**/*.js','!./src/scripts/lib'])
+    gulp.src(['./src/scripts/**/*.js','!./src/scripts/lib/**/*'])
         .pipe(plumber())
         .pipe(babel())
         .pipe(rename({suffix: '.min'}))
@@ -60,10 +60,16 @@ gulp.task('img', function() {
         .pipe(gulp.dest('./docs/images'));
 });
 
+//reload
+gulp.task('reload', function() {
+    browserSync.reload();
+});
 
 gulp.task('default',['html','sass','js','img'],function(){
+    browserSync.init({ server: "./docs" });
     gulp.watch('./src/**/*.html', ['html']);
     gulp.watch('./src/styles/**/*.scss', ['sass']);
     gulp.watch('./src/scripts/**/*.js',['js']);
     gulp.watch('./src/images/**/*',['img']);
+    gulp.watch('./src/**',['reload']);
 });

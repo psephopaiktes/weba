@@ -16,7 +16,7 @@ main{
 }
 
 
-header{
+.globalHeader{
     width: 100%;
     position: relative;
     padding: 8rem 0 10rem;
@@ -206,7 +206,7 @@ header nav{
 /////////////////////////////////////////////
 // footer
 /////////////////////////////////////////////
-footer{
+.globalFooter{
     padding: 4rem 0;
     color: rgba($main,.4);
     font-size: 2rem;

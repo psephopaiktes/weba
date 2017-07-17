@@ -29,7 +29,7 @@ main{
 }
 
 
-header{
+.globalHeader{
     background: $base;
     width: 100%;
     margin: 2rem auto 0;
@@ -209,9 +209,7 @@ header nav{
         width: 5.6rem;
         text-align: center;
     }
-    .current .material-icons{
-        background: #eee;
-    }
+    .current a{ background: #f0f0f0 }
 }
 
 .search__tags{
@@ -238,7 +236,7 @@ header nav{
 /////////////////////////////////////////////
 // footer
 /////////////////////////////////////////////
-footer{
+.globalFooter{
     text-align: center;
     padding: 4rem 0;
     color: rgba($main,.4);

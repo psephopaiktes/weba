@@ -9,7 +9,7 @@ $base: #fff;
 $main: #223;
 $acce: #fc6;
 
-$readable: 60em;
+$readable: 55em;
 $mobile: 600px;
 $tablet: 1280px;
 
@@ -42,10 +42,10 @@ ul{
 // responsive
 //////////////////////////////////////////////
 @include max($tablet) {
-    :root{ font-size: 50%; }
+    :root{ font-size: 57.5%; }
 }
 @include max($mobile) {
-    :root{ font-size: 40%; }
+    :root{ font-size: 50%; }
 }
 
 
