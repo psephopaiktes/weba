@@ -66,10 +66,10 @@ gulp.task('reload', function() {
 });
 
 gulp.task('default',['html','sass','js','img'],function(){
-    browserSync.init({ server: "./static" });
+    // browserSync.init({ server: "./static" });
     gulp.watch('./src/**/*.html', ['html']);
     gulp.watch('./src/styles/**/*.scss', ['sass']);
     gulp.watch('./src/scripts/**/*.js',['js']);
     gulp.watch('./src/images/**/*',['img']);
-    gulp.watch('./src/**',['reload']);
+    // gulp.watch('./src/**',['reload']);
 });

@@ -29,6 +29,7 @@ body{
     color: $main;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 *:hover{ transition: .2s ease }
 ul{
@@ -54,6 +55,7 @@ ul{
 /////////////////////////////////////////////
 #gotop{
     display: block;
+    cursor: pointer;
     width: 8rem;
     height: 6rem;
     border-radius: 3rem 0 0 3rem;

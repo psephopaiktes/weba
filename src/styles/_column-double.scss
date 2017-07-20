@@ -117,6 +117,8 @@ header nav{
 .search{
     width: 28rem;
     float: right;
+    position: sticky;
+    top: 2rem;
 }
 
 .search__box{
@@ -195,11 +197,6 @@ header nav{
             opacity: 1;
         }
     }
-}
-.search.sticky{
-    position:fixed;
-    top: 8rem;
-    right: calc( 50% - 60rem );
 }
 
 

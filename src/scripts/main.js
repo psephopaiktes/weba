@@ -1,23 +1,42 @@
-$( function(){
+console.log('© hirata 2017');
 
+///////////////////////////////////////////////
+// go top
+///////////////////////////////////////////////
+! function(){
 
+    var elm = document.getElementById('gotop');
 
-    console.log('© hirata 2017');
+    window.addEventListener('scroll', function(){
+        if( window.pageYOffset > 200 ) elm.classList.add('show');
+        else elm.classList.remove('show');
+    }, false);
 
+    elm.addEventListener('click', function(){
 
+        var cosParameter = window.scrollY / 2,
+            scrollCount = 0,
+            oldTimestamp = performance.now();
 
-    // go top
-    $(window).on('load scroll', function() {
-        if ( $(this).scrollTop() > 200 ) $('#gotop').addClass('show');
-        else $('#gotop').removeClass('show');
-    });
-    $('#gotop').on('click', function() {
-        $('body,html').animate({scrollTop:0}, 'swing');
-    });
+        function step (newTimestamp) {
+            scrollCount += Math.PI / ( 600 / (newTimestamp - oldTimestamp));
+            if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+            if (window.scrollY === 0) return;
+            window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+            oldTimestamp = newTimestamp;
+            window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
 
+    }, false);
 
+}();
 
-    // toggle menu
+///////////////////////////////////////////////
+// toggle menu
+///////////////////////////////////////////////
+! function(){
+
     function toggleMenu( target, hide ){
         if( !$('#'+target+'Button').hasClass('on') ){
             $('#'+target+'Button').addClass('on');
@@ -46,45 +65,60 @@ $( function(){
         $('.menu,.search').slideUp(300);
         $('#mask').fadeOut(200);
     });
-    $(window).on('load scroll', function() {
+    $(window).on('scroll', function() {
         if( $('#mask').css('display') == 'block' )
             $('.menu,.search').slideUp(300);
         $('#menuButton,#searchButton').removeClass('on');
         $('#mask').fadeOut(200);
     });
 
+}();
 
+///////////////////////////////////////////////
+// scroll reveal
+///////////////////////////////////////////////
+! function(){
 
-    // sticky sidebar
-    var stopPos = $('.search').offset().top - parseInt( $('header').css('padding-top') );
-    $(window).on('load scroll', function() {
-        if ( $(this).scrollTop() > stopPos )
-            $('.search').addClass('sticky');
-        else
-            $('.search').removeClass('sticky');
+    var elm = document.querySelectorAll('#posts li');
+
+    // すでに画面何にある要素を表示
+    [].forEach.call( elm, function(elm){
+
+        var elmTop = elm.getBoundingClientRect().top + document.body.scrollTop;
+
+        if ( window.pageYOffset > elmTop - window.outerHeight*3/4 ){
+            elm.style.opacity = 1;
+            elm.style.transform = 'translateY(0)';
+        }
+
     });
 
+    // スクロールして画面内に入った要素を表示
+    window.addEventListener('scroll', function(){
 
+        [].forEach.call( elm, function(elm){
 
-    // scroll reveal
-    $('#posts li').each(function(){
-        if ( $(window).scrollTop() > $(this).offset().top - $(window).height()*9/10 )
-            $(this).css({ opacity:1,transform:'translateY(0)' });
-    });
-    $(window).on('load scroll', function() {
-        $('#posts li').each(function(){
-            if ( $(window).scrollTop() > $(this).offset().top - $(window).height()*9/10 )
-                $(this).addClass('inview');
+            var elmTop = elm.getBoundingClientRect().top + document.body.scrollTop;
+
+            if ( window.pageYOffset > elmTop - window.outerHeight*3/4 )
+                elm.classList.add('inview');
+
         });
-    });
+
+    }, false);
+
+}();
 
 
 
-    // fix viewport more than 1920px width
-    if( $(window).width() > 1920 ){
-        $('meta[name=viewport]').attr('content','width=1920,initial-scale=1"');
-    }
+///////////////////////////////////////////////
+// fix viewport more than 1920px width
+///////////////////////////////////////////////
+! function(){
 
+    var elm = document.querySelector('meta[name=viewport]');
 
+    if( window.innerWidth > 1920 )
+        elm.setAttribute('content','width=1920,initial-scale=1');
 
-});
+}();
