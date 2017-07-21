@@ -90,25 +90,33 @@ article header{
         background: #f0f0f0;
         margin: 6rem 0 0;
         @include max($mobile){ margin: 4rem 0 0 }
-        padding: 2.4rem 3.2rem 0;
+        padding: 1.8rem 3.2rem 0;
         border-radius: .4rem;
         font-size: 1.6rem;
+        text-align: center;
+        letter-spacing: .05em;
         &::before{
             content: "目次";
             font-weight: bold;
             font-size: 2rem;
+            display: block;
+            color: #ccc;
         }
         ol{
-            padding: 2.4rem;
-            margin: 0;
+            padding: 1.2rem 1.8rem;
+            margin: 0 auto;
+            display: inline-block;
+            text-align: left;
         }
         li{
             padding-left: .8rem;
-            margin-bottom: 2.4rem;
+            margin-bottom: 1.8rem;
             line-height: 1.4;
+            font-weight: 900;
         }
         a{
             color: $main;
+            font-weight: 100;
         }
     }
 }
@@ -116,8 +124,6 @@ article header{
 
 
 article section{
-    margin: 12rem 0 0;
-    @include max($mobile){ margin: 8rem 0 0 }
     >*{
         margin: 6rem 0 0;
     }

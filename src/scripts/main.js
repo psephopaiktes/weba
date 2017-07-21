@@ -50,20 +50,30 @@ console.log('© hirata 2017');
         box : document.getElementsByClassName('search')[0]
     };
     var mask = document.getElementById('mask');
+    var viewFlag = 0;
+
+    // transform scale は負荷がかかるため読み込み時にメニューがちらつく
+    // いったんdisplay:noneしといて読み込みあとに表示
+    window.onload = function(){
+        menu.box.style.display  = 'block';
+        search.box.style.display  = 'block';
+    };
 
     // target を展開して、hideを隠す関数
     function toggleMenu( target, hide ){
 
         if( target.button.classList.contains('on') ){
             target.button.classList.remove('on');
-            target.box.style.transform  = 'scaleY(0)';
+            target.box.style.transform  = '';
             mask.style.display = 'none';
+            viewFlag = 0;
         }else{
             target.button.classList.add('on');
             hide.button.classList.remove('on');
-            hide.box.style.transform = 'scaleY(0)';
+            hide.box.style.transform = '';
             target.box.style.transform  = 'scaleY(1)';
             mask.style.display = 'block';
+            viewFlag = 1;
         }
 
         return;
@@ -83,15 +93,24 @@ console.log('© hirata 2017');
 
     // 展開したメニューを全て隠す
     function hideAll() {
+        if( !viewFlag ) return;
         menu.button.classList.remove('on');
         search.button.classList.remove('on');
-        menu.box.style.transform  = 'scaleY(0)';
-        search.box.style.transform  = 'scaleY(0)';
+        menu.box.style.transform  = '';
+        search.box.style.transform  = '';
         mask.style.display = 'none';
         return;
     }
     mask.addEventListener('click', hideAll, false );
     window.addEventListener('scroll', hideAll, false );
+
+    // 隠れたメニューがPC幅になったときに消えたままなのを防ぐ
+    window.addEventListener('resize', function(){
+        if( window.innerWidth >= 1280 ){
+            menu.box.style.transform  = '';
+            search.box.style.transform  = '';
+        }
+    }, false );
 
 }();
 

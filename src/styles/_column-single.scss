@@ -59,6 +59,7 @@ main{
         border: 0;
         cursor: pointer;
         outline: 0;
+        background: transparent;
         .material-icons{
             font-size: 4rem;
             line-height: 6rem;
@@ -90,6 +91,7 @@ main{
 
 
 .menu{
+    display: none;
     transform-origin: 0 0;
     transform: scaleY(0);
     transition: .2s ease;
@@ -148,6 +150,7 @@ header nav{
 // search
 /////////////////////////////////////////////
 .search{
+    display: none;
     transform-origin: 100% 0;
     transform: scaleY(0);
     transition: .2s ease;
@@ -173,6 +176,7 @@ header nav{
         padding: 0 1.6rem 0 5.6rem;
         line-height: 5.6rem;;
         outline: 0;
+        background: transparent;
     }
     .material-icons{
         position: absolute;

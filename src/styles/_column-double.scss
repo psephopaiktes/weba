@@ -41,7 +41,11 @@ main{
     button{ display: none }
 }
 header .follow{
-    margin: 6rem auto 0;
+    // margin: 6rem auto 0;
+    position: fixed;
+    z-index: 1;
+    top: 2rem;
+    right: calc( 50% - 120rem/2 );
     display: flex;
     width: 15rem;
     justify-content: space-between;
@@ -118,7 +122,7 @@ header nav{
     width: 28rem;
     float: right;
     position: sticky;
-    top: 2rem;
+    top: 8rem;
 }
 
 .search__box{
@@ -132,6 +136,7 @@ header nav{
         padding: 0 1.6rem 0 5.6rem;
         line-height: 5.6rem;;
         outline: 0;
+        background: transparent;
     }
     .material-icons{
         position: absolute;

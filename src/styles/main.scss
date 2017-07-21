@@ -2,6 +2,7 @@
 
 @charset "UTF-8";
 @import "common";
+
 @include min($tablet) {
     @import "column-double";
 }
@@ -123,8 +124,7 @@ main h1{
         height: 4rem;
         color: #fff;
         border-radius: .4rem;
-        vertical-align: middle;
-        display: inline-flex;
+        box-sizing: border-box;
         .material-icons{
             line-height: 4rem;
             vertical-align: middle;
@@ -132,12 +132,18 @@ main h1{
         }
     }
     select{
+        vertical-align: bottom;
+        appearance: none;
+        text-align: center;
         margin-left: 1.6rem;
         height: 4rem;
-        width: 6rem;
+        background: $base;
+        text-align: center;
+        padding: 0 2rem 0 2rem;
+        text-overflow: '';
         outline: none;
         border: .1rem #999 solid;
-        color: $main;
+        border-radius: .4rem;
         font-weight: bold;
     }
     span{
