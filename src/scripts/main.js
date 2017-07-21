@@ -1,5 +1,7 @@
 console.log('© hirata 2017');
 
+
+
 ///////////////////////////////////////////////
 // go top
 ///////////////////////////////////////////////
@@ -32,47 +34,68 @@ console.log('© hirata 2017');
 
 }();
 
+
+
 ///////////////////////////////////////////////
 // toggle menu
 ///////////////////////////////////////////////
 ! function(){
 
+    var menu = {
+        button : document.getElementById('menuButton'),
+        box : document.getElementsByClassName('menu')[0]
+    };
+    var search = {
+        button : document.getElementById('searchButton'),
+        box : document.getElementsByClassName('search')[0]
+    };
+    var mask = document.getElementById('mask');
+
+    // target を展開して、hideを隠す関数
     function toggleMenu( target, hide ){
-        if( !$('#'+target+'Button').hasClass('on') ){
-            $('#'+target+'Button').addClass('on');
-            $('#mask').fadeIn(200);
-            $('.'+hide).slideUp(300);
-            $('.'+target).slideDown(300);
-            $('#'+hide+'Button').removeClass('on');
+
+        if( target.button.classList.contains('on') ){
+            target.button.classList.remove('on');
+            target.box.style.transform  = 'scaleY(0)';
+            mask.style.display = 'none';
         }else{
-            $('#'+target+'Button').removeClass('on');
-            $('.'+target).slideUp(300);
-            $('#mask').fadeOut(200);
+            target.button.classList.add('on');
+            hide.button.classList.remove('on');
+            hide.box.style.transform = 'scaleY(0)';
+            target.box.style.transform  = 'scaleY(1)';
+            mask.style.display = 'block';
         }
+
+        return;
+
+    }
+
+    menu.button.addEventListener( 'click', function(){
+        toggleMenu( menu, search );
+    }, false );
+
+    search.button.addEventListener( 'click', function(){
+        toggleMenu( search, menu );
+        setTimeout( function(){
+            search.box.querySelector('input').focus();
+        }, 300 );
+    }, false );
+
+    // 展開したメニューを全て隠す
+    function hideAll() {
+        menu.button.classList.remove('on');
+        search.button.classList.remove('on');
+        menu.box.style.transform  = 'scaleY(0)';
+        search.box.style.transform  = 'scaleY(0)';
+        mask.style.display = 'none';
         return;
     }
-    $('#menuButton').on('click', function(){
-        toggleMenu( 'menu','search' );
-    });
-    $('#searchButton').on('click', function(){
-        toggleMenu( 'search','menu' );
-        setTimeout(function(){
-            $('.search__box input').focus();
-        },300);
-    });
-    $('#mask').on('click', function(){
-        $('#menuButton,#searchButton').removeClass('on');
-        $('.menu,.search').slideUp(300);
-        $('#mask').fadeOut(200);
-    });
-    $(window).on('scroll', function() {
-        if( $('#mask').css('display') == 'block' )
-            $('.menu,.search').slideUp(300);
-        $('#menuButton,#searchButton').removeClass('on');
-        $('#mask').fadeOut(200);
-    });
+    mask.addEventListener('click', hideAll, false );
+    window.addEventListener('scroll', hideAll, false );
 
 }();
+
+
 
 ///////////////////////////////////////////////
 // scroll reveal
@@ -81,7 +104,7 @@ console.log('© hirata 2017');
 
     var elm = document.querySelectorAll('#posts li');
 
-    // すでに画面何にある要素を表示
+    // すでに画面内にある要素を表示
     [].forEach.call( elm, function(elm){
 
         var elmTop = elm.getBoundingClientRect().top + document.body.scrollTop;

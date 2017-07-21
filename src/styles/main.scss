@@ -5,7 +5,7 @@
 @include min($tablet) {
     @import "column-double";
 }
-@include max($tablet) {
+@include max( $tablet - 1 ) {
     @import "column-single";
 }
 
