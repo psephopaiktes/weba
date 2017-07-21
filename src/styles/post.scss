@@ -11,7 +11,7 @@ main{
 article header{
 
     h1{
-        line-height: 1.4;
+        line-height: 1;
         margin: 0;
     }
     time,.postHeader__category{
@@ -63,7 +63,7 @@ article header{
         }
     }
     .share{
-        margin-top: 1rem;
+        margin-top: 2rem;
         display: flex;
         a{
             text-indent: 100%;
@@ -88,20 +88,23 @@ article header{
     }
     #contentList{
         background: #f0f0f0;
-        margin-top: 4rem;
-        padding: 1.6rem 2rem;
+        margin: 6rem 0 0;
+        @include max($mobile){ margin: 4rem 0 0 }
+        padding: 2.4rem 3.2rem 0;
         border-radius: .4rem;
         font-size: 1.6rem;
         &::before{
             content: "目次";
             font-weight: bold;
+            font-size: 2rem;
         }
         ol{
-            padding-left: .8rem;
-            margin: 1.6rem;
+            padding: 2.4rem;
+            margin: 0;
         }
         li{
-            margin-bottom: 1.6rem;
+            padding-left: .8rem;
+            margin-bottom: 2.4rem;
             line-height: 1.4;
         }
         a{
@@ -113,9 +116,12 @@ article header{
 
 
 article section{
-    margin-top: 2rem;
+    margin: 12rem 0 0;
+    @include max($mobile){ margin: 8rem 0 0 }
+    >*{
+        margin: 6rem 0 0;
+    }
     h2{
-        margin: 4rem 0 0;
         padding-left: 2rem;
         border-left: .2rem solid $acce;
         line-height: 1.4;
@@ -128,11 +134,13 @@ article section{
         color: #ccc !important;
     }
     h3{
-        margin: 2.4rem 0 0;
+        display: inline-block;
+        margin: 4rem 0 0;
         line-height: 1.4;
+        border-bottom: .2rem solid $main;
     }
     p{
-        margin: 1.6rem 0 0;
+        margin: 2rem 0 0;
         text-align: justify;
     }
     .fullImg{
@@ -162,14 +170,27 @@ article section{
         margin-bottom: .8rem;
         line-height: 1.4;
     }
-    table{}// NOTE:
-    pre{}
-    // code{
-    //     background: #f0f0f0;
-    //     padding: .2rem .4rem;
-    //     border-radius: .2rem;
-    //     color: rgba($main,.8);
-    // }
+    table{
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        th,td{
+            border: .1rem solid #ccc;
+            padding: .6rem 1.2rem;
+        }
+        th{
+            background: rgba($main,.1);
+        }
+        tr:nth-child(odd) td{
+            background: rgba($main,.01);
+        }
+    }
+    :not(pre) code{ // only inline code
+        background: #f0f0f0;
+        padding: .2rem .4rem;
+        border-radius: .2rem;
+        color: rgba($main,.7);
+    }
     b{font-weight: 900;}
     strong{
         background: linear-gradient(transparent 60%, rgba($acce,.8) 40%);
@@ -186,7 +207,7 @@ article section{
     hr{
         border: 0;
         margin: 6rem -1rem;
-        border-top: .1rem solid $main;
+        border-top: .1rem solid #ccc;
     }
     a:link{ color: darken($acce,20%) }
     a:visited{ color: darken($acce,40%) }
@@ -195,7 +216,7 @@ article section{
         display: block;
         position: relative;
         border: .2rem solid #ccc;
-        margin-top: 2rem;
+        margin: 2rem 0 0;
         height: 8rem;
         text-decoration: none;
         color: rgba($main,.6) !important;
@@ -245,16 +266,16 @@ article section{
 
 
 article footer{
-    margin-top: 8rem;
+    margin: 12rem 0 0;
+    @include max($mobile){ margin: 8rem 0 0 }
     .share{
-        margin-top: 1rem;
         display: flex;
         justify-content: center;
         a{
             text-indent: 100%;
             white-space: nowrap;
             overflow: hidden;
-            margin-right: 1rem;
+            margin: 0 .5rem 0;
             display: block;
             width: 4rem;
             height: 4rem;
@@ -272,10 +293,10 @@ article footer{
         }
     }
     .adsense{
-        margin: 8rem auto 0;
+        margin: 12rem auto 0;
+        @include max($mobile){ margin: 8rem 0 0 }
         width: 98%;
         height: 2rem;
         background: #ccc;
     }
-
 }
