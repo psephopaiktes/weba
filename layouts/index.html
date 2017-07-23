@@ -19,17 +19,7 @@
         <li class="adsense"></li>
 
     </ul>
-    <nav class="pager">
-        <a href="" class='disable'><i class="material-icons">navigate_before</i></a>
-        <select>
-            <option>1</option>
-            <option selected>2</option>
-            <option>3</option>
-            <option>99</option>
-        </select>
-        <span>&nbsp;&nbsp;/&nbsp;&nbsp;53</span>
-        <a href="">NEXT<i class="material-icons">navigate_next</i></a>
-    </nav>
+
     {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
         <nav class="pagination">
             {{ if .Paginator.HasPrev }}

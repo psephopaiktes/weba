@@ -1,4 +1,4 @@
-languageCode = "ja"
+languageCode = "ja_jp"
 title = "WEBA"
 author = "Akira HIRATA"
 copyright = "© weba 2017"
@@ -9,3 +9,14 @@ publishDir = "docs"
 # 独自変数
 description = "サイトの説明"
 analytics = "UA-01234567-8"
+github = "gituhubアカウント名"
+facebook = "フェイスブックアカウント名"
+linkedin = "Linkedinアカウント名"
+logo = "/images/ロゴファイル名"
+
+[taxonomies]
+# tag = "tags" タグ一覧ページ 不要
+archive = "archives"
+
+[permalinks]
+blog = "/:year/:month/:day/:slug/"
