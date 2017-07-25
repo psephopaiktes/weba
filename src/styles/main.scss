@@ -50,6 +50,7 @@ main h1{
         position: relative;
         text-decoration: none;
         color: $main;
+        box-shadow: .1rem .1rem .8rem #eee;
         .fixRatio{
             position: relative;
             width: 100%;
@@ -71,19 +72,19 @@ main h1{
             @include max($mobile){ filter: grayscale(0) brightness(100%) }
         }
         .post__info{
-            padding: 2rem 2.4rem;
+            padding: 3rem 3rem;
         }
         h3{
             margin: 0;
-            line-height: 1.4;
-            font-size: 1.6rem;
+            line-height: 1.5;
+            font-size: 1.8rem;
         }
         time,span{
         vertical-align: middle;
         display: inline-flex;
         font-size: 1.2rem;
         line-height: 1.4rem;
-        opacity: .7;
+        color: #ccc;
         margin: 1rem .8em 0 0;
             .material-icons{
                 vertical-align: middle;
@@ -94,15 +95,18 @@ main h1{
             }
         }
         p{
-            margin: 1.6rem 0 0;
+            margin: .8rem 0 0;
+            padding: .8rem 0 0;
+            border-top: .1rem solid #ccc;
             line-height: 1.5;
             font-size: 1.4rem;
         }
     }
     a:hover,a:active{
-        background: #f0f0f0;
-        transition: .6s;
+        transition: .3s;
         border-bottom: .6rem solid $acce;
+        box-shadow: .8rem .8rem 2.4rem #ccc;
+        transform: scale(1.009);
         img{ filter: grayscale(0) brightness(100%) }
     }
     .adsense{
