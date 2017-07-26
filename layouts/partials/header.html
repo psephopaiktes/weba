@@ -3,10 +3,20 @@
 
 <head>
     <title>
-        {{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}
+        {{ $isHomePage := eq .Title .Site.Title }}
+        {{ .Title }}
+        {{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}
     </title>
     <link rel="canonical" href="{{ .Permalink }}"/>
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/main.min.css">
+    <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/main.min.css"> -->
+
+    {{ $.Scratch.Set "ogpType" "article" }}
+
+    {{ if eq .Title "Blogs" }}
+      {{ $.Scratch.Set "ogpType" "blog" }}
+    {{ end }}
+
+    <meta property="og:type" content="{{ $.Scratch.Get "ogpType" }}" />
 </head>
 
 
@@ -15,7 +25,7 @@
     <!-- header block-->
     <header class="globalHeader">
         <h1><a href="{{ .Site.BaseURL }}">
-            <img src="images/logo.svg" alt="logo">
+            <!-- <img src="images/logo.svg" alt="logo"> -->
             <p>Design &amp; Frontend</p>
         </a></h1>
         <nav><ul>

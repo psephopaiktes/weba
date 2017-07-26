@@ -24,6 +24,9 @@
                 <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
             </aside>
             <aside id="contentList"><ol></ol></aside>
+            {{ if isset .Params "image"}}
+            <p>image is {{ .Params.image }}</p>
+            {{ end }}
         </header>
 
         <section>{{ .Content }}</section>
