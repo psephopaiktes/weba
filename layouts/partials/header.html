@@ -3,12 +3,13 @@
 
 <head>
     <title>
-        {{ $isHomePage := eq .Title .Site.Title }}
-        {{ .Title }}
-        {{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}
+    {{ if eq .Title .Site.Title }}
+        {{ .Site.Title }} | デザインとフロントエンドのブログ
+    {{ else }}
+        {{ .Title }} | {{ .Site.Title }}
+    {{ end }}
     </title>
     <link rel="canonical" href="{{ .Permalink }}"/>
-    <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/main.min.css"> -->
 
     {{ $.Scratch.Set "ogpType" "article" }}
 
@@ -17,6 +18,7 @@
     {{ end }}
 
     <meta property="og:type" content="{{ $.Scratch.Get "ogpType" }}" />
+
 </head>
 
 

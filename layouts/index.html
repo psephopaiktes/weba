@@ -1,7 +1,9 @@
 {{ partial "header.html" . }}
 
-    <!-- main content block-->
-    <main><ul class="posts" id="posts">
+<!-- main content block-->
+<main>
+
+    <ul class="posts" id="posts">
 
         {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 12 }}
         {{ range $paginator.Pages }}
@@ -21,16 +23,16 @@
     </ul>
 
     {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-        <nav class="pagination">
-            {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}">前へ</a>
-            {{ end }}
-            <span class="current-page">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
-            {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}">次へ</a>
-            {{ end }}
-        </nav>
+    <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">前へ</a>
+        {{ end }}
+        <span class="current-page">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}">次へ</a>
+        {{ end }}
+    </nav>
     {{ end }}
-    </main>
 
+</main>
 {{ partial "footer.html" . }}

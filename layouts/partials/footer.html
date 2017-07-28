@@ -1,6 +1,10 @@
 
     <!-- SCRIPTS-->
+    {{ if isset .Params "asset"}}
+    <script src="scripts/{{ .Params.asset }}.min.js" async></script>
+    {{ else }}
     <script src="scripts/main.min.js" async></script>
+    {{ end }}
 
 </body>
 </html>

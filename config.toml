@@ -18,5 +18,5 @@ logo = "/images/ロゴファイル名"
 # tag = "tags" タグ一覧ページ 不要
 archive = "archives"
 
-[permalinks]
-blog = "/:year/:month/:day/:slug/"
+# [permalinks]
+# blog = "/:year/:month/:day/:slug/"
