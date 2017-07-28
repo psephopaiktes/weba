@@ -19,6 +19,15 @@
 
     <meta property="og:type" content="{{ $.Scratch.Get "ogpType" }}" />
 
+    {{ if eq .asset ""}}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{ .Params.asset }}.min.css">
+    {{ else }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.min.css">
+    {{ end }}
+
+
+
+
 </head>
 
 

@@ -1,0 +1,12 @@
+{{ partial "header.html" (dict "asset" "") }}
+
+    <!-- main content block-->
+    <main>
+
+        <test>{{ .Params.asset }}</test>
+
+        <section>{{ .Content }}</section>
+
+    </main>
+
+{{ partial "footer.html" . }}
