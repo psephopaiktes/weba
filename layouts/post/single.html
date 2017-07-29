@@ -1,50 +1,55 @@
-{{ partial "header.html" (dict "asset" "post") }}
+{{ partial "header" (dict "asset" "post" "context" . "Site" .Site ) }}
 
-    <!-- main content block-->
-    <main><article>
+{{ "<!-- main content block -->" | safeHTML }}
+<main><article>
 
-        <header>
-            <h1>{{ .Title }}</h1>
-            <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">event</i>{{ .Date.Format "2006.01.02" }}公開</time>
-            <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">update</i> {{ .Date.Format "2006.01.02" }}更新</time>
-            <a class="postHeader__category" href=""><i class="material-icons">folder_open</i>Design</a>
-            <ul class="postHeader__tags">
-                <li><a href="">Hugo</a>
-                <li><a href="">HTML</a>
-                <li><a href="">CSS</a>
-            </ul>
-            <picture class="hero">
-                <source media="(max-width:600px)" srcset="images/post/20170717_hello-world_sp.jpg" sizes="100vw">
-                    <img src="images/post/20170717_hello-world_pc.jpg" alt="ヘッダー画像">
-            </picture>
-            <aside class="share">
-                <a class="twitter" href="" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
-                <a class="facebook" href="" target="_blank" rel="noopener" title="Facebookでシェアする">Facebook</a>
-                <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
-                <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
-            </aside>
-            <aside id="contentList"><ol></ol></aside>
-            {{ if isset .Params "image"}}
-            <p>image is {{ .Params.image }}</p>
-            {{ end }}
-        </header>
+    <header>
+        <h1>{{ .Title }}</h1>
+        <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">event</i>{{ .Date.Format "2006.01.02" }}公開</time>
+        {{ if isset .Params "Update"}}
+        <time datetime="{{ .Update.Format "2006-01-02" }}"><i class="material-icons">update</i> {{ .Update.Format "2006.01.02" }}更新</time>
+        {{ end }}
+        {{ with .Params.categories -}}{{ range . -}}
+        <a class="postHeader__category" href="/categories/{{ . | urlize }}/"><i class="material-icons">folder_open</i>{{ . }}</a>
+        {{- end }}{{- end }}
+        {{ with .Params.tags -}}
+        <ul class="postHeader__tags">
+            {{ range . -}}
+            <li><a href="/tags/{{ . | urlize }}/"># {{ . }}</a>
+            {{- end }}
+        </ul>
+        {{- end }}
+        {{ if isset .Params "image" }}
+        <picture class="hero">
+            <source media="(max-width:600px)" srcset="images/post/{{ .Params.image }}_sp.jpg" sizes="100vw">
+                <img src="images/post/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
+        </picture>
+        {{ end }}
+        <aside class="share">
+            <a class="twitter" href="" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
+            <a class="facebook" href="" target="_blank" rel="noopener" title="Facebookでシェアする">Facebook</a>
+            <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
+            <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
+        </aside>
+        <aside id="contentList"><ol></ol></aside>
+    </header>
 
-        <test>{{ .Params.asset }}</test>
+    <section>
+        {{ .Content }}
+    </section>
 
-        <section>{{ .Content }}</section>
 
+    <footer>
+        <aside class="share">
+            <a class="twitter" href="" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
+            <a class="facebook" href="" target="_blank" rel="noopener" title="Facebookでシェアする">Facebook</a>
+            <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
+            <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
+        </aside>
+        <aside class="disqus"></aside>
+        <div class="adsense"></div>
+    </footer>
 
-        <footer>
-            <aside class="share">
-                <a class="twitter" href="" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
-                <a class="facebook" href="" target="_blank" rel="noopener" title="Facebookでシェアする">Facebook</a>
-                <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
-                <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
-            </aside>
-            <aside class="disqus"></aside>
-            <div class="adsense"></div>
-        </footer>
+</article></main>
 
-    </article></main>
-
-{{ partial "footer.html" . }}
+{{ partial "footer" (dict "asset" "post" "context" . "Site" .Site ) }}

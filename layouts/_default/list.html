@@ -3,6 +3,9 @@
 {{ "<!-- main content block -->" | safeHTML }}
 <main>
 
+    <h1>{{ .Title }} の記事</h1>
+    <!-- <h1><b>Design</b> カテゴリの記事</h1> -->
+
     <ul class="posts" id="posts">
 
 {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 11 -}}

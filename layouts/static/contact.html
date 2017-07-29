@@ -1,0 +1,18 @@
+{{ partial "header" (dict "asset" "contact" "context" . "Site" .Site ) }}
+
+{{ "<!-- main content block -->" | safeHTML }}
+<main>
+    <div class="hero">
+        <h1>CONTACT</h1>
+        <p>ご連絡はSNSを通じてお願いいたします。</p>
+    </div>
+    <ul class="contactList">
+        <li><a class="github" href="https://github.com/psephopaiktes" target="_brank" rel="noopener">GitHub</a>
+        <li><a class="twitter" href="https://twitter.com/psephopaiktes" target="_brank" rel="noopener">Twitter</a>
+        <li><a class="facebook" href="" target="_brank" rel="noopener">Facebook</a>
+        <li><a class="instagram" href="https://www.instagram.com/psephopaiktes" target="_brank" rel="noopener">Instagram</a>
+        <li><a class="pixiv" href="http://pixiv.me/psephopaiktes" target="_brank" rel="noopener">Pixiv</a>
+    </ul>
+</main>
+
+{{ partial "footer" (dict "asset" "" "context" . "Site" .Site ) }}

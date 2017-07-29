@@ -1,0 +1,20 @@
+{{ partial "header" (dict "asset" "about" "context" . "Site" .Site ) }}
+
+{{ "<!-- hero img -->" | safeHTML }}
+<div class="hero">
+    <img src="/images/logo.svg" alt="logo">
+    <p>Design &amp; Frontend</p>
+</div>
+
+{{ "<!-- main content block -->" | safeHTML }}
+<main>
+    <h1>ABOUT WEBA</h1>
+    <h2>このブログについて</h2>
+    <p><b>WEBA</b>はWeb制作やデザイン、フロントエンド技術について自分用のメモやアウトプットのために執筆しているブログです。キーワードとしては「グラフィックデザイン」「UI/UX」「HTML/CSS」「フロントエンド」「Javascript」あたりのことを書いていく予定です。</p>
+    <h2>ソースコード</h2>
+    <p>このブログは<a href="https://gohugo.io/" target="_blank">HUGO</a>と<a href="https://pages.github.com/" target="_blank">GitHub Pages</a>で作成・公開されています。ソースコードは<a href="https://github.com/psephopaiktes/weba" target="_blank">こちら</a>でご確認可能です。</p>
+    <h2>作者について</h2>
+    <p>平田と申します。都内在住、駆け出しUXデザイナーです。スキルセット的には「 Markup > Design > Frontend 」といった感じです。詳しくは<a href="http://hirata.works/" target="_blank">ポートフォリオ(作品集)</a>も御覧ください。</p>
+</main>
+
+{{ partial "footer" (dict "asset" "" "context" . "Site" .Site ) }}

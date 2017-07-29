@@ -1,10 +1,13 @@
-{{ partial "header.html" (dict "asset" "404") }}
+{{ partial "header" (dict "asset" "404" "context" . "Site" .Site ) }}
 
-<!-- main content block-->
+{{ "<!-- main content block -->" | safeHTML }}
 <main>
-
     <h1>404</h1>
-
+    <p>page not found</p>
+    <nav><ul>
+        <li><a href="{{ .Site.BaseURL }}">HOME</a>
+        <li><a href="{{ .Site.BaseURL }}/contact">CONTACT</a>
+    </ul></nav>
 </main>
 
-{{ partial "footer" . }}
+{{ partial "footer" (dict "asset" "" "context" . "Site" .Site ) }}

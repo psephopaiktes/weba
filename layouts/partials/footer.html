@@ -1,10 +1,16 @@
+{{ "<!-- footer block -->" | safeHTML }}
+<footer class="globalFooter">
+    <a id="gotop" title="上へスクロール">▲</a>
+    <p><small>© hirata 2017</small></p>
+</footer>
 
-    <!-- SCRIPTS-->
-    {{ if isset .Params "asset"}}
-    <script src="scripts/{{ .Params.asset }}.min.js" async></script>
-    {{ else }}
-    <script src="scripts/main.min.js" async></script>
-    {{ end }}
 
+{{ "<!-- SCRIPTS -->" | safeHTML }}
+<script src="{{ .Site.BaseURL }}/scripts/main.min.js" async></script>
+{{- if ne .asset "" -}}
+<script src="{{ .Site.BaseURL }}/scripts/{{.asset}}.min.js" async></script>
+{{- end -}}
+
+</div>{{ "<!-- / wrap -->" | safeHTML }}
 </body>
 </html>

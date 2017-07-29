@@ -1,9 +1,11 @@
-languageCode = "ja_jp"
+languageCode = "ja"
 title = "WEBA"
 author = "Akira HIRATA"
 copyright = "© weba 2017"
 baseURL = "http://hirata.blog"
 publishDir = "docs"
+hasCJKLanguage = true
+disableHugoGeneratorInject = true
 
 [Params]
 # 独自変数
@@ -12,11 +14,11 @@ analytics = "UA-01234567-8"
 github = "gituhubアカウント名"
 facebook = "フェイスブックアカウント名"
 linkedin = "Linkedinアカウント名"
-logo = "/images/ロゴファイル名"
 
 [taxonomies]
-# tag = "tags" タグ一覧ページ 不要
+tag = "tagss"
+category = "categories"
 archive = "archives"
 
-# [permalinks]
-# blog = "/:year/:month/:day/:slug/"
+[permalinks]
+post = "/:year-:month/:slug/"

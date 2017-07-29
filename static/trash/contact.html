@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
-<!--
-
-('A`)y-~  < Hi
-ﾉ( ﾍ ﾍ
-
--->
 
 <head>
-	<meta name="generator" content="Hugo 0.19" />
+    <!--
+
+    ('A`)y-~  < Hi
+    ﾉ( ﾍ ﾍ
+
+    -->
     <title>WEBA | デザインとフロントエンドのブログ</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="description" content="Web・UXデザインやフロントエンド技術についてのブログです。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="http://hirata.blog"><link rel="next" href="">
-    <!-- TODO:  --><!-- icons-->
+    <link rel="next" href="">
+    <!-- icons-->
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- Add to homescreen for Chrome on Android-->
     <meta name="mobile-web-app-capable" content="yes">
@@ -34,8 +33,10 @@
     <!-- Disable tap highlight on IE-->
     <meta name="msapplication-tap-highlight" content="no">
     <!-- css-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="http://hirata.blog/styles/main.min.css"><!-- OGP -->
-    <!-- GA -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/contact.min.css">
+    <!-- OGP -->
+    <!-- GA-->
     <script async src="scripts/analytics.min.js"></script>
 </head>
 
@@ -46,8 +47,8 @@
 
     <!-- header block-->
     <header class="globalHeader">
-        <h1><a href="http://hirata.blog">
-            <img src="http://hirata.blog/images/logo.svg" alt="logo">
+        <h1><a href="/">
+            <img src="images/logo.svg" alt="logo">
             <p>Design &amp; Frontend</p>
         </a></h1>
         <button id="menuButton"><i class="material-icons">menu</i></button>
@@ -69,11 +70,14 @@
                 <li><a href=""><svg class="feedly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 60">
                     <path class="cls-1" d="M34.74,45.07l3.86,3.85a1.09,1.09,0,0,1,0,1.54l-2.86,2.83a.61.61,0,0,1-.48.19H32.74a.61.61,0,0,1-.47-.19l-2.9-2.87a1.09,1.09,0,0,1,0-1.54l3.82-3.82a1.09,1.09,0,0,1,1.54,0Zm0-15.81,3.86,3.85a1.09,1.09,0,0,1,0,1.54L27.83,45.42a.61.61,0,0,1-.48.19H24.83a.6.6,0,0,1-.47-.19l-2.9-2.89a1.09,1.09,0,0,1,0-1.54L33.23,29.26a1.09,1.09,0,0,1,1.54,0Zm0-15.78,3.86,3.85a1.09,1.09,0,0,1,0,1.54L19.92,37.54a.61.61,0,0,1-.48.19H16.93a.61.61,0,0,1-.47-.19l-2.9-2.91a1.09,1.09,0,0,1,0-1.54L33.23,13.47A1.09,1.09,0,0,1,34.77,13.47ZM39.59,2.31a7.92,7.92,0,0,0-11.18,0l-26,26a7.88,7.88,0,0,0,0,11.16L21.15,58.24A7.16,7.16,0,0,0,25.31,60H42.56a7.93,7.93,0,0,0,4.35-1.83l18.7-18.71a7.88,7.88,0,0,0,0-11.16l-26-26Z"/>
                 </svg></a>
+                <!-- <li><a href=""><svg class="notification" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 60">
+                    <path class="cls-1" d="M25,60a6.17,6.17,0,0,0,6.15-6.15H18.85A6.15,6.15,0,0,0,25,60ZM43.46,41.54V26.15c0-9.45-5-17.35-13.85-19.45V4.62a4.62,4.62,0,0,0-9.23,0V6.71C11.55,8.8,6.54,16.68,6.54,26.15V41.54L.38,47.69v3.08H49.62V47.69Z"/>
+                </svg></a> -->
             </ul>
             <nav><ul>
-                <li><a href="http://hirata.blog">HOME</a>
-                <li><a href="http://hirata.blog/about">ABOUT</a>
-                <li><a href="http://hirata.blog/contact">CONTACT</a>
+                <li><a href="/">HOME</a>
+                <li><a href="/about.html">ABOUT</a>
+                <li><a href="/contact.html">CONTACT</a>
             </ul></nav>
         </div>
         <button id="searchButton"><i class="material-icons">search</i></button>
@@ -87,49 +91,46 @@
             <i class="material-icons">search</i>
         </div>
         <ul class="search__categories">
-            <li><a href="http://hirata.blog/category/"><i class="material-icons">code</i>Frontend</a>
-            <li><a href="http://hirata.blog/category/"><i class="material-icons">create</i>Design</a>
-            <li><a href="http://hirata.blog/category/"><i class="material-icons">subject</i>Other</a>
-            <li><a href="http://hirata.blog/archive"><i class="material-icons">inbox</i>Archives</a>
+            <li><a href=""><i class="material-icons">code</i>Frontend</a>
+            <li><a href=""><i class="material-icons">create</i>Design</a>
+            <li><a href=""><i class="material-icons">subject</i>Other</a>
+            <li><a href=""><i class="material-icons">inbox</i>Archives</a>
         </ul>
         <ul class="search__tags">
-            
+            <li><a href="">Hugo</a>
+            <li><a href="">HTML</a>
+            <li><a href="">CSS</a>
+            <li><a href="">Chrome</a>
+            <li><a href="">HTML</a>
+            <li><a href="">HTML</a>
         </ul>
-    </aside><!-- /search block -->
+    </aside><!-- / sidebar block -->
+
+    <!-- main content block-->
+    <main>
+        <div class="hero">
+            <h1>CONTACT</h1>
+            <p>ご連絡はSNSを通じてお願いいたします。</p>
+        </div>
+        <ul class="contactList">
+            <li><a class="github" href="https://github.com/psephopaiktes" target="_brank" rel="noopener">GitHub</a>
+            <li><a class="twitter" href="https://twitter.com/psephopaiktes" target="_brank" rel="noopener">Twitter</a>
+            <li><a class="facebook" href="" target="_brank" rel="noopener">Facebook</a>
+            <li><a class="instagram" href="https://www.instagram.com/psephopaiktes" target="_brank" rel="noopener">Instagram</a>
+            <li><a class="pixiv" href="http://pixiv.me/psephopaiktes" target="_brank" rel="noopener">Pixiv</a>
+        </ul>
+    </main>
+
+    <!-- footer block-->
+    <footer class="globalFooter">
+        <a id="gotop" title="上へスクロール">▲</a>
+        <p><small>© hirata 2017</small></p>
+    </footer>
 
 
-<!-- main content block -->
-<main>
+    <!-- SCRIPTS-->
+    <script src="scripts/main.min.js" async></script>
 
-    <ul class="posts" id="posts">
-
-        <li><a href="http://hirata.blog/2017-07/test/">
-            <div class="fixRatio"><img src="images/post/20170717_hello-world_sp.jpg" alt="post-image"></div>
-            <div class="post__info">
-                <h3>test </h3>
-                <time datetime="2017-07-28T11:58:45&#43;09:00"><i class="material-icons">event</i>2017.07.28</time>
-                <span><i class="material-icons">create</i>Design</span>
-                <p>文字詰めできるCSSのfont-feature-settingsが凄い！ 日本語フォントこそ指定したい自動カーニング文字詰めできるCSSのfont-feature-settingsが凄い！ 日本語フォントこそ指定したい自動カーニング文字詰めできるCSSのfont-feature-settingsが凄い！ 日本語フォントこそ指定したい自動カーニング</p>
-            </div>
-        </a></li>
-
-
-        <li class="adsense"></li>
-
-    </ul>
-
-    
-
-</main>
-<!-- footer block -->
-<footer class="globalFooter">
-    <a id="gotop" title="上へスクロール">▲</a>
-    <p><small>© hirata 2017</small></p>
-</footer>
-
-
-<!-- SCRIPTS -->
-<script src="http://hirata.blog/scripts/main.min.js" async></script></div><!-- / wrap -->
+</div><!-- / wrap -->
 </body>
 </html>
-
