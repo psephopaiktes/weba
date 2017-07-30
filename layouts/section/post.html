@@ -1,0 +1,18 @@
+{{ partial "header" (dict "asset" "archive" "context" . "Site" .Site ) }}
+
+{{ "<!-- main content block -->" | safeHTML }}
+<main>
+
+    <h1>全記事一覧</h1>
+
+    {{/* <h2>2017年 8月</h2> */}}
+    <ul class="posts" id="posts">
+
+    {{ range (where .Data.Pages "Type" "post") }}
+        <li>{{ .Date.Format "2006.01.02" }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+
+    </ul>
+
+</main>
+{{ partial "footer" (dict "asset" "" "context" . "Site" .Site ) }}

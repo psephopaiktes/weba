@@ -5,15 +5,16 @@
 
     <header>
         <h1>{{ .Title }}</h1>
-        <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">event</i>{{ .Date.Format "2006.01.02" }}公開</time>
+        <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">schedule</i>{{ .Date.Format "2006.01.02" }}公開</time>
         {{ if isset .Params "Update"}}
         <time datetime="{{ .Update.Format "2006-01-02" }}"><i class="material-icons">update</i> {{ .Update.Format "2006.01.02" }}更新</time>
         {{ end }}
         {{ with .Params.categories -}}{{ range . -}}
-        <a class="postHeader__category" href="/categories/{{ . | urlize }}/"><i class="material-icons">folder_open</i>{{ . }}</a>
+        <a class="postHeader__category" href="/categories/{{ . | urlize }}/"><i class="material-icons">folder</i>{{ . }}</a>
         {{- end }}{{- end }}
         {{ with .Params.tags -}}
         <ul class="postHeader__tags">
+            <i class="material-icons">local_offer</i>
             {{ range . -}}
             <li><a href="/tags/{{ . | urlize }}/"># {{ . }}</a>
             {{- end }}
@@ -31,7 +32,9 @@
             <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
             <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
         </aside>
-        <aside id="contentList"><ol></ol></aside>
+        {{ if .Params.contentlist -}}
+            <aside id="contentList"><ol></ol></aside>
+        {{- end }}
     </header>
 
     <section>

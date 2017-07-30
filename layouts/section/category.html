@@ -3,14 +3,7 @@
 {{ "<!-- main content block -->" | safeHTML }}
 <main>
 
-
-    <h1>
-        {{- if eq .Data.Singular "category" -}}
-            <b>{{ .Title }}</b> カテゴリの記事
-        {{- else if eq .Data.Singular "tag" -}}
-            <b>{{ .Title }}</b> タグの記事
-        {{- end -}}
-    </h1>
+    <h1><b>{{ .Title }}</b> カテゴリの記事</h1>
 
     <ul class="posts" id="posts">
 
@@ -19,11 +12,9 @@
 
 {{ .Render "li" }}
 
-{{ else }}
-
-<p>記事がないよ</p>
-
 {{- end }}
+
+        <li class="adsense"></li>
 
     </ul>
 
@@ -35,7 +26,7 @@
         {{ end }}
 
         <select>
-            <option url="{{ .Paginator.2.URL }}" selected>{{ .Paginator.PageNumber }}</option>
+            <option selected>{{ .Paginator.PageNumber }}</option>
             <!-- TODO: FOR 文まわして作る -->
         </select>
         <span>&nbsp;&nbsp;/&nbsp;&nbsp;{{ .Paginator.TotalPages }}</span>

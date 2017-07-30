@@ -95,19 +95,23 @@
 
     {{ "<!-- search block -->" | safeHTML }}
     <aside class="search">
+
         <div class="search__box">
-            <input type="text" placeholder="search">
+            <input id="search__box" type="text" placeholder="search">
             <i class="material-icons">search</i>
         </div>
+
         <ul class="search__categories">
             <li><a href="{{ .Site.BaseURL }}/categories/front"><i class="material-icons">code</i>Frontend</a>
             <li><a href="{{ .Site.BaseURL }}/categories/design"><i class="material-icons">create</i>Design</a>
             <li><a href="{{ .Site.BaseURL }}/categories/other"><i class="material-icons">subject</i>Other</a>
-            <li><a href="{{ .Site.BaseURL }}/archive"><i class="material-icons">inbox</i>Archives</a>
+            <li><a href="{{ .Site.BaseURL }}/post"><i class="material-icons">inbox</i>Archives</a>
         </ul>
+
         <ul class="search__tags">
-            {{ range $key, $value := .Site.Taxonomies.tags.ByCount }}
-            <li><a href="/tags/{{ $key | urlize }}">{{ $key }} ({{ .Count }})</a></li>
-            {{ end }}
+            {{- range $key, $value := .Site.Taxonomies.tags.ByCount }}
+            <li><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }} ({{ $value.Count }})</a>
+            {{- end }}
         </ul>
+
     </aside>{{ "<!-- /search block -->" | safeHTML }}

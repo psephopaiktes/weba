@@ -117,6 +117,21 @@ console.log('© hirata 2017');
 
 
 ///////////////////////////////////////////////
+// search
+///////////////////////////////////////////////
+! function(){
+
+    var elm = document.getElementById('search__box');
+
+    elm.addEventListener('input', function(){
+        window.open('site:hirata.blog ' + elm.value );
+    }, false);
+
+}();
+
+
+
+///////////////////////////////////////////////
 // scroll reveal
 ///////////////////////////////////////////////
 ! function(){

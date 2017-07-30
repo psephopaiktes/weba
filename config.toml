@@ -15,10 +15,5 @@ github = "gituhubアカウント名"
 facebook = "フェイスブックアカウント名"
 linkedin = "Linkedinアカウント名"
 
-[taxonomies]
-tag = "tagss"
-category = "categories"
-archive = "archives"
-
 [permalinks]
 post = "/:year-:month/:slug/"
