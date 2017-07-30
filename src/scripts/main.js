@@ -123,8 +123,9 @@ console.log('© hirata 2017');
 
     var elm = document.getElementById('search__box');
 
-    elm.addEventListener('input', function(){
-        window.open('site:hirata.blog ' + elm.value );
+    elm.addEventListener('keydown', function(){
+        if(window.event.keyCode==13)
+            window.open('https://www.google.co.jp/search?q=site:hirata.blog+' + elm.value );
     }, false);
 
 }();
