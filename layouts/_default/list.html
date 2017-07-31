@@ -19,10 +19,6 @@
 
 {{ .Render "li" }}
 
-{{ else }}
-
-<p>記事がないよ</p>
-
 {{- end }}
 
     </ul>
@@ -30,19 +26,20 @@
     {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
     <nav class="pager">
 
-        {{ if .Paginator.HasPrev }}
+        {{- if .Paginator.HasPrev }}
         <a href="{{ .Paginator.Prev.URL }}" class='disable'><i class="material-icons">navigate_before</i></a>
-        {{ end }}
+        {{- end }}
 
-        <select>
-            <option url="{{ .Paginator.2.URL }}" selected>{{ .Paginator.PageNumber }}</option>
-            <!-- TODO: FOR 文まわして作る -->
+        <select id="pager__select">
+            {{- range $paginator.Pagers }}
+            <option value="{{ .URL }}"{{ if eq . $paginator }} selected{{ end }}>{{ .PageNumber }}</option>
+            {{- end }}
         </select>
         <span>&nbsp;&nbsp;/&nbsp;&nbsp;{{ .Paginator.TotalPages }}</span>
 
-        {{ if .Paginator.HasNext }}
+        {{- if .Paginator.HasNext }}
         <a href="{{ .Paginator.Next.URL }}">NEXT<i class="material-icons">navigate_next</i></a>
-        {{ end }}
+        {{- end }}
 
     </nav>
     {{ end }}

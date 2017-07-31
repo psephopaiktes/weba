@@ -6,6 +6,8 @@
                 {{ with .Params.categories -}}{{ range . -}}
                 <span><i class="material-icons">folder</i>{{ . }}</span>
                 {{- end }}{{- end }}
-                <p>文字詰めできるCSSのfont-feature-settingsが凄い！ 日本語フォントこそ指定したい自動カーニング文字詰めできるCSSのfont-feature-settingsが凄い！ 日本語フォントこそ指定したい自動カーニング文字詰めできるCSSのfont-feature-settingsが凄い！ 日本語フォントこそ指定したい自動カーニング</p>
+                {{ with .Params.description -}}
+                <p>{{ . }}</p>
+                {{- end }}
             </div>
         </a></li>

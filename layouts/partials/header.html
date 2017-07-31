@@ -17,12 +17,19 @@
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="description" content="Web・UXデザインやフロントエンド技術についてのブログです。">
+    <meta name="description" content="{{.Site.Params.Description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{{ .Site.BaseURL }}">
-    {{- if eq .context.Title .Site.Title -}}
-    <link rel="next" href="">
-    {{ "<!-- TODO:  -->" | safeHTML }}
+    {{- if .Paginator.HasNext }}
+    <link rel="next" href="{{ .Paginator.Next.URL }}" />
+    {{- end }}
+    {{- if .Paginator.HasPrev }}
+    <link rel="prev" href="{{ .Paginator.Prev.URL }}" />
+    {{- end }}
+    {{ "<!-- css-->" | safeHTML }}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {{- if ne .asset "" -}}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.min.css">
     {{- end -}}
     {{ "<!-- icons-->" | safeHTML }}
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -42,12 +49,22 @@
     <meta name="theme-color" content="#fc6">
     {{ "<!-- Disable tap highlight on IE-->" | safeHTML }}
     <meta name="msapplication-tap-highlight" content="no">
-    {{ "<!-- css-->" | safeHTML }}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    {{- if ne .asset "" -}}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.min.css">
-    {{- end -}}
     {{ "<!-- OGP -->" | safeHTML }}
+    {{- if eq .context.Title .Site.Title -}}
+    <meta property="og:type" content="website">
+    {{- else -}}
+    <meta property="og:type" content="article">
+    {{- end -}}
+    {{ if isset .Params "description" }}
+    <meta property="og:description" content="{{.Params.description}}" />
+    {{- else -}}
+    <meta property="og:description" content="{{.Site.Params.Description}}">
+    {{- end -}}
+    {{ if isset .Params "image" }}
+    <meta property="og:image" content="{{ .Params.image }}_og.jpg">
+    {{ end }}
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
     {{ "<!-- GA -->" | safeHTML }}
     <script async src="scripts/analytics.min.js"></script>
 </head>

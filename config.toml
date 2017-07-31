@@ -9,7 +9,7 @@ disableHugoGeneratorInject = true
 
 [Params]
 # 独自変数
-description = "サイトの説明"
+description = "Web・UXデザインやフロントエンド技術についてのブログです。"
 analytics = "UA-01234567-8"
 github = "gituhubアカウント名"
 facebook = "フェイスブックアカウント名"

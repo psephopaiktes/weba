@@ -133,6 +133,21 @@ console.log('© hirata 2017');
 
 
 ///////////////////////////////////////////////
+// pager
+///////////////////////////////////////////////
+! function(){
+
+    var elm = document.getElementById('pager__select');
+
+    elm.addEventListener('change', function(){
+        location.href = this.value;
+    }, false);
+
+}();
+
+
+
+///////////////////////////////////////////////
 // scroll reveal
 ///////////////////////////////////////////////
 ! function(){
