@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on WEBA</title>
+    <link>http://hirata.blog/tags/hugo/</link>
+    <description>Recent content in Hugo on WEBA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>© weba 2017</copyright>
+    <lastBuildDate>Fri, 28 Jul 2017 23:58:45 +0900</lastBuildDate>
+    
+	<atom:link href="http://hirata.blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>test</title>
+      <link>http://hirata.blog/2017-07/test/</link>
+      <pubDate>Fri, 28 Jul 2017 23:58:45 +0900</pubDate>
+      
+      <guid>http://hirata.blog/2017-07/test/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
