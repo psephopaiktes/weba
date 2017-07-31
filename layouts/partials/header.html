@@ -19,7 +19,8 @@
     <meta charset="utf-8">
     <meta name="description" content="{{.Site.Params.Description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="{{ .Site.BaseURL }}">
+    <!-- TODO: TOPとリスト系にはすべてこれ表示。AMPする場合は要検討 -->
+    <!-- <link rel="canonical" href="{{ .Site.BaseURL }}"> -->
     {{- if .Paginator.HasNext }}
     <link rel="next" href="{{ .Paginator.Next.URL }}" />
     {{- end }}
