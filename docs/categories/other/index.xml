@@ -2,15 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Other on WEBA</title>
-    <link>http://hirata.blog/categories/other/</link>
+    <link>http://hirata.blog/categories/other/index.xml</link>
     <description>Recent content in Other on WEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Fri, 28 Jul 2017 23:58:45 +0900</lastBuildDate>
-    
-	<atom:link href="http://hirata.blog/categories/other/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://hirata.blog/categories/other/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>test</title>

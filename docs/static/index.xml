@@ -2,15 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Statics on WEBA</title>
-    <link>http://hirata.blog/static/</link>
+    <link>http://hirata.blog/static/index.xml</link>
     <description>Recent content in Statics on WEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
     <lastBuildDate>Sat, 29 Jul 2017 19:09:51 +0900</lastBuildDate>
-    
-	<atom:link href="http://hirata.blog/static/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://hirata.blog/static/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
