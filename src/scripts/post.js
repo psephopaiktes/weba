@@ -5,7 +5,7 @@
 // syntax highlight
 ///////////////////////////////////////////////
 ! function(){
-    hljs.initHighlightingOnLoad();
+    // hljs.initHighlightingOnLoad();
 }();
 
 
@@ -17,12 +17,12 @@
 
     var links = document.links;
 
-    [].forEach.call( links, function(elm,i){
-        if (elm[i].hostname != window.location.hostname) {
-            elm[i].target = '_blank';
-            elm[i].rel = 'noopener';
-        }
-    });
+    for (var i = 0; i < links.length; i++) {
+       if (links[i].hostname != window.location.hostname) {
+           links[i].target = '_blank';
+           links[i].rel = 'noopener';
+       }
+    }
 
 }();
 
@@ -63,7 +63,6 @@
 // embed card bookmarklet ( use on browser )
 ///////////////////////////////////////////////
 /*
-
 javascript:!function(undefined){
     var og = document.querySelector('meta[property="og:image"]');
     if( og )
@@ -77,4 +76,14 @@ javascript:!function(undefined){
     }('<a class="embed-card" href="'+document.location+'" target="brank_" rel="noopener"><img class="og" src="'+img+'" alt="参照記事サムネイル"><h5>'+document.title+'</h5><p></p><img class="favi" src="http://www.google.com/s2/favicons?domain='+location.host+'"><span>'+location.host+'</span><i class="material-icons">open_in_new</i></a>');
 }();
 
+javascript:!function(undefined){
+    var og = document.querySelector('meta[property="og:image"]');
+    if( og ) var img = og.getAttribute('content');
+    else var img = '';
+    !function(a){
+        var b = document.createElement('textarea'),
+        c = document.getSelection();
+        b.textContent = a, document.body.appendChild(b), c.removeAllRanges(), b.select(), document.execCommand('copy'), c.removeAllRanges(), document.body.removeChild(b);
+    }('{{< embed-card\n'+'    "'+document.location+'"\n'+'    "'+img+'"\n'+'    "'+document.title+'"\n'+'    "'+location.host+'"\n'+'>}}\n');
+}();
 */

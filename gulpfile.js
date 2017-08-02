@@ -14,11 +14,11 @@ var sourcemaps = require("gulp-sourcemaps");
 
 
 
-// html
-gulp.task('html', function() {
-    gulp.src(['./src/**/*.html'])
+// post-asset
+gulp.task('post-asset', function() {
+    gulp.src(['./src/post-asset/*'])
         .pipe(plumber())
-        .pipe(gulp.dest('./static'));
+        .pipe(gulp.dest('./static/post-asset'));
 });
 
 // SASS
@@ -65,9 +65,9 @@ gulp.task('reload', function() {
     browserSync.reload();
 });
 
-gulp.task('default',['html','sass','js','img'],function(){
+gulp.task('default',['post-asset','sass','js','img'],function(){
     // browserSync.init({ server: "./static" });
-    gulp.watch('./src/**/*.html', ['html']);
+    gulp.watch('./src/post-asset/*', ['post-asset']);
     gulp.watch('./src/styles/**/*.scss', ['sass']);
     gulp.watch('./src/scripts/**/*.js',['js']);
     gulp.watch('./src/images/**/*',['img']);

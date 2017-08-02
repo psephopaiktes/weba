@@ -20,12 +20,15 @@
             {{- end }}
         </ul>
         {{- end }}
-        {{ if isset .Params "image" }}
         <picture class="hero">
-            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/post/{{ .Params.image }}_sp.jpg" sizes="100vw">
-                <img src="{{ .Site.BaseURL }}/images/post/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
+            {{- if isset .Params "image" }}
+            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_sp.jpg" sizes="100vw">
+                <img src="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
+            {{- else }}
+            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/default_sp.png" sizes="100vw">
+                <img src="{{ .Site.BaseURL }}/images/default_pc.png" alt="ヘッダー画像">
+            {{- end }}
         </picture>
-        {{ end }}
         <aside class="share">
             <a class="twitter" href="" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
             <a class="facebook" href="" target="_blank" rel="noopener" title="Facebookでシェアする">Facebook</a>

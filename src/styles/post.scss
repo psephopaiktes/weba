@@ -129,9 +129,10 @@ article header{
 
 article section{
     >*{
-        margin: 6rem 0 0;
+        margin: 2rem 0 0;
     }
     h2{
+        margin: 6rem 0 0;
         padding-left: 2rem;
         border-left: .2rem solid $acce;
         line-height: 1.4;
@@ -144,28 +145,31 @@ article section{
         color: #ccc !important;
     }
     h3{
-        display: inline-block;
         margin: 4rem 0 0;
         line-height: 1.4;
-        border-bottom: .2rem solid $main;
+        &::before{ content: "◆ "}
     }
     p{
-        margin: 2rem 0 0;
     }
-    .fullImg{
-        display: block;
-        margin: 1.6rem 0;
-        width: 100%;
-    }
-    .leftImage{
-        width: 50%;
-        float: left;
-        margin: 1.6rem 2.4rem 1.6rem 0;
-    }
-    .rightImage{
-        width: 50%;
-        float: right;
-        margin: 1.6rem 0 1.6rem 2.4rem;
+    img{
+        display: inline-block;
+        max-width: 100%;
+        margin: 0;
+        &.left{
+            max-width: 50%;
+            float: left;
+            margin: .8rem 2rem 0 0;
+        }
+        &.right{
+            max-width: 50%;
+            float: right;
+            margin: .8rem 0 0 2rem;
+        }
+        &.center{
+            display: block;
+            max-width: 100%;
+            margin: 2rem auto 0;
+        }
     }
     ul{
         list-style: disc;
@@ -176,8 +180,19 @@ article section{
         padding-left: 2.4rem;
     }
     li{
-        margin-bottom: .8rem;
+        margin: 0 0 .8rem;
         line-height: 1.4;
+        ul,ol{
+            margin: .8rem 0 0;
+        }
+    }
+    .footnote-ref{
+        a{
+            &::before{ content: " [" }
+            &::after{ content: "]" }
+            text-decoration: none;
+            color: darken($acce,20%) !important;
+        }
     }
     table{
         table-layout: fixed;
@@ -194,13 +209,17 @@ article section{
             background: rgba($main,.01);
         }
     }
-    :not(pre) code{ // only inline code
-        background: #f0f0f0;
-        padding: .2rem .4rem;
-        border-radius: .2rem;
-        color: rgba($main,.7);
-    }
+    // :not(pre) code{ // only inline code
+    //     background: #f0f0f0;
+    //     padding: .2rem .4rem;
+    //     border-radius: .2rem;
+    //     color: rgba($main,.7);
+    // }
     b{font-weight: 900;}
+    em{
+        font-style: italic;
+        color: #666;
+    }
     strong{
         background: linear-gradient(transparent 60%, rgba($acce,.8) 40%);
     }
@@ -209,8 +228,7 @@ article section{
         color: rgba($main,.6);
         background: #f0f0f0;
         border-radius: .2rem;
-        margin: 2rem 0;
-        padding: 2rem 2.4rem;
+        padding: .1rem 2.4rem;
         border-left: .4rem solid rgba($main,.2);
     }
     hr{
@@ -221,11 +239,22 @@ article section{
     a:link{ color: darken($acce,20%) }
     a:visited{ color: darken($acce,40%) }
     a:hover,a:active{ color: darken($acce,30%) }
+    .embed-line{
+        opacity: .8;
+        text-decoration: none;
+        text-align: right;
+        border-bottom: .1rem solid;
+        padding-bottom: .2rem;
+        font-size: 1.4rem;
+        .material-icons{
+            font-size: 1.6rem;
+            vertical-align: text-bottom;
+        }
+    }
     .embed-card{
         display: block;
         position: relative;
-        border: .2rem solid #ccc;
-        margin: 2rem 0 0;
+        box-shadow: .1rem .1rem .4rem rgba(#000,.2);
         height: 8rem;
         text-decoration: none;
         color: rgba($main,.6) !important;

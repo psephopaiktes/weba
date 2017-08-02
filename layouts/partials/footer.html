@@ -4,14 +4,14 @@
     <p><small>© hirata 2017</small></p>
 </footer>
 
+</div>{{ "<!-- / wrap -->" | safeHTML }}
 
 {{ "<!-- SCRIPTS -->" | safeHTML }}
 <!-- <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> -->
 <script src="{{ .Site.BaseURL }}/scripts/main.min.js" async></script>
-{{- if ne .asset "" -}}
+{{- if ne .asset "" }}
 <script src="{{ .Site.BaseURL }}/scripts/{{.asset}}.min.js" async></script>
-{{- end -}}
+{{- end }}
 
-</div>{{ "<!-- / wrap -->" | safeHTML }}
 </body>
 </html>
