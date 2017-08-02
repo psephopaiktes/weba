@@ -11,6 +11,24 @@
 
 
 ///////////////////////////////////////////////
+// set md anchor target="brank_"
+///////////////////////////////////////////////
+! function(){
+
+    var links = document.links;
+
+    [].forEach.call( links, function(elm,i){
+        if (elm[i].hostname != window.location.hostname) {
+            elm[i].target = '_blank';
+            elm[i].rel = 'noopener';
+        }
+    });
+
+}();
+
+
+
+///////////////////////////////////////////////
 // Generate Content List
 ///////////////////////////////////////////////
 ! function(){

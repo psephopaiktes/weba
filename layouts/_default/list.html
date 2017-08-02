@@ -14,12 +14,20 @@
 
     <ul class="posts" id="posts">
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") 11 -}}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") 6 -}}
 {{- range $paginator.Pages -}}
 
 {{ .Render "li" }}
 
 {{- end }}
+
+        <!-- <li class="adsense">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5055970484117246"
+                 data-ad-slot="5244399469"
+                 data-ad-format="auto"></ins>
+        </li> -->
 
     </ul>
 

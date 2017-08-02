@@ -5,9 +5,9 @@
 
     <header>
         <h1>{{ .Title }}</h1>
-        <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">schedule</i>{{ .Date.Format "2006.01.02" }}公開</time>
-        {{ if isset .Params "Update"}}
-        <time datetime="{{ .Update.Format "2006-01-02" }}"><i class="material-icons">update</i> {{ .Update.Format "2006.01.02" }}更新</time>
+        <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">schedule</i>{{ .Date.Format "2006.01.02" }} 公開</time>
+        {{ if isset .Params "update"}}
+        <time><i class="material-icons">update</i> {{ .Params.update }} 更新</time>
         {{ end }}
         {{ with .Params.categories -}}{{ range . -}}
         <a class="postHeader__category" href="/categories/{{ . | urlize }}/"><i class="material-icons">folder</i>{{ . }}</a>
@@ -22,8 +22,8 @@
         {{- end }}
         {{ if isset .Params "image" }}
         <picture class="hero">
-            <source media="(max-width:600px)" srcset="images/post/{{ .Params.image }}_sp.jpg" sizes="100vw">
-                <img src="images/post/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
+            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/post/{{ .Params.image }}_sp.jpg" sizes="100vw">
+                <img src="{{ .Site.BaseURL }}/images/post/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
         </picture>
         {{ end }}
         <aside class="share">
@@ -49,7 +49,7 @@
             <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
             <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
         </aside>
-        <aside class="disqus"></aside>
+        <!-- <aside class="disqus"></aside>
         <div class="adsense">
             <ins class="adsbygoogle"
                  style="display:block; text-align:center;"
@@ -57,7 +57,7 @@
                  data-ad-layout="in-article"
                  data-ad-client="ca-pub-5055970484117246"
                  data-ad-slot="5667426518"></ins>
-        </div>
+        </div> -->
     </footer>
 
 </article></main>
