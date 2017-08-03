@@ -12,7 +12,7 @@ disableHugoGeneratorInject = true
 description = "Web・UXデザインやフロントエンド技術についてのブログです。"
 analytics = "UA-01234567-8"
 github = "gituhubアカウント名"
-facebook = "フェイスブックアカウント名"
+facebook = "http://fb.me/hirata.blog"
 linkedin = "Linkedinアカウント名"
 
 [permalinks]
