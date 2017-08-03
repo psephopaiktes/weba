@@ -1,4 +1,4 @@
-{{ partial "header" (dict "asset" "post" "context" . "Site" .Site ) }}
+{{ partial "header" (dict "asset" "post" "context" . "Site" .Site "ogp" .Params.img ) }}
 
 {{ "<!-- main content block -->" | safeHTML }}
 <main><article>

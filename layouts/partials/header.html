@@ -8,6 +8,7 @@
 {{ "-->" | safeHTML }}
 
 <head>
+
     <title>
     {{- if eq .context.Title .Site.Title -}}
         {{- .context.Title }} | デザインとフロントエンドのブログ
@@ -15,6 +16,7 @@
         {{- .context.Title }} | {{ .Site.Title -}}
     {{- end -}}
     </title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="description" content="{{.Site.Params.Description}}">
@@ -29,9 +31,10 @@
     {{- end }}
     {{ "<!-- css-->" | safeHTML }}
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    {{- if ne .asset "" -}}
+    {{- if ne .asset "" }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.min.css">
-    {{- end -}}
+    {{- end }}
+
     {{ "<!-- icons-->" | safeHTML }}
     <link rel="shortcut icon" href="images/favicon.ico">
     {{ "<!-- Add to homescreen for Chrome on Android-->" | safeHTML }}
@@ -50,22 +53,28 @@
     <meta name="theme-color" content="#fc6">
     {{ "<!-- Disable tap highlight on IE-->" | safeHTML }}
     <meta name="msapplication-tap-highlight" content="no">
+
     {{ "<!-- OGP -->" | safeHTML }}
-    {{- if eq .context.Title .Site.Title -}}
+    {{- if eq .context.Title .Site.Title }}
     <meta property="og:type" content="website">
-    {{- else -}}
+    {{- else }}
     <meta property="og:type" content="article">
-    {{- end -}}
-    {{ if isset .Params "description" }}
+    {{- end }}
+    <meta property="og:title" content="{{.context.Title}}" />
+    {{- if isset .Params "description" }}
     <meta property="og:description" content="{{.Params.description}}" />
-    {{- else -}}
+    {{- else }}
     <meta property="og:description" content="{{.Site.Params.Description}}">
-    {{- end -}}
-    {{ if isset .Params "image" }}
-    <meta property="og:image" content="{{ .Params.image }}_og.jpg">
-    {{ end }}
+    {{- end }}
+    {{- if ne .ogp nil }}
+    <meta property="og:image" content="og.jpg">
+    {{- else }}
+    <meta property="og:image" content="{{ .Site.BaseURL }}/images/icon.png">
+    {{- end }}
+    <meta property="og:url" content="{{.context.Permalink}}">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="{{ .Site.Title }}" />
+
     {{ "<!-- Analytics, AdSense -->" | safeHTML }}
     <!-- <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>
     <script>
@@ -75,6 +84,7 @@
         });
     </script> -->
     <script async src="{{ .Site.BaseURL }}/scripts/analytics.min.js"></script>
+
 </head>
 
 
