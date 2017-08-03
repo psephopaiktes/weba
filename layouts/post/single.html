@@ -29,12 +29,7 @@
                 <img src="{{ .Site.BaseURL }}/images/default_pc.png" alt="ヘッダー画像">
             {{- end }}
         </picture>
-        <aside class="share">
-            <a class="twitter" href="" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
-            <a class="facebook" href="" target="_blank" rel="noopener" title="Facebookでシェアする">Facebook</a>
-            <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
-            <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
-        </aside>
+        {{ partial "share" . }}
         {{ if .Params.contentlist -}}
             <aside id="contentList"><ol></ol></aside>
         {{- end }}
@@ -46,12 +41,7 @@
 
 
     <footer>
-        <aside class="share">
-            <a class="twitter" href="" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
-            <a class="facebook" href="" target="_blank" rel="noopener" title="Facebookでシェアする">Facebook</a>
-            <a class="hatena" href="" target="_blank" rel="noopener" title="はてなブックマークに登録する">はてなブックマーク</a>
-            <a class="pocket" href="" target="_blank" rel="noopener" title="Pocketに保存する">Pocket</a>
-        </aside>
+        {{ partial "share" . }}
         <!-- <aside class="disqus"></aside>
         <div class="adsense">
             <ins class="adsbygoogle"
