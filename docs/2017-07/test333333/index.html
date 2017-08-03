@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--
+
+('A`)y-~  < Hi
+ﾉ( ﾍ ﾍ
+
+-->
+
+<head>
+    <title>ジュゲムジュゲム | WEBA</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="description" content="Web・UXデザインやフロントエンド技術についてのブログです。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <!-- css-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="http://hirata.blog/styles/post.min.css"><!-- icons-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- Add to homescreen for Chrome on Android-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="WEBA">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="myTemplate">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <!-- Tile icon for Win8 (144x144 + tile color)-->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#fc6">
+    <!-- Color the status bar on mobile devices-->
+    <meta name="theme-color" content="#fc6">
+    <!-- Disable tap highlight on IE-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- OGP --><meta property="og:type" content="article"><meta property="og:description" content="Web・UXデザインやフロントエンド技術についてのブログです。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="WEBA" />
+    <!-- Analytics, AdSense -->
+    
+    <script async src="http://hirata.blog/scripts/analytics.min.js"></script>
+</head>
+
+
+<body>
+<div id="mask"></div>
+<div class="wrap">
+
+    <!-- header block-->
+    <header class="globalHeader">
+        <h1><a href="http://hirata.blog">
+            <img src="http://hirata.blog/images/logo.svg" alt="logo">
+            <p>Design &amp; Frontend</p>
+        </a></h1>
+        <button id="menuButton"><i class="material-icons">menu</i></button>
+        <div class="menu">
+            <ul class="follow">
+                <li><a href=""><svg class="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 60">
+                    <path class="cls-1" d="M23.3,60c27.86,0,43.11-23.09,43.11-43.11,0-.66,0-1.31,0-2a30.82,30.82,0,0,0,7.56-7.84,30.24,30.24,0,0,1-8.7,2.38A15.2,15.2,0,0,0,71.88,1.1a30.36,30.36,0,0,1-9.62,3.68A15.16,15.16,0,0,0,36.44,18.59,43,43,0,0,1,5.22,2.76,15.16,15.16,0,0,0,9.91,23,15,15,0,0,1,3,21.09v.19A15.16,15.16,0,0,0,15.19,36.13a15.13,15.13,0,0,1-6.84.26A15.17,15.17,0,0,0,22.5,46.92a30.4,30.4,0,0,1-18.81,6.5,30.84,30.84,0,0,1-3.61-.22A42.89,42.89,0,0,0,23.3,60"/>
+                </svg></a>
+                <li><a href=""><svg class="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                    <path
+                        id="White"
+                        class="cls-1"
+                        d="M56.69,0H3.31A3.31,3.31,0,0,0,0,3.31V56.69A3.31,3.31,0,0,0,3.31,60H32V36.76H24.23V27.71H32V21c0-7.75,4.73-12,11.65-12a64.15,64.15,0,0,1,7,.36v8.1H45.89c-3.76,0-4.49,1.79-4.49,4.41v5.78h9L49.2,36.76H41.4V60H56.69A3.31,3.31,0,0,0,60,56.69V3.31A3.31,3.31,0,0,0,56.69,0Z"/>
+                </svg></a>
+                <li><a href=""><svg class="rss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                    <circle class="cls-1" cx="8.41" cy="51.59" r="8.41"/>
+                    <path class="cls-1" d="M0,0V10.91A49.09,49.09,0,0,1,49.09,60H60A60,60,0,0,0,0,0ZM0,21.83V32.74A27.29,27.29,0,0,1,27.26,60H38.17A38.16,38.16,0,0,0,0,21.83Z"/>
+                </svg></a>
+                <li><a href=""><svg class="feedly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 60">
+                    <path class="cls-1" d="M34.74,45.07l3.86,3.85a1.09,1.09,0,0,1,0,1.54l-2.86,2.83a.61.61,0,0,1-.48.19H32.74a.61.61,0,0,1-.47-.19l-2.9-2.87a1.09,1.09,0,0,1,0-1.54l3.82-3.82a1.09,1.09,0,0,1,1.54,0Zm0-15.81,3.86,3.85a1.09,1.09,0,0,1,0,1.54L27.83,45.42a.61.61,0,0,1-.48.19H24.83a.6.6,0,0,1-.47-.19l-2.9-2.89a1.09,1.09,0,0,1,0-1.54L33.23,29.26a1.09,1.09,0,0,1,1.54,0Zm0-15.78,3.86,3.85a1.09,1.09,0,0,1,0,1.54L19.92,37.54a.61.61,0,0,1-.48.19H16.93a.61.61,0,0,1-.47-.19l-2.9-2.91a1.09,1.09,0,0,1,0-1.54L33.23,13.47A1.09,1.09,0,0,1,34.77,13.47ZM39.59,2.31a7.92,7.92,0,0,0-11.18,0l-26,26a7.88,7.88,0,0,0,0,11.16L21.15,58.24A7.16,7.16,0,0,0,25.31,60H42.56a7.93,7.93,0,0,0,4.35-1.83l18.7-18.71a7.88,7.88,0,0,0,0-11.16l-26-26Z"/>
+                </svg></a>
+            </ul>
+            <nav><ul>
+                <li><a href="http://hirata.blog">HOME</a>
+                <li><a href="http://hirata.blog/about">ABOUT</a>
+                <li><a href="http://hirata.blog/contact">CONTACT</a>
+            </ul></nav>
+        </div>
+        <button id="searchButton"><i class="material-icons">search</i></button>
+    </header>
+
+
+    <!-- search block -->
+    <aside class="search">
+
+        <div class="search__box">
+            <input id="search__box" type="text" placeholder="search">
+            <i class="material-icons">search</i>
+        </div>
+
+        <ul class="search__categories">
+            <li><a href="http://hirata.blog/categories/front"><i class="material-icons">code</i>Frontend</a>
+            <li><a href="http://hirata.blog/categories/design"><i class="material-icons">create</i>Design</a>
+            <li><a href="http://hirata.blog/categories/other"><i class="material-icons">subject</i>Other</a>
+            <li><a href="http://hirata.blog/post"><i class="material-icons">inbox</i>Archives</a>
+        </ul>
+
+        <ul class="search__tags">
+            <li><a href="/tags/"> (10)</a>
+            <li><a href="/tags/html">html (2)</a>
+            <li><a href="/tags/other">other (2)</a>
+            <li><a href="/tags/aaa">aaa (1)</a>
+            <li><a href="/tags/ccc">ccc (1)</a>
+            <li><a href="/tags/hugo">hugo (1)</a>
+        </ul>
+
+    </aside><!-- /search block -->
+
+
+<!-- main content block -->
+<main><article>
+
+    <header>
+        <h1>ジュゲムジュゲム</h1>
+        <time datetime="2017-07-30"><i class="material-icons">schedule</i>2017.07.30 公開</time>
+        
+        <time><i class="material-icons">update</i> 2017.08.02 更新</time>
+        
+        <a class="postHeader__category" href="/categories/design/"><i class="material-icons">folder</i>design</a>
+        <ul class="postHeader__tags">
+            <i class="material-icons">local_offer</i>
+            <li><a href="/tags/aaa/"># aaa</a><li><a href="/tags/ccc/"># ccc</a>
+        </ul>
+        <picture class="hero">
+            <source media="(max-width:600px)" srcset="http://hirata.blog/post-asset/20170717_hello-world_sp.jpg" sizes="100vw">
+                <img src="http://hirata.blog/post-asset/20170717_hello-world_pc.jpg" alt="ヘッダー画像">
+        </picture>
+        <aside class="share">
+
+    <a class="twitter" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fhirata.blog%2f2017-07%2ftest333333%2f&text=%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%20%7c%20WEBA" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
+
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhirata.blog%2f2017-07%2ftest333333%2f" title="Facebookでシェア">Facebook</a>
+
+    <a class="hatena" href="http://b.hatena.ne.jp/entry/http://hirata.blog/2017-07/test333333/" title="はてブに登録">はてなブックマーク</a>
+
+    <a class="pocket" href="javascript:(function()%7Bvar e%3Dfunction(t,n,r,i,s)%7Bvar o%3D%5B4196444,5264221,5438709,4215637,4573418,6367504,5702607,8626376,5425547,6432314%5D%3Bvar i%3Di%7C%7C0,u%3D0,n%3Dn%7C%7C%5B%5D,r%3Dr%7C%7C0,s%3Ds%7C%7C0%3Bvar a%3D%7B%27a%27:97,%27b%27:98,%27c%27:99,%27d%27:100,%27e%27:101,%27f%27:102,%27g%27:103,%27h%27:104,%27i%27:105,%27j%27:106,%27k%27:107,%27l%27:108,%27m%27:109,%27n%27:110,%27o%27:111,%27p%27:112,%27q%27:113,%27r%27:114,%27s%27:115,%27t%27:116,%27u%27:117,%27v%27:118,%27w%27:119,%27x%27:120,%27y%27:121,%27z%27:122,%27A%27:65,%27B%27:66,%27C%27:67,%27D%27:68,%27E%27:69,%27F%27:70,%27G%27:71,%27H%27:72,%27I%27:73,%27J%27:74,%27K%27:75,%27L%27:76,%27M%27:77,%27N%27:78,%27O%27:79,%27P%27:80,%27Q%27:81,%27R%27:82,%27S%27:83,%27T%27:84,%27U%27:85,%27V%27:86,%27W%27:87,%27X%27:88,%27Y%27:89,%27Z%27:90,%270%27:48,%271%27:49,%272%27:50,%273%27:51,%274%27:52,%275%27:53,%276%27:54,%277%27:55,%278%27:56,%279%27:57,%27%5C/%27:47,%27:%27:58,%27%3F%27:63,%27%3D%27:61,%27-%27:45,%27_%27:95,%27%26%27:38,%27%24%27:36,%27!%27:33,%27.%27:46%7D%3Bif(!s%7C%7Cs%3D%3D0)%7Bt%3Do%5B0%5D%2Bt%7Dfor(var f%3D0%3Bf<t.length%3Bf%2B%2B)%7Bvar l%3Dfunction(e,t)%7Breturn a%5Be%5Bt%5D%5D%3Fa%5Be%5Bt%5D%5D:e.charCodeAt(t)%7D(t,f)%3Bif(!l*1)l%3D3%3Bvar c%3Dl*(o%5Bi%5D%2Bl*o%5Bu%25o.length%5D)%3Bn%5Br%5D%3D(n%5Br%5D%3Fn%5Br%5D%2Bc:c)%2Bs%2Bu%3Bvar p%3Dc%25(50*1)%3Bif(n%5Bp%5D)%7Bvar d%3Dn%5Br%5D%3Bn%5Br%5D%3Dn%5Bp%5D%3Bn%5Bp%5D%3Dd%7Du%2B%3Dc%3Br%3Dr%3D%3D50%3F0:r%2B1%3Bi%3Di%3D%3Do.length-1%3F0:i%2B1%7Dif(s%3D%3D469)%7Bvar v%3D%27%27%3Bfor(var f%3D0%3Bf<n.length%3Bf%2B%2B)%7Bv%2B%3DString.fromCharCode(n%5Bf%5D%25(25*1)%2B97)%7Do%3Dfunction()%7B%7D%3Breturn v%2B%279f3773db1a%27%7Delse%7Breturn e(u%2B%27%27,n,r,i,s%2B1)%7D%7D%3Bvar t%3Ddocument,n%3Dt.location.href,r%3Dt.title%3Bvar i%3De(n)%3Bvar s%3Dt.createElement(%27script%27)%3Bs.type%3D%27text/javascript%27%3Bs.src%3D%27https://getpocket.com/b/r4.js%3Fh%3D%27%2Bi%2B%27%26u%3D%27%2BencodeURIComponent(n)%2B%27%26t%3D%27%2BencodeURIComponent(r)%3Be%3Di%3Dfunction()%7B%7D%3Bvar o%3Dt.getElementsByTagName(%27head%27)%5B0%5D%7C%7Ct.documentElement%3Bo.appendChild(s)%7D)()" title="Pocketに保存する">Pocket</a>
+
+    <a class="line" href="http://line.me/R/msg/text/?%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%20%7c%20WEBA%20http%3a%2f%2fhirata.blog%2f2017-07%2ftest333333%2f" title="LINEで共有">LINE</a>
+
+</aside>
+
+        
+    </header>
+
+    <section>
+        
+
+<h2 id="ブログをつくりました">ブログをつくりました</h2>
+
+<p>平田です。社会人になりました。仕事がはじまってから毎日が新しいことばかりで、苦労もありますがとても楽しいです。自分用の勉強メモとして、またアウトプットの場としてまたブログがほしくなったので、仕事終わりに少しずつ本ブログ「WEBA」を作成しました。昔同名のブログを一瞬やってましたが、完全にゼロベースで作り直しました。月2くらいで更新できればいいかな&hellip;くらいのぬるいブログ予定ですが、これからよろしくお願いいたします。情報配信はTwitter, Facebook, RSSなどで行いますので、よろしければ左上のメニューからフォローください。</p>
+
+<h2 id="ブログの開発構成">ブログの開発構成</h2>
+
+<p>このブログは<a href="https://gohugo.io/">HUGO</a>と<a href="https://pages.github.com/">GitHub Pages</a>という仕組みを利用して運用しています。技術ブログといえばはてブやMediumではじめるか、WordPressで作るかが定番でしたが、いま作るならStaticSiteGenerator(SSG)が良さそうだったのでこうなりました。SSGとは、要はMarkdownなどで書いたブログを静的なHTMLに変換・管理してくれるCUIツールです。Ruby製のJekyllやNode製のHexoなどたくさん種類がありますが、人気が高く性能も高いHugoを選択しました。Go言語製ってのもモダンっぽくて惹かれますね。Wordpress同様Hugoにも無料のブログテーマがたくさん公開されていますが、WEBAは完全にフルスクラッチで作成しました。ちなみにjQueryも使ってません。GitHub PagesはGitHubのレポジトリに上げたHTMLソースをWebサイトとして公開できる公式の無料機能です。なのでこのブログはドメイン代だけで運用してます。最高。</p>
+
+<h2 id="hugoのmarkdown変換">HugoのMarkdown変換</h2>
+
+<p>Hugoは<a href="https://github.com/russross/blackfriday">Blackfriday</a>というMarkdsown変換エンジンを内蔵しており、Markdownで書いた記事を自動的に適切にStaticなHTMLに変換してくれます。カスタマイズしたCSSをあてることで、かなり楽にリッチなドキュメントを記述できます。以下に、自分用のためにも機能を紹介しておきます。ここに書いた他にもLaTex形式で記述したりする機能もあるみたいです。</p>
+
+<h3 id="h3h3h3h3h3h3h3">h3h3h3h3h3h3h3</h3>
+
+<ul>
+<li><em>斜体</em></li>
+<li><b>軽い強調</b></li>
+<li><strong>強い強調</strong>。</li>
+<li><del>否定</del></li>
+<li><code>inline code</code></li>
+<li>この文章に脚注をつける.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
+<li><a href="https://gohugo.io/">LINK</a></li>
+<li>&ldquo;自動でダブルクォートを整形&rdquo;</li>
+<li>ダッシュは&mdash;長くつなげます</li>
+<li>URLは自動的にリンク配置
+
+<ul>
+<li><a href="https://gohugo.io/">https://gohugo.io/</a></li>
+</ul></li>
+<li><sup>4</sup>&frasl;<sub>5</sub> ←分数も勝手に変えます</li>
+<li><a class="embed-line" href="https://gohugo.io/">引用源引用源引用源引 <i class="material-icons">open_in_new</i></a>
+</li>
+</ul>
+
+<blockquote>
+<p>引用 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+</blockquote>
+
+<a class="embed-line" href="https://gohugo.io/">引用源引用源引用源引 <i class="material-icons">open_in_new</i></a>
+
+
+<h3 id="embed-card">embed-card</h3>
+
+<a class="embed-card" href="http://system.blog.uuum.jp/entry/2016/02/16/120000" target="brank_" rel="noopener">
+    
+    <img class="og" src="http://hirata.blog/images/embed-thumbnail.png" alt="参照記事サムネイル">
+    
+    <h5>静的サイトジェネレータ「Hugo」について - UUUM攻殻機動</h5>
+    <img class="favi" src="http://www.google.com/s2/favicons?domain=system.blog.uuum.jp">
+    <span>system.blog.uuum.jp</span>
+    <i class="material-icons">open_in_new</i>
+</a>
+
+
+<a class="embed-line" href="https://gohugo.io/">引用源引用源引用源引 <i class="material-icons">open_in_new</i></a>
+
+
+<h2 id="definition-lists">Definition lists</h2>
+
+<dl>
+<dt>Cat</dt>
+<dd>Fluffy animal everyone likes
+Internet</dd>
+<dd>Vector of transmission for pictures of cats</dd>
+</dl>
+
+<h2 id="左寄せ画像">左寄せ画像</h2>
+
+<p><img class="left" src="http://hirata.blog/post-asset/20170717_hello-world_pc.jpg" alt="AltString">
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h2 id="右寄せ画像">右寄せ画像</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+<img class="right" src="http://hirata.blog/post-asset/20170717_hello-world_pc.jpg" alt="AltString">
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h2 id="中央寄せ">中央寄せ</h2>
+
+<img class="center" src="http://hirata.blog/post-asset/20170717_hello-world_pc.jpg" alt="AltString">
+
+
+<h2 id="指定なし">指定なし</h2>
+
+<p><img src="/images/bg.jpg" alt="altString" /></p>
+
+<hr />
+
+<h2 id="ul">UL</h2>
+
+<ul>
+<li>aaaaaaaaaaaaaa</li>
+<li>Lorem ipsum dulor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<ul>
+<li>ああああ</li>
+<li>ああああああああああああああああああああああああああああああああああああああああああああああああああああ</li>
+<li>あああ</li>
+</ul></li>
+<li>asf</li>
+</ul>
+
+<h2 id="ol">OL</h2>
+
+<ol>
+<li>aaaaaaaaaaaaaa</li>
+<li>Lorem ipsum elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<ol>
+<li>あああ</li>
+<li>あああ</li>
+</ol></li>
+<li>asf
+
+<ul>
+<li>あああ</li>
+<li>あああ</li>
+</ul></li>
+</ol>
+
+<h2 id="table">Table</h2>
+
+<table>
+<thead>
+<tr>
+<th align="right">右寄せ</th>
+<th align="left">左寄せ</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="right">aa</td>
+<td align="left">aa</td>
+</tr>
+
+<tr>
+<td align="right">aadg</td>
+<td align="left">aadfgb</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th align="left">header</th>
+<th align="center">真ん中寄せ</th>
+<th align="left">header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">aa</td>
+<td align="center">aa</td>
+<td align="left">aa</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="checkbox">Checkbox</h2>
+
+<ul class="task-list">
+<li><input type="checkbox" disabled class="task-list-item"> タスク1</li>
+<li><input type="checkbox" checked disabled class="task-list-item"> タスク2</li>
+
+<li><p>ああああ<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></p>
+
+<h2 id="code">CODE</h2></li>
+</ul>
+
+<pre><code class="language-js">var elm = document.getElementById('gotop');
+
+window.addEventListener('scroll', function(){
+    if( window.pageYOffset &gt; 200 ) elm.classList.add('show');
+    else elm.classList.remove('show');
+}, false);
+</code></pre>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">脚注の説明。最後にまとめられる
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">ああああああああああ
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </section>
+
+
+    <footer>
+        <aside class="share">
+
+    <a class="twitter" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fhirata.blog%2f2017-07%2ftest333333%2f&text=%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%20%7c%20WEBA" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
+
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhirata.blog%2f2017-07%2ftest333333%2f" title="Facebookでシェア">Facebook</a>
+
+    <a class="hatena" href="http://b.hatena.ne.jp/entry/http://hirata.blog/2017-07/test333333/" title="はてブに登録">はてなブックマーク</a>
+
+    <a class="pocket" href="javascript:(function()%7Bvar e%3Dfunction(t,n,r,i,s)%7Bvar o%3D%5B4196444,5264221,5438709,4215637,4573418,6367504,5702607,8626376,5425547,6432314%5D%3Bvar i%3Di%7C%7C0,u%3D0,n%3Dn%7C%7C%5B%5D,r%3Dr%7C%7C0,s%3Ds%7C%7C0%3Bvar a%3D%7B%27a%27:97,%27b%27:98,%27c%27:99,%27d%27:100,%27e%27:101,%27f%27:102,%27g%27:103,%27h%27:104,%27i%27:105,%27j%27:106,%27k%27:107,%27l%27:108,%27m%27:109,%27n%27:110,%27o%27:111,%27p%27:112,%27q%27:113,%27r%27:114,%27s%27:115,%27t%27:116,%27u%27:117,%27v%27:118,%27w%27:119,%27x%27:120,%27y%27:121,%27z%27:122,%27A%27:65,%27B%27:66,%27C%27:67,%27D%27:68,%27E%27:69,%27F%27:70,%27G%27:71,%27H%27:72,%27I%27:73,%27J%27:74,%27K%27:75,%27L%27:76,%27M%27:77,%27N%27:78,%27O%27:79,%27P%27:80,%27Q%27:81,%27R%27:82,%27S%27:83,%27T%27:84,%27U%27:85,%27V%27:86,%27W%27:87,%27X%27:88,%27Y%27:89,%27Z%27:90,%270%27:48,%271%27:49,%272%27:50,%273%27:51,%274%27:52,%275%27:53,%276%27:54,%277%27:55,%278%27:56,%279%27:57,%27%5C/%27:47,%27:%27:58,%27%3F%27:63,%27%3D%27:61,%27-%27:45,%27_%27:95,%27%26%27:38,%27%24%27:36,%27!%27:33,%27.%27:46%7D%3Bif(!s%7C%7Cs%3D%3D0)%7Bt%3Do%5B0%5D%2Bt%7Dfor(var f%3D0%3Bf<t.length%3Bf%2B%2B)%7Bvar l%3Dfunction(e,t)%7Breturn a%5Be%5Bt%5D%5D%3Fa%5Be%5Bt%5D%5D:e.charCodeAt(t)%7D(t,f)%3Bif(!l*1)l%3D3%3Bvar c%3Dl*(o%5Bi%5D%2Bl*o%5Bu%25o.length%5D)%3Bn%5Br%5D%3D(n%5Br%5D%3Fn%5Br%5D%2Bc:c)%2Bs%2Bu%3Bvar p%3Dc%25(50*1)%3Bif(n%5Bp%5D)%7Bvar d%3Dn%5Br%5D%3Bn%5Br%5D%3Dn%5Bp%5D%3Bn%5Bp%5D%3Dd%7Du%2B%3Dc%3Br%3Dr%3D%3D50%3F0:r%2B1%3Bi%3Di%3D%3Do.length-1%3F0:i%2B1%7Dif(s%3D%3D469)%7Bvar v%3D%27%27%3Bfor(var f%3D0%3Bf<n.length%3Bf%2B%2B)%7Bv%2B%3DString.fromCharCode(n%5Bf%5D%25(25*1)%2B97)%7Do%3Dfunction()%7B%7D%3Breturn v%2B%279f3773db1a%27%7Delse%7Breturn e(u%2B%27%27,n,r,i,s%2B1)%7D%7D%3Bvar t%3Ddocument,n%3Dt.location.href,r%3Dt.title%3Bvar i%3De(n)%3Bvar s%3Dt.createElement(%27script%27)%3Bs.type%3D%27text/javascript%27%3Bs.src%3D%27https://getpocket.com/b/r4.js%3Fh%3D%27%2Bi%2B%27%26u%3D%27%2BencodeURIComponent(n)%2B%27%26t%3D%27%2BencodeURIComponent(r)%3Be%3Di%3Dfunction()%7B%7D%3Bvar o%3Dt.getElementsByTagName(%27head%27)%5B0%5D%7C%7Ct.documentElement%3Bo.appendChild(s)%7D)()" title="Pocketに保存する">Pocket</a>
+
+    <a class="line" href="http://line.me/R/msg/text/?%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%e3%82%b8%e3%83%a5%e3%82%b2%e3%83%a0%20%7c%20WEBA%20http%3a%2f%2fhirata.blog%2f2017-07%2ftest333333%2f" title="LINEで共有">LINE</a>
+
+</aside>
+
+        
+    </footer>
+
+</article></main>
+
+<!-- footer block -->
+<footer class="globalFooter">
+    <a id="gotop" title="上へスクロール">▲</a>
+    <p><small>© hirata 2017</small></p>
+</footer>
+
+</div><!-- / wrap -->
+
+<!-- SCRIPTS -->
+
+<script src="http://hirata.blog/scripts/main.min.js" async></script>
+<script src="http://hirata.blog/scripts/post.min.js" async></script>
+
+</body>
+</html>
+

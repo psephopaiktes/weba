@@ -68,27 +68,6 @@ article header{
     }
     .share{
         margin-top: 2rem;
-        display: flex;
-        a{
-            text-indent: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            margin-right: 1rem;
-            display: block;
-            width: 4rem;
-            height: 4rem;
-            background: url("../images/post-share.svg") no-repeat;
-            background-color: rgba($main,.3);
-            background-size: 16rem 4rem;
-            &.twitter{background-position: 0 0 }
-            &:hover.twitter{ background-color: #008ff7 }
-            &.facebook{ background-position: -4rem 0 }
-            &:hover.facebook{background-color: #27448b }
-            &.hatena{ background-position: -8rem 0 }
-            &:hover.hatena{ background-color: #00a4de }
-            &.pocket{ background-position: -12rem 0 }
-            &:hover.pocket{ background-color: #ef4056 }
-        }
     }
     #contentList{
         background: #f0f0f0;
@@ -307,28 +286,8 @@ article footer{
     margin: 12rem 0 0;
     @include max($mobile){ margin: 8rem 0 0 }
     .share{
-        display: flex;
         justify-content: center;
-        a{
-            text-indent: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            margin: 0 .5rem 0;
-            display: block;
-            width: 4rem;
-            height: 4rem;
-            background: url("../images/post-share.svg") no-repeat;
-            background-color: rgba($main,.3);
-            background-size: 16rem 4rem;
-            &.twitter{background-position: 0 0 }
-            &:hover.twitter{ background-color: #008ff7 }
-            &.facebook{ background-position: -4rem 0 }
-            &:hover.facebook{background-color: #27448b }
-            &.hatena{ background-position: -8rem 0 }
-            &:hover.hatena{ background-color: #00a4de }
-            &.pocket{ background-position: -12rem 0 }
-            &:hover.pocket{ background-color: #ef4056 }
-        }
+        margin: 0;
     }
     .adsense{
         margin: 12rem auto 0;
@@ -336,5 +295,40 @@ article footer{
         width: 98%;
         height: 2rem;
         background: #ccc;
+    }
+}
+
+article .share{
+    display: flex;
+    a{
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: 1rem;
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background: url("../images/post-share.svg") no-repeat;
+        background-color: rgba($main,.3);
+        background-size: 20rem 4rem;
+        &.twitter{background-position: 0 0 }
+        &:hover.twitter{ background-color: #008ff7 }
+        &.facebook{ background-position: -4rem 0 }
+        &:hover.facebook{background-color: #27448b }
+        &.hatena{ background-position: -8rem 0 }
+        &:hover.hatena{ background-color: #00a4de }
+        // PocketはPCのみ
+        &.pocket{
+            background-position: -12rem 0;
+            @include max($mobile){ display: none }
+        }
+        &:hover.pocket{ background-color: #ef4056 }
+        // LINEはSPのみ
+        &.line{
+            background-position: -16rem 0;
+            display: none;
+            @include max($mobile){ display: block }
+        }
+        &:hover.line{ background-color: #00B500 }
     }
 }
