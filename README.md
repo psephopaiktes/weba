@@ -3,6 +3,7 @@
 ## Hugoメモ
 `hugo server -D` :記事ファイル中でdraft = trueになっている記事も表示する。
 `hugo server -w` :ウォッチ
+`hugo server --buildDrafts`  :Draftもビルド
 `hugo new post/20170717_Hello-World` :記事の作成
 `hugo new post/20170717_Hello-World --editor="atom"` :記事の作成。Atomで開く
 `hugo` :deploy

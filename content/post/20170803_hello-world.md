@@ -25,3 +25,4 @@ WEBAは私が2014年に1年ほど運営していた料理とPC関連の適当な
 
 ## まとめ
 これからよろしくお願いいたします。
+{{< amazon "//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=psephopaiktes-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873115736&linkId=e07da936e2c77e10e3c59e959e85e2b6" >}}

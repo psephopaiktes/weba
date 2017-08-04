@@ -21,7 +21,7 @@
         </ul>
         {{- end }}
         <picture class="hero">
-            {{- if isset .Params "image" }}
+            {{- with .Params.image }}
             <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_sp.jpg" sizes="100vw">
                 <img src="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
             {{- else }}
