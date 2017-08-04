@@ -12,7 +12,12 @@ var cmq = require("gulp-combine-mq");
 var babel = require("gulp-babel");
 var sourcemaps = require("gulp-sourcemaps");
 
-
+// copy static file ( e.g. CNAME )
+gulp.task('copyStatic', function() {
+    gulp.src(['./src/*','!./src/trash'])
+        .pipe(plumber())
+        .pipe(gulp.dest('./static'));
+});
 
 // post-asset
 gulp.task('post-asset', function() {
@@ -65,7 +70,7 @@ gulp.task('reload', function() {
     browserSync.reload();
 });
 
-gulp.task('default',['post-asset','sass','js','img'],function(){
+gulp.task('default',['copyStatic','post-asset','sass','js','img'],function(){
     // browserSync.init({ server: "./static" });
     gulp.watch('./src/post-asset/*', ['post-asset']);
     gulp.watch('./src/styles/**/*.scss', ['sass']);
