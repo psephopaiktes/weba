@@ -129,6 +129,15 @@ article section{
         line-height: 1.4;
         &::before{ content: "◆ "}
     }
+    h4{
+        background: #282c34;
+        font-weight: normal;
+        font-size: 1.4rem;
+        padding: .4rem 1.2rem .2rem;
+        margin-bottom: -2rem;
+        color: rgba(#fff,.4);
+        border-bottom: .1rem solid rgba(#fff,.4);
+    }
     p{
     }
     img{
@@ -273,6 +282,21 @@ article section{
 }
 
 article section .hljs{
+    padding: 1.6rem 2.4rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    em{
+        font-style: normal;
+        margin-left: -2.4rem;
+        margin-right: -2.4rem;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+        background-color: rgba(#fff,.1);
+        display: inline-block;
+        width: 100%;
+        box-sizing: content-box;
+    }
 }
 
 article footer{
