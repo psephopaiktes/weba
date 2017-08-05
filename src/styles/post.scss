@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "lib/atom-one-dark";
 @import "common";
 @import "column-single";
 
@@ -188,17 +189,7 @@ article section{
             background: rgba($main,.01);
         }
     }
-    // :not(pre) code{ // only inline code
-    //     background: #f0f0f0;
-    //     padding: .2rem .4rem;
-    //     border-radius: .2rem;
-    //     color: rgba($main,.7);
-    // }
-    b{font-weight: 900;}
-    em{
-        font-style: italic;
-        color: #666;
-    }
+    b{font-weight: 900 }
     strong{
         background: linear-gradient(transparent 60%, rgba($acce,.8) 40%);
     }
@@ -281,6 +272,8 @@ article section{
 
 }
 
+article section .hljs{
+}
 
 article footer{
     margin: 12rem 0 0;

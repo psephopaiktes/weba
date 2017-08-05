@@ -29,7 +29,8 @@ main h1{
     align-items: stretch;
     @include max($readable){ padding: 0 2rem}
     li{
-        width: calc( 50% - 1rem );
+        width: calc( 50% - 1.6rem );
+        @include max($tablet){ width:calc( 50% - 1rem ) }
         @include max($mobile){ width:100% }
         margin: 0 0 2rem;
         opacity: 0;
@@ -58,7 +59,7 @@ main h1{
             &::before{
                 content: "";
                 display: block;
-                padding-top: 50%;
+                padding-top: 52.36%;
             }
         }
         img{

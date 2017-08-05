@@ -117,16 +117,18 @@ aa | aa | aa
 - あああ
 
 ## Affiliate
-{{< amazon "//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=psephopaiktes-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4873115736&linkId=e07da936e2c77e10e3c59e959e85e2b6" >}}
+
 
 ## CODE
 
 ```js
 var elm = document.getElementById('gotop');
 
-window.addEventListener('scroll', function(){
-    if( window.pageYOffset > 200 ) elm.classList.add('show');
+{{<em>}}window.addEventListener('scroll', function()
+
+    if( window.pageYOffset > 200 ) elm.classList.add('show');{{{</em>}}
     else elm.classList.remove('show');
+
 }, false);
 ```
 

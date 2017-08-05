@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Thu, 03 Aug 2017 23:00:34 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 05 Aug 2017 00:46:13 +0900</lastBuildDate>
     <atom:link href="http://hirata.blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hello World !!</title>
       <link>http://hirata.blog/2017-08/hello-world/</link>
-      <pubDate>Thu, 03 Aug 2017 23:00:34 +0900</pubDate>
+      <pubDate>Sat, 05 Aug 2017 00:46:13 +0900</pubDate>
       
       <guid>http://hirata.blog/2017-08/hello-world/</guid>
       <description>
@@ -33,6 +33,216 @@
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;これからよろしくお願いいたします。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>post parts sample</title>
+      <link>http://hirata.blog/2017-07/sample/</link>
+      <pubDate>Sun, 30 Jul 2017 23:34:34 +0900</pubDate>
+      
+      <guid>http://hirata.blog/2017-07/sample/</guid>
+      <description>
+
+&lt;h2 id=&#34;基本要素&#34;&gt;基本要素&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;軽い強調&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;強い強調&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;否定&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inline code&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;この文章に脚注をつける.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;LINK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;自動でダブルクォートを整形&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;ダッシュは&amp;mdash;長くつなげます&lt;/li&gt;
+&lt;li&gt;URLは自動的にリンク配置
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;sup&gt;4&lt;/sup&gt;&amp;frasl;&lt;sub&gt;5&lt;/sub&gt; ←分数も勝手に変えます&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;embed-line&#34; href=&#34;https://gohugo.io/&#34;&gt;引用源引用源引用源引 &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;引用 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;a class=&#34;embed-line&#34; href=&#34;https://gohugo.io/&#34;&gt;引用源引用源引用源引 &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;&lt;/a&gt;
+
+
+&lt;h3 id=&#34;embed-card&#34;&gt;embed-card&lt;/h3&gt;
+
+&lt;a class=&#34;embed-card&#34; href=&#34;http://system.blog.uuum.jp/entry/2016/02/16/120000&#34; target=&#34;brank_&#34; rel=&#34;noopener&#34;&gt;
+    
+    &lt;img class=&#34;og&#34; src=&#34;http://hirata.blog/images/embed-thumbnail.png&#34; alt=&#34;参照記事サムネイル&#34;&gt;
+    
+    &lt;h5&gt;静的サイトジェネレータ「Hugo」について - UUUM攻殻機動&lt;/h5&gt;
+    &lt;img class=&#34;favi&#34; src=&#34;http://www.google.com/s2/favicons?domain=system.blog.uuum.jp&#34;&gt;
+    &lt;span&gt;system.blog.uuum.jp&lt;/span&gt;
+    &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;
+&lt;/a&gt;
+
+
+&lt;a class=&#34;embed-line&#34; href=&#34;https://gohugo.io/&#34;&gt;引用源引用源引用源引 &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;&lt;/a&gt;
+
+
+&lt;h2 id=&#34;definition-lists&#34;&gt;Definition lists&lt;/h2&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Cat&lt;/dt&gt;
+&lt;dd&gt;Fluffy animal everyone likes&lt;/dd&gt;
+&lt;dt&gt;Internet&lt;/dt&gt;
+&lt;dd&gt;Vector of transmission for pictures of cats&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2 id=&#34;左寄せ画像&#34;&gt;左寄せ画像&lt;/h2&gt;
+
+&lt;p&gt;&lt;img class=&#34;left&#34; src=&#34;http://hirata.blog/post-asset/20170803_hello-world_pc.jpg&#34; alt=&#34;AltString&#34;&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2 id=&#34;右寄せ画像&#34;&gt;右寄せ画像&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+&lt;img class=&#34;right&#34; src=&#34;http://hirata.blog/post-asset/20170803_hello-world_pc.jpg&#34; alt=&#34;AltString&#34;&gt;
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2 id=&#34;中央寄せ&#34;&gt;中央寄せ&lt;/h2&gt;
+
+&lt;img class=&#34;center&#34; src=&#34;http://hirata.blog/post-asset/20170803_hello-world_pc.jpg&#34; alt=&#34;AltString&#34;&gt;
+
+
+&lt;h2 id=&#34;指定なし&#34;&gt;指定なし&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://hirata.blog/images/bg.jpg&#34; alt=&#34;altString&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;ul&#34;&gt;UL&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;aaaaaaaaaaaaaa&lt;/li&gt;
+&lt;li&gt;Lorem ipsum dulor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+&lt;ul&gt;
+&lt;li&gt;ああああ&lt;/li&gt;
+&lt;li&gt;ああああああああああああああああああああああああああああああああああああああああああああああああああああ&lt;/li&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;asf&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ol&#34;&gt;OL&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;aaaaaaaaaaaaaa&lt;/li&gt;
+&lt;li&gt;Lorem ipsum elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+&lt;ol&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;asf
+
+&lt;ul&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;table&#34;&gt;Table&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;right&#34;&gt;右寄せ&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;左寄せ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;aa&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;aa&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;aadg&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;aadfgb&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;header&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;真ん中寄せ&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;aa&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;aa&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;aa&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;checkbox&#34;&gt;Checkbox&lt;/h2&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; タスク1&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; タスク2&lt;/li&gt;
+&lt;li&gt;ああああ&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;affiliate&#34;&gt;Affiliate&lt;/h2&gt;
+
+&lt;h2 id=&#34;code&#34;&gt;CODE&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var elm = document.getElementById(&#39;gotop&#39;);
+
+&lt;em&gt;window.addEventListener(&#39;scroll&#39;, function()
+
+    if( window.pageYOffset &gt; 200 ) elm.classList.add(&#39;show&#39;);{&lt;/em&gt;
+    else elm.classList.remove(&#39;show&#39;);
+
+}, false);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;脚注の説明。最後にまとめられる
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;ああああああああああ
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     

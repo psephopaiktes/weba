@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 {{ "<!--" | safeHTML }}
 
 {{ "('A`)y-~  < Hi" | safeHTML }}
@@ -24,10 +24,10 @@
     <!-- TODO: TOPとリスト系にはすべてこれ表示。AMPする場合は要検討 -->
     <!-- <link rel="canonical" href="{{ .Site.BaseURL }}"> -->
     {{- if .Paginator.HasNext }}
-    <link rel="next" href="{{ .Paginator.Next.URL }}" />
+    <link rel="next" href="{{ .Paginator.Next.URL }}">
     {{- end }}
     {{- if .Paginator.HasPrev }}
-    <link rel="prev" href="{{ .Paginator.Prev.URL }}" />
+    <link rel="prev" href="{{ .Paginator.Prev.URL }}">
     {{- end }}
     {{ "<!-- css-->" | safeHTML }}
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -60,20 +60,20 @@
     {{- else }}
     <meta property="og:type" content="article">
     {{- end }}
-    <meta property="og:title" content="{{.context.Title}}" />
-    {{- if isset .Params "description" }}
-    <meta property="og:description" content="{{.Params.description}}" />
+    <meta property="og:title" content="{{.context.Title}}">
+    {{- if ne .context.Params.description "" }}
+    <meta property="og:description" content="{{.context.Params.description}}">
     {{- else }}
     <meta property="og:description" content="{{.Site.Params.Description}}">
     {{- end }}
-    {{- if ne .ogp nil }}
-    <meta property="og:image" content="og.jpg">
+    {{- if ne .context.Params.image "" }}
+    <meta property="og:image" content="{{ .Site.BaseURL }}/post-asset/{{ .context.Params.image }}_sp.jpg">
     {{- else }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}/images/icon.png">
+    <meta property="og:image" content="{{ .Site.BaseURL }}/images/ogp.jpg">
     {{- end }}
     <meta property="og:url" content="{{.context.Permalink}}">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}">
 
     {{ "<!-- Google -->" | safeHTML }}
     <meta name="google-site-verification" content="rldO9vcSRN-0zhIXSWLF5bCbAJ7BfEhdsH_OQRXz89Q">

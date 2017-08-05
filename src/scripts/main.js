@@ -139,6 +139,8 @@ console.log('© hirata 2017');
 
     var elm = document.getElementById('pager__select');
 
+    if(!elm) return false;
+
     elm.addEventListener('change', function(){
         location.href = this.value;
     }, false);

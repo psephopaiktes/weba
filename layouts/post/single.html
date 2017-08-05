@@ -1,4 +1,4 @@
-{{ partial "header" (dict "asset" "post" "context" . "Site" .Site "ogp" .Params.img ) }}
+{{ partial "header" (dict "asset" "post" "context" . "Site" .Site ) }}
 
 {{ "<!-- main content block -->" | safeHTML }}
 <main><article>
@@ -6,7 +6,7 @@
     <header>
         <h1>{{ .Title }}</h1>
         <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">schedule</i>{{ .Date.Format "2006.01.02" }} 公開</time>
-        {{ if isset .Params "update"}}
+        {{ if ne .Params.update "" }}
         <time><i class="material-icons">update</i> {{ .Params.update }} 更新</time>
         {{ end }}
         {{ with .Params.categories -}}{{ range . -}}
@@ -21,7 +21,7 @@
         </ul>
         {{- end }}
         <picture class="hero">
-            {{- with .Params.image }}
+            {{- if ne .Params.image "" }}
             <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_sp.jpg" sizes="100vw">
                 <img src="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
             {{- else }}

@@ -4,9 +4,9 @@
 ///////////////////////////////////////////////
 // syntax highlight
 ///////////////////////////////////////////////
-! function(){
-    // hljs.initHighlightingOnLoad();
-}();
+window.onload = function() {
+    hljs.initHighlightingOnLoad();
+};
 
 
 
