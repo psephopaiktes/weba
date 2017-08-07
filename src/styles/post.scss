@@ -112,7 +112,7 @@ article section{
         margin: 2rem 0 0;
     }
     h2{
-        margin: 6rem 0 0;
+        margin: 12rem 0 0;
         padding-left: 2rem;
         border-left: .2rem solid $acce;
         line-height: 1.4;
@@ -212,8 +212,8 @@ article section{
     }
     hr{
         border: 0;
-        margin: 6rem -1rem;
-        border-top: .1rem solid #ccc;
+        margin: 6rem 0;
+        border-top: .1rem dashed #ccc;
     }
     a:link{ color: darken($acce,20%) }
     a:visited{ color: darken($acce,40%) }
