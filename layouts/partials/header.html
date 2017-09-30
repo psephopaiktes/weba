@@ -67,7 +67,7 @@
     <meta property="og:description" content="{{.Site.Params.Description}}">
     {{- end }}
     {{- if ne .context.Params.image "" }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}/post-asset/{{ .context.Params.image }}_sp.jpg">
+    <meta property="og:image" content="{{ .Site.BaseURL }}/post-asset/{{ .context.Params.image }}--sp.jpg">
     {{- else }}
     <meta property="og:image" content="{{ .Site.BaseURL }}/images/ogp.jpg">
     {{- end }}
@@ -146,7 +146,7 @@
 
         <ul class="search__tags">
             {{- range $key, $value := .Site.Taxonomies.tags.ByCount }}
-            <li><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }} ({{ $value.Count }})</a>
+            <li><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }} <span>|</span> {{ $value.Count }}</a>
             {{- end }}
         </ul>
 

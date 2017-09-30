@@ -1,8 +1,8 @@
         <li><a href="{{ .Permalink }}">
             {{- if ne .Params.image ""  }}
-            <div class="fixRatio"><img src="{{ .Site.BaseURL }}/post-asset/{{ .Params.image -}}_sp.jpg" alt="記事サムネイル"></div>
+            <div class="fixRatio"><img src="{{ .Site.BaseURL }}/post-asset/{{ .Params.image -}}--sp.jpg" alt="記事サムネイル"></div>
             {{- else }}
-            <div class="fixRatio"><img src="{{ .Site.BaseURL }}/images/default_sp.png" alt="記事サムネイル"></div>
+            <div class="fixRatio"><img src="{{ .Site.BaseURL }}/images/default--sp.png" alt="記事サムネイル"></div>
             {{- end }}
             <div class="post__info">
                 <h3>{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</h3>

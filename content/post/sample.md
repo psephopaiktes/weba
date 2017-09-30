@@ -65,17 +65,17 @@ Internet
 : Vector of transmission for pictures of cats
 
 ## 左寄せ画像
-{{< img "left" "20170803_hello-world_pc.jpg" "AltString" >}}
+{{< img "left" "20170803_hello-world--pc.jpg" "AltString" >}}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## 右寄せ画像
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-{{< img "right" "20170803_hello-world_pc.jpg" "AltString" >}}
+{{< img "right" "20170803_hello-world--pc.jpg" "AltString" >}}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## 中央寄せ
-{{< img "center" "20170803_hello-world_pc.jpg" "AltString" >}}
+{{< img "center" "20170803_hello-world--pc.jpg" "AltString" >}}
 
 ## 指定なし
 ![altString](/images/bg.jpg )

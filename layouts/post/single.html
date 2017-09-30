@@ -22,11 +22,11 @@
         {{- end }}
         <picture class="hero">
             {{- if ne .Params.image "" }}
-            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_sp.jpg" sizes="100vw">
-                <img src="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}_pc.jpg" alt="ヘッダー画像">
+            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}--sp.jpg" sizes="100vw">
+                <img src="{{ .Site.BaseURL }}/post-asset/{{ .Params.image }}--pc.jpg" alt="ヘッダー画像">
             {{- else }}
-            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/default_sp.png" sizes="100vw">
-                <img src="{{ .Site.BaseURL }}/images/default_pc.png" alt="ヘッダー画像">
+            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/default--sp.png" sizes="100vw">
+                <img src="{{ .Site.BaseURL }}/images/default--pc.png" alt="ヘッダー画像">
             {{- end }}
         </picture>
         {{ partial "share" . }}

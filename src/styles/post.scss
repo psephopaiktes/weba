@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "lib/atom-one-dark";
+@import "lib/atom-one-light";
 @import "common";
 @import "column-single";
 
@@ -116,6 +116,7 @@ article section{
         padding-left: 2rem;
         border-left: .2rem solid $acce;
         line-height: 1.4;
+        font-size: 3.2rem;
     }
     .backContentList{
         display: block;
@@ -128,31 +129,39 @@ article section{
         margin: 4rem 0 0;
         line-height: 1.4;
         &::before{ content: "◆ "}
+        opacity: .8;
     }
-    h4{
-        background: #282c34;
+    h4{ //コードブロックのタイトル専用
+        background: #fafafa;
         font-weight: normal;
         font-size: 1.4rem;
         padding: .4rem 1.2rem .2rem;
         margin-bottom: -2rem;
-        color: rgba(#fff,.4);
-        border-bottom: .1rem solid rgba(#fff,.4);
+        color: rgba(#000,.4);
+        border-bottom: .1rem solid rgba(#000,.2);
     }
-    p{
+    p:after {
+      content: "";
+      clear: both;
+      display: block;
     }
     img{
         display: inline-block;
         max-width: 100%;
-        margin: 0;
+        margin:  0;
         &.left{
-            max-width: 50%;
-            float: left;
-            margin: .8rem 2rem 0 0;
+            @include min($mobile){
+                max-width: 50%;
+                float: left;
+                margin: .8rem 2rem .8rem 0;
+            }
         }
         &.right{
-            max-width: 50%;
-            float: right;
-            margin: .8rem 0 0 2rem;
+            @include min($mobile){
+                max-width: 50%;
+                float: right;
+                margin: .8rem 0 .8rem 2rem;
+            }
         }
         &.center{
             display: block;
@@ -201,6 +210,16 @@ article section{
     b{font-weight: 900 }
     strong{
         background: linear-gradient(transparent 60%, rgba($acce,.8) 40%);
+    }
+    code:not(.hljs){
+        font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+        color: #d72b3f;
+        background-color: #f0f0f0;
+        padding: 0.2em .4em;
+        margin: auto 0.2em;
+        border-radius: .2rem;
+        font-size: .9em;
+        vertical-align: 0.2em;
     }
     blockquote{
         font-style: italic;

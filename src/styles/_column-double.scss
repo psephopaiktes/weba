@@ -198,6 +198,9 @@ header nav{
         text-decoration: none;
         opacity: .8;
         box-shadow: .05rem .05rem .2rem rgba(#000,.2);
+        span{
+            opacity: .2;
+        }
         &:hover,&:active{
             opacity: 1;
         }
