@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on WEBA</title>
-    <link>http://hirata.blog/tags/hugo/index.xml</link>
+    <link>https://hirata.blog/tags/hugo/index.xml</link>
     <description>Recent content in Hugo on WEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <atom:link href="http://hirata.blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hirata.blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hello World !!</title>
-      <link>http://hirata.blog/2017-08/hello-world/</link>
-      <pubDate>Sat, 05 Aug 2017 00:46:13 +0900</pubDate>
+      <link>https://hirata.blog/2017-10/hello-world/</link>
+      <pubDate>Sun, 01 Oct 2017 00:46:13 +0900</pubDate>
       
-      <guid>http://hirata.blog/2017-08/hello-world/</guid>
+      <guid>https://hirata.blog/2017-10/hello-world/</guid>
       <description>
 
 &lt;h2 id=&#34;ブログをつくりました&#34;&gt;ブログをつくりました&lt;/h2&gt;
@@ -23,11 +23,11 @@
 
 &lt;h2 id=&#34;ブログの開発構成&#34;&gt;ブログの開発構成&lt;/h2&gt;
 
-&lt;p&gt;このブログは&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;と&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;という仕組みを利用して運用しています。技術ブログといえばはてブやMediumではじめるか、WordPressで作るかが定番でしたが、いま作るならStaticSiteGenerator(SSG)が良さそうだったのでこうなりました。SSGとは、要はMarkdownなどで書いたブログを静的なHTMLに変換・管理してくれるCUIツールです。Ruby製のJekyllやNode製のHexoなどたくさん種類がありますが、人気が高く性能も高いHugoを選択しました。Go言語製ってのもモダンっぽくて惹かれますね。Wordpress同様Hugoにも無料のブログテーマがたくさん公開されていますが、WEBAは完全にフルスクラッチで作成しました。ちなみにjQueryも使ってません。GitHub PagesはGitHubのレポジトリに上げたHTMLソースをWebサイトとして公開できる公式の無料機能です。なのでこのブログはドメイン代だけで運用してます。最高。&lt;/p&gt;
+&lt;p&gt;このブログは&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;と&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;という仕組みを利用して運用しています。技術ブログといえばはてブやMediumではじめるか、WordPressで作るかが定番でしたが、いま作るならStaticSiteGenerator(SSG)が良さそうだったのでこうなりました。SSGとは、要はMarkdownなどで書いたブログを静的なHTMLに変換・管理してくれるCUIツールです。Ruby製のJekyllやNode製のHexoなどたくさん種類がありますが、人気が高く性能も高いHugoを選択しました。Go言語製ってのもモダンっぽくて惹かれますね。Wordpress同様Hugoにも無料のブログテーマがたくさん公開されていますが、WEBAは完全にフルスクラッチで作成しました。ちなみにjQueryも使ってません。GitHub PagesはGitHubのレポジトリに上げたHTMLソースをWebサイトとして公開できる公式の無料機能です。なのでこのブログはドメイン代だけで運用してます。安い。&lt;/p&gt;
 
-&lt;h2 id=&#34;むかしのweba&#34;&gt;むかしのWEBA&lt;/h2&gt;
+&lt;h3 id=&#34;補足-むかしのweba&#34;&gt;補足: むかしのWEBA&lt;/h3&gt;
 
-&lt;p&gt;WEBAは私が2014年に1年ほど運営していた料理とPC関連の適当なブログです。もはや&lt;a href=&#34;http://hirata.works/works_weba.html&#34;&gt;スクショしか残ってません&lt;/a&gt;が、私が最初に作ったそこそこ規模のあるWebサイトなので、割りと思い出深いです。Wordpressのtheme自作までちゃんとやったので、かなり勉強にもなりました。&lt;/p&gt;
+&lt;p&gt;WEBAは私が2014年に1年ほど運営していた料理とPC関連の適当なブログです。もはや&lt;a href=&#34;http://hirata.works/works_weba.html&#34;&gt;スクショしか残ってません&lt;/a&gt;が、私が最初に作ったそこそこ規模のあるWebサイトでした。&lt;/p&gt;
 
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 
