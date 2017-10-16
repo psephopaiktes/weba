@@ -38,6 +38,8 @@
 
     if( contentList ){
 
+        contentList.classList.add('view');
+
         [].forEach.call( contentHeader, function(elm,i){
 
             // h2 に遷移用のアンカーIDを設定
