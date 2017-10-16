@@ -150,39 +150,41 @@ console.log('© hirata 2017');
 
 
 ///////////////////////////////////////////////
-// scroll reveal
+// scroll reveal GH PAGESだと挙動が安定しないので、いったんOFF
 ///////////////////////////////////////////////
-! function(){
-
-    var elm = document.querySelectorAll('#posts li');
-
-    // すでに画面内にある要素を表示
-    [].forEach.call( elm, function(elm){
-
-        var elmTop = elm.getBoundingClientRect().top + document.body.scrollTop;
-
-        if ( window.pageYOffset > elmTop - window.outerHeight*3/4 ){
-            elm.style.opacity = 1;
-            elm.style.transform = 'translateY(0)';
-        }
-
-    });
-
-    // スクロールして画面内に入った要素を表示
-    window.addEventListener('scroll', function(){
-
-        [].forEach.call( elm, function(elm){
-
-            var elmTop = elm.getBoundingClientRect().top + document.body.scrollTop;
-
-            if ( window.pageYOffset > elmTop - window.outerHeight*3/4 )
-                elm.classList.add('inview');
-
-        });
-
-    }, false);
-
-}();
+// ! function(){
+//
+//     var elm = document.querySelectorAll('#posts li');
+//
+//     // 画面内の要素をhide
+//
+//     // すでに画面内にある要素を表示
+//     [].forEach.call( elm, function(elm){
+//
+//         var elmTop = elm.getBoundingClientRect().top + document.body.scrollTop;
+//
+//         if ( window.pageYOffset > elmTop - window.outerHeight*3/4 ){
+//             elm.style.opacity = 1;
+//             elm.style.transform = 'translateY(0)';
+//         }
+//
+//     });
+//
+//     // スクロールして画面内に入った要素を表示
+//     window.addEventListener('scroll', function(){
+//
+//         [].forEach.call( elm, function(elm){
+//
+//             var elmTop = elm.getBoundingClientRect().top + document.body.scrollTop;
+//
+//             if ( window.pageYOffset > elmTop - window.outerHeight*3/4 )
+//                 elm.classList.add('inview');
+//
+//         });
+//
+//     }, false);
+//
+// }();
 
 
 
@@ -194,6 +196,6 @@ console.log('© hirata 2017');
     var elm = document.querySelector('meta[name=viewport]');
 
     if( window.innerWidth > 1920 )
-        elm.setAttribute('content','width=1920,initial-scale=1');
+        elm.setAttribute('content','width=1920');
 
 }();

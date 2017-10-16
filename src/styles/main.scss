@@ -33,14 +33,14 @@ main h1{
         @include max($tablet){ width:calc( 50% - 1rem ) }
         @include max($mobile){ width:100% }
         margin: 0 0 2rem;
-        opacity: 0;
-        transition: 0;
-        transform: translateY(3rem);
-        &.inview{
-            transition: .6s ease-out;
-            opacity: 1;
-            transform: translateY(0);
-        }
+        // opacity: 0;
+        // transition: 0;
+        // transform: translateY(3rem);
+        // &.inview{
+        //     transition: .6s ease-out;
+        //     opacity: 1;
+        //     transform: translateY(0);
+        // }
     }
     a{
         border: .1rem solid #eee;
