@@ -36,18 +36,18 @@
     {{- end }}
 
     {{ "<!-- icons-->" | safeHTML }}
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="{{ .Site.BaseURL }}/image/png" href="{{ .Site.BaseURL }}/images/favicon.png">
     {{ "<!-- Add to homescreen for Chrome on Android-->" | safeHTML }}
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="WEBA">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <link rel="icon" sizes="192x192" href="{{ .Site.BaseURL }}/images/touch/chrome-touch-icon-192x192.png">
     {{ "<!-- Add to homescreen for Safari on iOS-->" | safeHTML }}
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="myTemplate">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}/images/touch/apple-touch-icon.png">
     {{ "<!-- Tile icon for Win8 (144x144 + tile color)-->" | safeHTML }}
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}/images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#fc6">
     {{ "<!-- Color the status bar on mobile devices-->" | safeHTML }}
     <meta name="theme-color" content="#fc6">
