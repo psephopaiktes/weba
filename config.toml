@@ -5,7 +5,7 @@ copyright = "© weba 2017"
 baseURL = "https://hirata.blog"
 publishDir = "docs"
 hasCJKLanguage = true
-disableHugoGeneratorInject = true
+# disableHugoGeneratorInject = true
 
 [Params]
 # 独自変数

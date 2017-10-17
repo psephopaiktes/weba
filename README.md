@@ -1,12 +1,14 @@
 # weba
 
-## Hugoメモ
+## コマンド
 - `hugo server -D` :記事ファイル中でdraft = trueになっている記事も表示する。  
 - `hugo server -w` :ウォッチ  
 - `hugo new post/20170717_Hello-World.md` :記事の作成  
 - `hugo new post/20170717_Hello-World.md --editor="atom"` :記事の作成。Atomで開く
 - `hugo` :deploy
 - docs(public)内に下書きファイルも残るので、公開前に整理すること
+
+## バッチ
 
 ## 構成メモ
 ファイル・フォルダ名 | 役割
@@ -26,3 +28,11 @@ gulpfile.js | Gulp設定
 LICENSE | ライセンス
 package.json | npmパッケージ
 README.md | これ
+
+## 例外対応
+
+### - 記事ごとに固有のCSSやメディアファイルが欲しい時
+- ファイル名は`post-asset/{{ .Date.Format "20060102" }}_{{ .Slug }}.css`を作って記事のオプション`CSS`と`JS`をtrueかfalseで切り替える
+
+### - デモ用の静的なHTMLがほしいとき
+- STATICに作る
