@@ -9,6 +9,8 @@
     - docs(public)内に下書きファイルも残るので、公開前に整理すること
 
 ## バッチ
+- `./new $post-id` $post-idで記事作成の準備
+- `./deploy $comment` $commentでCommitとしてデプロイからプッシュまで
 
 ## 構成メモ
 ファイル・フォルダ名 | 役割
