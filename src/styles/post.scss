@@ -326,12 +326,9 @@ article footer{
         justify-content: center;
         margin: 0;
     }
-    .adsense{
-        margin: 12rem auto 0;
-        @include max($mobile){ margin: 8rem 0 0 }
+    .adsbygoogle{
+        margin: 8rem auto 0;
         width: 98%;
-        height: 2rem;
-        background: #ccc;
     }
 }
 
