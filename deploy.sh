@@ -9,7 +9,8 @@ if [ -z ${COMMENT} ]; then
   read COMMENT
 fi
 
-#docsを一度消してGulpとHugoでビルド
+#staticとdocsを一度消してGulpとHugoでビルド
+rm -rf static
 rm -rf docs
 gulp copyStatic
 gulp sass
