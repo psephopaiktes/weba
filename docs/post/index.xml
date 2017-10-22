@@ -2,32 +2,241 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>全記事一覧 on WEBA</title>
-    <link>https://hirata.blog/post/</link>
+    <link>https://hirata.blog/post/index.xml</link>
     <description>Recent content in 全記事一覧 on WEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
     <lastBuildDate>Sun, 30 Jul 2017 23:32:08 +0900</lastBuildDate>
+    <atom:link href="https://hirata.blog/post/index.xml" rel="self" type="application/rss+xml" />
     
-	<atom:link href="https://hirata.blog/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>デザイナなら意識したいシグニファイアと、間違いやすいアフォーダンスの話</title>
+      <link>https://hirata.blog/201710_signifier/</link>
+      <pubDate>Sun, 22 Oct 2017 22:49:51 +1632</pubDate>
+      
+      <guid>https://hirata.blog/201710_signifier/</guid>
+      <description>
+
+&lt;h2 id=&#34;まえがき&#34;&gt;まえがき&lt;/h2&gt;
+
+&lt;p&gt;みなさんは &lt;strong&gt;アフォーダンス&lt;/strong&gt; と &lt;strong&gt;シグニファイア&lt;/strong&gt; という言葉を聞いたことがあるでしょうか。 &lt;b&gt;アフォーダンス&lt;/b&gt; しか聞いたこと無いという方は、要注意です。あなたが知っているアフォーダンスは本当は &lt;b&gt;シグニファイア&lt;/b&gt; のことかもしれません。UXデザインにおける重要な概念であるのですが、誤解されやすく、理解しづらい用語です。ネットにあまりわかりやすい記事が無いので、シンプルに解説してみます。両方共知らないという方はぜひこの機会に覚えて帰ってください。&lt;/p&gt;
+
+&lt;h2 id=&#34;誤解されている背景&#34;&gt;誤解されている背景&lt;/h2&gt;
+
+&lt;p&gt;世間一般ではシグニファイアのことをアフォーダンスとして間違って覚えている方がたくさんいます。それには、以下のような背景があるのです。
+&lt;b&gt;アフォーダンス&lt;/b&gt;はD.A.ノーマン氏が1990年に出した &lt;a href=&#34;https://www.amazon.co.jp/dp/478850362X/ref=cm_sw_r_tw_dp_x_.Vl5zbYK2K00R&#34;&gt;誰のためのデザイン?&lt;/a&gt; という書籍の中で紹介され、一気に有名になった言葉です。この本はベストセラーになり、世界中で翻訳されてたくさんの人が読みました。ですが、同氏が2015年に出した&lt;a href=&#34;https://www.amazon.co.jp/dp/4788514346/ref=cm_sw_r_tw_dp_x_8Vl5zbJKEJNT1&#34;&gt;誰のためのデザイン？ 増補・改訂版&lt;/a&gt;の中で、&lt;b&gt;アフォーダンスという言葉を間違えて紹介した&lt;/b&gt;ことを記述しています。ノーマン氏は古い版の書籍で &lt;strong&gt;シグニファイアのことを間違えてアフォーダンスとして&lt;/strong&gt; 紹介してしまったのです。そういったわけで、世間一般に間違った意味のアフォーダンスが定着してしまっているわけです。&lt;/p&gt;
+
+&lt;h2 id=&#34;用語解説&#34;&gt;用語解説&lt;/h2&gt;
+
+&lt;p&gt;では、用語の意味について解説していきます。どちらもUXデザインの&lt;b&gt;インタラクション&lt;/b&gt;において重要視される概念です。世間にある、あらゆるモノ(製品・サービス・自然物・人工物)とそれを利用する主体(人間)との間に生じる概念です。図を使ってできるだけシンプルに解説していくのでがんばってついてきてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;アフォーダンスとは&#34;&gt;アフォーダンスとは&lt;/h3&gt;
+
+&lt;p&gt;あるモノとその利用主体(人間)との &lt;strong&gt;関係のこと&lt;/strong&gt; です。この世のあらゆる物理的なモノ(自然にあるものから、人工的なものまで)と人間との間には「なにができるか」という関係性があります。&lt;/p&gt;
+
+&lt;p&gt;例えば、「人間」は「椅子」に「座る」ことができる関係にあります。また、多くの「人間」は「椅子」を「持ち上げる」ことができます。これらの、&lt;strong&gt;「なにができるか」という関係のことをアフォーダンスといいます。&lt;/strong&gt; この時、変な言いまわしですが「椅子は人間が座ることを&lt;b&gt;アフォードする&lt;/b&gt;」「椅子は人間が持ち上げることを&lt;b&gt;アフォードする&lt;/b&gt;」と言ったりもします。&lt;/p&gt;
+
+&lt;img class=&#34;center&#34; src=&#34;https://hirata.blog/images/post/201710_signifier/affordance.png&#34; alt=&#34;アフォーダンスのイメージ&#34;&gt;
+
+
+&lt;p&gt;同じモノ、同じ主体でも、それらの対象が変わることでアフォーダンスは変わります。先程の例で、「人間」が「赤ちゃん」だった場合は「椅子」を「持ち上げる」アフォーダンスは存在しえません。他にも&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;「ガラス」は「空気」が「通れる」ことをアフォードする&lt;/li&gt;
+&lt;li&gt;「ガラス」は「水」が「通れる」ことをアフォード&lt;b&gt;しない&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;「空気」は「水」が「通れる」ことをアフォードする&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;などなど。実例は自然界に最初からたくさん存在しています。&lt;/p&gt;
+
+&lt;h3 id=&#34;シグニファイアとは&#34;&gt;シグニファイアとは&lt;/h3&gt;
+
+&lt;p&gt;あるモノとその利用主体(人間)との &lt;strong&gt;関係を教えてくれるサイン&lt;/strong&gt; のことです。つまり、&lt;b&gt;アフォーダンスがなんであるか&lt;/b&gt;を教えてくれるヒントとなるものです。デザインにおいて特に重要なのはこちらです。&lt;/p&gt;
+
+&lt;p&gt;たとえば、「鳩」と、「なにもついていない木枠」と、「ガラスのはまった木枠」があるとします。このとき、「なにもついていない木枠」は「鳩」に「通り抜けられる」ことをアフォードします( = 「鳩」は「なにもついていない木枠」を「通り抜けられる」関係にある )。「ガラスのはまった木枠」は「鳩」に「通り抜けられる」ことをアフォードしません( = 「鳩」は「ガラスのはまった木枠」を「通り抜けられない」関係にある )。しかしこのとき、ガラスが十分に透明であれば、鳩が見た時どちらも通り抜けられるように見えてしまいます。しかし、ガラスにペンキで色を塗っておけば、鳩は「通り抜けられない」アフォーダンスに気づくことができます。この場合、ペンキがシグニファイアです。この &lt;strong&gt;「なにができるか」を教えてくれるサインがシグニファイアです。&lt;/strong&gt; シグニファイアは知覚されてはじめてシグニファイアとして働きます。&lt;/p&gt;
+
+&lt;img class=&#34;center&#34; src=&#34;https://hirata.blog/images/post/201710_signifier/siginifier.png&#34; alt=&#34;シグニファイアのイメージ&#34;&gt;
+
+
+&lt;p&gt;理解しやすいように視覚に限定しましたが、正確に言うと「どのように知覚されるか」なので、聴覚や嗅覚でも構いません。例えば、「甘い匂い」は「生き物」に「食べられる」ことを伝えるシグニファイアとして作用します。シグニファイアは自然に存在する場合もあり、意図的に付与することも可能です。&lt;/p&gt;
+
+&lt;h2 id=&#34;シグニファイアの実例&#34;&gt;シグニファイアの実例&lt;/h2&gt;
+
+&lt;p&gt;アフォーダンスとシグニファイアについて理解して頂けたでしょうか。では、これらの概念がデザインにどう関わってくるのでしょう。勘のよい方はお気づきでしょうが、シグニファイアはユーザにメッセージを伝える強力なアイテムとして働きます。製品・サービスに意図的にシグニファイアを用意することで、それを利用するユーザに操作を理解させたり、行動を促したり、逆に行動を制限したりすることが可能です。&lt;/p&gt;
+
+&lt;h3 id=&#34;操作方法を伝えるシグニファイア&#34;&gt;操作方法を伝えるシグニファイア&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ドア
+
+&lt;ul&gt;
+&lt;li&gt;ノーマン氏の書籍の中でも実例として多くのドアが出てきます。&lt;/li&gt;
+&lt;li&gt;たとえばドアによって「押せる」「引ける」「スライドできる」などドアと人間のあいだには様々なアフォーダンスがあります。そのドアに対してどのような操作ができるのか、適切に知覚できるサインがあることが理想です。&lt;/li&gt;
+&lt;li&gt;丸いドアノブがついていればまわして「引ける」、ひらべったい板がついていれば「押せる」、凹んだ溝がついていれば手をひっかけて「スライドできる」、などのシグニファイアが利用できます。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Webやアプリ
+
+&lt;ul&gt;
+&lt;li&gt;「色と下線が」文字につくことでが「他のページに遷移できる」アフォーダンスを持つリンクであることを知覚させます。 → &lt;a href=&#34;https://twitter.com/psephopaiktes&#34;&gt;This is Link Text !!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;「ボタンの形」をしたUIは「押せる」ことを表すシグニファイアです。&lt;/li&gt;
+&lt;li&gt;サムネイルが並んでいるとき、「一部だけ次のサムネイルがはみ出している」シグニファイアにより、「スクロールできる」アフォーダンスに気づくことができます。&lt;br /&gt;
+&lt;img class=&#34;center&#34; src=&#34;https://hirata.blog/images/post/201710_signifier/carousel.jpg&#34; alt=&#34;carousel&#34;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;危険を知らせるシグニファイア&#34;&gt;危険を知らせるシグニファイア&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;都市ガスの臭いは「ガスが漏れており、危険である」ことを伝えるシグニファイアとしてはたらくように、意図的につけられています&lt;/li&gt;
+&lt;li&gt;トラックはバックするときに「警報音」が鳴るように義務付けられています&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;シグニファイアの例は世の中のあらゆる製品やサービスの中に隠れています。これらにおいて重要なのは、対象となるユーザが自然に知覚でき、容易に理解できることです。たとえば「フロッピーディスク」のアイコンは、さまざまなアプリケーションにおいて「保存する」操作を促すボタンのシグニファイアとして使われています。ですが、これらはフロッピーディスクを使ったことがない若い世代にはなにを表すアイコンなのかさっぱりわかりません。デザイナーのしごとは、対象となるユーザを深く理解し、適切なシグニファイアを用意して、プロダクトが持つメッセージを効果的に伝えることにあります。凝り固まった頭でデザインを決めずに、柔軟な発想でユーザを助けることができるデザイナーになりましょう。&lt;/p&gt;
+
+&lt;h2 id=&#34;おわりに&#34;&gt;おわりに&lt;/h2&gt;
+
+&lt;p&gt;冒頭で紹介した &lt;a href=&#34;https://www.amazon.co.jp/dp/4788514346/ref=cm_sw_r_tw_dp_x_8Vl5zbJKEJNT1&#34;&gt;誰のためのデザイン？ 増補・改訂版&lt;/a&gt; はデザイナーはもちろんのこと、プロダクトに関わるあらゆるひとの必読書として愛されています。本記事で紹介したアフォーダンス、シグニファイアについての詳細はもちろん、プロダクトやサービスについての重要な考え方や技術が多く紹介されています。ページ数が多くて大変ですが、ぜひ一度は読んでおくことをおすすめします。デザイナ以外の人が読んでもわかりやすい文体で記述されていますので、読むのに困ることは無いと思います。まちがえて古い版を買わないようにお気をつけください。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>すこしでもJSかjQueryが書けるならブックマークレットを作ろう</title>
-      <link>https://hirata.blog/2017-10/lets-bookmarklet/</link>
+      <link>https://hirata.blog/201710_lets-bookmarklet/</link>
       <pubDate>Mon, 02 Oct 2017 00:46:13 +1000</pubDate>
       
-      <guid>https://hirata.blog/2017-10/lets-bookmarklet/</guid>
-      <description>ブックマークレットとは 平田です。これが初のブログ記事です。とりあえず最近自分の中でブームだったブックマークレットについてまとめます。( ブック</description>
+      <guid>https://hirata.blog/201710_lets-bookmarklet/</guid>
+      <description>
+
+&lt;h2 id=&#34;ブックマークレットとは&#34;&gt;ブックマークレットとは&lt;/h2&gt;
+
+&lt;p&gt;平田です。これが初のブログ記事です。とりあえず最近自分の中でブームだった&lt;strong&gt;ブックマークレット&lt;/strong&gt;についてまとめます。( ブックマークレットが何かは知っていて、作り方を知りたい人は&lt;a href=&#34;#content-3&#34;&gt;ブックマークレットの作り方&lt;/a&gt;からお読みください。) ブックマークレットとは、ブラウザのブックマークにJSの短いコードを登録しておき、クリックすることで実行できる技術です。ネット黎明期からありながら今日までほとんど進化もしていない技術ですが、気軽に作れていろいろ活用できるので便利です。&lt;/p&gt;
+
+&lt;h3 id=&#34;ブックマークレットを体験&#34;&gt;ブックマークレットを体験&lt;/h3&gt;
+
+&lt;p&gt;とりあえず体験していただくのがてっとりばやいですね。下の[Say Hello]というリンクをブラウザのブックマークバーにドラッグ&amp;amp;ドロップして登録します。できたら登録した[Say Hello]のブックマークをクリックしてみてください。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;javascript:alert(&#39;hello !&#39;)&#34;&gt;[Say Hello]&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ブラウザのアラートで「Hello」と表示されたかと思います。上記のリンクは以下のようなaタグで書かれています。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a href=&amp;quot;javascript:alert(&#39;hello !&#39;)&amp;quot;&amp;gt;Say Hello&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このように、ブックマークに登録するURLの先頭に&lt;code&gt;javascript:&lt;/code&gt;をつけてJSのコードを記述することで、開いているWebページ上でそのコードを実行できるようになるのです。ブラウザの「新規ブックマークを追加」メニューで作ることもできますし、上記のようにaタグの形で公開されたものを登録することもできます。&lt;/p&gt;
+
+&lt;h2 id=&#34;ブックマークレットの例&#34;&gt;ブックマークレットの例&lt;/h2&gt;
+
+&lt;p&gt;任意のページ上で自分の好きなJSコードを実行できるわけですから、実にさまざまなことが可能です。すでに、有志が作った便利なものはいろいろ公開されています。たとえば、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://psephopaiktes.github.io/bookmarklets/#bookmarklet-0&#34;&gt;開いているページのTitleとURLをコピーする。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://biz.moneyforward.com/blog/business-hack/iphone-chrome-bookmarklet/#26Web&#34;&gt;開いているページのCSSレイアウトをいじる&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://psephopaiktes.github.io/bookmarklets/#bookmarklet-4&#34;&gt;開いているページを翻訳する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://bookmarklet.web.fc2.com/bookmarklet_070.html&#34;&gt;テンプレートからすばやくGmailを作成できる&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ものなど、検索するとたくさんあります。また、SNS系だと開いているページをすばやく共有できるブックマークレットがTwitterやFaceebook公式から出ていたりします。私のおすすめのブックマークレットは&lt;a href=&#34;https://psephopaiktes.github.io/bookmarklets/&#34;&gt;こちらのページで&lt;/a&gt;まとめたので、見てみてください。&lt;/p&gt;
+
+&lt;h2 id=&#34;ブックマークレットの作り方&#34;&gt;ブックマークレットの作り方&lt;/h2&gt;
+
+&lt;p&gt;検索すると実にたくさんのブックマークレットがありますが、ヘビーに使用していると時々独自性が高い自分専用のものがほしくなることがあります。特にページ情報を特定のフォーマットに整形してコピーしたい時など、一度作ってしまえばあとは楽なので便利です。&lt;/p&gt;
+
+&lt;h3 id=&#34;step1-jsのコードを書く&#34;&gt;STEP1. JSのコードを書く&lt;/h3&gt;
+
+&lt;p&gt;まずは処理を記述しましょう。グローバル変数に影響がでないように(ページですでに使われているJavascriptに影響が出ないように)、無名関数と言われる形で記述する必要があります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;javascript:!function(undefined){
+    //任意の処理を記述
+}();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記のような形で作成しましょう。ブックマークレットとして使うため、先頭に&lt;code&gt;javascript:&lt;/code&gt;の文字列を加えます。&lt;/p&gt;
+
+&lt;h3 id=&#34;step2-特殊文字を整形し-1行に圧縮する&#34;&gt;STEP2. 特殊文字を整形し、1行に圧縮する。&lt;/h3&gt;
+
+&lt;p&gt;ブックマークレットとして登録するためには、圧縮されている(改行が無い)必要があります。&lt;a href=&#34;http://dean.edwards.name/packer/&#34;&gt;/packer/&lt;/a&gt;などのツールを使って一行にしましょう。また、&lt;code&gt;(&lt;/code&gt;や&lt;code&gt;&amp;amp;&lt;/code&gt;の文字や、日本語をそのまま利用することは基本的にできません。そのため、一行にした後&lt;a href=&#34;http://www.tagindex.com/tool/url.html&#34;&gt;URLエンコード・デコードフォーム&lt;/a&gt;のようなツールを使ってURLエスケープ(特殊文字へ変換)します。もっとも最近の環境だと改行つき&amp;amp;&amp;amp;日本語のまま登録しても動くことも多いようです。&lt;/p&gt;
+
+&lt;h3 id=&#34;step3-ブラウザに登録する&#34;&gt;STEP3. ブラウザに登録する&lt;/h3&gt;
+
+&lt;img class=&#34;left&#34; src=&#34;https://hirata.blog/images/post/201710_lets-bookmarklet/1.png&#34; alt=&#34;ブックマークを登録するイメージ&#34;&gt;
+
+
+&lt;p&gt;STEP2で圧縮&amp;amp;エスケープした文字列をブラウザに新規ブックマークとして登録します。ブラウザごとに微妙に違いますが、ほとんどやり方は同じです。Chromeを例にあげると、ブックマークバーを右クリックしてから、「ページを追加」を選んで実行します。「名前:」の欄に任意のブックマーク名、「URL:」の欄に作成したコード貼り付けて「保存」を押すと終了です。&lt;/p&gt;
+
+&lt;h3 id=&#34;補足-jqueryを使いたい場合&#34;&gt;補足: jQueryを使いたい場合&lt;/h3&gt;
+
+&lt;p&gt;登録するURLの中で事前にライブラリを読み込んで置くことで、jQueryも利用できます。ページのDOMを取得しやすくなるので、特定のページの要素を抽出しやすくなりますね。以下のページがわかりやすいです。&lt;/p&gt;
+
+&lt;a class=&#34;embed-card&#34; href=&#34;http://blog.mudatobunka.org/entry/2016/02/29/030633&#34; target=&#34;brank_&#34; rel=&#34;noopener&#34;&gt;
+    
+    &lt;img class=&#34;og&#34; src=&#34;https://hirata.blog/images/embed-thumbnail.png&#34; alt=&#34;参照記事サムネイル&#34;&gt;
+    
+    &lt;h5&gt;いまさらまとめるブックマークレットの作り方&lt;/h5&gt;
+    &lt;img class=&#34;favi&#34; src=&#34;http://www.google.com/s2/favicons?domain=blog.mudatobunka.org&#34;&gt;
+    &lt;span&gt;blog.mudatobunka.org&lt;/span&gt;
+    &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;
+&lt;/a&gt;
+
+
+&lt;h3 id=&#34;補足-特定の文をクリップボードにコピーする&#34;&gt;補足: 特定の文をクリップボードにコピーする&lt;/h3&gt;
+
+&lt;p&gt;ブックマークレットで非常によく使う処理です。JSを使ってクリップボードに文章をコピーするには&lt;strong&gt;document.execCommand&lt;/strong&gt;メソッドを利用します。&lt;/p&gt;
+
+&lt;a class=&#34;embed-card&#34; href=&#34;https://developer.mozilla.org/ja/docs/Web/API/Document/execCommand&#34; target=&#34;brank_&#34; rel=&#34;noopener&#34;&gt;
+    
+    &lt;img class=&#34;og&#34; src=&#34;https://hirata.blog/images/embed-thumbnail.png&#34; alt=&#34;参照記事サムネイル&#34;&gt;
+    
+    &lt;h5&gt;document.execCommand - Web API インターフェイス | MDN&lt;/h5&gt;
+    &lt;img class=&#34;favi&#34; src=&#34;http://www.google.com/s2/favicons?domain=developer.mozilla.org&#34;&gt;
+    &lt;span&gt;developer.mozilla.org&lt;/span&gt;
+    &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;
+&lt;/a&gt;
+
+
+&lt;p&gt;以下のように記述することで、取得した文字列をクリップボードにコピーできます。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;javascript:!function(undefined){
+    // 任意の処理を記述
+    !function(a){
+        var b = document.createElement(&#39;textarea&#39;),
+        c = document.getSelection();
+        b.textContent = a, document.body.appendChild(b), c.removeAllRanges(), b.select(), document.execCommand(&#39;copy&#39;), c.removeAllRanges(), document.body.removeChild(b);
+    }(/*コピーしたい文字列を記述*/);
+}();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;JS、jQueryがある程度書けるひとであればブックマークレットはとても便利で、作成も簡単なツールです。ブラウザの拡張機能やプラグインでもいいじゃんって方も多いとは思いますが、拡張機能と違って使う時以外ブラウザやメモリに処理がかからない点や、フォルダや名前を自由に整理できるのが利点だと思います。昨今javascriptでできることはかなり増えており、FileAPIを使用してページ情報をまとめたCSVを生成したり、CANVASで画像を作ったりすることもできます。使いこなせば、今後より強力に作業をお助けしてくれることは間違いありません。&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Hello World !!</title>
-      <link>https://hirata.blog/2017-10/hello-world/</link>
+      <link>https://hirata.blog/201710_hello-world/</link>
       <pubDate>Sun, 01 Oct 2017 00:46:13 +0900</pubDate>
       
-      <guid>https://hirata.blog/2017-10/hello-world/</guid>
-      <description>ブログをつくりました 平田です。社会人になりました。仕事がはじまってから毎日が新しいことばかりで、苦労もありますがとても楽しいです。自分用の勉</description>
+      <guid>https://hirata.blog/201710_hello-world/</guid>
+      <description>
+
+&lt;h2 id=&#34;ブログをつくりました&#34;&gt;ブログをつくりました&lt;/h2&gt;
+
+&lt;p&gt;平田です。社会人になりました。仕事がはじまってから毎日が新しいことばかりで、苦労もありますがとても楽しいです。自分用の勉強メモとして、またアウトプットの場としてまたブログがほしくなったので、仕事終わりに少しずつ本ブログ「WEBA」を作成しました。昔同名のブログを一瞬やってましたが、完全にゼロベースで作り直しました。月2くらいで更新できればいいかな&amp;hellip;くらいのぬるいブログ予定ですが、これからよろしくお願いいたします。情報配信はTwitter, Facebook, RSSなどで行いますので、よろしければ左上のメニューからフォローください。&lt;/p&gt;
+
+&lt;h2 id=&#34;ブログの開発構成&#34;&gt;ブログの開発構成&lt;/h2&gt;
+
+&lt;p&gt;このブログは&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;と&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;という仕組みを利用して運用しています。技術ブログといえばはてブやMediumではじめるか、WordPressで作るかが定番でしたが、いま作るならStaticSiteGenerator(SSG)が良さそうだったのでこうなりました。SSGとは、要はMarkdownなどで書いたブログを静的なHTMLに変換・管理してくれるCUIツールです。Ruby製のJekyllやNode製のHexoなどたくさん種類がありますが、人気が高く性能も高いHugoを選択しました。Go言語製ってのもモダンっぽくて惹かれますね。Wordpress同様Hugoにも無料のブログテーマがたくさん公開されていますが、WEBAは完全にフルスクラッチで作成しました。ちなみにjQueryも使ってません。GitHub PagesはGitHubのレポジトリに上げたHTMLソースをWebサイトとして公開できる公式の無料機能です。なのでこのブログはドメイン代だけで運用してます。安い。&lt;/p&gt;
+
+&lt;h3 id=&#34;補足-むかしのweba&#34;&gt;補足: むかしのWEBA&lt;/h3&gt;
+
+&lt;p&gt;WEBAは私が2014年に1年ほど運営していた料理とPC関連の適当なブログです。もはや&lt;a href=&#34;http://hirata.works/works_weba.html&#34;&gt;スクショしか残ってません&lt;/a&gt;が、私が最初に作ったそこそこ規模のあるWebサイトでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;これからよろしくお願いいたします。&lt;/p&gt;
+</description>
     </item>
     
   </channel>

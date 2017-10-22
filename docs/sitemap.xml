@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hirata.blog/2017-10/lets-bookmarklet/</loc>
+    <loc>https://hirata.blog/201710_signifier/</loc>
+    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/201710_lets-bookmarklet/</loc>
     <lastmod>2017-10-02T00:46:13+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hirata.blog/2017-10/hello-world/</loc>
+    <loc>https://hirata.blog/201710_hello-world/</loc>
     <lastmod>2017-10-01T00:46:13+09:00</lastmod>
   </url>
   
@@ -29,6 +33,18 @@
   
   <url>
     <loc>https://hirata.blog/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/design/</loc>
+    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/categories/design/</loc>
+    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,13 +80,18 @@
   
   <url>
     <loc>https://hirata.blog/tags/</loc>
-    <lastmod>2017-10-01T00:46:13+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/ux/</loc>
+    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/</loc>
-    <lastmod>2017-10-02T00:46:13+10:00</lastmod>
+    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
     <priority>0</priority>
   </url>
   

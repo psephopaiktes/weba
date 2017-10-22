@@ -19,13 +19,6 @@ gulp.task('copyStatic', function() {
         .pipe(gulp.dest('./static'));
 });
 
-// post-asset
-gulp.task('post-asset', function() {
-    gulp.src(['./src/post-asset/*'])
-        .pipe(plumber())
-        .pipe(gulp.dest('./static/post-asset'));
-});
-
 // SASS
 gulp.task('sass', function() {
     gulp.src(['./src/styles/**/*.scss', '!./src/styles/**/_*.scss','!./src/styles/lib/**/*'])
@@ -60,7 +53,7 @@ gulp.task('js', function() {
 
 //img
 gulp.task('img', function() {
-    gulp.src('./src/images/**/*')
+    gulp.src('./src/images/**/*.*')
         .pipe(cache(imagemin()))
         .pipe(gulp.dest('./static/images'));
 });
@@ -70,9 +63,8 @@ gulp.task('reload', function() {
     browserSync.reload();
 });
 
-gulp.task('default',['copyStatic','post-asset','sass','js','img'],function(){
+gulp.task('default',['copyStatic','sass','js','img'],function(){
     // browserSync.init({ server: "./static" });
-    gulp.watch('./src/post-asset/*', ['post-asset']);
     gulp.watch('./src/styles/**/*.scss', ['sass']);
     gulp.watch('./src/scripts/**/*.js',['js']);
     gulp.watch('./src/images/**/*',['img']);

@@ -6,9 +6,9 @@ slug = "sample"
 title = "post parts sample"
 description = "sample"
 date = "2017-07-30T23:34:34+09:00"
-css = ""
-js = ""
-image = ""
+css = false
+js = false
+id = ""
 draft = true
 update = ""
 

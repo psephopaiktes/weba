@@ -5,15 +5,13 @@ copyright = "© weba 2017"
 baseURL = "https://hirata.blog"
 publishDir = "docs"
 hasCJKLanguage = true
-# disableHugoGeneratorInject = true
 
 [Params]
 # 独自変数
 description = "Web・UXデザインやフロントエンド技術についてのブログです。"
 analytics = "UA-01234567-8"
-github = "gituhubアカウント名"
+github = "psephopaiktes"
 facebook = "https://fb.me/hirata.blog"
-linkedin = "Linkedinアカウント名"
 
 [permalinks]
-post = "/:year-:month/:slug/"
+post = "/:filename/"

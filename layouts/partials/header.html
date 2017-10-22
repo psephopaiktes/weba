@@ -21,8 +21,6 @@
     <meta charset="utf-8">
     <meta name="description" content="{{.context.Params.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- TODO: TOPとリスト系にはすべてこれ表示。AMPする場合は要検討 -->
-    <!-- <link rel="canonical" href="{{ .Site.BaseURL }}"> -->
     {{- if .Paginator.HasNext }}
     <link rel="next" href="{{ .Paginator.Next.URL }}">
     {{- end }}
@@ -66,8 +64,8 @@
     {{- else }}
     <meta property="og:description" content="{{.Site.Params.Description}}">
     {{- end }}
-    {{- if ne .context.Params.image "" }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}/post-asset/{{ .context.Params.image }}--sp.jpg">
+    {{- if ne .context.Params.id "" }}
+    <meta property="og:image" content="{{ .Site.BaseURL }}/images/post/{{ .context.Params.id }}/hero--sp.jpg">
     {{- else }}
     <meta property="og:image" content="{{ .Site.BaseURL }}/images/ogp.jpg">
     {{- end }}
