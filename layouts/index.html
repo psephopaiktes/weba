@@ -1,48 +1,50 @@
 {{ partial "header" (dict "asset" "main" "context" . "Site" .Site ) }}
 
-{{ "<!-- main content block -->" | safeHTML }}
-<main>
+    {{ "<!-- main content block -->" | safeHTML }}
+    <main>
 
-    <ul class="posts" id="posts">
+        <ul class="posts" id="posts">
 
-<!-- Adsense追加したら7に変える -->
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") 6 -}}
-{{- range $paginator.Pages -}}
+    <!-- Adsense追加したら7に変える -->
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 7 -}}
+    {{- range $paginator.Pages -}}
 
-{{ .Render "li" }}
+    {{ .Render "li" }}
 
-{{- end }}
+    {{- end }}
 
-        <!-- <li class="adsense">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-5055970484117246"
-                 data-ad-slot="5244399469"
-                 data-ad-format="auto"></ins>
-        </li> -->
+            <li class="adsense">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-7k-3-gk+bt+1ak"
+                    data-ad-client="ca-pub-5055970484117246"
+                    data-ad-slot="3423591226"></ins>
+            </li>
 
-    </ul>
+        </ul>
 
-    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-    <nav class="pager">
+        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+        <nav class="pager">
 
-        {{- if .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}" class='disable'><i class="material-icons">navigate_before</i></a>
-        {{- end }}
-
-        <select id="pager__select">
-            {{- range $paginator.Pagers }}
-            <option value="{{ .URL }}"{{ if eq . $paginator }} selected{{ end }}>{{ .PageNumber }}</option>
+            {{- if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" class='disable'><i class="material-icons">navigate_before</i></a>
             {{- end }}
-        </select>
-        <span>&nbsp;&nbsp;/&nbsp;&nbsp;{{ .Paginator.TotalPages }}</span>
 
-        {{- if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}">NEXT<i class="material-icons">navigate_next</i></a>
-        {{- end }}
+            <select id="pager__select">
+                {{- range $paginator.Pagers }}
+                <option value="{{ .URL }}"{{ if eq . $paginator }} selected{{ end }}>{{ .PageNumber }}</option>
+                {{- end }}
+            </select>
+            <span>&nbsp;&nbsp;/&nbsp;&nbsp;{{ .Paginator.TotalPages }}</span>
 
-    </nav>
-    {{ end }}
+            {{- if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}">NEXT<i class="material-icons">navigate_next</i></a>
+            {{- end }}
 
-</main>
+        </nav>
+        {{ end }}
+
+    </main>{{ "<!-- / main content block -->" | safeHTML }}
+
 {{ partial "footer" (dict "asset" "" "context" . "Site" .Site ) }}
