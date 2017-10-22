@@ -9,7 +9,7 @@ hasCJKLanguage = true
 [Params]
 # 独自変数
 description = "Web・UXデザインやフロントエンド技術についてのブログです。"
-analytics = "UA-01234567-8"
+analytics = "UA-50842673-3"
 github = "psephopaiktes"
 facebook = "https://fb.me/hirata.blog"
 
