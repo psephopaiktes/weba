@@ -111,7 +111,8 @@ main h1{
         img{ filter: grayscale(0) brightness(100%) }
     }
     .adsense{
-        background: #ccc;
+        border: 1px solid #ccc;
+        padding: 1.6rem 1rem;
     }
 }
 .pager{
