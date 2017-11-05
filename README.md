@@ -6,11 +6,11 @@
 - `hugo new post/20170717_Hello-World.md` :記事の作成  
 - `hugo new post/20170717_Hello-World.md --editor="atom"` :記事の作成。Atomで開く
 - `hugo` :deploy
-    - docs(public)内に下書きファイルも残るので、公開前に整理すること
+    - docs(public)内に下書きファイルも残るので、手動でやる場合は公開前に整理すること
 
 ## バッチ
-- `./new $post-id` $post-idで記事作成の準備
-- `./deploy $comment` $commentでCommitとしてデプロイからプッシュまで
+- `./new.sh $post-id` $post-idで記事作成の準備。$post-idは`yearmonth_word-word`。例:201710_hello-world。
+- `./deploy.sh $comment` $commentでCommitとしてデプロイからプッシュまで
 
 ## 構成メモ
 ファイル・フォルダ名 | 役割

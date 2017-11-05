@@ -128,7 +128,7 @@ article section{
     h3{
         margin: 4rem 0 0;
         line-height: 1.4;
-        &::before{ content: "◆ "}
+        &::before{ content: "▶ "}
         opacity: .8;
     }
     h4{ //コードブロックのタイトル専用

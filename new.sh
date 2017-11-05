@@ -13,6 +13,9 @@ fi
 #記事ファイルを作成してatomで開く
 hugo new post/$ID.md --editor="atom"
 
+#記事IDをクリップボードにコピーしておく。
+echo $ID | pbcopy
+
 #記事用の画像フォルダを作成し、Finderで開く
 mkdir src/images/post/$ID
 open src/images/post/$ID
