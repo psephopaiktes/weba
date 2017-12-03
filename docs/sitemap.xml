@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hirata.blog/201712_python-server/</loc>
+    <lastmod>2017-12-03T13:05:42+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/201710_signifier/</loc>
     <lastmod>2017-10-22T22:49:51+16:32</lastmod>
   </url>
@@ -37,20 +42,20 @@
   </url>
   
   <url>
-    <loc>https://hirata.blog/tags/design/</loc>
-    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://hirata.blog/categories/design/</loc>
     <lastmod>2017-10-22T22:49:51+16:32</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://hirata.blog/tags/design/</loc>
+    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/categories/front/</loc>
-    <lastmod>2017-10-02T00:46:13+10:00</lastmod>
+    <lastmod>2017-12-03T13:05:42+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,6 +78,12 @@
   </url>
   
   <url>
+    <loc>https://hirata.blog/tags/python/</loc>
+    <lastmod>2017-12-03T13:05:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/static/</loc>
     <lastmod>2017-07-29T19:09:51+09:00</lastmod>
     <priority>0</priority>
@@ -91,7 +102,13 @@
   
   <url>
     <loc>https://hirata.blog/</loc>
-    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
+    <lastmod>2017-12-03T13:05:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/web-design/</loc>
+    <lastmod>2017-12-03T13:05:42+09:00</lastmod>
     <priority>0</priority>
   </url>
   

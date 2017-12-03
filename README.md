@@ -2,7 +2,7 @@
 
 ## コマンド
 - `hugo server -D` :記事ファイル中でdraft = trueになっている記事も表示する。  
-- `hugo server -w` :ウォッチ
+- `hugo server -w` :ウォッチ (デフォルトでON)
 - `hugo new post/20170717_Hello-World.md` :記事の作成  
 - `hugo new post/20170717_Hello-World.md --editor="atom"` :記事の作成。Atomで開く
 - `hugo` :deploy
