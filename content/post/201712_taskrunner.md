@@ -56,66 +56,121 @@ CSSやJavascriptに構文ミスが無いか検証するツールです。細か�
 
 ---
 
-## gulp
+## gulp 
+<img src="http://www.google.com/s2/favicons?domain=gulpjs.com">
 [[公式サイト]](https://gulpjs.com)
 [[GitHub]](https://github.com/gulpjs/gulp)  
 新進気鋭のタスクランナー達の中ではそこそこ歴史の古いものです。タスクの設定は`gulpfile.js`に定義します。ひとつひとつのタスクを定義し、組み合わせて様々なことを行えます。自由度がかなり高くファイルの管理や認識のAPIも豊富です。ごく基本的・静的なWebページを作りたい時や、逆にEJSなどのテンプレートエンジンを使ってJSONからページを量産するなど、ちょっと特殊なことがしたいときにもおすすめです。反面、Javssriptのモジュール管理にはこれ単体だとかなり不便です。ちなみに[本ブログはGulpで作成](https://github.com/psephopaiktes/weba)されています。
 ### おすすめ記事
-- []()
+- [絶対つまずかないGulp入門。インストールからSassのコンパイルまで - ICS MEDIA](https://ics.media/entry/3290)  
+Gulpのはじめ方についてわかりやすくまとまっています。
+- [タスク自動化ツール「gulp」 を使って制作時間を短縮しよう | Webクリエイターボックス](https://www.webcreatorbox.com/tech/gulp)  
+古い記事ですが、デザイナーでもわかりやすくGulpのセットアップがまとめられています。
+- [gulp | NxWorld](https://www.nxworld.net/tag/gulp/)  
+少し踏み込んだ設定や操作を行いたいときは、NxWorldさんのGulpについての記事がかなり参考になります。
 
 ---
 
 ## npm script
-[[公式サイト]](https://www.npmjs.com)
+<img src="http://www.google.com/s2/favicons?domain=npmjs.com">
+[[公式サイト]](https://npmjs.com)
 [[GitHub]](https://github.com/npm/npm)  
-実は、Node.jsのパッケージマネージャである**npm**単体でもタスクランナーとして使えます。プラグイン設定ファイルである`package.json`の中に、プラグインの実行用コマンドを組み合わせてタスクとして定義しておき、`$ npm run`コマンドで実行します。意外と機能もあり、外部ファイルにタスクを定義したりもできるので、頑張ればかなり様々なこともできますし、Gulpなどに依存するより実行が速い場合が多いです。今回紹介するタスクランナーは全てnpmに依存しているので、この方法が1番シンプルではあります。
+実は、Node.jsのパッケージマネージャである**npm**単体でもタスクランナーとして使えます。プラグイン設定ファイルである`package.json`の中に、プラグインの実行用コマンドを組み合わせてタスクとして定義しておき、`$ npm run`コマンドで実行します。意外と機能もあり、外部ファイルにタスクを定義したりもできるので、頑張ればかなり様々なこともできます。Gulpなどに依存するより実行が速い場合が多いです。今回紹介するタスクランナーは全てnpmに依存しているので、この方法が1番シンプルではあります。
 ### おすすめ記事
-- []()
+- [Node.jsユーザーなら押さえておきたいnpm-scriptsのタスク実行方法まとめ - ICS MEDIA](https://ics.media/entry/12226)  
+短めの記事ですが、概要がよくまとまっています。
+- [[意訳]私がGulpとGruntを手放した理由 - Qiita](https://qiita.com/chuck0523/items/dafdbd19c12efd40e2de)
+- [Grunt/Gulpで憔悴したおっさんの話 - MOL](https://t32k.me/mol/log/npm-run-script/)  
+上記2つの記事から、GulpやWebpackを捨ててシンプルにNPMだけでいこう！ みたいな流れが出来た気がします。GulpやWebpackを触ったことが無い人にはあんまし関係ない記事かもです。
 
 ---
 
 ## webpack
+<img src="http://www.google.com/s2/favicons?domain=webpack.js.org">
 [[公式サイト]](https://webpack.js.org)
 [[GitHub]](https://github.com/webpack/webpack)  
-Browserifyに変わるモジュールバンドラ(兼タスクランナー)として近年とても人気が出ました。`loader`と呼ばれるプラグインを組み合わせて様々な処理を行います。基本的な目的はJavascriptの統合であり、CSSや画像すらもJavascriptとしてひとつのファイルにまとめることができます。ReactやAnguralなどのモダンなJSフレームワークによる開発で使われることが多いです。設定が煩雑になりがちで、敷居が高めなのが欠点でしょうか。
+Browserifyに変わるモジュールバンドラ(兼タスクランナー)として近年とても人気が出ました。`loader`と呼ばれるプラグインを組み合わせて様々な処理を行います。基本的な目的はJavascriptファイルの統合であり、CSSや画像すらもJavascriptとしてひとつのファイルにまとめることができます。SCSSや画像を普通にコンパイルしたり圧縮もできますが、そのような場合はgulpと組み合わせて使用したほうが良いです。ReactやAnguralなどのモダンなJSフレームワークによる開発で使われることが多いです。設定が煩雑になりがちで、敷居が高めなのが欠点でしょうか。
 ### おすすめ記事
-- []()
+- [最新版で学ぶwebpack 3入門 - JavaScript開発で人気のバンドルツール - ICS MEDIA](https://ics.media/entry/12140/3)  
+またまたICSさんの記事です。入門記事として最適だと思います。ICSさんは他にも[TypeScript](https://ics.media/entry/16329)や[Babel](https://ics.media/entry/16028)と、ReactやVueを組み合わせる場合のコード例も紹介されているので、とても参考になります。
+- [Gulpで始めるwebpack 3入門 - Qiita](https://qiita.com/tonkotsuboy_com/items/2d4f3862e6d05dc0bea1)  
+Gulpと組み合わせて使いたい場合は、上記のQiita記事がよくまとまっています。
+- [Reactを使ったモジュラーCSS : CSS-in-JSとCSS Module | プログラミング | POSTD](http://postd.cc/modular-css-with-react/)  
+Reactの様に複数のComponentでページを管理する場合、CSSもComponentごとに定義してしまいたい場合があります(CSS-in-JSと言います)。スタイル定義を[CSSファイルで作成する](https://qiita.com/clockmaker/items/8fab54c93e84001846b0)のか、JSの中に書いてしまうのがいいか、上記の記事が参考になると思います。
 
 ---
 
 ## Rollup
-[[公式サイト]]()
-[[GitHub]]()  
+<img src="http://www.google.com/s2/favicons?domain=rollupjs.org">
+[[公式サイト]](https://rollupjs.org)
+[[GitHub]](https://github.com/rollup/rollup)  
+ビルドはwebpackより若干遅めですが、Minifyした生成ファイルが非常に小さくなるのが特徴です。そのため、<b>ライブラリなどを開発する際に使用される</b>ことが多いです。設定ファイルはwebpackに似ています。他のモジュールバンドラ同様、タスクランナーとしては貧弱なので単体で使うのは不便かもしれません。
+### おすすめ記事
+- [Rollupがちょうどいい感じ - Qiita](https://qiita.com/cognitom/items/e3ac0da00241f427dad6)
+- [Webpack and Rollup: the same but different – webpack – Medium](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c) ([日本語訳](http://postd.cc/webpack-and-rollup-the-same-but-different/) )
+
+
 
 ---
 
 ## Fusebox
+<img src="http://www.google.com/s2/favicons?domain=fuse-box.org">
 [[公式サイト]](http://fuse-box.org)
 [[GitHub]](https://github.com/fuse-box/fuse-box)  
+かなり新しめのモジュールバンドラです。webpackよりも圧倒的に高速、かつ設定がシンプルで、一部で人気がでています。(後発のParcelに比べると勢いは低いですが...。) ローカルサーバやTypeScriptにデフォルトで対応しており、設定ファイル`fuse.js`も簡潔に記述できます。webpack同様、タスクランナーとしてCSSや画像の処理もできますが、それはGulpやnpm scriptに任せたほうがよいかもしれません。まだレファレンスがかなり少ないので、特殊なことをしようとすると苦労しそうです。
+### おすすめ記事
+- [FuseBox – 新進気鋭の JavaScript モジュールバンドラー – PSYENCE:MEDIA](https://tech.recruit-mp.co.jp/front-end/post-12691/)  
+Fuseboxについての概要と、競合との比較を行った良記事です。
+- [webpackよりもシンプルで高速！最新モジュールバンドラー「FuseBox」超入門 - WPJ](https://www.webprofessional.jp/fusebox-faster-webpack-alternative/)
 
 ---
 
 ## Parcel
+<img src="http://www.google.com/s2/favicons?domain=parceljs.org">
 [[公式サイト]](https://parceljs.org)
-[[GitHub]](https://parceljs.org)  
-リリースされたばかりのタスクランナーですが、圧倒的簡単さとパフォーマンスから人気を伸ばしています。webpackの様に複雑な設定ファイルを用意せずとも、いい感じに察してビルドやバンドルを行ってくれます。開発サーバも最初からセットでついてきます。設定が非常に楽な反面、カスタマイズ性や機能はまだまだ低く、現場で使用するには機能不足という印象です。将来的に利用できる機能が増えれば、webpackをリプレイスする可能性はありそうです。
+[[GitHub]](https://github.com/parcel-bundler/parcel)  
+こちらもリリースされたばかりのタスクランナーですが、圧倒的簡単さとパフォーマンスから人気を伸ばしています。webpackの様に複雑な設定ファイルを用意せずとも、いい感じに察してビルドやバンドルを行ってくれます。開発サーバも最初からセットでついてきます。設定が非常に楽な反面、カスタマイズ性や機能はまだまだ低く、現場で使用するには機能不足という印象です。将来的に利用できる機能が増えれば、webpackをリプレイスする可能性はありそうです。
+### おすすめ記事
+- [webpack時代の終わりとparcel時代のはじまり - Qiita](https://qiita.com/bitrinjani/items/b08876e0a2618745f54a)  
+Parcelの人気の火付け役となったQiita記事です。
+- [webpackやGulpのような独自設定ファイルは不要。ParcelでコンパイルするSassとAutoprefixer - Qiita](https://qiita.com/tonkotsuboy_com/items/2f96263294fad7661a82)
+- [設定ファイル不要のParcelでTypeScriptをコンパイル・バンドルしたら拍子抜けするほど簡単だった - Qiita](https://qiita.com/tonkotsuboy_com/items/20ee57c6bb2762746fce)
+
 
 ---
 
 ## 番外編
-上記のタスクランナーの設定が面倒であれば、最初からタスクランナーが設定済みで組み込まれているboilerplate(雛形・開発用テンプレート)を使用するのも手です。
+上記のタスクランナーの設定が面倒であれば、最初からタスクランナーが設定済みで組み込まれているboilerplate(雛形・開発用テンプレート)や、Webフレームワークに組み込まれているものを使用するのも手です。
  
 - [Create React App](https://github.com/facebookincubator/create-react-app)  
 Reactの開発元であるFacebookが提供するReact開発用の環境です。webpackなどで設定されており、とりあえずReactを使ってみたいときなどに便利です。
 - [Web Starter Kit](https://developers.google.com/web/tools/starter-kit/?hl=ja)  
 Googleが提供するWeb作成用の環境です。Gulpベースで作成されており、よく使われる機能が網羅されています。
 - [asset pipline ( Ruby on Rails ) ](http://rubyonrails.org/)  
-boilerplateではありませんが...。Railsには最初からSASSの変換やローカルサーバの機能が備わっています。また、`v5.1`からは[webpacker](https://github.com/rails/webpacker) というモジュールバンドラも追加されるそうです。
+Railsには最初からSASSの変換やローカルサーバの機能が備わっています。また、`v5.1`からは[webpacker](https://github.com/rails/webpacker) というモジュールバンドラも追加されるそうです。
+- [CodeKit](https://codekitapp.com/)  
+今回紹介しているものは全てターミナルで使用するCUIツールですが、CodeKitのようなGUIで管理・制御できるツールもあります。あくまで個人の趣味開発などであれば選択肢としてありかもしれませんが、使用プラグインが限られたり、複数人での開発時にコードを管理しづらかったりと、基本的におすすめはできません。
 
 ---
 
 ## それぞれの人気状況
-2017年12月13日現在の情報です。
+2017年12月13日現在の情報です。この格付=人気とは言い切れませんが、参考にはなるかと思います。
+
+### GitHub Star数
+\# | name | star
+:--:|:--:|:--:
+1 | [webpack](https://github.com/webpack/webpack) | 34,852
+2 | [gulp](https://github.com/gulpjs/gulp) | 28,170
+3 | [npm](https://github.com/npm/npm) | 14,795
+4 | [rollup](https://github.com/rollup/rollup) | 11,109
+5 | [parcel](https://github.com/parcel-bundler/parcel) | 9,304
+6 | [fuse-box](https://github.com/fuse-box/fuse-box) | 2,980
+
+### Google Trend
+[Google トレンド](https://trends.google.co.jp/trends/explore?cat=31&date=2014-12-13%202017-12-13&q=webpack,gulp,rollup,parcel,npm%20script) での検索数の推移です。fuse-boxはグラフ圏外であきらかに少なかったので除外しました。ちなみにnpm scriptについては、「npm run」と検索する人も多いので、実際はもう少し多いかと思われます。
+{{< img "center" "trends.png" "Googleトレンドの推移" >}}
+
+
 
 ## 選び方の方針
 
