@@ -36,7 +36,7 @@ HTMLをより簡略にかけたり、共通で使いまわせるレイアウト�
 CSSをより読みやすく書いたり、変数や関数などを利用できます。また、将来的に公式のCSSで採用される機能を先取りして利用することもできます。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;BabelやTypescriptなどのJavascriptトランスパイラ&lt;/strong&gt;&lt;br /&gt;
 より厳密なルールで型を定義したり、将来的に採用されることが決まっている仕様で記述したりできます。CoffeScriptのような、記述を簡便化することが目的のものもあります。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ReactやVue、Anguralなどのフレームワーク&lt;/strong&gt;&lt;br /&gt;
+&lt;li&gt;&lt;strong&gt;ReactやVue、Angularなどのフレームワーク&lt;/strong&gt;&lt;br /&gt;
 SPA開発などフロント面で多機能なUI実装をしたり、様々な目的を持つライブラリが非常にたくさんあります。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CommonJSやAMDなどのモジュールバンドラ&lt;/strong&gt;&lt;br /&gt;
 複数ファイルに分割されたJavaScriptをModuleとして扱い、ひとつのファイルに結合します。ただ順番にファイルを結合(concat)するのではなく、それらの関数や変数値などの依存関係を解決した上で1つに結びつけます。&lt;/li&gt;
@@ -61,7 +61,7 @@ CSSやJavascriptに構文ミスが無いか検証するツールです。細か�
 
 &lt;h3 id=&#34;node-jsとnpm&#34;&gt;Node.jsとNPM&lt;/h3&gt;
 
-&lt;p&gt;上記で紹介したライブラリやフレームワークのほとんど、またそれを扱うタスクランナー自体が&lt;a href=&#34;https://nodejs.org&#34;&gt;Node.js&lt;/a&gt;で開発され、&lt;b&gt;パッケージ&lt;/b&gt;として公開されています。それらのパッケージを簡単にインストール・管理できる公式ツールがNodePackageManager= &lt;strong&gt;NPM&lt;/strong&gt; です。(RubyのgemやPythonのpipみたいなものです。) フロントエンド開発の環境構築はNPMではじまりNPMで終わるといっても過言ではありません。( NPMと互換性のある&lt;a href=&#34;https://yarnpkg.com&#34;&gt;YARN&lt;/a&gt;も人気ですが、今回は説明しません。 ) 各プロジェクトフォルダに&lt;code&gt;package.json&lt;/code&gt;という管理ファイルを作成し、そのファイルの中に利用するパッケージをリスト化してまとめておくことができます。node.jsやnpmについて深く知らなくてもタスクランナーは使えますが、そういうものでできているんだな、という認識だけぜひ持っておいてください。&lt;/p&gt;
+&lt;p&gt;上記で紹介したライブラリやフレームワークのほとんど、またそれを扱うタスクランナー自体が&lt;a href=&#34;https://nodejs.org&#34;&gt;Node.js&lt;/a&gt;で開発され、&lt;b&gt;パッケージ&lt;/b&gt;として公開されています。それらのパッケージを簡単にインストール・管理できる公式ツールがNodePackageManager= &lt;strong&gt;NPM&lt;/strong&gt; です。(RubyのbundlerやPythonのpipみたいなものです。) フロントエンド開発の環境構築はNPMではじまりNPMで終わるといっても過言ではありません。( NPMと互換性のある&lt;a href=&#34;https://yarnpkg.com&#34;&gt;YARN&lt;/a&gt;も人気ですが、今回は説明しません。 ) 各プロジェクトフォルダに&lt;code&gt;package.json&lt;/code&gt;という管理ファイルを作成し、そのファイルの中に利用するパッケージをリスト化してまとめておくことができます。node.jsやnpmについて深く知らなくてもタスクランナーは使えますが、そういうものでできているんだな、という認識だけぜひ持っておいてください。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -71,6 +71,17 @@ CSSやJavascriptに構文ミスが無いか検証するツールです。細か�
 &lt;a href=&#34;https://gulpjs.com&#34;&gt;[公式サイト]&lt;/a&gt;
 &lt;a href=&#34;https://github.com/gulpjs/gulp&#34;&gt;[GitHub]&lt;/a&gt;&lt;br /&gt;
 新進気鋭のタスクランナー達の中ではそこそこ歴史の古いものです。タスクの設定は&lt;code&gt;gulpfile.js&lt;/code&gt;に定義します。ひとつひとつのタスクを定義し、組み合わせて様々なことを行えます。自由度がかなり高くファイルの管理や認識のAPIも豊富です。ごく基本的・静的なWebページを作りたい時や、逆にEJSなどのテンプレートエンジンを使ってJSONからページを量産するなど、ちょっと特殊なことがしたいときにもおすすめです。反面、Javssriptのモジュール管理にはこれ単体だとかなり不便です。ちなみに&lt;a href=&#34;https://github.com/psephopaiktes/weba&#34;&gt;本ブログはGulpで作成&lt;/a&gt;されています。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;good&lt;/th&gt;
+    &lt;td&gt;自由度がかなり高く、レファレンスやプラグインも豊富。&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;bad&lt;/th&gt;
+    &lt;td&gt;モジュールバンドラとしての機能は貧弱、パフォーマンスは普通&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
 &lt;h3 id=&#34;おすすめ記事&#34;&gt;おすすめ記事&lt;/h3&gt;
 
@@ -92,6 +103,17 @@ Gulpのはじめ方についてわかりやすくまとまっています。&lt;
 &lt;a href=&#34;https://github.com/npm/npm&#34;&gt;[GitHub]&lt;/a&gt;&lt;br /&gt;
 実は、Node.jsのパッケージマネージャである&lt;strong&gt;npm&lt;/strong&gt;単体でもタスクランナーとして使えます。プラグイン設定ファイルである&lt;code&gt;package.json&lt;/code&gt;の中に、プラグインの実行用コマンドを組み合わせてタスクとして定義しておき、&lt;code&gt;$ npm run&lt;/code&gt;コマンドで実行します。意外と機能もあり、外部ファイルにタスクを定義したりもできるので、頑張ればかなり様々なこともできます。Gulpなどに依存するより実行が速い場合が多いです。今回紹介するタスクランナーは全てnpmに依存しているので、この方法が1番シンプルではあります。&lt;/p&gt;
 
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;good&lt;/th&gt;
+    &lt;td&gt;npmの本来の機能のみでよく、シンプルな構成になる。ビルドパフォーマンスが高い&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;bad&lt;/th&gt;
+    &lt;td&gt;モジュールバンドラとしての機能は貧弱。自由度は低め、レファレンスも少ない&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
 &lt;h3 id=&#34;おすすめ記事-1&#34;&gt;おすすめ記事&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -109,7 +131,18 @@ Gulpのはじめ方についてわかりやすくまとまっています。&lt;
 &lt;p&gt;&lt;img src=&#34;http://www.google.com/s2/favicons?domain=webpack.js.org&#34;&gt;
 &lt;a href=&#34;https://webpack.js.org&#34;&gt;[公式サイト]&lt;/a&gt;
 &lt;a href=&#34;https://github.com/webpack/webpack&#34;&gt;[GitHub]&lt;/a&gt;&lt;br /&gt;
-Browserifyに変わるモジュールバンドラ(兼タスクランナー)として近年とても人気が出ました。&lt;code&gt;loader&lt;/code&gt;と呼ばれるプラグインを組み合わせて様々な処理を行います。基本的な目的はJavascriptファイルの統合であり、CSSや画像すらもJavascriptとしてひとつのファイルにまとめることができます。SCSSや画像を普通にコンパイルしたり圧縮もできますが、そのような場合はgulpと組み合わせて使用したほうが良いです。ReactやAnguralなどのモダンなJSフレームワークによる開発で使われることが多いです。設定が煩雑になりがちで、敷居が高めなのが欠点でしょうか。&lt;/p&gt;
+Browserifyに変わるモジュールバンドラ(兼タスクランナー)として近年とても人気が出ました。&lt;code&gt;loader&lt;/code&gt;と呼ばれるプラグインを組み合わせて様々な処理を行います。基本的な目的はJavascriptファイルの統合であり、CSSや画像すらもJavascriptとしてひとつのファイルにまとめることができます。SCSSや画像を普通にコンパイルしたり圧縮もできますが、そのような場合はgulpと組み合わせて使用したほうが良いです。ReactやAngularなどのモダンなJSフレームワークによる開発で使われることが多いです。設定が煩雑になりがちで、敷居が高めなのが欠点でしょうか。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;good&lt;/th&gt;
+    &lt;td&gt;モジュールバンドらとしては人気が高く、レファレンスも多い&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;bad&lt;/th&gt;
+    &lt;td&gt;設定が難しめ、ファイル操作などは弱い&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
 &lt;h3 id=&#34;おすすめ記事-2&#34;&gt;おすすめ記事&lt;/h3&gt;
 
@@ -131,6 +164,17 @@ Reactの様に複数のComponentでページを管理する場合、CSSもCompon
 &lt;a href=&#34;https://github.com/rollup/rollup&#34;&gt;[GitHub]&lt;/a&gt;&lt;br /&gt;
 ビルドはwebpackより若干遅めですが、Minifyした生成ファイルが非常に小さくなるのが特徴です。そのため、&lt;b&gt;ライブラリなどを開発する際に使用される&lt;/b&gt;ことが多いです。設定ファイルはwebpackに似ています。他のモジュールバンドラ同様、タスクランナーとしては貧弱なので単体で使うのは不便かもしれません。&lt;/p&gt;
 
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;good&lt;/th&gt;
+    &lt;td&gt;生成されたファイルが小さく、ライブラリの作成などに向いている&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;bad&lt;/th&gt;
+    &lt;td&gt;ビルドが少し遅め&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
 &lt;h3 id=&#34;おすすめ記事-3&#34;&gt;おすすめ記事&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -146,6 +190,17 @@ Reactの様に複数のComponentでページを管理する場合、CSSもCompon
 &lt;a href=&#34;http://fuse-box.org&#34;&gt;[公式サイト]&lt;/a&gt;
 &lt;a href=&#34;https://github.com/fuse-box/fuse-box&#34;&gt;[GitHub]&lt;/a&gt;&lt;br /&gt;
 かなり新しめのモジュールバンドラです。webpackよりも圧倒的に高速、かつ設定がシンプルで、一部で人気がでています。(後発のParcelに比べると勢いは低いですが&amp;hellip;。) ローカルサーバやTypeScriptにデフォルトで対応しており、設定ファイル&lt;code&gt;fuse.js&lt;/code&gt;も簡潔に記述できます。webpack同様、タスクランナーとしてCSSや画像の処理もできますが、それはGulpやnpm scriptに任せたほうがよいかもしれません。まだレファレンスがかなり少ないので、特殊なことをしようとすると苦労しそうです。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;good&lt;/th&gt;
+    &lt;td&gt;ビルドパフォーマンス、設定のシンプルさでwebpackより優れている&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;bad&lt;/th&gt;
+    &lt;td&gt;レファレンスが少ない、信頼性は若干低いかも&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
 &lt;h3 id=&#34;おすすめ記事-4&#34;&gt;おすすめ記事&lt;/h3&gt;
 
@@ -163,6 +218,17 @@ Fuseboxについての概要と、競合との比較を行った良記事です�
 &lt;a href=&#34;https://parceljs.org&#34;&gt;[公式サイト]&lt;/a&gt;
 &lt;a href=&#34;https://github.com/parcel-bundler/parcel&#34;&gt;[GitHub]&lt;/a&gt;&lt;br /&gt;
 こちらもリリースされたばかりのタスクランナーですが、圧倒的簡単さとパフォーマンスから人気を伸ばしています。webpackの様に複雑な設定ファイルを用意せずとも、いい感じに察してビルドやバンドルを行ってくれます。開発サーバも最初からセットでついてきます。設定が非常に楽な反面、カスタマイズ性や機能はまだまだ低く、現場で使用するには機能不足という印象です。将来的に利用できる機能が増えれば、webpackをリプレイスする可能性はありそうです。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;good&lt;/th&gt;
+    &lt;td&gt;ビルドパフォーマンス、設定のシンプルさでwebpackより圧倒的に優れている&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;bad&lt;/th&gt;
+    &lt;td&gt;レファレンスが少ない、まだ発展途上で機能は少なめ&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
 
 &lt;h3 id=&#34;おすすめ記事-5&#34;&gt;おすすめ記事&lt;/h3&gt;
 
