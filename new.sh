@@ -11,7 +11,7 @@ if [ -z ${ID} ]; then
 fi
 
 #記事ファイルを作成してatomで開く
-hugo new post/$ID.md --editor="atom"
+hugo new post/$ID.md --editor="code"
 
 #記事IDをクリップボードにコピーしておく。
 echo $ID | pbcopy
@@ -19,6 +19,7 @@ echo $ID | pbcopy
 #記事用の画像フォルダを作成し、Finderで開く
 mkdir src/images/post/$ID
 open src/images/post/$ID
+open src/images/post.ai
 
 #サーバをたててChromeで開く
 open -a "Google Chrome.app" http://127.0.0.1:1313/

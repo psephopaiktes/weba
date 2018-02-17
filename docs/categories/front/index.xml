@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Front on WEBA</title>
-    <link>https://hirata.blog/categories/front/index.xml</link>
+    <link>https://hirata.blog/categories/front/</link>
     <description>Recent content in Front on WEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <atom:link href="https://hirata.blog/categories/front/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2017 13:05:42 +0900</lastBuildDate>
+    
+	<atom:link href="https://hirata.blog/categories/front/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>PCで作成中のWebページをリアルタイムにスマホで確認する方法</title>
@@ -15,26 +18,7 @@
       <pubDate>Sun, 03 Dec 2017 13:05:42 +0900</pubDate>
       
       <guid>https://hirata.blog/201712_python-server/</guid>
-      <description>
-
-&lt;h2 id=&#34;やり方&#34;&gt;やり方&lt;/h2&gt;
-
-&lt;p&gt;ターミナルアプリで作業中のディレクトリに移動し、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;python -m http.server 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;というコマンドを実行します。するとpythonのローカルサーバが起ち上がり、同一のWIFIに繋がったデバイスからアクセスできるようになります。スマホのブラウザなどにPCのIPアドレスとポート番号を入力することでアクセスします。IPアドレスはMacであれば&lt;b&gt;システム環境設定→ネットワーク&lt;/b&gt;から見るか、&lt;code&gt;ifconfig&lt;/code&gt;コマンドで確認できます。ポート番号はデフォルトでは&lt;code&gt;8000&lt;/code&gt;です。たとえばIPアドレスが&lt;code&gt;192.168.11.11&lt;/code&gt;なら&lt;code&gt;192.168.11.11:8000&lt;/code&gt;にアクセスすることでプレビュー確認が可能です。&lt;/p&gt;
-
-&lt;h2 id=&#34;説明&#34;&gt;説明&lt;/h2&gt;
-
-&lt;p&gt;Webサイト・webアプリを作成していると、手元のPCで作成しているwebページを、スマホサイズで確認したいシーンが多々あると思います。基本的にはChromeのモバイルプレビューモード ( Devツールを開いてスマホのアイコンをクリック or &lt;code&gt;⌘⌥I&lt;/code&gt; → &lt;code&gt;⌘⇧M&lt;/code&gt; ) でもよいのですが、実機のCSSの正確な挙動を見たり、実際のデザインのイメージを説明するためには物足りません。&lt;/p&gt;
-
-&lt;img class=&#34;center&#34; src=&#34;https://hirata.blog/images/post/201712_python-server/chrome.png&#34; alt=&#34;Chromeのモバイルプレビュー&#34;&gt;
-
-
-&lt;p&gt;もしくはGulpやRailsなどの環境で開発用サーバが入っている場合ならそちらの機能を使えばいいのですが、ただ手元の静的なHTMLをちょっとスマホでみたい時、いちいち開発環境を用意するのは手間です。そういう時、Macであればデフォルトでインストールされている&lt;b&gt;Python&lt;/b&gt;の機能を使用して、上記コマンドで簡単にサーバを起てられるというわけです。&lt;/p&gt;
-</description>
+      <description>やり方 ターミナルアプリで作業中のディレクトリに移動し、 python -m http.server というコマンドを実行します。するとpythonのローカルサーバが起ち上がり、同一</description>
     </item>
     
     <item>
@@ -43,110 +27,7 @@
       <pubDate>Mon, 02 Oct 2017 00:46:13 +1000</pubDate>
       
       <guid>https://hirata.blog/201710_lets-bookmarklet/</guid>
-      <description>
-
-&lt;h2 id=&#34;ブックマークレットとは&#34;&gt;ブックマークレットとは&lt;/h2&gt;
-
-&lt;p&gt;平田です。これが初のブログ記事です。とりあえず最近自分の中でブームだった&lt;strong&gt;ブックマークレット&lt;/strong&gt;についてまとめます。( ブックマークレットが何かは知っていて、作り方を知りたい人は&lt;a href=&#34;#content-3&#34;&gt;ブックマークレットの作り方&lt;/a&gt;からお読みください。) ブックマークレットとは、ブラウザのブックマークにJSの短いコードを登録しておき、クリックすることで実行できる技術です。ネット黎明期からありながら今日までほとんど進化もしていない技術ですが、気軽に作れていろいろ活用できるので便利です。&lt;/p&gt;
-
-&lt;h3 id=&#34;ブックマークレットを体験&#34;&gt;ブックマークレットを体験&lt;/h3&gt;
-
-&lt;p&gt;とりあえず体験していただくのがてっとりばやいですね。下の[Say Hello]というリンクをブラウザのブックマークバーにドラッグ&amp;amp;ドロップして登録します。できたら登録した[Say Hello]のブックマークをクリックしてみてください。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;javascript:alert(&#39;hello !&#39;)&#34;&gt;[Say Hello]&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ブラウザのアラートで「Hello」と表示されたかと思います。上記のリンクは以下のようなaタグで書かれています。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a href=&amp;quot;javascript:alert(&#39;hello !&#39;)&amp;quot;&amp;gt;Say Hello&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;このように、ブックマークに登録するURLの先頭に&lt;code&gt;javascript:&lt;/code&gt;をつけてJSのコードを記述することで、開いているWebページ上でそのコードを実行できるようになるのです。ブラウザの「新規ブックマークを追加」メニューで作ることもできますし、上記のようにaタグの形で公開されたものを登録することもできます。&lt;/p&gt;
-
-&lt;h2 id=&#34;ブックマークレットの例&#34;&gt;ブックマークレットの例&lt;/h2&gt;
-
-&lt;p&gt;任意のページ上で自分の好きなJSコードを実行できるわけですから、実にさまざまなことが可能です。すでに、有志が作った便利なものはいろいろ公開されています。たとえば、&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://psephopaiktes.github.io/bookmarklets/#bookmarklet-0&#34;&gt;開いているページのTitleとURLをコピーする。&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://biz.moneyforward.com/blog/business-hack/iphone-chrome-bookmarklet/#26Web&#34;&gt;開いているページのCSSレイアウトをいじる&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://psephopaiktes.github.io/bookmarklets/#bookmarklet-4&#34;&gt;開いているページを翻訳する&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://bookmarklet.web.fc2.com/bookmarklet_070.html&#34;&gt;テンプレートからすばやくGmailを作成できる&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ものなど、検索するとたくさんあります。また、SNS系だと開いているページをすばやく共有できるブックマークレットがTwitterやFaceebook公式から出ていたりします。私のおすすめのブックマークレットは&lt;a href=&#34;https://psephopaiktes.github.io/bookmarklets/&#34;&gt;こちらのページで&lt;/a&gt;まとめたので、見てみてください。&lt;/p&gt;
-
-&lt;h2 id=&#34;ブックマークレットの作り方&#34;&gt;ブックマークレットの作り方&lt;/h2&gt;
-
-&lt;p&gt;検索すると実にたくさんのブックマークレットがありますが、ヘビーに使用していると時々独自性が高い自分専用のものがほしくなることがあります。特にページ情報を特定のフォーマットに整形してコピーしたい時など、一度作ってしまえばあとは楽なので便利です。&lt;/p&gt;
-
-&lt;h3 id=&#34;step1-jsのコードを書く&#34;&gt;STEP1. JSのコードを書く&lt;/h3&gt;
-
-&lt;p&gt;まずは処理を記述しましょう。グローバル変数に影響がでないように(ページですでに使われているJavascriptに影響が出ないように)、無名関数と言われる形で記述する必要があります。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;javascript:!function(undefined){
-    //任意の処理を記述
-}();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上記のような形で作成しましょう。ブックマークレットとして使うため、先頭に&lt;code&gt;javascript:&lt;/code&gt;の文字列を加えます。&lt;/p&gt;
-
-&lt;h3 id=&#34;step2-特殊文字を整形し-1行に圧縮する&#34;&gt;STEP2. 特殊文字を整形し、1行に圧縮する。&lt;/h3&gt;
-
-&lt;p&gt;ブックマークレットとして登録するためには、圧縮されている(改行が無い)必要があります。&lt;a href=&#34;http://dean.edwards.name/packer/&#34;&gt;/packer/&lt;/a&gt;などのツールを使って一行にしましょう。また、&lt;code&gt;(&lt;/code&gt;や&lt;code&gt;&amp;amp;&lt;/code&gt;の文字や、日本語をそのまま利用することは基本的にできません。そのため、一行にした後&lt;a href=&#34;http://www.tagindex.com/tool/url.html&#34;&gt;URLエンコード・デコードフォーム&lt;/a&gt;のようなツールを使ってURLエスケープ(特殊文字へ変換)します。もっとも最近の環境だと改行つき&amp;amp;&amp;amp;日本語のまま登録しても動くことも多いようです。&lt;/p&gt;
-
-&lt;h3 id=&#34;step3-ブラウザに登録する&#34;&gt;STEP3. ブラウザに登録する&lt;/h3&gt;
-
-&lt;img class=&#34;left&#34; src=&#34;https://hirata.blog/images/post/201710_lets-bookmarklet/1.png&#34; alt=&#34;ブックマークを登録するイメージ&#34;&gt;
-
-
-&lt;p&gt;STEP2で圧縮&amp;amp;エスケープした文字列をブラウザに新規ブックマークとして登録します。ブラウザごとに微妙に違いますが、ほとんどやり方は同じです。Chromeを例にあげると、ブックマークバーを右クリックしてから、「ページを追加」を選んで実行します。「名前:」の欄に任意のブックマーク名、「URL:」の欄に作成したコード貼り付けて「保存」を押すと終了です。&lt;/p&gt;
-
-&lt;h3 id=&#34;補足-jqueryを使いたい場合&#34;&gt;補足: jQueryを使いたい場合&lt;/h3&gt;
-
-&lt;p&gt;登録するURLの中で事前にライブラリを読み込んで置くことで、jQueryも利用できます。ページのDOMを取得しやすくなるので、特定のページの要素を抽出しやすくなりますね。以下のページがわかりやすいです。&lt;/p&gt;
-
-&lt;a class=&#34;embed-card&#34; href=&#34;http://blog.mudatobunka.org/entry/2016/02/29/030633&#34; target=&#34;brank_&#34; rel=&#34;noopener&#34;&gt;
-    
-    &lt;img class=&#34;og&#34; src=&#34;https://hirata.blog/images/embed-thumbnail.png&#34; alt=&#34;参照記事サムネイル&#34;&gt;
-    
-    &lt;h5&gt;いまさらまとめるブックマークレットの作り方&lt;/h5&gt;
-    &lt;img class=&#34;favi&#34; src=&#34;http://www.google.com/s2/favicons?domain=blog.mudatobunka.org&#34;&gt;
-    &lt;span&gt;blog.mudatobunka.org&lt;/span&gt;
-    &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;
-&lt;/a&gt;
-
-
-&lt;h3 id=&#34;補足-特定の文をクリップボードにコピーする&#34;&gt;補足: 特定の文をクリップボードにコピーする&lt;/h3&gt;
-
-&lt;p&gt;ブックマークレットで非常によく使う処理です。JSを使ってクリップボードに文章をコピーするには&lt;strong&gt;document.execCommand&lt;/strong&gt;メソッドを利用します。&lt;/p&gt;
-
-&lt;a class=&#34;embed-card&#34; href=&#34;https://developer.mozilla.org/ja/docs/Web/API/Document/execCommand&#34; target=&#34;brank_&#34; rel=&#34;noopener&#34;&gt;
-    
-    &lt;img class=&#34;og&#34; src=&#34;https://hirata.blog/images/embed-thumbnail.png&#34; alt=&#34;参照記事サムネイル&#34;&gt;
-    
-    &lt;h5&gt;document.execCommand - Web API インターフェイス | MDN&lt;/h5&gt;
-    &lt;img class=&#34;favi&#34; src=&#34;http://www.google.com/s2/favicons?domain=developer.mozilla.org&#34;&gt;
-    &lt;span&gt;developer.mozilla.org&lt;/span&gt;
-    &lt;i class=&#34;material-icons&#34;&gt;open_in_new&lt;/i&gt;
-&lt;/a&gt;
-
-
-&lt;p&gt;以下のように記述することで、取得した文字列をクリップボードにコピーできます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;javascript:!function(undefined){
-    // 任意の処理を記述
-    !function(a){
-        var b = document.createElement(&#39;textarea&#39;),
-        c = document.getSelection();
-        b.textContent = a, document.body.appendChild(b), c.removeAllRanges(), b.select(), document.execCommand(&#39;copy&#39;), c.removeAllRanges(), document.body.removeChild(b);
-    }(/*コピーしたい文字列を記述*/);
-}();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;JS、jQueryがある程度書けるひとであればブックマークレットはとても便利で、作成も簡単なツールです。ブラウザの拡張機能やプラグインでもいいじゃんって方も多いとは思いますが、拡張機能と違って使う時以外ブラウザやメモリに処理がかからない点や、フォルダや名前を自由に整理できるのが利点だと思います。昨今javascriptでできることはかなり増えており、FileAPIを使用してページ情報をまとめたCSVを生成したり、CANVASで画像を作ったりすることもできます。使いこなせば、今後より強力に作業をお助けしてくれることは間違いありません。&lt;/p&gt;
-</description>
+      <description>ブックマークレットとは 平田です。これが初のブログ記事です。とりあえず最近自分の中でブームだったブックマークレットについてまとめます。( ブック</description>
     </item>
     
   </channel>

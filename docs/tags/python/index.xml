@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on WEBA</title>
-    <link>https://hirata.blog/tags/python/index.xml</link>
+    <link>https://hirata.blog/tags/python/</link>
     <description>Recent content in Python on WEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <atom:link href="https://hirata.blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Dec 2017 13:05:42 +0900</lastBuildDate>
+    
+	<atom:link href="https://hirata.blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>PCで作成中のWebページをリアルタイムにスマホで確認する方法</title>
@@ -15,26 +18,7 @@
       <pubDate>Sun, 03 Dec 2017 13:05:42 +0900</pubDate>
       
       <guid>https://hirata.blog/201712_python-server/</guid>
-      <description>
-
-&lt;h2 id=&#34;やり方&#34;&gt;やり方&lt;/h2&gt;
-
-&lt;p&gt;ターミナルアプリで作業中のディレクトリに移動し、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;python -m http.server 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;というコマンドを実行します。するとpythonのローカルサーバが起ち上がり、同一のWIFIに繋がったデバイスからアクセスできるようになります。スマホのブラウザなどにPCのIPアドレスとポート番号を入力することでアクセスします。IPアドレスはMacであれば&lt;b&gt;システム環境設定→ネットワーク&lt;/b&gt;から見るか、&lt;code&gt;ifconfig&lt;/code&gt;コマンドで確認できます。ポート番号はデフォルトでは&lt;code&gt;8000&lt;/code&gt;です。たとえばIPアドレスが&lt;code&gt;192.168.11.11&lt;/code&gt;なら&lt;code&gt;192.168.11.11:8000&lt;/code&gt;にアクセスすることでプレビュー確認が可能です。&lt;/p&gt;
-
-&lt;h2 id=&#34;説明&#34;&gt;説明&lt;/h2&gt;
-
-&lt;p&gt;Webサイト・webアプリを作成していると、手元のPCで作成しているwebページを、スマホサイズで確認したいシーンが多々あると思います。基本的にはChromeのモバイルプレビューモード ( Devツールを開いてスマホのアイコンをクリック or &lt;code&gt;⌘⌥I&lt;/code&gt; → &lt;code&gt;⌘⇧M&lt;/code&gt; ) でもよいのですが、実機のCSSの正確な挙動を見たり、実際のデザインのイメージを説明するためには物足りません。&lt;/p&gt;
-
-&lt;img class=&#34;center&#34; src=&#34;https://hirata.blog/images/post/201712_python-server/chrome.png&#34; alt=&#34;Chromeのモバイルプレビュー&#34;&gt;
-
-
-&lt;p&gt;もしくはGulpやRailsなどの環境で開発用サーバが入っている場合ならそちらの機能を使えばいいのですが、ただ手元の静的なHTMLをちょっとスマホでみたい時、いちいち開発環境を用意するのは手間です。そういう時、Macであればデフォルトでインストールされている&lt;b&gt;Python&lt;/b&gt;の機能を使用して、上記コマンドで簡単にサーバを起てられるというわけです。&lt;/p&gt;
-</description>
+      <description>やり方 ターミナルアプリで作業中のディレクトリに移動し、 python -m http.server というコマンドを実行します。するとpythonのローカルサーバが起ち上がり、同一</description>
     </item>
     
   </channel>

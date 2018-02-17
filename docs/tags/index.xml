@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on WEBA</title>
+    <link>https://hirata.blog/tags/</link>
+    <description>Recent content in Tags on WEBA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>© weba 2017</copyright>
+    <lastBuildDate>Sun, 22 Oct 2017 22:49:51 +1632</lastBuildDate>
+    
+	<atom:link href="https://hirata.blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design</title>
+      <link>https://hirata.blog/tags/design/</link>
+      <pubDate>Sun, 22 Oct 2017 22:49:51 +1632</pubDate>
+      
+      <guid>https://hirata.blog/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://hirata.blog/tags/hugo/</link>
+      <pubDate>Sun, 01 Oct 2017 00:46:13 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://hirata.blog/tags/javascript/</link>
+      <pubDate>Tue, 12 Dec 2017 21:57:25 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://hirata.blog/tags/python/</link>
+      <pubDate>Sun, 03 Dec 2017 13:05:42 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Task Runner</title>
+      <link>https://hirata.blog/tags/task-runner/</link>
+      <pubDate>Tue, 12 Dec 2017 21:57:25 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/task-runner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ux</title>
+      <link>https://hirata.blog/tags/ux/</link>
+      <pubDate>Sun, 22 Oct 2017 22:49:51 +1632</pubDate>
+      
+      <guid>https://hirata.blog/tags/ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Design</title>
+      <link>https://hirata.blog/tags/web-design/</link>
+      <pubDate>Sun, 03 Dec 2017 13:05:42 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/web-design/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

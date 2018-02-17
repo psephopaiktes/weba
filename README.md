@@ -8,9 +8,9 @@
 - `hugo` :deploy
     - docs(public)内に下書きファイルも残るので、手動でやる場合は公開前に整理すること
 
-## バッチ
+## 作成の流れ
 - `./new.sh $post-id` $post-idで記事作成の準備。$post-idは`yearmonth_word-word`。例:201710_hello-world。
-- `./deploy.sh $comment` $commentでCommitとしてデプロイからプッシュまで
+- `./deploy.sh $comment` $commentでCommitしてデプロイからプッシュまで
 
 ## 構成メモ
 ファイル・フォルダ名 | 役割
