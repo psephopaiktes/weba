@@ -14,6 +14,7 @@ article header{
     h1{
         line-height: 1.4;
         margin: 0;
+        font-size: 2.4rem;
     }
     time,.postHeader__category{
         vertical-align: middle;
@@ -71,13 +72,12 @@ article header{
         margin-top: 2rem;
     }
     #contentList.view{
-        background: #f0f0f0;
+        background: #F5F5F5;
         margin: 6rem 0 0;
         @include max($mobile){ margin: 4rem 0 0 }
         padding: 1.8rem 3.2rem 0;
         border-radius: .4rem;
         font-size: 1.6rem;
-        text-align: center;
         letter-spacing: .05em;
         &::before{
             content: "目次";
@@ -88,9 +88,6 @@ article header{
         }
         ol{
             padding: 1.2rem 1.8rem;
-            margin: 0 auto;
-            display: inline-block;
-            text-align: left;
         }
         li{
             padding-left: .8rem;
@@ -120,7 +117,7 @@ article section{
     }
     .backContentList{
         display: block;
-        margin: 1rem 0 -1rem;
+        margin-top: .4rem;
         font-size: 1.4rem;
         text-decoration: none;
         color: #ccc !important;
@@ -128,7 +125,7 @@ article section{
     h3{
         margin: 4rem 0 0;
         line-height: 1.4;
-        &::before{ content: "▶ "}
+        font-size: 1.2em;
         opacity: .8;
     }
     h4{ //コードブロックのタイトル専用
