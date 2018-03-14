@@ -30,7 +30,7 @@
     {{ "<!-- css-->" | safeHTML }}
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {{- if ne .asset "" }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.css">
     {{- end }}
 
     {{ "<!-- icons-->" | safeHTML }}
@@ -74,7 +74,7 @@
     <meta property="og:site_name" content="{{ .Site.Title }}">
 
     {{ "<!-- Google -->" | safeHTML }}
-    <script async src="{{ .Site.BaseURL }}/scripts/analytics.min.js"></script>
+    <script async src="{{ .Site.BaseURL }}/scripts/analytics.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>

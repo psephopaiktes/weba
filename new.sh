@@ -10,7 +10,7 @@ if [ -z ${ID} ]; then
   read ID
 fi
 
-#記事ファイルを作成してatomで開く
+#記事ファイルを作成してVS CODEで開く
 hugo new post/$ID.md --editor="code"
 
 #記事IDをクリップボードにコピーしておく。
@@ -22,5 +22,5 @@ open src/images/post/$ID
 open src/images/post.ai
 
 #サーバをたててChromeで開く
-open -a "Google Chrome.app" http://127.0.0.1:1313/
 hugo server -D
+open -a "Google Chrome.app" http://127.0.0.1:1313/

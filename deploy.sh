@@ -12,10 +12,7 @@ fi
 #staticとdocsを一度消してGulpとHugoでビルド
 rm -rf static
 rm -rf docs
-gulp copyStatic
-gulp sass
-gulp js
-gulp img
+npm run build
 hugo
 
 #GitHubPagesに公開
