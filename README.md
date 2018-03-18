@@ -1,12 +1,11 @@
 # weba
 
-## コマンド
+## 基本コマンド
 - `hugo server -D` :記事ファイル中でdraft = trueになっている記事も表示する。  
 - `hugo server -w` :ウォッチ (デフォルトでON)
 - `hugo new post/20170717_Hello-World.md` :記事の作成  
 - `hugo new post/20170717_Hello-World.md --editor="atom"` :記事の作成。Atomで開く
-- `hugo` :deploy
-    - docs(public)内に下書きファイルも残るので、手動でやる場合は公開前に整理すること
+- `hugo` :deployする。docs(public)内に下書きファイルも残るので、手動でやる場合は公開前に整理すること
 
 ## 作成の流れ
 - `./new.sh $post-id` $post-idで記事作成の準備。$post-idは`yearmonth_word-word`。例:201710_hello-world。
@@ -31,7 +30,7 @@ LICENSE | ライセンス
 package.json | npmパッケージ
 README.md | これ
 
-## 例外対応
+## 例外
 
 ### - 記事ごとに固有のCSSやメディアファイルが欲しい時
 - ファイル名は`src/images/post/{{ .Date.Format "20060102" }}_{{ .Slug }}.css`を作って記事のオプション`CSS`と`JS`をtrueかfalseで切り替える
