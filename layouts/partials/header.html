@@ -11,7 +11,7 @@
 
     <title>
     {{- if eq .context.Title .Site.Title -}}
-        {{- .context.Title }} | デザインとフロントエンドのブログ
+        {{- .context.Title }} | Design &amp; Frontend
     {{- else -}}
         {{- .context.Title }} | {{ .Site.Title -}}
     {{- end -}}
@@ -137,7 +137,7 @@
 
         <ul class="search__tags">
             {{- range $key, $value := .Site.Taxonomies.tags.ByCount }}
-            <li><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }} <span>|</span> {{ $value.Count }}</a>
+            <li><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }} <span>{{ $value.Count }}</span></a>
             {{- end }}
         </ul>
 

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "lib/atom-one-light";
+@import "lib/atom-one-dark";
 @import "common";
 @import "column-single";
 
@@ -11,9 +11,20 @@ main{
 
 article header{
 
+
+    .hero{
+        display: block;
+        background: #ccc;
+        border: 2px solid #ccc;
+        margin: 0;
+        @include min($tablet){ min-height: $readable/3 }
+        img{
+            width: 100%;
+        }
+    }
     h1{
         line-height: 1.4;
-        margin: 0;
+        margin: 2rem 0 0;
         font-size: 2.4rem;
     }
     time,.postHeader__category{
@@ -53,47 +64,40 @@ article header{
         a{
             vertical-align: middle;
             display: inline-flex;
+            text-decoration: none;
             font-size: 1.2rem;
             line-height: 1.4rem;
             margin: 2rem .8em 0 0;
             color: $main;
         }
-    }
-    .hero{
-        display: block;
-        background: #ccc;
-        margin: 2rem 0 0;
-        @include min($tablet){ min-height: $readable/3 }
-        img{
-            width: 100%;
+        li:not(:last-child) a::after{
+            content: ","
         }
-    }
-    .share{
-        margin-top: 2rem;
     }
     #contentList.view{
         background: #F5F5F5;
         margin: 6rem 0 0;
         @include max($mobile){ margin: 4rem 0 0 }
-        padding: 1.8rem 3.2rem 0;
+        padding: 1.6rem 2.4rem;
         border-radius: .4rem;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         letter-spacing: .05em;
         &::before{
             content: "目次";
             font-weight: bold;
-            font-size: 2rem;
+            font-size: 1.6rem;
             display: block;
             color: #ccc;
         }
         ol{
-            padding: 1.2rem 1.8rem;
+            padding: 0 1.8rem;
+            margin: 0;
         }
         li{
             padding-left: .8rem;
-            margin-bottom: 1.8rem;
-            line-height: 1.4;
-            font-weight: 900;
+            margin-top: 1.8rem;
+            line-height: 1.2;
+            // font-weight: 900;
         }
         a{
             color: $main;
@@ -105,6 +109,7 @@ article header{
 
 
 article section{
+    margin: 12rem 0 0;
     >*{
         margin: 2rem 0 0;
     }
@@ -319,10 +324,6 @@ article section .hljs{
 article footer{
     margin: 12rem 0 0;
     @include max($mobile){ margin: 8rem 0 0 }
-    .share{
-        justify-content: center;
-        margin: 0;
-    }
     .adsense{
         margin: 8rem auto 0;
         width: 98%;
@@ -333,14 +334,21 @@ article footer{
 
 article .share{
     display: flex;
+    position: fixed;
+    flex-direction: column;
+    @include max($readable){ flex-direction: row; }
+    bottom: 2rem;
+    left: 2rem;
     a{
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
-        margin-right: 1rem;
+        margin-top: 1.4rem;
+        margin-right: 1.4rem;
         display: block;
         width: 4rem;
         height: 4rem;
+        border-radius: 50%;
         background: url("../images/post-share.svg") no-repeat;
         background-color: rgba($main,.3);
         background-size: 20rem 4rem;

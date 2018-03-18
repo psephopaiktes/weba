@@ -69,8 +69,6 @@ main h1{
             top: 0;
             left: 0;
             object-fit: cover;
-            filter: grayscale(100%) brightness(60%);
-            @include max($mobile){ filter: grayscale(0) brightness(100%) }
         }
         .post__info{
             padding: 3rem 3rem;
@@ -108,7 +106,6 @@ main h1{
         border-bottom: .6rem solid $acce;
         box-shadow: .8rem .8rem 2.4rem #ccc;
         transform: scale(1.009);
-        img{ filter: grayscale(0) brightness(100%) }
     }
     .adsense{
         border: 1px solid #ccc;

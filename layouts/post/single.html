@@ -4,6 +4,15 @@
 <main><article>
 
     <header>
+        <picture class="hero">
+            {{- if ne .Params.id "" }}
+            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/post/{{ .Params.id }}/hero--sp.jpg" sizes="100vw">
+                <img src="{{ .Site.BaseURL }}/images/post/{{ .Params.id }}/hero--pc.jpg" alt="ヘッダー画像">
+            {{- else }}
+            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/default--sp.png" sizes="100vw">
+                <img src="{{ .Site.BaseURL }}/images/default--pc.png" alt="ヘッダー画像">
+            {{- end }}
+        </picture>
         <h1>{{ .Title }}</h1>
         <time datetime="{{ .Date.Format "2006-01-02" }}"><i class="material-icons">schedule</i>{{ .Date.Format "2006.01.02" }} 公開</time>
         {{ if ne .Params.update "" }}
@@ -16,20 +25,10 @@
         <ul class="postHeader__tags">
             <i class="material-icons">local_offer</i>
             {{ range . -}}
-            <li><a href="/tags/{{ . | urlize }}/"># {{ . }}</a>
+            <li><a href="/tags/{{ . | urlize }}/">{{ . }}</a>
             {{- end }}
         </ul>
         {{- end }}
-        <picture class="hero">
-            {{- if ne .Params.id "" }}
-            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/post/{{ .Params.id }}/hero--sp.jpg" sizes="100vw">
-                <img src="{{ .Site.BaseURL }}/images/post/{{ .Params.id }}/hero--pc.jpg" alt="ヘッダー画像">
-            {{- else }}
-            <source media="(max-width:600px)" srcset="{{ .Site.BaseURL }}/images/default--sp.png" sizes="100vw">
-                <img src="{{ .Site.BaseURL }}/images/default--pc.png" alt="ヘッダー画像">
-            {{- end }}
-        </picture>
-        {{ partial "share" . }}
         {{ if .Params.contentlist -}}
             <aside id="contentList"><ol></ol></aside>
         {{- end }}
