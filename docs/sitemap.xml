@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hirata.blog/20180323_invision-studio/</loc>
+    <lastmod>2018-03-23T00:46:13+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/201712_taskrunner/</loc>
     <lastmod>2017-12-12T21:57:25+09:00</lastmod>
   </url>
@@ -43,18 +48,24 @@
   </url>
   
   <url>
+    <loc>https://hirata.blog/tags/app/</loc>
+    <lastmod>2018-03-23T00:46:13+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hirata.blog/tags/design/</loc>
-    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
+    <loc>https://hirata.blog/categories/design/</loc>
+    <lastmod>2018-03-23T00:46:13+10:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hirata.blog/categories/design/</loc>
+    <loc>https://hirata.blog/tags/design/</loc>
     <lastmod>2017-10-22T22:49:51+16:32</lastmod>
     <priority>0</priority>
   </url>
@@ -96,6 +107,12 @@
   </url>
   
   <url>
+    <loc>https://hirata.blog/tags/sketch/</loc>
+    <lastmod>2018-03-23T00:46:13+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/static/</loc>
     <lastmod>2017-07-29T19:09:51+09:00</lastmod>
     <priority>0</priority>
@@ -103,7 +120,7 @@
   
   <url>
     <loc>https://hirata.blog/tags/</loc>
-    <lastmod>2017-10-22T22:49:51+16:32</lastmod>
+    <lastmod>2018-03-23T00:46:13+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -121,7 +138,7 @@
   
   <url>
     <loc>https://hirata.blog/</loc>
-    <lastmod>2017-12-12T21:57:25+09:00</lastmod>
+    <lastmod>2018-03-23T00:46:13+10:00</lastmod>
     <priority>0</priority>
   </url>
   
