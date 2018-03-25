@@ -47,9 +47,7 @@ article header{
     .postHeader__tags{
         margin: 0;
         opacity: .7;
-        @include min($mobile){
-            display: inline;
-        }
+        display: inline;
         .material-icons{
             vertical-align: middle;
             display: inline-flex;
@@ -173,6 +171,7 @@ article section{
     }
     video{
         max-width: 100%;
+        background-color: #ccc;
     }
     ul{
         list-style: disc;

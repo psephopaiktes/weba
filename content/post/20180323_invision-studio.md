@@ -40,24 +40,24 @@ contentlist = true
 ## インスコ・起動
 届いた招待メールの「GET STUDIO NOW」からダウンロードページへ行き、いつものように.dmgファイルからMacインスコするだけです。ここらへんは割愛。アイコンはこんな感じです。シンプルな分、目立っています。
 
-<img src="/images/post/20180323_invision-studio/2018-03-23-04-12-40.png" alt="スクショ" style="max-width:400px">
+<img src="/images/post/20180323_invision-studio/2018-03-23-04-12-40.png" alt="スクショ">
 
 起動しました。この画面はLauncherと呼ぶ模様。「Open Studio or Sketch File」の文字が...Sketch形式にも対応している模様。ためしに手元のSketchファイルを開いてみましたが、だいぶ見た目バグったのでこれはみなかったことにします。左下「Learn Studio」は[YouTubeの動画](https://www.youtube.com/watch?v=LkEOaR4Bl5M&amp=&feature=youtu.be)が開くだけでした。
 
 
-<img src="/images/post/20180323_invision-studio/2018-03-23-04-14-40.png" alt="スクショ" style="max-width:600px">
+<img src="/images/post/20180323_invision-studio/2018-03-23-04-14-40.png" alt="スクショ">
 
 地味にテンプレートが多くてステキ。
 
-<img src="/images/post/20180323_invision-studio/2018-03-23-04-22-39.png" alt="スクショ" style="max-width:400px">
+<img src="/images/post/20180323_invision-studio/2018-03-23-04-22-39.png" alt="スクショ">
 
 やはり基本的なUIパネルの構成はSkechに近いですね。
 
-<img src="/images/post/20180323_invision-studio/2018-03-23-04-34-51.png" alt="スクショ" style="max-width:600px">
+<img src="/images/post/20180323_invision-studio/2018-03-23-04-34-51.png" alt="スクショ">
 
 ちなみにLightなThemeもあります。
 
-<img src="/images/post/20180323_invision-studio/2018-03-23-05-44-40.png" alt="スクショ" style="max-width:600px">
+<img src="/images/post/20180323_invision-studio/2018-03-23-05-44-40.png" alt="スクショ">
 
 ## チュートリアルで紹介されている機能
 とりあえずLauncher画面にある、みっつのTutorialsをやってみます。これをクリックすると練習用の説明付きファイルが開きます。XDでも同じようなチュートリアルがありますが、こういうのとてもわかりやすくて良いです。
@@ -87,22 +87,22 @@ contentlist = true
 
 ### InVisionへのアップロード
 当然できます。まぁSketchでもCraft使ってよくやるし割愛。<br>
-<img src="/images/post/20180323_invision-studio/2018-03-23-06-01-03.png" alt="スクショ" style="max-width:300px">
+<img src="/images/post/20180323_invision-studio/2018-03-23-06-01-03.png" alt="スクショ">
 
 
 
 ### モバイルプレビュー
 SketchMirrorのような機能もありますよ。プロトタイピングを作成したら、右上の画面からQRコードを表示し、<br>
-<img src="/images/post/20180323_invision-studio/2018-03-23-06-02-47.png" alt="スクショ" style="max-width:300px"><br>
+<img src="/images/post/20180323_invision-studio/2018-03-23-06-02-47.png" alt="スクショ"><br>
 [InVisionアプリ](https://itunes.apple.com/app/invision-design-collaboration/id990700027)のカメラで読み取ってモバイルプレビューできます。
 
 
 
 ### コンポーネント ( シンボル )
 さて、大事なシンボル機能についてです。studio.ではシンボルではなく、**コンポーネント**と呼んでいる模様。Web開発の世界でモジュールの考え方が主流になっている昨今、シンボルよりも適切な名前だと思います。名前は違えど、コンポーネント化(めんどいのでシンボル化って書きます)の流れはほぼ同じです。シンボル化したいレイヤーを選択し、`⌘K`のショートカットもしくは上部ツールバーのこのナットのアイコンをクリックするだけです。
-<img src="/images/post/20180323_invision-studio/2018-03-23-06-15-43.png" alt="スクショ" style="max-width:300px"><br>
+<img src="/images/post/20180323_invision-studio/2018-03-23-06-15-43.png" alt="スクショ"><br>
 シンボルを管理する場所はSketchだと Symbolsレイヤー (正確には任意のレイヤー) ですが、studio.はレイヤーパネルに「Library」という専用の領域が用意されています。こちらは公式動画のスクショ↓
-<img src="/images/post/20180323_invision-studio/2018-03-23-06-31-40.png" alt="スクショ" style="max-width:600px"><br>
+<img src="/images/post/20180323_invision-studio/2018-03-23-06-31-40.png" alt="スクショ"><br>
 SymbolsのOverrideも当然できると思うのですが、どうも見当たりません...。さらに動画ではこのライブラリを複数人で共有したりテキストスタイルの管理などもここで行えるようなのですが、そのような機能は現状未実装の模様です。
 
 
