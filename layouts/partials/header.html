@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns#">
-{{ "<!--" | safeHTML }}
-
-{{ "('A`)y-~  < Hi" | safeHTML }}
-{{ "ﾉ( ﾝ ﾝ" | safeHTML }}
-
-{{ "-->" | safeHTML }}
 
 <head>
 
@@ -32,7 +26,6 @@
     {{- if ne .asset "" }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.css">
     {{- end }}
-
     {{ "<!-- icons-->" | safeHTML }}
     <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/images/favicon.png">
     {{ "<!-- Add to homescreen for Chrome on Android-->" | safeHTML }}
@@ -51,7 +44,6 @@
     <meta name="theme-color" content="#fc6">
     {{ "<!-- Disable tap highlight on IE-->" | safeHTML }}
     <meta name="msapplication-tap-highlight" content="no">
-
     {{ "<!-- OGP -->" | safeHTML }}
     {{- if eq .context.Title .Site.Title }}
     <meta property="og:type" content="website">
@@ -72,10 +64,8 @@
     <meta property="og:url" content="{{.context.Permalink}}">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="{{ .Site.Title }}">
-
     {{ "<!-- Google -->" | safeHTML }}
     <script async src="{{ .Site.BaseURL }}/scripts/analytics.js"></script>
-
 </head>
 
 

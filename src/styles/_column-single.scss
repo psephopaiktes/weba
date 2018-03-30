@@ -91,9 +91,9 @@ main{
 
 
 .menu{
-    display: none;
-    transform-origin: 0 0;
-    transform: scaleY(0);
+    --height: 0;
+    max-height: var(--height);
+    overflow: hidden;
     transition: .2s ease;
     z-index: 998;
     position: absolute;
@@ -150,9 +150,9 @@ header nav{
 // search
 /////////////////////////////////////////////
 .search{
-    display: none;
-    transform-origin: 100% 0;
-    transform: scaleY(0);
+    --height: 0;
+    max-height: var(--height);
+    overflow: hidden;
     transition: .2s ease;
     background: $base;
     z-index: 998;
@@ -162,7 +162,7 @@ header nav{
     right: 0;
     background: rgba($base,1);
     box-shadow: 0 1rem 2rem -1rem rgba($main,.8);
-    padding: 3rem;
+    padding: 0 3rem;
 }
 
 .search__box{
@@ -170,6 +170,7 @@ header nav{
     border-radius: .4rem;
     position: relative;
     height: 5.6rem;
+    margin-top: 3rem;
     input{
         border: 0;
         width: 100%;
@@ -225,11 +226,12 @@ header nav{
     display: flex;
     flex-wrap: wrap;
     margin: 2rem 0 0;
+    padding-bottom: 3rem;
     a{
         display: inline-block;
         background-color: #f0f0f0;
         color: #333;
-        padding: .6rem 1.8rem;
+        padding: .4rem 1.2rem;
         margin: .4rem;
         font-size: 1.4rem;
         border-radius: .4rem;
