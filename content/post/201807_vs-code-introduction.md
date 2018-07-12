@@ -3,13 +3,13 @@ title = "AtomユーザもSublimeユーザも、死角が無いエディタ「VS 
 date = "2018-07-04T00:46:13+10:00"
 update = ""
 draft = true
-categories = [""]
-tags = ["", ""]
-description = ""
-id = ""
+categories = ["Frontend"]
+tags = ["App", "web-design"]
+description = "世の中にエディタは数あれど、機能不足・速度不足・学習コスト・値段などネックとなる要素はたくさんあります。その中でも、弱点が少なく、普段使いでもっともちょうどよく、快適に使えるエディタ、「VS CODE」を紹介します。主にAtomやSublime、BracketsやCodaなどを使っているユーザに向けた布教記事です。"
+id = "201807_vs-code-introduction"
 css = false
 js = false
-contentlist = false
+contentlist = true
 
 +++
 
