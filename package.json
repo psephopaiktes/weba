@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "npm run css -- -w --source-map true & npm run js -- -w -s & npm run img -- -w & npm run copy -- -w",
-    "build": "npm run css & npm run js & npm run img & npm run copy",
+    "build": "npm run css && npm run js && npm run img && npm run copy",
     "css": "node-sass src -o static --output-style compressed",
     "js": "babel src -d static --compact=true --presets=env --no-comments",
     "img": "cpx 'src/images/**' 'static/images'",

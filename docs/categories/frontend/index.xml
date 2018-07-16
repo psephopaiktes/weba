@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Tue, 12 Dec 2017 21:57:25 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jul 2018 00:46:13 +1000</lastBuildDate>
     
 	<atom:link href="https://hirata.blog/categories/frontend/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AtomユーザもSublimeユーザも、死角が無いエディタ「VS CODE」に乗り換えよう</title>
+      <link>https://hirata.blog/201807_vs-code-introduction/</link>
+      <pubDate>Mon, 16 Jul 2018 00:46:13 +1000</pubDate>
+      
+      <guid>https://hirata.blog/201807_vs-code-introduction/</guid>
+      <description>概要 この記事はAtom、Sublime、ついでにBracketsなどのユーザに向けたVS CODEの布教記事です。VimやDreamweave</description>
+    </item>
     
     <item>
       <title>【保存版】gulp, webpack, parcel...増え続けるタスクランナーの特徴を理解して最適なものを選択しよう</title>

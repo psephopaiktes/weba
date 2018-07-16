@@ -9,7 +9,7 @@ if [ -z ${COMMENT} ]; then
   read COMMENT
 fi
 
-#staticとdocsを一度消してGulpとHugoでビルド
+#staticとdocsを一度消してnpmとHugoでビルド
 rm -rf static
 rm -rf docs
 npm run build

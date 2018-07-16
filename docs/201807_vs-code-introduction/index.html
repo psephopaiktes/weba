@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+    <title>AtomユーザもSublimeユーザも、死角が無いエディタ「VS CODE」に乗り換えよう | WEBA</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="description" content="世の中にエディタは数あれど、機能不足・速度不足・学習コスト・値段などネックとなる要素はたくさんあります。その中でも、弱点が少なく、普段使いでちょうどよく快適に使えるエディタ、「VS CODE」を紹介します。主にAtomやSublime、BracketsやCodaなどを使っているユーザに向けた布教記事です。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://hirata.blog/styles/post.css">
+    <!-- icons-->
+    <link rel="icon" type="image/png" href="https://hirata.blog/images/favicon.png">
+    <!-- Add to homescreen for Chrome on Android-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="WEBA">
+    <link rel="icon" sizes="192x192" href="https://hirata.blog/images/touch/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="myTemplate">
+    <link rel="apple-touch-icon" href="https://hirata.blog/images/touch/apple-touch-icon.png">
+    <!-- Tile icon for Win8 (144x144 + tile color)-->
+    <meta name="msapplication-TileImage" content="https://hirata.blog/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#fc6">
+    <!-- Color the status bar on mobile devices-->
+    <meta name="theme-color" content="#fc6">
+    <!-- Disable tap highlight on IE-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- OGP -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AtomユーザもSublimeユーザも、死角が無いエディタ「VS CODE」に乗り換えよう">
+    <meta property="og:description" content="世の中にエディタは数あれど、機能不足・速度不足・学習コスト・値段などネックとなる要素はたくさんあります。その中でも、弱点が少なく、普段使いでちょうどよく快適に使えるエディタ、「VS CODE」を紹介します。主にAtomやSublime、BracketsやCodaなどを使っているユーザに向けた布教記事です。">
+    <meta property="og:image" content="https://hirata.blog/images/post/201807_vs-code-introduction/hero--sp.jpg">
+    <meta property="og:url" content="https://hirata.blog/201807_vs-code-introduction/">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="WEBA">
+    <!-- Google -->
+    <script async src="https://hirata.blog/scripts/analytics.js"></script>
+</head>
+
+
+<body>
+<div id="mask"></div>
+<div class="wrap">
+
+    <!-- header block-->
+    <header class="globalHeader">
+        <h1><a href="https://hirata.blog">
+            <img src="https://hirata.blog/images/logo.svg" alt="logo">
+            <p>Design &amp; Frontend</p>
+        </a></h1>
+        <button id="menuButton"><i class="material-icons">menu</i></button>
+        <div class="menu">
+            <ul class="follow">
+                <li><a href="https://twitter.com/psephopaiktes" target="_blank" rel="noopener"><svg class="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 60">
+                    <path class="cls-1" d="M23.3,60c27.86,0,43.11-23.09,43.11-43.11,0-.66,0-1.31,0-2a30.82,30.82,0,0,0,7.56-7.84,30.24,30.24,0,0,1-8.7,2.38A15.2,15.2,0,0,0,71.88,1.1a30.36,30.36,0,0,1-9.62,3.68A15.16,15.16,0,0,0,36.44,18.59,43,43,0,0,1,5.22,2.76,15.16,15.16,0,0,0,9.91,23,15,15,0,0,1,3,21.09v.19A15.16,15.16,0,0,0,15.19,36.13a15.13,15.13,0,0,1-6.84.26A15.17,15.17,0,0,0,22.5,46.92a30.4,30.4,0,0,1-18.81,6.5,30.84,30.84,0,0,1-3.61-.22A42.89,42.89,0,0,0,23.3,60"/>
+                </svg></a>
+                <li><a href="http://fb.me/hirata.blog" target="_blank" rel="noopener"><svg class="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                    <path
+                        id="White"
+                        class="cls-1"
+                        d="M56.69,0H3.31A3.31,3.31,0,0,0,0,3.31V56.69A3.31,3.31,0,0,0,3.31,60H32V36.76H24.23V27.71H32V21c0-7.75,4.73-12,11.65-12a64.15,64.15,0,0,1,7,.36v8.1H45.89c-3.76,0-4.49,1.79-4.49,4.41v5.78h9L49.2,36.76H41.4V60H56.69A3.31,3.31,0,0,0,60,56.69V3.31A3.31,3.31,0,0,0,56.69,0Z"/>
+                </svg></a>
+                <li><a href="http://hirata.blog/index.xml" target="_blank"><svg class="rss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                    <circle class="cls-1" cx="8.41" cy="51.59" r="8.41"/>
+                    <path class="cls-1" d="M0,0V10.91A49.09,49.09,0,0,1,49.09,60H60A60,60,0,0,0,0,0ZM0,21.83V32.74A27.29,27.29,0,0,1,27.26,60H38.17A38.16,38.16,0,0,0,0,21.83Z"/>
+                </svg></a>
+                <li><a href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fhirata.blog%2Findex.xml" target="_blank" rel="noopener"><svg class="feedly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 60">
+                    <path class="cls-1" d="M34.74,45.07l3.86,3.85a1.09,1.09,0,0,1,0,1.54l-2.86,2.83a.61.61,0,0,1-.48.19H32.74a.61.61,0,0,1-.47-.19l-2.9-2.87a1.09,1.09,0,0,1,0-1.54l3.82-3.82a1.09,1.09,0,0,1,1.54,0Zm0-15.81,3.86,3.85a1.09,1.09,0,0,1,0,1.54L27.83,45.42a.61.61,0,0,1-.48.19H24.83a.6.6,0,0,1-.47-.19l-2.9-2.89a1.09,1.09,0,0,1,0-1.54L33.23,29.26a1.09,1.09,0,0,1,1.54,0Zm0-15.78,3.86,3.85a1.09,1.09,0,0,1,0,1.54L19.92,37.54a.61.61,0,0,1-.48.19H16.93a.61.61,0,0,1-.47-.19l-2.9-2.91a1.09,1.09,0,0,1,0-1.54L33.23,13.47A1.09,1.09,0,0,1,34.77,13.47ZM39.59,2.31a7.92,7.92,0,0,0-11.18,0l-26,26a7.88,7.88,0,0,0,0,11.16L21.15,58.24A7.16,7.16,0,0,0,25.31,60H42.56a7.93,7.93,0,0,0,4.35-1.83l18.7-18.71a7.88,7.88,0,0,0,0-11.16l-26-26Z"/>
+                </svg></a>
+            </ul>
+            <nav><ul>
+                <li><a href="https://hirata.blog">HOME</a>
+                <li><a href="https://hirata.blog/about">ABOUT</a>
+                <li><a href="https://hirata.blog/contact">CONTACT</a>
+            </ul></nav>
+        </div>
+        <button id="searchButton"><i class="material-icons">search</i></button>
+    </header>
+
+
+    <!-- search block -->
+    <aside class="search">
+
+        <div class="search__box">
+            <input id="search__box" type="text" placeholder="search">
+            <i class="material-icons">search</i>
+        </div>
+
+        <ul class="search__categories">
+            <li><a href="https://hirata.blog/categories/front"><i class="material-icons">code</i>Frontend</a>
+            <li><a href="https://hirata.blog/categories/design"><i class="material-icons">create</i>Design</a>
+            <li><a href="https://hirata.blog/categories/other"><i class="material-icons">subject</i>Other</a>
+            <li><a href="https://hirata.blog/post"><i class="material-icons">inbox</i>Archives</a>
+        </ul>
+
+        <ul class="search__tags">
+            <li><a href="/tags/app">app <span>2</span></a>
+            <li><a href="/tags/javascript">javascript <span>2</span></a>
+            <li><a href="/tags/web-design">web-design <span>2</span></a>
+            <li><a href="/tags/design">design <span>1</span></a>
+            <li><a href="/tags/hugo">hugo <span>1</span></a>
+            <li><a href="/tags/python">python <span>1</span></a>
+            <li><a href="/tags/sketch">sketch <span>1</span></a>
+            <li><a href="/tags/task-runner">task-runner <span>1</span></a>
+            <li><a href="/tags/ux">ux <span>1</span></a>
+        </ul>
+
+    </aside><!-- /search block -->
+
+
+<!-- main content block -->
+<main><article>
+
+    <header>
+        <picture class="hero">
+            <source media="(max-width:600px)" srcset="https://hirata.blog/images/post/201807_vs-code-introduction/hero--sp.jpg" sizes="100vw">
+                <img src="https://hirata.blog/images/post/201807_vs-code-introduction/hero--pc.jpg" alt="ヘッダー画像">
+        </picture>
+        <h1>AtomユーザもSublimeユーザも、死角が無いエディタ「VS CODE」に乗り換えよう</h1>
+        <time datetime="2018-07-16"><i class="material-icons">schedule</i>2018.07.16 公開</time>
+        
+        <a class="postHeader__category" href="/categories/frontend/"><i class="material-icons">folder</i>Frontend</a>
+        <ul class="postHeader__tags">
+            <i class="material-icons">local_offer</i>
+            <li><a href="/tags/app/">App</a><li><a href="/tags/web-design/">web-design</a>
+        </ul>
+        <aside id="contentList"><ol></ol></aside>
+    </header>
+
+    <section>
+        
+
+<h2 id="概要">概要</h2>
+
+<p>この記事はAtom、Sublime、ついでにBracketsなどのユーザに向けたVS CODEの布教記事です。VimやDreamweaver、JetBrains系エディタを使っているユーザのことはあまり考えてません。</p>
+
+<h3 id="vs-code-とは">VS CODE とは</h3>
+
+<p>VS CODE (正式名称 Visual Studio Code) (以下、CODE) はMicrosoftが開発しているテキストエディタです。Windows, Mac, Linuxで動作します。系統的にはSublime Text, Atom, Brackets, Codaなどと同様のリッチテキストエディタの類になります。それらよりもすこしIDE(統合開発環境)としての側面が強く、ビルトインの開発者向け機能が豊富です。Electronという環境で作られた<a href="https://github.com/Microsoft/vscode">OSSであり</a>、利用料金は完全に<b>無料</b>です。ここらへんはAtomと似ていますね。</p>
+
+<p>ダウンロードは以下のページから行えます。</p>
+
+<a class="embed-card" href="https://code.visualstudio.com/" target="brank_" rel="noopener">
+    
+    <img class="og" src="http://code.visualstudio.com/opengraphimg/opengraph-home.png" alt="参照記事サムネイル">
+    
+    <h5>Visual Studio Code - Code Editing. Redefined</h5>
+    <img class="favi" src="http://www.google.com/s2/favicons?domain=code.visualstudio.com">
+    <span>code.visualstudio.com</span>
+    <i class="material-icons">open_in_new</i>
+</a>
+
+
+<p>それでは以下、VS CODEの良さを紹介していきます。
+なお、紹介するキーボードショートカットは環境によって変わるのでご参考程度に。</p>
+
+<h2 id="安定した動作パフォーマンス">安定した動作パフォーマンス</h2>
+
+<p>起動から、重いファイルを開いた時まで、速度・パフォーマンスは非常に安定していて使いやすいです。同じくElectron製のAtomと比べると明らかにサクサク動きます。いまんとこフリーズしたこともありません。</p>
+
+<p>もっとも、速度面・パフォーマンスだけを重視するのならSublimeが圧勝です。が、CODEも全く動作に問題なしで安定して利用できます。</p>
+
+<p>参考 : <a class="embed-line" href="https://ryuta46.com/379">Atom vs Visual Studio Code 速度比較!! Electron系テキストエディタ2大決戦!! <i class="material-icons">open_in_new</i></a>
+</p>
+
+<h2 id="デフォルト機能が豊富">デフォルト機能が豊富</h2>
+
+<p>あまり拡張機能を入れなくても、最初からかなりの機能がそろっています。AtomやSublimeでは拡張機能が無いとできなかったことが、CODEだと普通にできることも多いです。公式のサポート下で様々な機能が扱えるのは安心感が違いますね。もちろんCODEも拡張機能によってさらにできることはひろがります。すくなくとも、SublimeやAtomでぼくが必要だった機能が、CODEに無いということはほぼありませんでした。機能の一例としては、</p>
+
+<ul>
+<li>ターミナル</li>
+<li>Gitクライアント</li>
+<li>デバッガ</li>
+</ul>
+
+<p>などが最初から組み込まれています</p>
+
+<h2 id="ビルドインターミナル">ビルドインターミナル</h2>
+
+<p>これがとにかく快適です。きょうびデザイナ・コーダであってもなんやかんやターミナルを使うことが多いと思うのですが、それがエディタの中で使えるのがすごく楽です。「 Ctrl + ` 」のショートカットで<b>編集しているファイルのフォルダで</b>ターミナルを起動し、すぐにアクションが起こせます。ショートカットでエディタ部分とターミナル部分を行き来できるので、ホームポジションに手を置いたままで大丈夫です。同時に複数のターミナルを開くこともできます。</p>
+
+<img class="center" src="https://hirata.blog/images/post/201807_vs-code-introduction/terminal.gif" alt="GIFイメージ">
+
+
+<p>AtomやSublimeも拡張機能でエディタ内ターミナルを使えるのですが、見た目が悪かったり動作が安定しなかったり、1個しか開けなかったり、微妙な出来栄えなんですよね&hellip;。</p>
+
+<h2 id="すぐれたデザインカスタマイズ性">すぐれたデザインカスタマイズ性</h2>
+
+<p>AtomやSublime同様に様々なカラーテーマ、シンタックステーマが公開されています。また、表示するUIも細かくカスタマイズできるので、自分好みの見た目に設定できます。</p>
+
+<p><img class="center" src="https://hirata.blog/images/post/201807_vs-code-introduction/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88%202018-07-12%2014.34.14.png" alt="デザイン例">
+
+<img class="center" src="https://hirata.blog/images/post/201807_vs-code-introduction/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88%202018-07-12%2014.35.34.png" alt="デザイン例">
+</p>
+
+<p>また、アプリのメニューバー部分がMacデフォルトでなく、トンマナが揃ったキレイな見た目なのがステキです。ちなみにこれはAtomも設定で変えられますが、Sublimeは変更できないっぽいです。</p>
+
+<h2 id="使い慣れたショートカットを使える">使い慣れたショートカットを使える</h2>
+
+<p>他エディタからの乗り換えをおすすめできる理由のひとつです。CODEはAtomやSublime、Vimなどのキーバインディングに対応しており、新しいキーボードショートカットを覚える手間がありません。</p>
+
+<a class="embed-card" href="https://code.visualstudio.com/docs/getstarted/keybindings" target="brank_" rel="noopener">
+    
+    <img class="og" src="https://code.visualstudio.com/assets/docs/getstarted/keybinding/customization_keybindings.png" alt="参照記事サムネイル">
+    
+    <h5>Visual Studio Code Key Bindings</h5>
+    <img class="favi" src="http://www.google.com/s2/favicons?domain=code.visualstudio.com">
+    <span>code.visualstudio.com</span>
+    <i class="material-icons">open_in_new</i>
+</a>
+
+
+<h2 id="markdownエディタにも最高">Markdownエディタにも最高</h2>
+
+<p>CODEはMarkdownのためのエディタとしても便利です。デフォルトでもプレビューやシンタックスに対応していますが、
+<a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a>と<a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image">Paste Image</a>という2つの拡張機能を入れることにより、最高のMarkdownエディタになります。</p>
+
+<p>Markdown All in One はいろいろな機能がまとまった便利系プラグインです。
+ショートカットで太字 ( <code>** **</code> ) にできたり、自動でファイル内の見出しから目次を作ったり、Markdownを書くなら必須のプラグインです。有る無しで快適さが全然違います。</p>
+
+<p>Paste Image はコピーした画像をMarkdownファイル(.mdファイル)に貼り付けることができるプラグインです。貼り付けた画像をどのフォルダに保存するかも設定できます。</p>
+
+<p>Webの画像を右クリックでコピーしたり、Macのスクショ機能でコピー( <code>Command + Shift + 4</code> → <code>Ctrlを押しながらドラッグ</code> )してすぐに画像を貼り付けられるのはとんでもなく便利です。</p>
+
+<img class="center" src="https://hirata.blog/images/post/201807_vs-code-introduction/markdownPaste.gif" alt="GIFイメージ">
+
+
+<p>ここまでの快適さはAtomやSublimeでは実現できなません。ちなみに平田はEvernoteの代わりに CODE + Google Drive でメモを残しています。</p>
+
+<h2 id="設定はクラウドで管理-同期可能">設定はクラウドで管理・同期可能</h2>
+
+<p>これはAtom, Sublimeでもできることですが、設定・拡張機能のファイルをGitやDropboxなどで同期することで、設定をクラウド管理できます。僕は会社と自宅のMacでCODEを使っていますが、Google Driveで常に設定ファイルを同期しているので、片方の環境で設定を変えればもう片方にもすぐ反映されます。</p>
+
+<p>設定方法は以下のとおりです。<b><code>a-hirata</code> の部分は自分のユーザー名に変えてください。</b></p>
+
+<ol>
+<li><code>/Users/a-hirata/Library/Application Support/Code/User</code> と <code>/Users/a-hirata/.vscode</code> の2つのフォルダをDropboxなどに移す。</li>
+<li>Dropboxなどに移動したフォルダからシンボリックリンクを作成して元の場所に置く。以下のようにコマンドを実行すればOKです。
+
+<ul>
+<li><code>sudo ln -snf &quot;移動した場所/User&quot; &quot;/Users/a-hirata/Library/Application Support/Code&quot;</code></li>
+<li><code>sudo ln -snf &quot;移動した場所/.vscode&quot; &quot;/Users/a-hirata&quot;</code></li>
+</ul></li>
+</ol>
+
+<p>2台目移行のMacでは、1のフォルダを削除してから2を実行すればOKです。シンボリックリンクがよくわからないひとは以下の記事がかなり易しめでわかりやすいかも。</p>
+
+<a class="embed-line" href="http://irabbit.seesaa.net/article/435861075.html">[Mac] OS Xでシンボリックリンクを作成してみよう！: らびっと。 <i class="material-icons">open_in_new</i></a>
+
+
+<p>また、version 1.25 から<a href="https://code.visualstudio.com/docs/editor/portable">ポータブルモード</a>なるものが導入されたらしく、USBドライブやクラウドストレージなどでソフトをまるごとひとつのフォルダで管理することもできるようです。</p>
+
+<h2 id="プロジェクト-フォルダ-の切り替えがめっちゃ楽">プロジェクト (フォルダ) の切り替えがめっちゃ楽</h2>
+
+<p>AtomやSublimeでWebサイトやアプリを開発する時、<code>index.html</code>や<code>style.css</code>をいっこいっこ直接開くのではなく、そのファイルがある場所のフォルダを登録してから作業すると思います。</p>
+
+<p>その際、毎回フォルダをエディタにドラッグ&amp;ドロップして開いているでしょうか。それともエディタのメニューからフォルダを開いているでしょうか。その後別のプロジェクトに切り替えたいときはどうしているでしょうか。</p>
+
+<p>CODEでは一度登録したプロジェクトは <code>Ctrl + R</code>のショートカットでさくさく切り替えることができます。</p>
+
+<p><code>Ctrl</code> を押しながら <code>R</code> を押すことで選択し、キーを離すと現在のウィンドウがそのプロジェクトに切り変わります。切り替えをキャンセルしたい場合は<code>Esc</code>キーです。</p>
+
+<p>別のウィンドウで新しく開きたい場合は <code>Ctrl</code> を押したまま <code>Enter</code> でOKです。</p>
+
+<img class="center" src="https://hirata.blog/images/post/201807_vs-code-introduction/project.gif" alt="GIFイメージ">
+
+
+<p>ちなみに、以下の2つの設定をしておけば、GUIからもCUIからもすぐにフォルダをCODEで開けて便利ですよ。</p>
+
+<ul>
+<li><a class="embed-line" href="http://ascii.jp/elem/000/001/025/1025457/">ASCII.jp：MacのFinderのツールバーにアプリを追加するテクで作業が捗る！ <i class="material-icons">open_in_new</i></a>
+</li>
+
+<li><a class="embed-line" href="https://qiita.com/naru0504/items/c2ed8869ffbf7682cf5c">ターミナルからVisual Studio Codeを起動する方法【公式の方法】 - Qiita <i class="material-icons">open_in_new</i></a>
+</li>
+</ul>
+
+<h2 id="プロジェクトごとに拡張機能-設定を別々にカスタマイズし-メンバーで共有も可能">プロジェクトごとに拡張機能・設定を別々にカスタマイズし、メンバーで共有も可能</h2>
+
+<p>複数人で開発を行う場合、プロジェクトによってインデントなどのルールが違うことがあります。
+CODEでは <code>.vscode</code> という設定フォルダをプロジェクトルートに置いておけば、自動的にプロジェクトごとの設定がエディタに反映されます。設置方法は簡単で、CODEの基本設定を開いて、「ワークスペースの設定」をすると自動的に <code>.vscode</code> フォルダが作成されます。このフォルダをGitHubなどで共有すればOKです。</p>
+
+<p>共有してる例: <a class="embed-line" href="https://github.com/Microsoft/TypeScript">Microsoft/TypeScript: TypeScript is a superset of JavaScript that compiles to clean JavaScript output. <i class="material-icons">open_in_new</i></a>
+</p>
+
+<h2 id="公式のドキュメントがすごく詳しい">公式のドキュメントがすごく詳しい</h2>
+
+<p>これはVisual Studio 全体で言えることなのですが、ドキュメントが詳細かつ豊富に用意されており、非常にわかりやすいです。</p>
+
+<a class="embed-card" href="https://code.visualstudio.com/docs" target="brank_" rel="noopener">
+    
+    <img class="og" src="http://code.visualstudio.com/opengraphimg/opengraph-gettingstarted.png" alt="参照記事サムネイル">
+    
+    <h5>Documentation for Visual Studio Code</h5>
+    <img class="favi" src="http://www.google.com/s2/favicons?domain=code.visualstudio.com">
+    <span>code.visualstudio.com</span>
+    <i class="material-icons">open_in_new</i>
+</a>
+
+
+<p>ドキュメントはGithubで管理されており、誰でもすぐにブラウザ上で編集し、プルリクエストで編集依頼をかけることができます。以下の記事にまとめられていますが、とてもよくできた管理体制ですね&hellip;。</p>
+
+<a class="embed-line" href="https://qiita.com/amay077/items/8823376f307235a7f651">プロダクトのドキュメントにプルリクエストを送れる仕組みがすごい - Qiita <i class="material-icons">open_in_new</i></a>
+
+
+<p>また、アップデート時にエディタ内に表示されるリリースノートも非常に見やすく、操作がGifアニメで説明されていたり、新機能をすぐに理解できます。</p>
+
+<img class="center" src="https://hirata.blog/images/post/201807_vs-code-introduction/release.gif" alt="GIFイメージ">
+
+
+<h2 id="僕が感じているvs-codeの弱点">僕が感じているVS CODEの弱点</h2>
+
+<p>以上、VS CODEの布教でした。ほんとに不満が無いエディタです。あえて言うならこれくらいでしょうか↓</p>
+
+<h3 id="sublimeよりは遅い">Sublimeよりは遅い</h3>
+
+<p>でもまぁ十分サクサクですし、弱点ってほどではありませんね。</p>
+
+<h3 id="アイコンがださい">アイコンがださい</h3>
+
+<p>なんどか色が変わったりしてますが、とにかくダサい。</p>
+
+<h3 id="設定がcuiのみ"><del>設定がCUIのみ</del></h3>
+
+<p>エディタの設定は基本的にJSONで記述するため、慣れない人には若干不親切でした。現在GUI版の設定ページが開発されており、プレビュー版として利用することができるようです。
+<img class="center" src="https://hirata.blog/images/post/201807_vs-code-introduction/settings-editor.png" alt="設定エディタ">
+</p>
+
+<h2 id="さいごに">さいごに</h2>
+
+<p>VS CODE 人口が増えると <code>.vscode</code> 共有により作業がしやすいと思い書き始めた記事ですが、いかがでしたか。</p>
+
+<p>VS CODE はMicrosoft発のオルト言語「TypeScript」の人気に伴い、それ用のエディタとして有名になっていますが、その用途以外にも他のエディタには無い魅力がたくさんあります。ちなみに僕のエディタ遍歴は Sublime2 (1年) → Brackets (半年) → Sublime 3beta (1年) → Atom + Sublime 3 (3年) → VS CODE (半年) って感じです。DreamweaverやWebStormも短期間使ってました。その結論がこの記事です。</p>
+
+<p>もっとも、エディタは宗教と呼ばれるほど好みが激しく、人によって求めるものは違う世界なのは当然です。けっきょく使い慣れたものが一番ではありますが、ちょっとでもCODEに興味をもって頂けたならうれしいです。</p>
+
+<p>また後日、拡張機能やテーマ、おすすめの使い方なども紹介する記事も書きたいです。</p>
+
+<a class="embed-card" href="https://code.visualstudio.com/" target="brank_" rel="noopener">
+    
+    <img class="og" src="http://code.visualstudio.com/opengraphimg/opengraph-home.png" alt="参照記事サムネイル">
+    
+    <h5>Visual Studio Code - Code Editing. Redefined</h5>
+    <img class="favi" src="http://www.google.com/s2/favicons?domain=code.visualstudio.com">
+    <span>code.visualstudio.com</span>
+    <i class="material-icons">open_in_new</i>
+</a>
+
+
+<p>ちなみにAtomの開発元であるGitHubはMicrosoftに買収されましたが、<a href="http://www.itmedia.co.jp/enterprise/articles/1806/13/news052_2.html">Atomの開発が止まる予定は無い</a>らしいです。</p>
+
+<h2 id="おまけ">おまけ</h2>
+
+<p>どうでもいい自慢ですが、平田はむかしやってたVS CODEの公式キャラクターコンテストで優秀賞もらいました。</p>
+
+<p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">【優秀賞】平田章サマ。オメデトウ～♪ 作品はAzure Webサイトで公開されてるのヨ！ <a href="https://t.co/xPB6X9kF0q">https://t.co/xPB6X9kF0q</a><a href="https://twitter.com/hashtag/vsjp2525?src=hash&amp;ref_src=twsrc%5Etfw">#vsjp2525</a> <a href="https://t.co/NUuk79NZQR">pic.twitter.com/NUuk79NZQR</a></p>&mdash; クラウディア窓辺（終了） (@Claudia_Azure) <a href="https://twitter.com/Claudia_Azure/status/667022885781794816?ref_src=twsrc%5Etfw">2015年11月18日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+    </section>
+
+
+    <footer>
+        <aside class="share">
+
+    <a class="twitter" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirata.blog%2f201807_vs-code-introduction%2f&text=Atom%e3%83%a6%e3%83%bc%e3%82%b6%e3%82%82Sublime%e3%83%a6%e3%83%bc%e3%82%b6%e3%82%82%e3%80%81%e6%ad%bb%e8%a7%92%e3%81%8c%e7%84%a1%e3%81%84%e3%82%a8%e3%83%87%e3%82%a3%e3%82%bf%e3%80%8cVS%20CODE%e3%80%8d%e3%81%ab%e4%b9%97%e3%82%8a%e6%8f%9b%e3%81%88%e3%82%88%e3%81%86%20%7c%20WEBA" target="_blank" rel="noopener" title="Twitterでシェアする">Twitter</a>
+
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhirata.blog%2f201807_vs-code-introduction%2f" title="Facebookでシェア">Facebook</a>
+
+    <a class="hatena" href="http://b.hatena.ne.jp/entry/https://hirata.blog/201807_vs-code-introduction/" title="はてブに登録">はてなブックマーク</a>
+
+    <a class="pocket" href="javascript:(function()%7Bvar e%3Dfunction(t,n,r,i,s)%7Bvar o%3D%5B4196444,5264221,5438709,4215637,4573418,6367504,5702607,8626376,5425547,6432314%5D%3Bvar i%3Di%7C%7C0,u%3D0,n%3Dn%7C%7C%5B%5D,r%3Dr%7C%7C0,s%3Ds%7C%7C0%3Bvar a%3D%7B%27a%27:97,%27b%27:98,%27c%27:99,%27d%27:100,%27e%27:101,%27f%27:102,%27g%27:103,%27h%27:104,%27i%27:105,%27j%27:106,%27k%27:107,%27l%27:108,%27m%27:109,%27n%27:110,%27o%27:111,%27p%27:112,%27q%27:113,%27r%27:114,%27s%27:115,%27t%27:116,%27u%27:117,%27v%27:118,%27w%27:119,%27x%27:120,%27y%27:121,%27z%27:122,%27A%27:65,%27B%27:66,%27C%27:67,%27D%27:68,%27E%27:69,%27F%27:70,%27G%27:71,%27H%27:72,%27I%27:73,%27J%27:74,%27K%27:75,%27L%27:76,%27M%27:77,%27N%27:78,%27O%27:79,%27P%27:80,%27Q%27:81,%27R%27:82,%27S%27:83,%27T%27:84,%27U%27:85,%27V%27:86,%27W%27:87,%27X%27:88,%27Y%27:89,%27Z%27:90,%270%27:48,%271%27:49,%272%27:50,%273%27:51,%274%27:52,%275%27:53,%276%27:54,%277%27:55,%278%27:56,%279%27:57,%27%5C/%27:47,%27:%27:58,%27%3F%27:63,%27%3D%27:61,%27-%27:45,%27_%27:95,%27%26%27:38,%27%24%27:36,%27!%27:33,%27.%27:46%7D%3Bif(!s%7C%7Cs%3D%3D0)%7Bt%3Do%5B0%5D%2Bt%7Dfor(var f%3D0%3Bf<t.length%3Bf%2B%2B)%7Bvar l%3Dfunction(e,t)%7Breturn a%5Be%5Bt%5D%5D%3Fa%5Be%5Bt%5D%5D:e.charCodeAt(t)%7D(t,f)%3Bif(!l*1)l%3D3%3Bvar c%3Dl*(o%5Bi%5D%2Bl*o%5Bu%25o.length%5D)%3Bn%5Br%5D%3D(n%5Br%5D%3Fn%5Br%5D%2Bc:c)%2Bs%2Bu%3Bvar p%3Dc%25(50*1)%3Bif(n%5Bp%5D)%7Bvar d%3Dn%5Br%5D%3Bn%5Br%5D%3Dn%5Bp%5D%3Bn%5Bp%5D%3Dd%7Du%2B%3Dc%3Br%3Dr%3D%3D50%3F0:r%2B1%3Bi%3Di%3D%3Do.length-1%3F0:i%2B1%7Dif(s%3D%3D469)%7Bvar v%3D%27%27%3Bfor(var f%3D0%3Bf<n.length%3Bf%2B%2B)%7Bv%2B%3DString.fromCharCode(n%5Bf%5D%25(25*1)%2B97)%7Do%3Dfunction()%7B%7D%3Breturn v%2B%279f3773db1a%27%7Delse%7Breturn e(u%2B%27%27,n,r,i,s%2B1)%7D%7D%3Bvar t%3Ddocument,n%3Dt.location.href,r%3Dt.title%3Bvar i%3De(n)%3Bvar s%3Dt.createElement(%27script%27)%3Bs.type%3D%27text/javascript%27%3Bs.src%3D%27https://getpocket.com/b/r4.js%3Fh%3D%27%2Bi%2B%27%26u%3D%27%2BencodeURIComponent(n)%2B%27%26t%3D%27%2BencodeURIComponent(r)%3Be%3Di%3Dfunction()%7B%7D%3Bvar o%3Dt.getElementsByTagName(%27head%27)%5B0%5D%7C%7Ct.documentElement%3Bo.appendChild(s)%7D)()" title="Pocketに保存する">Pocket</a>
+
+    <a class="line" href="http://line.me/R/msg/text/?Atom%e3%83%a6%e3%83%bc%e3%82%b6%e3%82%82Sublime%e3%83%a6%e3%83%bc%e3%82%b6%e3%82%82%e3%80%81%e6%ad%bb%e8%a7%92%e3%81%8c%e7%84%a1%e3%81%84%e3%82%a8%e3%83%87%e3%82%a3%e3%82%bf%e3%80%8cVS%20CODE%e3%80%8d%e3%81%ab%e4%b9%97%e3%82%8a%e6%8f%9b%e3%81%88%e3%82%88%e3%81%86%20%7c%20WEBA%20https%3a%2f%2fhirata.blog%2f201807_vs-code-introduction%2f" title="LINEで共有">LINE</a>
+
+</aside>
+
+        <div class="adsense">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-5055970484117246"
+                 data-ad-slot="5704293727"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </footer>
+
+</article></main>
+
+    <!-- footer block -->
+    <footer class="globalFooter">
+        <a id="gotop" title="上へスクロール">▲</a>
+        <p><small>© hirata 2018</small></p>
+    </footer>
+
+    </div><!-- / wrap -->
+
+    <!-- SCRIPTS -->
+    <script src="https://hirata.blog/scripts/main.js" async></script>
+    <script src="https://hirata.blog/scripts/lib/highlight.pack.js" async></script>
+    <script src="https://hirata.blog/scripts/post.js" async></script>
+
+</body>
+</html>
+
