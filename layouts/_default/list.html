@@ -14,20 +14,25 @@
 
     <ul class="posts" id="posts">
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") 6 -}}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") 7 -}}
 {{- range $paginator.Pages -}}
 
 {{ .Render "li" }}
 
 {{- end }}
 
-        <!-- <li class="adsense">
+        <li class="adsense">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-5055970484117246"
-                 data-ad-slot="5244399469"
-                 data-ad-format="auto"></ins>
-        </li> -->
+                style="display:block"
+                data-ad-format="fluid"
+                data-ad-layout-key="-6b+cv+2t-2q+74"
+                data-ad-client="ca-pub-5055970484117246"
+                data-ad-slot="3423591226"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </li>
 
     </ul>
 
