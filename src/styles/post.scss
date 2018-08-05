@@ -186,6 +186,7 @@ article section{
         line-height: 1.4;
         ul,ol{
             margin: .8rem 0 0;
+            list-style: circle;
         }
     }
     .footnote-ref{
@@ -331,6 +332,41 @@ article footer{
         width: 98%;
         border: 1px solid #ccc;
         padding: 1rem;
+    }
+    .follow{
+        background: #FAFAFA;
+        font-family: 'Trebuchet MS';
+        text-align: center;
+        padding: 2.4rem 0;
+        margin: 6rem 0 0;
+        h3{
+            margin: 0;
+            line-height: 1;
+            color: $main;
+            font-size: 2.4rem;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: .8rem 0 0;
+            padding: 0 2rem;
+        }
+        li{
+            width: calc( 50% - .8rem );
+            margin: .8rem 0 0;
+        }
+        a{
+            display: block;
+            background-color: $acce;
+            line-height: 3.2rem;
+            height: 3.2rem;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 2px;
+            &:hover,&:active{ filter: brightness(110%); }
+        }
     }
 }
 
