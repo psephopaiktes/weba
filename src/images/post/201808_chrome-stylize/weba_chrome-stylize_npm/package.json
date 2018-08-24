@@ -1,0 +1,19 @@
+{
+  "name": "chrome-stylize",
+  "version": "1.0.0",
+  "private": true,
+  "description": "chrome extension for customize CSS and JS.",
+  "scripts": {
+    "start": "npm run html -- -w & npm run css -- -w & npm run js -- -w",
+    "build": "rm -rf docs && npm run html && npm run css && npm run js",
+    "html": "cpx 'src/*.html' docs",
+    "css": "node-sass src -o docs --output-style compressed",
+    "js": "babel src -d docs --compact=true --presets=env --no-comments"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cpx": "^1.5.0",
+    "node-sass": "^4.9.2"
+  }
+}

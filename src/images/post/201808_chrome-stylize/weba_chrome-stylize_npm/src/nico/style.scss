@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import "../common";
+
+html,body{
+  background: #272727 !important;
+}
+.HeaderContainer,.VideoTitle{
+  color: #fff !important;
+}
+
+.NicoSpotAdContainer,
+.SwitchToFlashLead,
+.BottomContainer-side,
+.IchibaContainer
+{
+  display: none !important;
+}

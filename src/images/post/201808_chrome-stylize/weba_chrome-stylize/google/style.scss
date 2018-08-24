@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import "../common";
+
+body{
+  background-color: $base !important;
+  color: $main !important;
+}
+input[type="submit"]{
+  background-color: $acce !important;
+}
+#gb#gb a.gb_P, #gb#gb span.gb_P{
+  color: $main !important;
+}
+
+// 特定のリンクを半透明に
+a[href*="matome.naver.jp"],
+a[href*="kinarino.jp"],
+a[href*="cafy.jp"],
+a[href*="d.hatena.ne.jp/asin/"],
+a[href*="welq.jp"]
+{ opacity: 0.3 }
