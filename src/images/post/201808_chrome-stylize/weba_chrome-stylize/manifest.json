@@ -4,16 +4,16 @@
   "description": "chrome extension for customize CSS and JS.",
   "version": "1.0.0",
   "manifest_version": 2,
-  "web_accessible_resources": ["docs/*"],
+  "web_accessible_resources": ["*"],
   "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["https://www.google.co.jp/*"],
-      "css": ["docs/google/style.css"],"js": ["docs/google/script.js"]
+      "css": ["google/style.css"],"js": ["jquery.min.js","google/script.js"]
     },
     {
       "matches": ["http://www.nicovideo.jp/watch/*"],
-      "css": ["docs/nico/style.css"],"js": ["docs/nico/script.js"]
+      "css": ["nico/style.css"],"js": ["nico/script.js"]
     }
   ]
 }
