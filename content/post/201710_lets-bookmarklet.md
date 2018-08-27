@@ -4,7 +4,7 @@ date = "2017-10-02T00:46:13+10:00"
 title = "すこしでもJSかjQueryが書けるならブックマークレットを作ろう"
 categories = ["frontend"]
 draft = false
-update = ""
+update = "2018-08-27T00:46:13+10:00"
 css = false
 id = "201710_lets-bookmarklet"
 description = "ブックマークレットとはブラウザに登録しておき、任意のWebページ上で実行できるプログラムです。JSがすこしわかれば作成はとても簡単で、特別な環境作成も必要ありません。"
@@ -38,7 +38,7 @@ contentlist = true
 - [開いているページを翻訳する](https://psephopaiktes.github.io/bookmarklets/#bookmarklet-4)
 - [テンプレートからすばやくGmailを作成できる](http://bookmarklet.web.fc2.com/bookmarklet_070.html)
 
-ものなど、検索するとたくさんあります。また、SNS系だと開いているページをすばやく共有できるブックマークレットがTwitterやFaceebook公式から出ていたりします。私のおすすめのブックマークレットは[こちらのページで](https://psephopaiktes.github.io/bookmarklets/)まとめたので、見てみてください。
+ものなど、検索するとたくさんあります。また、SNS系だと開いているページをすばやく共有できるブックマークレットがTwitterやFaceebook公式から出ていたりします。私のおすすめのブックマークレットは[こちらのページで](https://psephopaiktes.github.io/pages/bookmarklets/)まとめたので、見てみてください。
 
 
 ## ブックマークレットの作り方
