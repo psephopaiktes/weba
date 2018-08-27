@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://hirata.blog/sitemap.xml
+Disallow: /CNAME
