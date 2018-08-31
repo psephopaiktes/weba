@@ -33,9 +33,9 @@ contentlist = true
 ## ブックマークレットの例
 任意のページ上で自分の好きなJSコードを実行できるわけですから、実にさまざまなことが可能です。すでに、有志が作った便利なものはいろいろ公開されています。たとえば、
 
-- [開いているページのTitleとURLをコピーする。](https://psephopaiktes.github.io/bookmarklets/#bookmarklet-0)
+- [開いているページのTitleとURLをコピーする。](https://psephopaiktes.github.io/pages/bookmarklets/#bookmarklet-0)
 - [開いているページのCSSレイアウトをいじる](https://biz.moneyforward.com/blog/business-hack/iphone-chrome-bookmarklet/#26Web)
-- [開いているページを翻訳する](https://psephopaiktes.github.io/bookmarklets/#bookmarklet-4)
+- [開いているページを翻訳する](https://psephopaiktes.github.io/pages/bookmarklets/#bookmarklet-4)
 - [テンプレートからすばやくGmailを作成できる](http://bookmarklet.web.fc2.com/bookmarklet_070.html)
 
 ものなど、検索するとたくさんあります。また、SNS系だと開いているページをすばやく共有できるブックマークレットがTwitterやFaceebook公式から出ていたりします。私のおすすめのブックマークレットは[こちらのページで](https://psephopaiktes.github.io/pages/bookmarklets/)まとめたので、見てみてください。
