@@ -1,7 +1,7 @@
 +++
 title = "AtomユーザもSublimeユーザも、死角が無いエディタ「VS CODE」に乗り換えよう"
 date = "2018-07-16T00:46:13+10:00"
-update = ""
+update = "2018.09.13"
 draft = false
 categories = ["Frontend"]
 tags = ["App", "web-design"]
@@ -97,23 +97,18 @@ Webの画像を右クリックでコピーしたり、Macのスクショ機能�
 
 
 ## 設定はクラウドで管理・同期可能
-これはAtom, Sublimeでもできることですが、設定・拡張機能のファイルをGitやDropboxなどで同期することで、設定をクラウド管理できます。僕は会社と自宅のMacでCODEを使っていますが、Google Driveで常に設定ファイルを同期しているので、片方の環境で設定を変えればもう片方にもすぐ反映されます。
-
-設定方法は以下のとおりです。<b>`a-hirata` の部分は自分のユーザー名に変えてください。</b>
-
-1. `/Users/a-hirata/Library/Application Support/Code/User` と `/Users/a-hirata/.vscode` の2つのフォルダをDropboxなどに移す。
-2. Dropboxなどに移動したフォルダからシンボリックリンクを作成して元の場所に置く。以下のようにコマンドを実行すればOKです。
-    - `sudo ln -snf "移動した場所/User" "/Users/a-hirata/Library/Application Support/Code"`
-    - `sudo ln -snf "移動した場所/.vscode" "/Users/a-hirata"`
-
-2台目移行のMacでは、1のフォルダを削除してから2を実行すればOKです。シンボリックリンクがよくわからないひとは以下の記事がかなり易しめでわかりやすいかも。
+Atom, Sublimeでもできることですが、設定や拡張機能をクラウド上で管理できます。VS CODEでは<b>Setting Sync</b>というド定番の拡張機能を使うことをおすすめします。
 
 {{< embed-line
-    "http://irabbit.seesaa.net/article/435861075.html"
-    "[Mac] OS Xでシンボリックリンクを作成してみよう！: らびっと。"
+    "https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync"
+    "Settings Sync - Visual Studio Marketplace"
 >}}
 
+詳しい使い方は↑ページに書いています。英語ですが雰囲気でわかると思います。わからなければいろんなところで紹介されているのでググってください💪。
+
 また、version 1.25 から[ポータブルモード](https://code.visualstudio.com/docs/editor/portable)なるものが導入されたらしく、USBドライブやクラウドストレージなどでソフトをまるごとひとつのフォルダで管理することもできるようです。
+
+**※注意**: 以前までこの記事では、`User`フォルダと`.vscode`フォルダをGitやクラウドストレージで保存する方法を紹介していたのですが、この方法はあまりおすすめできません。なぜかというと、これらのフォルダ配下には拡張機能ごとの大量の依存ファイルがあるため、非常に同期にマシンコストがかかるためです。
 
 ## プロジェクト (フォルダ) の切り替えがめっちゃ楽
 AtomやSublimeでWebサイトやアプリを開発する時、`index.html`や`style.css`をいっこいっこ直接開くのではなく、そのファイルがある場所のフォルダを登録してから作業すると思います。

@@ -125,6 +125,8 @@
         <h1>AtomユーザもSublimeユーザも、死角が無いエディタ「VS CODE」に乗り換えよう</h1>
         <time datetime="2018-07-16"><i class="material-icons">schedule</i>2018.07.16 公開</time>
         
+        <time><i class="material-icons">update</i> 2018.09.13 更新</time>
+        
         <a class="postHeader__category" href="/categories/frontend/"><i class="material-icons">folder</i>Frontend</a>
         <ul class="postHeader__tags">
             <i class="material-icons">local_offer</i>
@@ -235,26 +237,16 @@
 
 <h2 id="設定はクラウドで管理-同期可能">設定はクラウドで管理・同期可能</h2>
 
-<p>これはAtom, Sublimeでもできることですが、設定・拡張機能のファイルをGitやDropboxなどで同期することで、設定をクラウド管理できます。僕は会社と自宅のMacでCODEを使っていますが、Google Driveで常に設定ファイルを同期しているので、片方の環境で設定を変えればもう片方にもすぐ反映されます。</p>
+<p>Atom, Sublimeでもできることですが、設定や拡張機能をクラウド上で管理できます。VS CODEでは<b>Setting Sync</b>というド定番の拡張機能を使うことをおすすめします。</p>
 
-<p>設定方法は以下のとおりです。<b><code>a-hirata</code> の部分は自分のユーザー名に変えてください。</b></p>
+<a class="embed-line" href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync">Settings Sync - Visual Studio Marketplace <i class="material-icons">open_in_new</i></a>
 
-<ol>
-<li><code>/Users/a-hirata/Library/Application Support/Code/User</code> と <code>/Users/a-hirata/.vscode</code> の2つのフォルダをDropboxなどに移す。</li>
-<li>Dropboxなどに移動したフォルダからシンボリックリンクを作成して元の場所に置く。以下のようにコマンドを実行すればOKです。
 
-<ul>
-<li><code>sudo ln -snf &quot;移動した場所/User&quot; &quot;/Users/a-hirata/Library/Application Support/Code&quot;</code></li>
-<li><code>sudo ln -snf &quot;移動した場所/.vscode&quot; &quot;/Users/a-hirata&quot;</code></li>
-</ul></li>
-</ol>
-
-<p>2台目移行のMacでは、1のフォルダを削除してから2を実行すればOKです。シンボリックリンクがよくわからないひとは以下の記事がかなり易しめでわかりやすいかも。</p>
-
-<a class="embed-line" href="http://irabbit.seesaa.net/article/435861075.html">[Mac] OS Xでシンボリックリンクを作成してみよう！: らびっと。 <i class="material-icons">open_in_new</i></a>
-
+<p>詳しい使い方は↑ページに書いています。英語ですが雰囲気でわかると思います。わからなければいろんなところで紹介されているのでググってください💪。</p>
 
 <p>また、version 1.25 から<a href="https://code.visualstudio.com/docs/editor/portable">ポータブルモード</a>なるものが導入されたらしく、USBドライブやクラウドストレージなどでソフトをまるごとひとつのフォルダで管理することもできるようです。</p>
+
+<p><strong>※注意</strong>: 以前までこの記事では、<code>User</code>フォルダと<code>.vscode</code>フォルダをGitやクラウドストレージで保存する方法を紹介していたのですが、この方法はあまりおすすめできません。なぜかというと、これらのフォルダ配下には拡張機能ごとの大量の依存ファイルがあるため、非常に同期にマシンコストがかかるためです。</p>
 
 <h2 id="プロジェクト-フォルダ-の切り替えがめっちゃ楽">プロジェクト (フォルダ) の切り替えがめっちゃ楽</h2>
 
