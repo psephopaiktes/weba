@@ -2,7 +2,7 @@
 title = "[Chrome拡張] よく見るサイトのデザインを自由に変えよう! 自作のCSSとJSを読み込ませる方法 [Stylish削除記念]"
 date = "2018-09-03T00:46:13+10:00"
 update = ""
-draft = true
+draft = false
 categories = ["Frontend"]
 tags = ["Chrome", "web-design"]
 description = "最低限HTMLとCSSの基礎知識だけあればOKです。Google検索やGitHubなどを黒い背景に変えたり、いらない要素を消したりできます。ローカルで拡張機能を作る方法なので、「安心」「JSも使える」「SCSSも使える」などメリットたくさん。"
