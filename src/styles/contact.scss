@@ -2,26 +2,11 @@
 @import "common";
 @import "column-single";
 
-
-// html{
-//     height: 100vh;
-//     background: repeating-linear-gradient(-45deg, #fcfcfc, #fcfcfc 5px, #f0f0f0 5px, #f0f0f0 10px);
-// }
-// html{
-//     background:
-//     radial-gradient(#fff, rgba(#fff,.2) 2px, transparent 40px),
-//     radial-gradient(#fff, rgba(#fff,.15) 1px, transparent 30px),
-//     radial-gradient(#fff, rgba(#fff,.1) 2px, transparent 40px),
-//     radial-gradient(rgba(#fff,.4), rgba(#fff,.1) 2px, transparent 30px);
-//     background-color: $main;
-//     background-size: 55rem 55rem, 35rem 35rem, 25rem 25rem, 15rem 15rem;
-//     background-position: 0 0, 4rem 6rem, 13rem 27rem, 7rem 10rem;
-//     animation: snow 1000s linear infinite;
-// }
-// @keyframes snow {
-//     0%{ background-position: 0 0 }
-//     100%{ background-position: 10000% 10000% }
-// }
+@keyframes contact-gradient {
+      0% { background-position: 0% 0; }
+     50% { background-position: 100% 0; }
+    100% { background-position: 0% 0; }
+}
 main{
     @include max($readable) { padding: 0 2rem}
     h1{
@@ -29,17 +14,15 @@ main{
         margin: 0;
         padding-bottom: 1rem;
         letter-spacing: .05em;
-        // color: $base;
         border-bottom: .3rem solid $main;
     }
-    p{
-        font-size: 2rem;
-        letter-spacing: .05em;
-        margin: 0;
-        // color: $base;
-    }
     .contactList{
-        background: #f9f9f9;
+        background-color: $acce;
+        background-image: linear-gradient(-45deg, #f66, $acce);
+        background-position: left top;
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+        animation: contact-gradient 12s ease infinite;
         padding: 2rem;
         li a{
             display: block;
@@ -52,10 +35,10 @@ main{
             line-height: 6rem;
             font-weight: bold;
             text-decoration: none;
-            color: $main;
+            color: $base;
             margin-bottom: 1rem;
             &:hover,&:active{
-                background: $acce;
+                background: rgba($base,.2);
             }
             &::before{
                 content: "";
