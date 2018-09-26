@@ -2,7 +2,7 @@
 date = "2017-12-03T13:05:42+09:00"
 tags = ["python","web design"]
 description = "Macなら特別な準備なしに、簡単にすぐローカルサーバをたてて手元のスマホから、作成中のWebページ・アプリを確認できます。"
-categories = ["frontend"]
+categories = ["front-end"]
 title = "PCで作成中のWebページをリアルタイムにスマホで確認する方法"
 contentlist = false
 id = "201712_python-server"

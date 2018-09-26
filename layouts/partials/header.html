@@ -5,7 +5,7 @@
 
     <title>
     {{- if eq .context.Title .Site.Title -}}
-        {{- .context.Title }} | Design &amp; Frontend
+        {{- .context.Title }} | Design &amp; Front-end
     {{- else -}}
         {{- .context.Title }} | {{ .Site.Title -}}
     {{- end -}}
@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {{- if ne .asset "" }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/{{.asset}}.css">
+    {{- end }}
+    {{- if .context.Params.css }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/images/post/{{.context.Params.id}}/style.css">
     {{- end }}
     {{ "<!-- icons-->" | safeHTML }}
     <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/images/favicon.png">
@@ -77,7 +80,7 @@
     <header class="globalHeader">
         <h1><a href="{{ .Site.BaseURL }}">
             <img src="{{ .Site.BaseURL }}/images/logo.svg" alt="logo">
-            <p>Design &amp; Frontend</p>
+            <p>Design &amp; Front-end</p>
         </a></h1>
         <button id="menuButton"><i class="material-icons">menu</i></button>
         <div class="menu">
@@ -118,7 +121,7 @@
         </div>
 
         <ul class="search__categories">
-            <li><a href="{{ .Site.BaseURL }}/categories/frontend"><i class="material-icons">code</i>Frontend</a>
+            <li><a href="{{ .Site.BaseURL }}/categories/front-end"><i class="material-icons">code</i>Front-end</a>
             <li><a href="{{ .Site.BaseURL }}/categories/design"><i class="material-icons">create</i>Design</a>
             <li><a href="{{ .Site.BaseURL }}/categories/other"><i class="material-icons">subject</i>Other</a>
             <li><a href="{{ .Site.BaseURL }}/post"><i class="material-icons">inbox</i>Archives</a>

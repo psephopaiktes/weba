@@ -6,7 +6,7 @@ GitHub Pagesで公開中。
 ## 基本コマンド
 - `hugo server -D` :記事ファイル中でdraft = trueになっている記事も表示する。  
 - `hugo new post/20170717_Hello-World.md` :記事の作成
-- `hugo new post/20170717_Hello-World.md --editor="code"` :記事の作成。Atomで開く
+- `hugo new post/20170717_Hello-World.md --editor="code"` :記事の作成。Codeで開く
 - `hugo` :deployする。docs(public)内に下書きファイルも残るので、手動でやる場合は公開前に整理すること
   - `rm -rf static`
   - `rm -rf docs`

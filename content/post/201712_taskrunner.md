@@ -1,7 +1,7 @@
 +++
 title = "【保存版】gulp, webpack, parcel...増え続けるタスクランナーの特徴を理解して最適なものを選択しよう"
 contentlist = true
-categories = ["Frontend"]
+categories = ["front-end"]
 draft = false
 update = "2017.12.16"
 date = "2017-12-12T21:57:25+09:00"

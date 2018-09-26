@@ -2,7 +2,7 @@
 js = false
 date = "2017-10-02T00:46:13+10:00"
 title = "すこしでもJSかjQueryが書けるならブックマークレットを作ろう"
-categories = ["frontend"]
+categories = ["front-end"]
 draft = false
 update = "2018-08-27T00:46:13+10:00"
 css = false

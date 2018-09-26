@@ -36,6 +36,7 @@ article header{
         margin: 2rem .8em 0 0;
         text-decoration: none;
         color: $main;
+        &:hover{ text-decoration: underline }
         .material-icons{
             vertical-align: middle;
             display: inline-flex;
@@ -51,7 +52,7 @@ article header{
         .material-icons{
             vertical-align: middle;
             display: inline-flex;
-            margin: 2rem .2em 0 0;
+            margin: 2rem 0 0;
             font-size: 1.6rem;
             line-height: 1.4rem;
             color: $main;
@@ -65,8 +66,9 @@ article header{
             text-decoration: none;
             font-size: 1.2rem;
             line-height: 1.4rem;
-            margin: 2rem .8em 0 0;
+            margin: 2rem .6em 0 0;
             color: $main;
+            &:hover{ text-decoration: underline }
         }
         li:not(:last-child) a::after{
             content: ","
