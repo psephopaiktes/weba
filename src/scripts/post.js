@@ -2,34 +2,35 @@
 ///////////////////////////////////////////////
 // syntax highlight
 ///////////////////////////////////////////////
-! function(){
+document.addEventListener("DOMContentLoaded", function(e){
     hljs.initHighlightingOnLoad();
-}();
+});
 
 
 
 ///////////////////////////////////////////////
 // set md anchor target="brank_"
 ///////////////////////////////////////////////
-! function(){
+document.addEventListener("DOMContentLoaded", function(e){
 
     var links = document.links;
 
     for (var i = 0; i < links.length; i++) {
-       if (links[i].hostname != window.location.hostname) {
-           links[i].target = '_blank';
+        if (links[i].hostname != window.location.hostname) {
+            console.log(i+':'+links[i]);
+           links[i].target = '_new';
            links[i].rel = 'noopener';
        }
     }
 
-}();
+});
 
 
 
 ///////////////////////////////////////////////
 // Generate Content List
 ///////////////////////////////////////////////
-! function(){
+document.addEventListener("DOMContentLoaded", function(e){
 
     var contentList = document.getElementById('contentList'),
         contentHeader = document.querySelectorAll('article h2');
@@ -55,7 +56,7 @@
 
     }
 
-}();
+});
 
 
 

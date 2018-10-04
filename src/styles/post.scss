@@ -10,8 +10,6 @@ main{
 }
 
 article header{
-
-
     .hero{
         display: block;
         background: #ccc;
@@ -106,7 +104,10 @@ article header{
     }
 }
 
-
+@keyframes highlight {
+    0%   { background: rgba($acce,.4) }
+    100% { background: transparent }
+}
 
 article section{
     margin: 12rem 0 0;
@@ -122,6 +123,7 @@ article section{
         border-left: .2rem solid $acce;
         line-height: 1.4;
         font-size: 3.2rem;
+        &:target{ animation: highlight 4s }
     }
     .backContentList{
         display: block;
