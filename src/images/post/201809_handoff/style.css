@@ -1,1 +1,32 @@
+#matrix{
+  position: relative;
+  height: 500px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+#matrix img:first-child{
+  height: 500px;
+  width: auto;
+  max-width: initial;
+}
+#matrix img:last-child{
+  display: none;
+  pointer-events: none;
+}
+@supports (position: sticky) or (position: -webkit-sticky) {
+  #matrix img:last-child{
+    position: -webkit-sticky;
+    position: sticky;
+    display: block;
+    height: 500px;
+    width: auto;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,.1);
+  }
+}
 
+@media (max-width: 600px){
+  #matrix,#matrix img:first-child,#matrix img:last-child{ height: 400px }
+}

@@ -21,86 +21,13 @@ contentlist = true
 ## 比較マトリクス
 まずは各サービスのステータスを表で比べてみます。
 
-<style>
-#handoff-matrix{
-    table-layout: fixed;
-    display: block;
-    width: 100%;
-    overflow: scroll;
-    position: relative;
-    font-size: 1.4rem;
-}
-#handoff-matrix tbody{
-    display: block;
-    width: max-content;
-}
-#handoff-matrix tr{
-}
-#handoff-matrix th,td{
-    height: 80px;
-}
-#handoff-matrix th:first-child{
-    width: 100px;
-    display: block;
-    position: sticky;
-    left: 0;
-    padding: 0;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    background-color: rgba(0,0,0,.7);
-    color: #fff;
-}
-#handoff-matrix tr:first-child th:first-child{
-    line-height: 80px;
-}
-#handoff-matrix th:first-child a{
-    color: #fff !important;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding-top: 55px;
-    background-image: url(/images/post/201809_handoff/splite.png);
-    background-size: 200px auto;
-}
-#handoff-matrix .platform{
-    width: 120px;
-}
-#handoff-matrix td.platform{
-    color: transparent;
-    background-image: url(/images/post/201809_handoff/splite.png);
-}
-#handoff-matrix td.platform.win.mac.lin{}
-#handoff-matrix td.platform.win.mac{}
-#handoff-matrix td.platform.mac{}
-</style>
-
-<table id="handoff-matrix">
-
-<tr>
-    <th>サービス名</th>
-    <th>運営</th>
-    <th>プラットフォーム</th>
-    <th>対応ソフト</th>
-    <th>料金</th>
-    <th>アップロード</th>
-    <th>確認</th>
-    <th>アセットの管理<br><small>※画像の抽出しやすさ</small></th>
-</tr>
-
-<tr>
-    <th>
-        <a href="https://zeplin.io" style="background-position: 0 0">Zeplin</a>
-    </th>
-    <td>
-        <a href="https://zeplin.io/about">Zeplin</a>
-    </td>
-    <td class="platform mac win lin">
-        MacOS, Windows, Linux
-    </td>
-</tr>
-
-</table>
+<div id="matrix">
+    <img src="/images/post/201809_handoff/matrix.png" alt="ハンドオフサービスの比較テーブル">
+    <img src="/images/post/201809_handoff/header.png" alt="テーブルヘッダー画像">
+    <!-- <map name="services">
+        <area shape="rect" coords="0,32,120,80" href="https://zeplin.io/">
+    </map> -->
+</div>
 
 ## それぞれのサービスの概要
 ### Zeplin
