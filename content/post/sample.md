@@ -1,7 +1,7 @@
 +++
 contentlist = true
-tags = []
-categories = []
+tags = ["sample"]
+categories = ["Other"]
 slug = "sample"
 title = "post parts sample"
 description = "sample"

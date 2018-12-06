@@ -75,6 +75,43 @@ p{
     &:hover,&:active{ background: $acce }
     &.show{ bottom: 2rem }
 }
+.wishList{
+    background: rgba($acce,.4);
+    padding: 2rem 2.8rem 2.4rem;
+    border-radius: 8px;
+    width: 90%;
+    margin: 6rem auto 0;
+    h3{
+        margin: 0;
+        text-align: center;
+        color: rgba($main,.8);
+        span{
+            font-size: 1.5em;
+        }
+    }
+    a{
+        display: block;
+        width: 24rem;
+        margin: 1rem auto 0;
+        height: 3.2rem;
+        line-height: 3.2rem;
+        text-align: center;
+        background: $acce;
+        border-bottom: 2px solid darken($acce,10%);
+        border-radius: 2px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 2rem;
+        img{
+            margin-top: -.15em;
+        }
+    }
+    p{
+        margin: 1.6rem 0 0;
+        opacity: .8;
+    }
+}
 
 
 /////////////////////////////////////////////
