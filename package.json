@@ -2,7 +2,7 @@
   "name": "WEBA",
   "author": "Akira HIRATA",
   "version": "1.0.0",
-  "description": "",
+  "description": "my blog.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "cpx": "^1.5.0",
-    "node-sass": "^4.9.2",
-    "prettier": "^1.13.7"
+    "node-sass": "^4.10.0",
+    "prettier": "^1.15.3"
   }
 }

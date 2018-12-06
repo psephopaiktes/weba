@@ -1,11 +1,11 @@
 #matrix{
   position: relative;
-  height: 500px;
+  height: 416px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 #matrix img:first-child{
-  height: 500px;
+  height: 416px;
   width: auto;
   max-width: initial;
 }
@@ -18,7 +18,7 @@
     position: -webkit-sticky;
     position: sticky;
     display: block;
-    height: 500px;
+    height: 416px;
     width: auto;
     z-index: 1;
     bottom: 0;
@@ -28,5 +28,5 @@
 }
 
 @media (max-width: 600px){
-  #matrix,#matrix img:first-child,#matrix img:last-child{ height: 400px }
+  #matrix,#matrix img:first-child,#matrix img:last-child{ height: 360px }
 }
