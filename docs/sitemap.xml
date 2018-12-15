@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hirata.blog/201812_goodbuy/</loc>
+    <lastmod>2018-12-06T00:46:13+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/201809_chrome-stylize/</loc>
     <lastmod>2018-09-03T00:46:13+10:00</lastmod>
   </url>
@@ -106,13 +111,19 @@
   
   <url>
     <loc>https://hirata.blog/categories/other/</loc>
-    <lastmod>2017-10-01T00:46:13+09:00</lastmod>
+    <lastmod>2018-12-06T00:46:13+10:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/tags/python/</loc>
     <lastmod>2017-12-03T13:05:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/review/</loc>
+    <lastmod>2018-12-06T00:46:13+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -148,7 +159,7 @@
   
   <url>
     <loc>https://hirata.blog/</loc>
-    <lastmod>2018-09-03T00:46:13+10:00</lastmod>
+    <lastmod>2018-12-06T00:46:13+10:00</lastmod>
     <priority>0</priority>
   </url>
   
