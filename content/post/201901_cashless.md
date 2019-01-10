@@ -1,6 +1,6 @@
 +++
 title = "財布を持ち歩くのをやめてわかったことと現状の最適解"
-date = "2018-12-07T00:46:13+10:00"
+date = "2019-01-10T10:42:17+09:00"
 update = ""
 draft = false
 categories = ["Other"]
@@ -9,7 +9,7 @@ description = "先日Pixel3というスマホを購入して以来、財布を�
 id = "201901_cashless"
 css = false
 js = false
-contentlist = false
+contentlist = true
 
 +++
 
