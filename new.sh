@@ -6,7 +6,7 @@ ID=$1
 
 #引数がなかった場合は入力を待つ
 if [ -z ${ID} ]; then
-  echo "please enter post name"
+  echo "please enter post name ex.201710_hello-world"
   read ID
 fi
 
