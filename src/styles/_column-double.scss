@@ -33,11 +33,12 @@ main{
     h1 p{
         font-size: 1.2rem;
         font-weight: 100;
+        font-family: 'Trebuchet MS';
         letter-spacing: .15em;
         text-indent: .15em;
         text-align: center;
-        margin: .6rem 0 0;
-        color: rgba(#000,1);
+        margin: .4rem 0 0;
+        color: rgba($main,.9);
     }
     button{ display: none }
 }

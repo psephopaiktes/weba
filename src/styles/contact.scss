@@ -46,7 +46,7 @@ main{
                 width: 4rem;
                 height: 4rem;
                 background: url("../images/contact-sns.svg") no-repeat;
-                background-size: 20rem 4rem;
+                background-size: 24rem 4rem;
                 margin: 0;
                 position: absolute;
                 top: 1rem;
@@ -58,5 +58,6 @@ main{
         .facebook::before{ background-position: -4rem 0 }
         .instagram::before{ background-position: -12rem 0 }
         .pixiv::before{ background-position: -16rem 0 }
+        .dribbble::before{ background-position: -20rem 0 }
     }
 }
