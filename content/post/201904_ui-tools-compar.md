@@ -1,6 +1,6 @@
 +++
 title = "いちばん詳しい Sketch ・ XD ・ Figma ・ Studio の比較"
-date = "2019-04-22T10:42:17+09:00"
+date = "2019-04-22T08:45:17+09:00"
 update = ""
 draft = false
 categories = ["Design"]
