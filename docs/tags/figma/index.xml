@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Figma on WEBA</title>
+    <link>https://hirata.blog/tags/figma/</link>
+    <description>Recent content in Figma on WEBA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>© weba 2017</copyright>
+    <lastBuildDate>Mon, 22 Apr 2019 08:45:17 +0900</lastBuildDate>
+    
+	<atom:link href="https://hirata.blog/tags/figma/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>いちばん詳しい Sketch ・ XD ・ Figma ・ Studio の比較</title>
+      <link>https://hirata.blog/201904_ui-tools-compar/</link>
+      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/201904_ui-tools-compar/</guid>
+      <description>すいません、今回はリンクだけです。表題の記事はnoteに書きました。 いちばん詳しい Sketch / XD / Figma / Studio の比較 〜1. 導入と背景知識｜平田｜note note.mu</description>
+    </item>
+    
+  </channel>
+</rss>

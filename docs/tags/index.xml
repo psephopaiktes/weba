@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Thu, 10 Jan 2019 10:42:17 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 08:45:17 +0900</lastBuildDate>
     
 	<atom:link href="https://hirata.blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>App・Service</title>
+      <link>https://hirata.blog/tags/appservice/</link>
+      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/appservice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Figma</title>
+      <link>https://hirata.blog/tags/figma/</link>
+      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/figma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sketc</title>
+      <link>https://hirata.blog/tags/sketc/</link>
+      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/sketc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XD</title>
+      <link>https://hirata.blog/tags/xd/</link>
+      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/xd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Review</title>
@@ -18,15 +54,6 @@
       <pubDate>Thu, 10 Jan 2019 10:42:17 +0900</pubDate>
       
       <guid>https://hirata.blog/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>appservice</title>
-      <link>https://hirata.blog/tags/appservice/</link>
-      <pubDate>Thu, 10 Jan 2019 10:42:17 +0900</pubDate>
-      
-      <guid>https://hirata.blog/tags/appservice/</guid>
       <description></description>
     </item>
     
@@ -40,7 +67,7 @@
     </item>
     
     <item>
-      <title>web design</title>
+      <title>web-design</title>
       <link>https://hirata.blog/tags/web-design/</link>
       <pubDate>Mon, 03 Sep 2018 00:46:13 +1000</pubDate>
       

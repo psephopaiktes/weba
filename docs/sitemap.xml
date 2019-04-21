@@ -3,9 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hirata.blog/categories/</loc>
-    <lastmod>2019-01-10T10:42:17+09:00</lastmod>
+    <loc>https://hirata.blog/tags/appservice/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/categories/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/figma/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/sketc/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/xd/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/categories/design/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/201904_ui-tools-compar/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
   </url>
   
   <url>
@@ -16,24 +63,6 @@
   
   <url>
     <loc>https://hirata.blog/tags/review/</loc>
-    <lastmod>2019-01-10T10:42:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/tags/</loc>
-    <lastmod>2019-01-10T10:42:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/</loc>
-    <lastmod>2019-01-10T10:42:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/tags/appservice/</loc>
     <lastmod>2019-01-10T10:42:17+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -78,12 +107,6 @@
   
   <url>
     <loc>https://hirata.blog/tags/sketch/</loc>
-    <lastmod>2018-03-23T00:46:13+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/categories/design/</loc>
     <lastmod>2018-03-23T00:46:13+10:00</lastmod>
     <priority>0</priority>
   </url>
