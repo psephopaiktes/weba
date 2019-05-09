@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>UX on WEBA</title>
+    <title>ux on WEBA</title>
     <link>https://hirata.blog/tags/ux/</link>
-    <description>Recent content in UX on WEBA</description>
+    <description>Recent content in ux on WEBA</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Sun, 22 Oct 2017 22:49:51 +1632</lastBuildDate>
+    <lastBuildDate>Wed, 08 May 2019 08:45:17 +0900</lastBuildDate>
     
 	<atom:link href="https://hirata.blog/tags/ux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pixel3カメラの価値は「撮影の体験」にこそある</title>
+      <link>https://hirata.blog/201905_pixel3-camera/</link>
+      <pubDate>Wed, 08 May 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/201905_pixel3-camera/</guid>
+      <description>先日の Google I/O 2019 イベントで Pixel3 の廉価版である、 Pixel3a が発表されましたね。 Pixel 3a ＆ Pixel 3a XL - それを実現する携帯電話 - Google Store store.google.com open_in_new Pixel3はGoogleが作っ</description>
+    </item>
     
     <item>
       <title>デザイナなら意識したいシグニファイアと、間違いやすいアフォーダンスの話</title>
