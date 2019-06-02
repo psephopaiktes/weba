@@ -31,15 +31,6 @@
     </item>
     
     <item>
-      <title>App・Service</title>
-      <link>https://hirata.blog/tags/appservice/</link>
-      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
-      
-      <guid>https://hirata.blog/tags/appservice/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Figma</title>
       <link>https://hirata.blog/tags/figma/</link>
       <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
@@ -67,6 +58,15 @@
     </item>
     
     <item>
+      <title>appservice</title>
+      <link>https://hirata.blog/tags/appservice/</link>
+      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/appservice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Chrome</title>
       <link>https://hirata.blog/tags/chrome/</link>
       <pubDate>Mon, 03 Sep 2018 00:46:13 +1000</pubDate>
@@ -76,7 +76,7 @@
     </item>
     
     <item>
-      <title>web design</title>
+      <title>web-design</title>
       <link>https://hirata.blog/tags/web-design/</link>
       <pubDate>Mon, 03 Sep 2018 00:46:13 +1000</pubDate>
       

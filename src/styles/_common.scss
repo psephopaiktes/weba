@@ -122,3 +122,76 @@ p{
         display: none;
     } ;
 }
+
+
+
+/////////////////////////////////////////////
+// Dark Theme
+/////////////////////////////////////////////
+@media (prefers-color-scheme: dark) {
+    html{
+        background: $main;
+    }
+    body{
+        background: none;
+        color: $base !important;
+    }
+    .globalHeader{
+        background: none !important;
+        color: rgba($base,.5);
+        button:hover, button:active, .on {
+            background: rgba($base,.2) !important;
+        }
+    }
+    #pager__select{
+        background: $main !important;
+    }
+    div.menu{
+        background: $main;
+        nav a{
+            border-color: rgba($base, .2) !important;
+            color: #fff !important;
+        }
+    }
+    aside.search{
+        background: $main;
+        box-shadow: 0 1rem 2rem -1rem #000;
+        .search__box{
+            background: rgba($base,.8);
+        }
+        .search__categories a{
+            color: $base;
+        }
+    }
+    #gotop{
+        background: #ccc;
+    }
+
+    #posts a{
+        box-shadow: none !important;
+        color: $base;
+        border-color: rgba($base, .2);
+    }
+
+    main h1{
+        border-color: $base !important;
+    }
+    main h2{
+        color: $base !important;
+    }
+    article header{
+        time, .postHeader__category,.postHeader__tags i,.postHeader__tags a{
+        color: $base !important;
+        }
+    }
+    aside.share a{
+        background-color: rgba($base,.4) !important;
+    }
+    article section strong {
+        background: linear-gradient(#0000 60%, #fc66 40%) !important;
+    }
+    .embed-card{
+        background: rgba($base,.5)
+    }
+
+}
