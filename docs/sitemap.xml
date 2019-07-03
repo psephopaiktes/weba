@@ -26,6 +26,12 @@
   </url>
   
   <url>
+    <loc>https://hirata.blog/tags/ux/</loc>
+    <lastmod>2019-05-08T08:45:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hirata.blog/</loc>
     <lastmod>2019-05-08T08:45:17+09:00</lastmod>
     <priority>0</priority>
@@ -33,12 +39,6 @@
   
   <url>
     <loc>https://hirata.blog/categories/other/</loc>
-    <lastmod>2019-05-08T08:45:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/tags/ux/</loc>
     <lastmod>2019-05-08T08:45:17+09:00</lastmod>
     <priority>0</priority>
   </url>
