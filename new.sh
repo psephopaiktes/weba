@@ -17,9 +17,9 @@ hugo new post/$ID.md --editor="code"
 echo $ID | pbcopy
 
 #記事用の画像フォルダを作成し、Finderで開く
-mkdir src/images/post/$ID
-open src/images/post/$ID
-open src/images/post.ai
+mkdir ./src/images/post/$ID
+open ./src/images/post/$ID
+open ./src/images/post.ai
 
 #サーバをたててChromeで開く
 hugo server -D
