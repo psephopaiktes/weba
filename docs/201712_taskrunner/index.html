@@ -3,7 +3,9 @@
 
 <head>
 
-    <title>【保存版】gulp, webpack, parcel...増え続けるタスクランナーの特徴を理解して最適なものを選択しよう | WEBA</title><meta name="description" content="フロントエンドの開発はたくさんのライブラリやフレームワークに依存し、それらを管理するためのタスクランナーも様々に群雄割拠しています。本記事はそれらの特徴とコンセプトについて触れ、違いをイメージしやすくすることです。"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <meta http-equiv="refresh" content="0;URL='https://hira.page/blog/201712_taskrunner'">
+        <link rel="canonical" href="https://hira.page/blog/201712_taskrunner"><title>【保存版】gulp, webpack, parcel...増え続けるタスクランナーの特徴を理解して最適なものを選択しよう | WEBA</title><meta name="description" content="フロントエンドの開発はたくさんのライブラリやフレームワークに依存し、それらを管理するためのタスクランナーも様々に群雄割拠しています。本記事はそれらの特徴とコンセプトについて触れ、違いをイメージしやすくすることです。"><meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css-->
@@ -136,334 +138,182 @@
     </header>
 
     <section>
-        
-
-<p>近年、フロントエンドの開発はたくさんのライブラリやフレームワークに依存し、それらを管理するためのタスクランナーも様々なものが群雄割拠している状況です。本記事の目的はそれらの特徴とコンセプトについて軽く触れ、違いをイメージしやすくすることです。Node.jsについての知識や、実際の詳しい環境構築のやり方については参考記事を紹介する程度ににとどめておきます。<br />
-<small>※ Grunt、Bower、Browserifyはなにかしらの下位互換として、オワコン感を否めないので今回のお話には出てきません。</small></p>
-
+        <p>近年、フロントエンドの開発はたくさんのライブラリやフレームワークに依存し、それらを管理するためのタスクランナーも様々なものが群雄割拠している状況です。本記事の目的はそれらの特徴とコンセプトについて軽く触れ、違いをイメージしやすくすることです。Node.jsについての知識や、実際の詳しい環境構築のやり方については参考記事を紹介する程度ににとどめておきます。<br>
+<!-- raw HTML omitted -->※ Grunt、Bower、Browserifyはなにかしらの下位互換として、オワコン感を否めないので今回のお話には出てきません。<!-- raw HTML omitted --></p>
 <h2 id="前提知識">前提知識</h2>
-
 <p>軽く背景を説明しておきます。本筋からは脱線するので、読み飛ばしても問題ないです。</p>
-
-<h3 id="そもそもタスクランナーって">そもそもタスクランナーって ?</h3>
-
+<h3 id="そもそもタスクランナーって-">そもそもタスクランナーって ?</h3>
 <p>WebページやWebアプリを作りたい時、最低限に作成するならそのままhtmlやcss、Javascriptを書けばよいだけですね。ですが近年は、以下のようなものを利用して開発することが当たり前になってきています。</p>
-
 <ul>
-<li><strong>EJSやpug、HAMLなどのテンプレートエンジン</strong><br />
+<li><strong>EJSやpug、HAMLなどのテンプレートエンジン</strong><br>
 HTMLをより簡略にかけたり、共通で使いまわせるレイアウトやパーツを使ったり、JSONファイルからページの量産などが行なえます。</li>
-<li><strong>SASS, PostCSSなどのCSSプリプロセッサ</strong><br />
+<li><strong>SASS, PostCSSなどのCSSプリプロセッサ</strong><br>
 CSSをより読みやすく書いたり、変数や関数などを利用できます。また、将来的に公式のCSSで採用される機能を先取りして利用することもできます。</li>
-<li><strong>BabelやTypescriptなどのJavascriptトランスパイラ</strong><br />
+<li><strong>BabelやTypescriptなどのJavascriptトランスパイラ</strong><br>
 より厳密なルールで型を定義したり、将来的に採用されることが決まっている仕様で記述したりできます。CoffeScriptのような、記述を簡便化することが目的のものもあります。</li>
-<li><strong>ReactやVue、Angularなどのフレームワーク</strong><br />
+<li><strong>ReactやVue、Angularなどのフレームワーク</strong><br>
 SPA開発などフロント面で多機能なUI実装をしたり、様々な目的を持つライブラリが非常にたくさんあります。</li>
-<li><strong>CommonJSやAMDなどのモジュールバンドラ</strong><br />
+<li><strong>CommonJSやAMDなどのモジュールバンドラ</strong><br>
 複数ファイルに分割されたJavaScriptをModuleとして扱い、ひとつのファイルに結合します。ただ順番にファイルを結合(concat)するのではなく、それらの関数や変数値などの依存関係を解決した上で1つに結びつけます。</li>
-<li><strong>eslintやstylelintなどの構文チェッカー</strong><br />
+<li><strong>eslintやstylelintなどの構文チェッカー</strong><br>
 CSSやJavascriptに構文ミスが無いか検証するツールです。細かく記述ルールを設定することもできます。</li>
 </ul>
-
 <p>などなど、HTMLやCSSをより便利に、多機能に記述するためのライブラリやツールがたくさんあり、今日びそのままでHTMLやCSSを書くことはあんまりありえません。また、Web開発をする際に</p>
-
 <ul>
-<li><b>作成しているページをリアルタイムにスマホで確認したり、  ファイルを編集するたびに自動でリロードしてくれるローカルサーバ</b></li>
-<li><b>画像を圧縮したり、CSSスプライト用の画像を自動で作成するプラグイン</b></li>
+<li><!-- raw HTML omitted -->作成しているページをリアルタイムにスマホで確認したり、  ファイルを編集するたびに自動でリロードしてくれるローカルサーバ<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->画像を圧縮したり、CSSスプライト用の画像を自動で作成するプラグイン<!-- raw HTML omitted --></li>
 </ul>
-
 <p>といった開発に便利な環境を導入することも多々あります。上記のようなツール・ライブラリ群は、当然それぞれを個別にインストールして使うこともできます。ですが、これらをひとつひとつ個別に実行し、HTMLやCSS、画像ファイルごとに意識して管理するのは現実的ではありません。また、プロジェクトごとにそれらの利用構成は異なっており、共同開発者全員がいちいちそれを把握しなければいけないのはナンセンスです。</p>
-
-<p>そこでこれらのひとつひとつを<b>タスク</b>として一元管理し、バックグラウンドで動かしておけばファイルごとに勝手に処理してくれるのが<strong>タスクランナー</strong>です。共通の設定ファイルを利用することで、チーム全員が同様の環境をすぐに構築できて、特に意識せずとも同じような処理を行えるようにするものです。</p>
-
+<p>そこでこれらのひとつひとつを<!-- raw HTML omitted -->タスク<!-- raw HTML omitted -->として一元管理し、バックグラウンドで動かしておけばファイルごとに勝手に処理してくれるのが<strong>タスクランナー</strong>です。共通の設定ファイルを利用することで、チーム全員が同様の環境をすぐに構築できて、特に意識せずとも同じような処理を行えるようにするものです。</p>
 <h3 id="フロントエンド地獄">フロントエンド地獄</h3>
-
 <p>ここまで読んでお気づきかもしれませんが、フロントエンド開発の世界にはいつのまにか様々なライブラリやフレームワークやトランスパイラ、開発環境が増えまくっており、なおかつどれもこれもそこそこに人気があり、これだけ学べば全部大丈夫みたいのはありません。また結構な勢いで新しいものが出ており、栄枯盛衰が激しい世界です。<a href="http://kikuchi1201.hateblo.jp/entry/2016/10/26/172404">ここらへん</a>を読めばわかりますが、とりあえずこーしよみたいなのが決まらないので、ある程度学んでも無限に苦しみは続きます。逆に言うと様々な選択肢があり、それぞれの良さがあるので楽しいと言えなくもないです。無理に全てを学ぼうとせず、必要なものだけ少しずつ慣れていくとよいかと思います。</p>
-
-<h3 id="node-jsとnpm">Node.jsとNPM</h3>
-
-<p>上記で紹介したライブラリやフレームワークのほとんど、またそれを扱うタスクランナー自体が<a href="https://nodejs.org">Node.js</a>で開発され、<b>パッケージ</b>として公開されています。それらのパッケージを簡単にインストール・管理できる公式ツールがNodePackageManager= <strong>NPM</strong> です。(RubyのbundlerやPythonのpipみたいなものです。) フロントエンド開発の環境構築はNPMではじまりNPMで終わるといっても過言ではありません。( NPMと互換性のある<a href="https://yarnpkg.com">YARN</a>も人気ですが、今回は説明しません。 ) 各プロジェクトフォルダに<code>package.json</code>という管理ファイルを作成し、そのファイルの中に利用するパッケージをリスト化してまとめておくことができます。node.jsやnpmについて深く知らなくてもタスクランナーは使えますが、そういうものでできているんだな、という認識だけぜひ持っておいてください。</p>
-
-<hr />
-
+<h3 id="nodejsとnpm">Node.jsとNPM</h3>
+<p>上記で紹介したライブラリやフレームワークのほとんど、またそれを扱うタスクランナー自体が<a href="https://nodejs.org">Node.js</a>で開発され、<!-- raw HTML omitted -->パッケージ<!-- raw HTML omitted -->として公開されています。それらのパッケージを簡単にインストール・管理できる公式ツールがNodePackageManager= <strong>NPM</strong> です。(RubyのbundlerやPythonのpipみたいなものです。) フロントエンド開発の環境構築はNPMではじまりNPMで終わるといっても過言ではありません。( NPMと互換性のある<a href="https://yarnpkg.com">YARN</a>も人気ですが、今回は説明しません。 ) 各プロジェクトフォルダに<code>package.json</code>という管理ファイルを作成し、そのファイルの中に利用するパッケージをリスト化してまとめておくことができます。node.jsやnpmについて深く知らなくてもタスクランナーは使えますが、そういうものでできているんだな、という認識だけぜひ持っておいてください。</p>
+<hr>
 <h2 id="gulp">gulp</h2>
-
-<p><img src="http://www.google.com/s2/favicons?domain=gulpjs.com">
-<a href="https://gulpjs.com">[公式サイト]</a>
-<a href="https://github.com/gulpjs/gulp">[GitHub]</a><br />
-新進気鋭のタスクランナー達の中ではそこそこ歴史の古いものです。タスクの設定は<code>gulpfile.js</code>に定義します。ひとつひとつのタスクを定義し、組み合わせて様々なことを行えます。自由度がかなり高くファイルの管理や認識のAPIも豊富です。ごく基本的・静的なWebページを作りたい時や、逆にEJSなどのテンプレートエンジンを使ってJSONからページを量産するなど、ちょっと特殊なことがしたいときにもおすすめです。反面、Javssriptのモジュール管理にはこれ単体だとかなり不便です。ちなみに<a href="https://github.com/psephopaiktes/weba">本ブログはGulpで作成</a>されています。</p>
-
-<table>
-  <tr>
-    <th>good</th>
-    <td>自由度がかなり高く、レファレンスやプラグインも豊富。</td>
-  </tr>
-  <tr>
-    <th>bad</th>
-    <td>モジュールバンドラとしての機能は貧弱、パフォーマンスは普通</td>
-  </tr>
-</table>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="おすすめ記事">おすすめ記事</h3>
-
 <ul>
-<li><a href="https://ics.media/entry/3290">絶対つまずかないGulp入門。インストールからSassのコンパイルまで - ICS MEDIA</a><br />
+<li><a href="https://ics.media/entry/3290">絶対つまずかないGulp入門。インストールからSassのコンパイルまで - ICS MEDIA</a><br>
 Gulpのはじめ方についてわかりやすくまとまっています。</li>
-<li><a href="https://www.webcreatorbox.com/tech/gulp">タスク自動化ツール「gulp」 を使って制作時間を短縮しよう | Webクリエイターボックス</a><br />
+<li><a href="https://www.webcreatorbox.com/tech/gulp">タスク自動化ツール「gulp」 を使って制作時間を短縮しよう | Webクリエイターボックス</a><br>
 古い記事ですが、デザイナーでもわかりやすくGulpのセットアップがまとめられています。</li>
-<li><a href="https://www.nxworld.net/tag/gulp/">gulp | NxWorld</a><br />
+<li><a href="https://www.nxworld.net/tag/gulp/">gulp | NxWorld</a><br>
 少し踏み込んだ設定や操作を行いたいときは、NxWorldさんのGulpについての記事がかなり参考になります。</li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="npm-script">npm script</h2>
-
-<p><img src="http://www.google.com/s2/favicons?domain=npmjs.com">
-<a href="https://npmjs.com">[公式サイト]</a>
-<a href="https://github.com/npm/npm">[GitHub]</a><br />
-実は、Node.jsのパッケージマネージャである<strong>npm</strong>単体でもタスクランナーとして使えます。プラグイン設定ファイルである<code>package.json</code>の中に、プラグインの実行用コマンドを組み合わせてタスクとして定義しておき、<code>$ npm run</code>コマンドで実行します。意外と機能もあり、外部ファイルにタスクを定義したりもできるので、頑張ればかなり様々なこともできます。Gulpなどに依存するより実行が速い場合が多いです。今回紹介するタスクランナーは全てnpmに依存しているので、この方法が1番シンプルではあります。</p>
-
-<table>
-  <tr>
-    <th>good</th>
-    <td>npmの本来の機能のみでよく、シンプルな構成になる。ビルドパフォーマンスが高い</td>
-  </tr>
-  <tr>
-    <th>bad</th>
-    <td>モジュールバンドラとしての機能は貧弱。自由度は低め、レファレンスも少ない</td>
-  </tr>
-</table>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="おすすめ記事-1">おすすめ記事</h3>
-
 <ul>
-<li><a href="https://ics.media/entry/12226">Node.jsユーザーなら押さえておきたいnpm-scriptsのタスク実行方法まとめ - ICS MEDIA</a><br />
+<li><a href="https://ics.media/entry/12226">Node.jsユーザーなら押さえておきたいnpm-scriptsのタスク実行方法まとめ - ICS MEDIA</a><br>
 短めの記事ですが、概要がよくまとまっています。</li>
 <li><a href="https://qiita.com/chuck0523/items/dafdbd19c12efd40e2de">[意訳]私がGulpとGruntを手放した理由 - Qiita</a></li>
-<li><a href="https://t32k.me/mol/log/npm-run-script/">Grunt/Gulpで憔悴したおっさんの話 - MOL</a><br />
+<li><a href="https://t32k.me/mol/log/npm-run-script/">Grunt/Gulpで憔悴したおっさんの話 - MOL</a><br>
 上記2つの記事から、GulpやWebpackを捨ててシンプルにNPMだけでいこう！ みたいな流れが出来た気がします。GulpやWebpackを触ったことが無い人にはあんまし関係ない記事かもです。</li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="webpack">webpack</h2>
-
-<p><img src="http://www.google.com/s2/favicons?domain=webpack.js.org">
-<a href="https://webpack.js.org">[公式サイト]</a>
-<a href="https://github.com/webpack/webpack">[GitHub]</a><br />
-Browserifyに変わるモジュールバンドラ(兼タスクランナー)として近年とても人気が出ました。<code>loader</code>と呼ばれるプラグインを組み合わせて様々な処理を行います。基本的な目的はJavascriptファイルの統合であり、CSSや画像すらもJavascriptとしてひとつのファイルにまとめることができます。SCSSや画像を普通にコンパイルしたり圧縮もできますが、そのような場合はgulpと組み合わせて使用したほうが良いです。ReactやAngularなどのモダンなJSフレームワークによる開発で使われることが多いです。設定が煩雑になりがちで、敷居が高めなのが欠点でしょうか。</p>
-
-<table>
-  <tr>
-    <th>good</th>
-    <td>モジュールバンドらとしては人気が高く、レファレンスも多い</td>
-  </tr>
-  <tr>
-    <th>bad</th>
-    <td>設定が難しめ、ファイル操作などは弱い</td>
-  </tr>
-</table>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="おすすめ記事-2">おすすめ記事</h3>
-
 <ul>
-<li><a href="https://ics.media/entry/12140/3">最新版で学ぶwebpack 3入門 - JavaScript開発で人気のバンドルツール - ICS MEDIA</a><br />
+<li><a href="https://ics.media/entry/12140/3">最新版で学ぶwebpack 3入門 - JavaScript開発で人気のバンドルツール - ICS MEDIA</a><br>
 またまたICSさんの記事です。入門記事として最適だと思います。ICSさんは他にも<a href="https://ics.media/entry/16329">TypeScript</a>や<a href="https://ics.media/entry/16028">Babel</a>と、ReactやVueを組み合わせる場合のコード例も紹介されているので、とても参考になります。</li>
-<li><a href="https://qiita.com/tonkotsuboy_com/items/2d4f3862e6d05dc0bea1">Gulpで始めるwebpack 3入門 - Qiita</a><br />
+<li><a href="https://qiita.com/tonkotsuboy_com/items/2d4f3862e6d05dc0bea1">Gulpで始めるwebpack 3入門 - Qiita</a><br>
 Gulpと組み合わせて使いたい場合は、上記のQiita記事がよくまとまっています。</li>
-<li><a href="http://postd.cc/modular-css-with-react/">Reactを使ったモジュラーCSS : CSS-in-JSとCSS Module | プログラミング | POSTD</a><br />
+<li><a href="http://postd.cc/modular-css-with-react/">Reactを使ったモジュラーCSS : CSS-in-JSとCSS Module | プログラミング | POSTD</a><br>
 Reactの様に複数のComponentでページを管理する場合、CSSもComponentごとに定義してしまいたい場合があります(CSS-in-JSと言います)。スタイル定義を<a href="https://qiita.com/clockmaker/items/8fab54c93e84001846b0">CSSファイルで作成する</a>のか、JSの中に書いてしまうのがいいか、上記の記事が参考になると思います。</li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="rollup">Rollup</h2>
-
-<p><img src="http://www.google.com/s2/favicons?domain=rollupjs.org">
-<a href="https://rollupjs.org">[公式サイト]</a>
-<a href="https://github.com/rollup/rollup">[GitHub]</a><br />
-ビルドはwebpackより若干遅めですが、Minifyした生成ファイルが非常に小さくなるのが特徴です。そのため、<b>ライブラリなどを開発する際に使用される</b>ことが多いです。設定ファイルはwebpackに似ています。他のモジュールバンドラ同様、タスクランナーとしては貧弱なので単体で使うのは不便かもしれません。</p>
-
-<table>
-  <tr>
-    <th>good</th>
-    <td>生成されたファイルが小さく、ライブラリの作成などに向いている</td>
-  </tr>
-  <tr>
-    <th>bad</th>
-    <td>ビルドが少し遅め</td>
-  </tr>
-</table>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="おすすめ記事-3">おすすめ記事</h3>
-
 <ul>
 <li><a href="https://qiita.com/cognitom/items/e3ac0da00241f427dad6">Rollupがちょうどいい感じ - Qiita</a></li>
 <li><a href="https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c">Webpack and Rollup: the same but different – webpack – Medium</a> (<a href="http://postd.cc/webpack-and-rollup-the-same-but-different/">日本語訳</a> )</li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="fusebox">Fusebox</h2>
-
-<p><img src="http://www.google.com/s2/favicons?domain=fuse-box.org">
-<a href="http://fuse-box.org">[公式サイト]</a>
-<a href="https://github.com/fuse-box/fuse-box">[GitHub]</a><br />
-かなり新しめのモジュールバンドラです。webpackよりも圧倒的に高速、かつ設定がシンプルで、一部で人気がでています。(後発のParcelに比べると勢いは低いですが&hellip;。) ローカルサーバやTypeScriptにデフォルトで対応しており、設定ファイル<code>fuse.js</code>も簡潔に記述できます。webpack同様、タスクランナーとしてCSSや画像の処理もできますが、それはGulpやnpm scriptに任せたほうがよいかもしれません。まだレファレンスがかなり少ないので、特殊なことをしようとすると苦労しそうです。</p>
-
-<table>
-  <tr>
-    <th>good</th>
-    <td>ビルドパフォーマンス、設定のシンプルさでwebpackより優れている</td>
-  </tr>
-  <tr>
-    <th>bad</th>
-    <td>レファレンスが少ない、信頼性は若干低いかも</td>
-  </tr>
-</table>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="おすすめ記事-4">おすすめ記事</h3>
-
 <ul>
-<li><a href="https://tech.recruit-mp.co.jp/front-end/post-12691/">FuseBox – 新進気鋭の JavaScript モジュールバンドラー – PSYENCE:MEDIA</a><br />
+<li><a href="https://tech.recruit-mp.co.jp/front-end/post-12691/">FuseBox – 新進気鋭の JavaScript モジュールバンドラー – PSYENCE:MEDIA</a><br>
 Fuseboxについての概要と、競合との比較を行った良記事です。</li>
 <li><a href="https://www.webprofessional.jp/fusebox-faster-webpack-alternative/">webpackよりもシンプルで高速！最新モジュールバンドラー「FuseBox」超入門 - WPJ</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="parcel">Parcel</h2>
-
-<p><img src="http://www.google.com/s2/favicons?domain=parceljs.org">
-<a href="https://parceljs.org">[公式サイト]</a>
-<a href="https://github.com/parcel-bundler/parcel">[GitHub]</a><br />
-こちらもリリースされたばかりのタスクランナーですが、圧倒的簡単さとパフォーマンスから人気を伸ばしています。webpackの様に複雑な設定ファイルを用意せずとも、いい感じに察してビルドやバンドルを行ってくれます。開発サーバも最初からセットでついてきます。設定が非常に楽な反面、カスタマイズ性や機能はまだまだ低く、現場で使用するには機能不足という印象です。将来的に利用できる機能が増えれば、webpackをリプレイスする可能性はありそうです。</p>
-
-<table>
-  <tr>
-    <th>good</th>
-    <td>ビルドパフォーマンス、設定のシンプルさでwebpackより圧倒的に優れている</td>
-  </tr>
-  <tr>
-    <th>bad</th>
-    <td>レファレンスが少ない、まだ発展途上で機能は少なめ</td>
-  </tr>
-</table>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="おすすめ記事-5">おすすめ記事</h3>
-
 <ul>
-<li><a href="https://qiita.com/bitrinjani/items/b08876e0a2618745f54a">webpack時代の終わりとparcel時代のはじまり - Qiita</a><br />
+<li><a href="https://qiita.com/bitrinjani/items/b08876e0a2618745f54a">webpack時代の終わりとparcel時代のはじまり - Qiita</a><br>
 Parcelの人気の火付け役となったQiita記事です。</li>
 <li><a href="https://qiita.com/tonkotsuboy_com/items/2f96263294fad7661a82">webpackやGulpのような独自設定ファイルは不要。ParcelでコンパイルするSassとAutoprefixer - Qiita</a></li>
 <li><a href="https://qiita.com/tonkotsuboy_com/items/20ee57c6bb2762746fce">設定ファイル不要のParcelでTypeScriptをコンパイル・バンドルしたら拍子抜けするほど簡単だった - Qiita</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="番外編">番外編</h2>
-
 <p>上記のタスクランナーの設定が面倒であれば、最初からタスクランナーが設定済みで組み込まれているboilerplate(雛形・開発用テンプレート)や、Webフレームワークに組み込まれているものを使用するのも手です。</p>
-
 <ul>
-<li><a href="https://github.com/facebookincubator/create-react-app">Create React App</a><br />
+<li><a href="https://github.com/facebookincubator/create-react-app">Create React App</a><br>
 Reactの開発元であるFacebookが提供するReact開発用の環境です。webpackなどで設定されており、とりあえずReactを使ってみたいときなどに便利です。</li>
-<li><a href="https://developers.google.com/web/tools/starter-kit/?hl=ja">Web Starter Kit</a><br />
+<li><a href="https://developers.google.com/web/tools/starter-kit/?hl=ja">Web Starter Kit</a><br>
 Googleが提供するWeb作成用の環境です。Gulpベースで作成されており、よく使われる機能が網羅されています。</li>
-<li><a href="http://rubyonrails.org/">asset pipline ( Ruby on Rails ) </a><br />
+<li><a href="http://rubyonrails.org/">asset pipline ( Ruby on Rails ) </a><br>
 Railsには最初からSASSの変換やローカルサーバの機能が備わっています。また、<code>v5.1</code>からは<a href="https://github.com/rails/webpacker">webpacker</a> というモジュールバンドラも追加されるそうです。</li>
-<li><a href="https://codekitapp.com/">CodeKit</a><br />
+<li><a href="https://codekitapp.com/">CodeKit</a><br>
 今回紹介しているものは全てターミナルで使用するCUIツールですが、CodeKitのようなGUIで管理・制御できるツールもあります。あくまで個人の趣味開発などであれば選択肢としてありかもしれませんが、使用プラグインが限られたり、複数人での開発時にコードを管理しづらかったりと、基本的におすすめはできません。</li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="それぞれの人気状況">それぞれの人気状況</h2>
-
 <p>2017年12月13日現在の情報です。この格付=人気とは言い切れませんが、参考にはなるかと思います。</p>
-
 <h3 id="github-star数">GitHub Star数</h3>
-
 <table>
 <thead>
 <tr>
-<th align="center">#</th>
-<th align="center">name</th>
-<th align="center">star</th>
+<th style="text-align:center">#</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">star</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="center"><a href="https://github.com/webpack/webpack">webpack</a></td>
-<td align="center">34,852</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><a href="https://github.com/webpack/webpack">webpack</a></td>
+<td style="text-align:center">34,852</td>
 </tr>
-
 <tr>
-<td align="center">2</td>
-<td align="center"><a href="https://github.com/gulpjs/gulp">gulp</a></td>
-<td align="center">28,170</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><a href="https://github.com/gulpjs/gulp">gulp</a></td>
+<td style="text-align:center">28,170</td>
 </tr>
-
 <tr>
-<td align="center">3</td>
-<td align="center"><a href="https://github.com/npm/npm">npm</a></td>
-<td align="center">14,795</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><a href="https://github.com/npm/npm">npm</a></td>
+<td style="text-align:center">14,795</td>
 </tr>
-
 <tr>
-<td align="center">4</td>
-<td align="center"><a href="https://github.com/rollup/rollup">rollup</a></td>
-<td align="center">11,109</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><a href="https://github.com/rollup/rollup">rollup</a></td>
+<td style="text-align:center">11,109</td>
 </tr>
-
 <tr>
-<td align="center">5</td>
-<td align="center"><a href="https://github.com/parcel-bundler/parcel">parcel</a></td>
-<td align="center">9,304</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center"><a href="https://github.com/parcel-bundler/parcel">parcel</a></td>
+<td style="text-align:center">9,304</td>
 </tr>
-
 <tr>
-<td align="center">6</td>
-<td align="center"><a href="https://github.com/fuse-box/fuse-box">fuse-box</a></td>
-<td align="center">2,980</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center"><a href="https://github.com/fuse-box/fuse-box">fuse-box</a></td>
+<td style="text-align:center">2,980</td>
 </tr>
 </tbody>
 </table>
-
 <h3 id="google-trend">Google Trend</h3>
-
 <p><a href="https://trends.google.co.jp/trends/explore?cat=31&amp;date=2014-12-13%202017-12-13&amp;q=webpack,gulp,rollup,parcel,npm%20script">Google トレンド</a> での検索数の推移です。fuse-boxはグラフ圏外であきらかに少なかったので除外しました。ちなみにnpm scriptについては、「npm run」と検索する人も多いので、実際はもう少し多いかと思われます。
 <img class="center" src="https://hirata.blog/images/post/201712_taskrunner/trends.png" alt="Googleトレンドの推移">
 </p>
-
 <h2 id="選び方の方針">選び方の方針</h2>
-
-<p>いろいろ用意したり学習するのが面倒臭ければ<b>Create React App</b>や<b>Web Starter Kit</b>などを利用しましょう。Reactを使いたければCreate React App、Web開発用のリッチな環境が欲しければWeb Starter Kit、といった感じで選んでいいと思います。</p>
-
+<p>いろいろ用意したり学習するのが面倒臭ければ<!-- raw HTML omitted -->Create React App<!-- raw HTML omitted -->や<!-- raw HTML omitted -->Web Starter Kit<!-- raw HTML omitted -->などを利用しましょう。Reactを使いたければCreate React App、Web開発用のリッチな環境が欲しければWeb Starter Kit、といった感じで選んでいいと思います。</p>
 <p>自分でタスクを定義したい場合はタスクランナーを設定して使用することになります。前提として、gulp・npm scriptは汎用的なタスクランナーとしての側面が強く、大してwebpack・rollup・parcelはモジュールバンドラとしてのコンセプトが強いです。</p>
-
-<p>基本的に、最低限SCSSやBabelなどを利用したいだけであれば<b>npm script</b>のみで十分だと思います。</p>
-
-<p>EJSやPUGを使ってページを量産したり、ちょっと特殊なビルドタスクを作りたい場合などは<b>Gulp</b>の豊富なAPIやプラグインが重宝するかもしれません。</p>
-
-<p>Reactなどを使って本格的なSPA開発を行いたいときは、<b>webpack</b>のようなモジュールバンドラがないと大変だと思います。さらに、公開用のライブラリを作成したい場合などは<b>rollup</b>が適しているかもしれません。趣味で開発する場合は、将来性に期待して<b>parcel</b>を試すのもありでしょう。</p>
-
-<p><b>webpackをJSバンドル用、gulpはSCSSや画像圧縮用</b>と割り切って両方使用するのも選択肢のひとつです。</p>
-
-<p>また、基本的にタスクの定義にはGulpやWebpackを使用するが、コマンド実行する際には<code>package.json</code>に定義した<code>$ npm run</code> コマンドもしくは<code>$ npx</code>コマンドで行う、といったやり方もとてもおすすめです。gulpやwebpackを直接ターミナルでコマンド実行するには、それらを<b>グローバルインストール</b>(PC全体にインストールし、どのフォルダでも利用できるようにする)する必要がありますが、プロジェクトフォルダだけにインストールして、npm script経由で実行する場合は、<b>ローカルインストール</b>(プロジェクトフォルダ自体にインストールし、そこだけで利用できるようにする)だけで完結します。このメリットとしては、</p>
-
+<p>基本的に、最低限SCSSやBabelなどを利用したいだけであれば<!-- raw HTML omitted -->npm script<!-- raw HTML omitted -->のみで十分だと思います。</p>
+<p>EJSやPUGを使ってページを量産したり、ちょっと特殊なビルドタスクを作りたい場合などは<!-- raw HTML omitted -->Gulp<!-- raw HTML omitted -->の豊富なAPIやプラグインが重宝するかもしれません。</p>
+<p>Reactなどを使って本格的なSPA開発を行いたいときは、<!-- raw HTML omitted -->webpack<!-- raw HTML omitted -->のようなモジュールバンドラがないと大変だと思います。さらに、公開用のライブラリを作成したい場合などは<!-- raw HTML omitted -->rollup<!-- raw HTML omitted -->が適しているかもしれません。趣味で開発する場合は、将来性に期待して<!-- raw HTML omitted -->parcel<!-- raw HTML omitted -->を試すのもありでしょう。</p>
+<p><!-- raw HTML omitted -->webpackをJSバンドル用、gulpはSCSSや画像圧縮用<!-- raw HTML omitted -->と割り切って両方使用するのも選択肢のひとつです。</p>
+<p>また、基本的にタスクの定義にはGulpやWebpackを使用するが、コマンド実行する際には<code>package.json</code>に定義した<code>$ npm run</code> コマンドもしくは<code>$ npx</code>コマンドで行う、といったやり方もとてもおすすめです。gulpやwebpackを直接ターミナルでコマンド実行するには、それらを<!-- raw HTML omitted -->グローバルインストール<!-- raw HTML omitted -->(PC全体にインストールし、どのフォルダでも利用できるようにする)する必要がありますが、プロジェクトフォルダだけにインストールして、npm script経由で実行する場合は、<!-- raw HTML omitted -->ローカルインストール<!-- raw HTML omitted -->(プロジェクトフォルダ自体にインストールし、そこだけで利用できるようにする)だけで完結します。このメリットとしては、</p>
 <ul>
 <li>プロジェクトごとにバージョンを指定できる</li>
 <li>複数人で利用する場合でもバージョンの統一ができる</li>
 <li>利用者はnpmコマンドだけの利用で完結する</li>
 </ul>
-
 <p>などがあります。<a href="https://ics.media/entry/12226">この記事</a>の最後の方に例があります。私個人としてはこのやり方が多く、 npm script を使ってSCSSなどのビルドを行い、WebpackでJSのバンドルを行うことが多いです。</p>
-
 <h2 id="最後に">最後に</h2>
-
 <p>はやくこの無駄な戦争が終わって平和が訪れることを願ってやみません。</p>
 
     </section>

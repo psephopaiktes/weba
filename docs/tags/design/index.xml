@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>design on WEBA</title>
@@ -7,18 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Sun, 22 Oct 2017 22:49:51 +1632</lastBuildDate>
-    
-	<atom:link href="https://hirata.blog/tags/design/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 22 Oct 2017 22:49:51 +1632</lastBuildDate><atom:link href="https://hirata.blog/tags/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>デザイナなら意識したいシグニファイアと、間違いやすいアフォーダンスの話</title>
       <link>https://hirata.blog/201710_signifier/</link>
       <pubDate>Sun, 22 Oct 2017 22:49:51 +1632</pubDate>
       
       <guid>https://hirata.blog/201710_signifier/</guid>
-      <description>まえがき みなさんは アフォーダンス と シグニファイア という言葉を聞いたことがあるでしょうか。 アフォーダンス しか聞いたこと無いという方は、要注意で</description>
+      <description>まえがき みなさんは アフォーダンス と シグニファイア という言葉を聞いたことがあるでしょうか。 アフォーダンスしか聞いたこと無いという方は、要注意で</description>
     </item>
     
   </channel>

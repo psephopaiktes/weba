@@ -3,7 +3,9 @@
 
 <head>
 
-    <title>すこしでもJSかjQueryが書けるならブックマークレットを作ろう | WEBA</title><meta name="description" content="ブックマークレットとはブラウザに登録しておき、任意のWebページ上で実行できるプログラムです。JSがすこしわかれば作成はとても簡単で、特別な環境作成も必要ありません。"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <meta http-equiv="refresh" content="0;URL='https://hira.page/blog/201710_lets-bookmarklet'">
+        <link rel="canonical" href="https://hira.page/blog/201710_lets-bookmarklet"><title>すこしでもJSかjQueryが書けるならブックマークレットを作ろう | WEBA</title><meta name="description" content="ブックマークレットとはブラウザに登録しておき、任意のWebページ上で実行できるプログラムです。JSがすこしわかれば作成はとても簡単で、特別な環境作成も必要ありません。"><meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css-->
@@ -136,68 +138,39 @@
     </header>
 
     <section>
-        
-
-<h2 id="ブックマークレットとは">ブックマークレットとは</h2>
-
+        <h2 id="ブックマークレットとは">ブックマークレットとは</h2>
 <p>平田です。これが初のブログ記事です。とりあえず最近自分の中でブームだった<strong>ブックマークレット</strong>についてまとめます。( ブックマークレットが何かは知っていて、作り方を知りたい人は<a href="#content-3">ブックマークレットの作り方</a>からお読みください。) ブックマークレットとは、ブラウザのブックマークにJSの短いコードを登録しておき、クリックすることで実行できる技術です。ネット黎明期からありながら今日までほとんど進化もしていない技術ですが、気軽に作れていろいろ活用できるので便利です。</p>
-
 <h3 id="ブックマークレットを体験">ブックマークレットを体験</h3>
-
 <p>とりあえず体験していただくのがてっとりばやいですね。下の[Say Hello]というリンクをブラウザのブックマークバーにドラッグ&amp;ドロップして登録します。できたら登録した[Say Hello]のブックマークをクリックしてみてください。</p>
-
-<p><a href="javascript:alert('hello !')">[Say Hello]</a></p>
-
+<p><!-- raw HTML omitted -->[Say Hello]<!-- raw HTML omitted --></p>
 <p>ブラウザのアラートで「Hello」と表示されたかと思います。上記のリンクは以下のようなaタグで書かれています。</p>
-
-<pre><code class="language-html">&lt;a href=&quot;javascript:alert('hello !')&quot;&gt;Say Hello&lt;/a&gt;
-</code></pre>
-
-<p>このように、ブックマークに登録するURLの先頭に<code>javascript:</code>をつけてJSのコードを記述することで、開いているWebページ上でそのコードを実行できるようになるのです。ブラウザの「新規ブックマークを追加」メニューで作ることもできますし、上記のようにaタグの形で公開されたものを登録することもできます。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript:alert(&#39;hello !&#39;)&#34;</span>&gt;Say Hello&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div><p>このように、ブックマークに登録するURLの先頭に<code>javascript:</code>をつけてJSのコードを記述することで、開いているWebページ上でそのコードを実行できるようになるのです。ブラウザの「新規ブックマークを追加」メニューで作ることもできますし、上記のようにaタグの形で公開されたものを登録することもできます。</p>
 <h2 id="ブックマークレットの例">ブックマークレットの例</h2>
-
 <p>任意のページ上で自分の好きなJSコードを実行できるわけですから、実にさまざまなことが可能です。すでに、有志が作った便利なものはいろいろ公開されています。たとえば、</p>
-
 <ul>
 <li><a href="https://psephopaiktes.github.io/pages/bookmarklets/#bookmarklet-0">開いているページのTitleとURLをコピーする。</a></li>
 <li><a href="https://biz.moneyforward.com/blog/business-hack/iphone-chrome-bookmarklet/#26Web">開いているページのCSSレイアウトをいじる</a></li>
 <li><a href="https://psephopaiktes.github.io/pages/bookmarklets/#bookmarklet-4">開いているページを翻訳する</a></li>
 <li><a href="http://bookmarklet.web.fc2.com/bookmarklet_070.html">テンプレートからすばやくGmailを作成できる</a></li>
 </ul>
-
 <p>ものなど、検索するとたくさんあります。また、SNS系だと開いているページをすばやく共有できるブックマークレットがTwitterやFaceebook公式から出ていたりします。私のおすすめのブックマークレットは<a href="https://psephopaiktes.github.io/pages/bookmarklets/">こちらのページで</a>まとめたので、見てみてください。</p>
-
 <h2 id="ブックマークレットの作り方">ブックマークレットの作り方</h2>
-
 <p>検索すると実にたくさんのブックマークレットがありますが、ヘビーに使用していると時々独自性が高い自分専用のものがほしくなることがあります。特にページ情報を特定のフォーマットに整形してコピーしたい時など、一度作ってしまえばあとは楽なので便利です。</p>
-
 <h3 id="step1-jsのコードを書く">STEP1. JSのコードを書く</h3>
-
 <p>まずは処理を記述しましょう。グローバル変数に影響がでないように(ページですでに使われているJavascriptに影響が出ないように)、無名関数と言われる形で記述する必要があります。</p>
-
-<pre><code class="language-js">javascript:!function(undefined){
-    //任意の処理を記述
-}();
-</code></pre>
-
-<p>上記のような形で作成しましょう。ブックマークレットとして使うため、先頭に<code>javascript:</code>の文字列を加えます。</p>
-
-<h3 id="step2-特殊文字を整形し-1行に圧縮する">STEP2. 特殊文字を整形し、1行に圧縮する。</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:!</span><span style="color:#66d9ef">function</span>(<span style="color:#66d9ef">undefined</span>){
+    <span style="color:#75715e">//任意の処理を記述
+</span><span style="color:#75715e"></span>}();
+</code></pre></div><p>上記のような形で作成しましょう。ブックマークレットとして使うため、先頭に<code>javascript:</code>の文字列を加えます。</p>
+<h3 id="step2-特殊文字を整形し1行に圧縮する">STEP2. 特殊文字を整形し、1行に圧縮する。</h3>
 <p>ブックマークレットとして登録するためには、圧縮されている(改行が無い)必要があります。<a href="http://dean.edwards.name/packer/">/packer/</a>などのツールを使って一行にしましょう。また、<code>(</code>や<code>&amp;</code>の文字や、日本語をそのまま利用することは基本的にできません。そのため、一行にした後<a href="http://www.tagindex.com/tool/url.html">URLエンコード・デコードフォーム</a>のようなツールを使ってURLエスケープ(特殊文字へ変換)します。もっとも最近の環境だと改行つき&amp;&amp;日本語のまま登録しても動くことも多いようです。</p>
-
 <h3 id="step3-ブラウザに登録する">STEP3. ブラウザに登録する</h3>
-
 <img class="left" src="https://hirata.blog/images/post/201710_lets-bookmarklet/1.png" alt="ブックマークを登録するイメージ">
 
-
 <p>STEP2で圧縮&amp;エスケープした文字列をブラウザに新規ブックマークとして登録します。ブラウザごとに微妙に違いますが、ほとんどやり方は同じです。Chromeを例にあげると、ブックマークバーを右クリックしてから、「ページを追加」を選んで実行します。「名前:」の欄に任意のブックマーク名、「URL:」の欄に作成したコード貼り付けて「保存」を押すと終了です。</p>
-
 <h3 id="補足-jqueryを使いたい場合">補足: jQueryを使いたい場合</h3>
-
 <p>登録するURLの中で事前にライブラリを読み込んで置くことで、jQueryも利用できます。ページのDOMを取得しやすくなるので、特定のページの要素を抽出しやすくなりますね。以下のページがわかりやすいです。</p>
-
 <a class="embed-card" href="http://blog.mudatobunka.org/entry/2016/02/29/030633" target="brank_" rel="noopener">
     
     <img class="og" src="https://hirata.blog/images/embed-thumbnail.png" alt="参照記事サムネイル">
@@ -208,11 +181,8 @@
     <i class="material-icons">open_in_new</i>
 </a>
 
-
 <h3 id="補足-特定の文をクリップボードにコピーする">補足: 特定の文をクリップボードにコピーする</h3>
-
 <p>ブックマークレットで非常によく使う処理です。JSを使ってクリップボードに文章をコピーするには<strong>document.execCommand</strong>メソッドを利用します。</p>
-
 <a class="embed-card" href="https://developer.mozilla.org/ja/docs/Web/API/Document/execCommand" target="brank_" rel="noopener">
     
     <img class="og" src="https://hirata.blog/images/embed-thumbnail.png" alt="参照記事サムネイル">
@@ -223,21 +193,16 @@
     <i class="material-icons">open_in_new</i>
 </a>
 
-
 <p>以下のように記述することで、取得した文字列をクリップボードにコピーできます。</p>
-
-<pre><code class="language-js">javascript:!function(undefined){
-    // 任意の処理を記述
-    !function(a){
-        var b = document.createElement('textarea'),
-        c = document.getSelection();
-        b.textContent = a, document.body.appendChild(b), c.removeAllRanges(), b.select(), document.execCommand('copy'), c.removeAllRanges(), document.body.removeChild(b);
-    }(/*コピーしたい文字列を記述*/);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:!</span><span style="color:#66d9ef">function</span>(<span style="color:#66d9ef">undefined</span>){
+    <span style="color:#75715e">// 任意の処理を記述
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">!</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>){
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;textarea&#39;</span>),
+        <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getSelection</span>();
+        <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>, document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">b</span>), <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">removeAllRanges</span>(), <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">select</span>(), document.<span style="color:#a6e22e">execCommand</span>(<span style="color:#e6db74">&#39;copy&#39;</span>), <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">removeAllRanges</span>(), document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">b</span>);
+    }(<span style="color:#75715e">/*コピーしたい文字列を記述*/</span>);
 }();
-</code></pre>
-
-<h2 id="まとめ">まとめ</h2>
-
+</code></pre></div><h2 id="まとめ">まとめ</h2>
 <p>JS、jQueryがある程度書けるひとであればブックマークレットはとても便利で、作成も簡単なツールです。ブラウザの拡張機能やプラグインでもいいじゃんって方も多いとは思いますが、拡張機能と違って使う時以外ブラウザやメモリに処理がかからない点や、フォルダや名前を自由に整理できるのが利点だと思います。昨今javascriptでできることはかなり増えており、FileAPIを使用してページ情報をまとめたCSVを生成したり、CANVASで画像を作ったりすることもできます。使いこなせば、今後より強力に作業をお助けしてくれることは間違いありません。</p>
 
     </section>

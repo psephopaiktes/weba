@@ -3,6 +3,15 @@
 
 <head>
 
+    <!-- Redirect to New blog -->
+    {{- if ne .context.Params.id "" }}
+        <meta http-equiv="refresh" content="0;URL='https://hira.page/blog/{{ .context.Params.id }}'">
+        <link rel="canonical" href="https://hira.page/blog/{{ .context.Params.id }}">
+    {{- else }}
+        <meta http-equiv="refresh" content="0;URL='https://hira.page'">
+        <link rel="canonical" href="https://hira.page">
+    {{- end -}}
+
     <title>
     {{- if eq .context.Title .Site.Title -}}
         {{- .context.Title }} | Design &amp; Front-end

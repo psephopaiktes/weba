@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on WEBA</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Wed, 08 May 2019 08:45:17 +0900</lastBuildDate>
-    
-	<atom:link href="https://hirata.blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 08 May 2019 08:45:17 +0900</lastBuildDate><atom:link href="https://hirata.blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Review</title>
       <link>https://hirata.blog/tags/review/</link>
@@ -27,6 +23,15 @@
       <pubDate>Wed, 08 May 2019 08:45:17 +0900</pubDate>
       
       <guid>https://hirata.blog/tags/ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>App・Service</title>
+      <link>https://hirata.blog/tags/appservice/</link>
+      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
+      
+      <guid>https://hirata.blog/tags/appservice/</guid>
       <description></description>
     </item>
     
@@ -54,15 +59,6 @@
       <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
       
       <guid>https://hirata.blog/tags/xd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>appservice</title>
-      <link>https://hirata.blog/tags/appservice/</link>
-      <pubDate>Mon, 22 Apr 2019 08:45:17 +0900</pubDate>
-      
-      <guid>https://hirata.blog/tags/appservice/</guid>
       <description></description>
     </item>
     

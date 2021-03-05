@@ -3,7 +3,9 @@
 
 <head>
 
-    <title>[Chrome拡張] よく見るサイトのデザインを自由に変えよう! 自作のCSSとJSを読み込ませる方法 [Stylish削除記念] | WEBA</title><meta name="description" content="最低限HTMLとCSSの基礎知識だけあればOKです。Google検索やGitHubなどを黒い背景に変えたり、いらない要素を消したりできます。ローカルで拡張機能を作る方法なので、「安心」「JSも使える」「SCSSも使える」などメリットたくさん。"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <meta http-equiv="refresh" content="0;URL='https://hira.page/blog/201809_chrome-stylize'">
+        <link rel="canonical" href="https://hira.page/blog/201809_chrome-stylize"><title>[Chrome拡張] よく見るサイトのデザインを自由に変えよう! 自作のCSSとJSを読み込ませる方法 [Stylish削除記念] | WEBA</title><meta name="description" content="最低限HTMLとCSSの基礎知識だけあればOKです。Google検索やGitHubなどを黒い背景に変えたり、いらない要素を消したりできます。ローカルで拡張機能を作る方法なので、「安心」「JSも使える」「SCSSも使える」などメリットたくさん。"><meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css-->
@@ -134,188 +136,131 @@
     </header>
 
     <section>
-        
-
-<h2 id="概要">概要</h2>
-
+        <h2 id="概要">概要</h2>
 <p>PCでいろいろなwebページを見るとき、YouTubeやTwitterのダークモードのように背景を暗くしてみたいと思ったことはありませんか。また、特定の要素を消したり大きくしたり、フォントを変えるなど、自分独自のCSSを自由にあてたいと思いませんか。これらはChromeの拡張機能を使うことで実現でき、これまではStylishという拡張機能が定番で多くの人に使われていました。しかし先日、Stylishはユーザの閲覧履歴を勝手に収集していた理由から、<a href="https://forest.watch.impress.co.jp/docs/news/1131353.html">ChromeのWebストアから削除</a>されました。</p>
-
 <p>そこでこの記事では、非公開になったStylishのかわりに、自分で好きなCSSとJSを、好きなWebページに当てる方法を紹介します。ローカル上に拡張機能を作ってしまう方法で、以下のような長所・短所があります。</p>
-
-<h3 id="good">🙆 GOOD</h3>
-
+<h3 id="-good">🙆 GOOD</h3>
 <ul>
 <li>任意のページに、自分で書いたCSSと<strong>Javascript</strong>を読み込むことができる</li>
 <li>ローカルでCSSやJSファイルを管理するので、SASSやTypeScriptなど自分の使い慣れた環境を使い放題</li>
 <li>ローカルでCSSやJSファイルを管理するので、GitやDropboxなどで管理可能</li>
 <li>サードパーティのエクステンションに依存してないので、廃止される心配・プライバシーの心配がない。</li>
 </ul>
-
-<h3 id="bad">🙅 BAD</h3>
-
+<h3 id="-bad">🙅 BAD</h3>
 <ul>
 <li>若干導入が面倒くさい</li>
 <li>Chrome間でアカウント同期してくれない</li>
 <li>Stylishのように、他のユーザが作成・公開しているCSSをワンボタン導入はできない。</li>
 </ul>
-
-<p>上記のように、デメリットもありますが基本的には自由度が高く、できることが多くなります。それではさっそく手順をみていきましょう。とにかく楽にやりたい人は<a href="#めんどくさいひとむけの手順">めんどくさいひとむけの手順</a>をご確認ください。(あまりオススメしませんが。)</p>
-
+<p>上記のように、デメリットもありますが基本的には自由度が高く、できることが多くなります。それではさっそく手順をみていきましょう。とにかく楽にやりたい人は<a href="#%E3%82%81%E3%82%93%E3%81%A9%E3%81%8F%E3%81%95%E3%81%84%E3%81%B2%E3%81%A8%E3%82%80%E3%81%91%E3%81%AE%E6%89%8B%E9%A0%86">めんどくさいひとむけの手順</a>をご確認ください。(あまりオススメしませんが。)</p>
 <h2 id="基本手順">基本手順</h2>
-
-<p>Chrome拡張機能を作るのは意外と簡単で、一つのフォルダの中にHTMLやCSS, JSファイルと、設定ファイルである<code>manifest.json</code>ファイルを置くだけでできあがります。このフォルダをzip圧縮してアップロードすることでストア公開ができますし、ローカルで個人的に使うだけならこのフォルダを<code>chrome://extensions/</code>のページで読み込むだけです。面倒な人用に<a href="#テンプレート">テンプレートを作っておく</a>ので、そちらをダウンロードして改造していただくのがおすすめです。</p>
-
-<p>Chrome拡張ではボタンを押したタイミングで実行できる<b>Browser Action</b>、ブラウザの新しいタブや履歴ページなどを置き換える<b>Override Pages</b>など、いろいろできる機能があります。今回は任意のURLページに対して任意のCSS,JSを読み込むことができる<strong>Content Script</strong>という機能を利用します。</p>
-
-<h3 id="1-manifest-jsonの作成">1. manifest.jsonの作成</h3>
-
+<p>Chrome拡張機能を作るのは意外と簡単で、一つのフォルダの中にHTMLやCSS, JSファイルと、設定ファイルである<code>manifest.json</code>ファイルを置くだけでできあがります。このフォルダをzip圧縮してアップロードすることでストア公開ができますし、ローカルで個人的に使うだけならこのフォルダを<code>chrome://extensions/</code>のページで読み込むだけです。面倒な人用に<a href="#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88">テンプレートを作っておく</a>ので、そちらをダウンロードして改造していただくのがおすすめです。</p>
+<p>Chrome拡張ではボタンを押したタイミングで実行できる<!-- raw HTML omitted -->Browser Action<!-- raw HTML omitted -->、ブラウザの新しいタブや履歴ページなどを置き換える<!-- raw HTML omitted -->Override Pages<!-- raw HTML omitted -->など、いろいろできる機能があります。今回は任意のURLページに対して任意のCSS,JSを読み込むことができる<strong>Content Script</strong>という機能を利用します。</p>
+<h3 id="1-manifestjsonの作成">1. manifest.jsonの作成</h3>
 <p>まず、好きな場所・名前でフォルダを作り、その中に<code>manifest.json</code>ファイルを作ります。<code>manifest.json</code>ファイルの中身は以下のような感じです。</p>
-
-<h4 id="manifest-json">manifest.json</h4>
-
-<pre><code class="language-json">{
-  &quot;name&quot;: &quot;chrome-stylize&quot;,
-  &quot;author&quot;: &quot;Akira HIRATA&quot;,
-  &quot;description&quot;: &quot;chrome extension for customize CSS and JS.&quot;,
-  &quot;version&quot;: &quot;1.0.0&quot;,
-  &quot;manifest_version&quot;: 2,
-  &quot;web_accessible_resources&quot;: [&quot;*&quot;],
-  &quot;permissions&quot;: [&quot;storage&quot;],
-  &quot;content_scripts&quot;: [
+<h4 id="manifestjson">manifest.json</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;chrome-stylize&#34;</span>,
+  <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;Akira HIRATA&#34;</span>,
+  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;chrome extension for customize CSS and JS.&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;manifest_version&#34;</span>: <span style="color:#ae81ff">2</span>,
+  <span style="color:#f92672">&#34;web_accessible_resources&#34;</span>: [<span style="color:#e6db74">&#34;*&#34;</span>],
+  <span style="color:#f92672">&#34;permissions&#34;</span>: [<span style="color:#e6db74">&#34;storage&#34;</span>],
+  <span style="color:#f92672">&#34;content_scripts&#34;</span>: [
     {
-      &quot;matches&quot;: [&quot;https://www.google.co.jp/*&quot;],
-      &quot;css&quot;: [&quot;google/style.css&quot;],&quot;js&quot;: [&quot;google/script.js&quot;]
+      <span style="color:#f92672">&#34;matches&#34;</span>: [<span style="color:#e6db74">&#34;https://www.google.co.jp/*&#34;</span>],
+      <span style="color:#f92672">&#34;css&#34;</span>: [<span style="color:#e6db74">&#34;google/style.css&#34;</span>],<span style="color:#f92672">&#34;js&#34;</span>: [<span style="color:#e6db74">&#34;google/script.js&#34;</span>]
     },
     {
-      &quot;matches&quot;: [&quot;http://www.nicovideo.jp/watch/*&quot;],
-      &quot;css&quot;: [&quot;nico/style.css&quot;],&quot;js&quot;: [&quot;nico/script.js&quot;]
+      <span style="color:#f92672">&#34;matches&#34;</span>: [<span style="color:#e6db74">&#34;http://www.nicovideo.jp/watch/*&#34;</span>],
+      <span style="color:#f92672">&#34;css&#34;</span>: [<span style="color:#e6db74">&#34;nico/style.css&#34;</span>],<span style="color:#f92672">&#34;js&#34;</span>: [<span style="color:#e6db74">&#34;nico/script.js&#34;</span>]
     }
   ]
 }
-</code></pre>
-
-<p>今回、上記の中で気にしなければいけないのは<code>content_scripts</code>の設定項目です。他は基本的にそのままで大丈夫です。<code>name</code>や<code>author</code>の項目は自由に変えて頂いても構いません。それぞれがどういう設定になっているのか気になる方は <a href="https://qiita.com/mdstoy/items/9866544e37987337dc79">こちらのページ</a> などが参考になります。</p>
-
+</code></pre></div><p>今回、上記の中で気にしなければいけないのは<code>content_scripts</code>の設定項目です。他は基本的にそのままで大丈夫です。<code>name</code>や<code>author</code>の項目は自由に変えて頂いても構いません。それぞれがどういう設定になっているのか気になる方は <a href="https://qiita.com/mdstoy/items/9866544e37987337dc79">こちらのページ</a> などが参考になります。</p>
 <h3 id="2-対象のページとファイルを設定">2. 対象のページとファイルを設定</h3>
-
 <p>CSS, JSを読み込ませたいページを指定します。<code>manifest.json</code>中の<code>content_scripts</code>の部分にURLのパターンを指定しましょう。今回はGoole検索とニコニコ動画の視聴ページを改造してみます。</p>
-
-<h4 id="manifest-json-1">manifest.json</h4>
-
-<pre><code class="language-json">  &quot;content_scripts&quot;: [
+<h4 id="manifestjson-1">manifest.json</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">  <span style="color:#e6db74">&#34;content_scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [
     {
-      &quot;matches&quot;: [&quot;https://www.google.co.jp/*&quot;],
-      &quot;css&quot;: [&quot;google/style.css&quot;],&quot;js&quot;: [&quot;google/script.js&quot;]
+      <span style="color:#f92672">&#34;matches&#34;</span>: [<span style="color:#e6db74">&#34;https://www.google.co.jp/*&#34;</span>],
+      <span style="color:#f92672">&#34;css&#34;</span>: [<span style="color:#e6db74">&#34;google/style.css&#34;</span>],<span style="color:#f92672">&#34;js&#34;</span>: [<span style="color:#e6db74">&#34;google/script.js&#34;</span>]
     },
     {
-      &quot;matches&quot;: [&quot;http://www.nicovideo.jp/watch/*&quot;],
-      &quot;css&quot;: [&quot;nico/style.css&quot;],&quot;js&quot;: [&quot;nico/script.js&quot;]
+      <span style="color:#f92672">&#34;matches&#34;</span>: [<span style="color:#e6db74">&#34;http://www.nicovideo.jp/watch/*&#34;</span>],
+      <span style="color:#f92672">&#34;css&#34;</span>: [<span style="color:#e6db74">&#34;nico/style.css&#34;</span>],<span style="color:#f92672">&#34;js&#34;</span>: [<span style="color:#e6db74">&#34;nico/script.js&#34;</span>]
     }
   ]
-</code></pre>
-
-<p><code>matches</code> が対象となるWEBページのURLパターン、<code>css</code>,<code>js</code>がそのページに読み込ませるCSS,JSファイルの指定です。<code>*</code>はワイルドカードです。上記の例であれば、<code>https://www.google.co.jp/</code>から始まるURLすべてにマッチングします。その他のURL指定の方法は <a href="https://developer.chrome.com/extensions/match_patterns">こちら</a> にまとまっています。</p>
-
+</code></pre></div><p><code>matches</code> が対象となるWEBページのURLパターン、<code>css</code>,<code>js</code>がそのページに読み込ませるCSS,JSファイルの指定です。<code>*</code>はワイルドカードです。上記の例であれば、<code>https://www.google.co.jp/</code>から始まるURLすべてにマッチングします。その他のURL指定の方法は <a href="https://developer.chrome.com/extensions/match_patterns">こちら</a> にまとまっています。</p>
 <p>CSS,JSファイルを対象ページごとにフォルダ分けして作成しておきましょう。まだ中身は空白です。</p>
-
-<p><img src="/images/post/201809_chrome-stylize/directory.png" alt="フォルダ構造" /></p>
-
-<p><code>css</code>,<code>js</code>は複数指定可能です。jQueryを使いたい場合はDLしたjQueryファイルを置いて、<br />
+<p><img src="/images/post/201809_chrome-stylize/directory.png" alt="フォルダ構造"></p>
+<p><code>css</code>,<code>js</code>は複数指定可能です。jQueryを使いたい場合はDLしたjQueryファイルを置いて、<br>
 <code>&quot;js&quot;: [&quot;jquery.min.js&quot;,&quot;google/script.js&quot;]</code> などと書けばOKです。</p>
-
-<h3 id="3-css-jsを作成">3. CSS,JSを作成</h3>
-
+<h3 id="3-cssjsを作成">3. CSS,JSを作成</h3>
 <p>上記で作成したCSS,JSを記述していきましょう。そのページのHTMLで、どの要素にどんなクラス名が使われているかはDevツールで地道に調べていくしかありません。細かいやり方は後述しますが、とりあえず以下のように<code>/google/style.css</code>と<code>/google/script.js</code>を書いてみてください。</p>
-
-<h4 id="google-style-css">/google/style.css</h4>
-
-<pre><code class="language-css">body{
-  background: #ccc !important;
+<h4 id="googlestylecss">/google/style.css</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span>{
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#ccc</span> <span style="color:#75715e">!important</span>;
 }
-</code></pre>
-
-<h4 id="google-script-js">/google/script.js</h4>
-
-<pre><code class="language-js">console.log('Hello World');
-</code></pre>
-
-<h3 id="4-chromeに読み込ませる">4. Chromeに読み込ませる</h3>
-
+</code></pre></div><h4 id="googlescriptjs">/google/script.js</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello World&#39;</span>);
+</code></pre></div><h3 id="4-chromeに読み込ませる">4. Chromeに読み込ませる</h3>
 <ol>
 <li>Chromeの拡張機能ページを開きます。ChromeのURLフォームに <code>chrome://extensions/</code> を入力してください。</li>
 <li>右上に「デベロッパーモード」のスイッチがあるので、ONにします。</li>
 <li>先程まで作成していたフォルダを、この画面にドラッグ&amp;ドロップすれば完了です。</li>
 <li>適当にGoogle検索ページを開いてみてください。背景がグレーになり、Devツールのコンソールでメッセージが確認できるようになったかと思います。</li>
 </ol>
-
 <p><img class="left" src="https://hirata.blog/images/post/201809_chrome-stylize/reload.png" alt="リロード">
 
-これ以降、CSSやJSファイルをさらに変更した場合、<strong>更新はすぐには反映されず、拡張機能ページで再読込する必要があります</strong>。画面中の、 <i class="material-icons">refresh</i> アイコンをクリックすることで再読込されます。</p>
-
+これ以降、CSSやJSファイルをさらに変更した場合、<strong>更新はすぐには反映されず、拡張機能ページで再読込する必要があります</strong>。画面中の、 <!-- raw HTML omitted -->refresh<!-- raw HTML omitted --> アイコンをクリックすることで再読込されます。</p>
 <h2 id="効率よくcssを書くには">効率よくCSSを書くには</h2>
-
 <p>上記が基本手順となりますが、やってみるとわかる通り、リアルタイムに結果を見ながらCSSを作成してくのは非常に面倒です。ここでは実際にどのようにCSSやJSファイルを書いていくのがよいか、2通りまとめてみます。</p>
-
 <h3 id="chrome-devtoolで結果を見ながら作成する">Chrome DevToolで結果を見ながら作成する</h3>
-
 <p>地道にそのページで使われているクラスを調べてCSSを書いていく方法です。かなり面倒な上に、初心者には結構厳しいかもしれません。</p>
-
 <ol>
 <li>Chrome Devツールを開きます。任意のページ上で右クリックし、「検証」を選択するか、<code>⌘⌥I</code>(Mac)・<code>F12</code>(Win)のショートカットでも起動できます。</li>
 <li>Devツール左上のカーソルアイコンをクリックして、要素選択モードにします。<code>⌘⇧C</code>(Mac)・<code>Ctrl+Shift+C</code>(Win)のショートカットでも起動できます。</li>
 <li>カーソルでクラス名を調べたい要素をクリックすると、Devツール上で該当要素がハイライト表示されます。ここでクラス名を確認できます。</li>
 </ol>
-
 <p>また、基本的にカスタマイズしたCSSは<a href="https://developer.mozilla.org/ja/docs/Web/CSS/Specificity">詳細度</a>の関係から優先されないことが多いです。なので、反映されてない場合は<code>!important</code>をつけて無理やり優先させてしまうのが簡単です。</p>
-
 <h3 id="公開されているスタイルをコピペする">公開されているスタイルをコピペする</h3>
-
 <p>こちらが圧倒的に楽ですね。ネット上には有志が作成したユーザースタイルシートがいろいろ公開されています。これをコピペしてしまうのが簡単です。もちろん、利用の際にはライセンスを確認して、著作権にご注意ください。(ローカルで個人的に使うだけなら大丈夫な場合がほとんどです。)</p>
-
 <p>いままでStylihsを使っていた方は、公式サイトでCSSを探すのが楽かもしれません。</p>
-
 <a class="embed-line" href="https://userstyles.org/">Website Themes &amp; Skins by Stylish | Userstyles.org <i class="material-icons">open_in_new</i></a>
 
-
 <h2 id="めんどくさいひとむけの手順">めんどくさいひとむけの手順</h2>
-
 <ol>
-<li><a href="#テンプレート">テンプレート</a>をダウンロードして解答します。</li>
-<li>manifest.jsonに対象のページと、読み込ませたいCSSを書きます。 <a href="#2-対象のページとファイルを設定">[詳しく]</a></li>
-<li>ネットに公開されているイカすCSSをコピペするか、Devツールを使ってがんばってCSSを書きます。 <a href="#効率よくcssを書くには">[詳しく]</a></li>
-<li>Chromeの拡張機能ページで開発者モードをオンにして、フォルダをD&amp;Dします。<a href="#4-chromeに読み込ませる">[詳しく]</a></li>
+<li><a href="#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88">テンプレート</a>をダウンロードして解答します。</li>
+<li>manifest.jsonに対象のページと、読み込ませたいCSSを書きます。 <a href="#2-%E5%AF%BE%E8%B1%A1%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A8%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%A8%AD%E5%AE%9A">[詳しく]</a></li>
+<li>ネットに公開されているイカすCSSをコピペするか、Devツールを使ってがんばってCSSを書きます。 <a href="#%E5%8A%B9%E7%8E%87%E3%82%88%E3%81%8Fcss%E3%82%92%E6%9B%B8%E3%81%8F%E3%81%AB%E3%81%AF">[詳しく]</a></li>
+<li>Chromeの拡張機能ページで開発者モードをオンにして、フォルダをD&amp;Dします。<a href="#4-chrome%E3%81%AB%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BE%E3%81%9B%E3%82%8B">[詳しく]</a></li>
 </ol>
-
 <h2 id="テンプレート">テンプレート</h2>
-
-<p><a href="/images/post/201809_chrome-stylize/weba_chrome-stylize.zip">テンプレート 最小構成 <i class="material-icons">cloud_download</i></a><br />
+<p><a href="/images/post/201809_chrome-stylize/weba_chrome-stylize.zip">テンプレート 最小構成 <!-- raw HTML omitted -->cloud_download<!-- raw HTML omitted --></a><br>
 最小のファイル構成で作成した例です。ダウンロードして解凍後、好きなように改造してください。</p>
-
-<p><a href="/images/post/201809_chrome-stylize/weba_chrome-stylize_npm.zip">テンプレート SCSS, BABEL有り <i class="material-icons">cloud_download</i></a><br />
+<p><a href="/images/post/201809_chrome-stylize/weba_chrome-stylize_npm.zip">テンプレート SCSS, BABEL有り <!-- raw HTML omitted -->cloud_download<!-- raw HTML omitted --></a><br>
 NPMに慣れている方はこちらをおすすめします。使い方は<code>npm i</code>して<code>npm start</code>するだけです。srcフォルダ内のSCSSファイルとJSファイルが監視されてdocsフォルダにビルドされます。</p>
-
 <h2 id="まとめと補足">まとめと補足</h2>
-
 <p>今回触ってみた方はわかると思いますが、Chrome拡張機能はHTML,CSS,JSの知識だけあればかなり簡単に作れます。今回の例の他に、新しいタブにカスタムページを表示する系も簡単に作れて楽しいです。</p>
-
 <p>拡張機能の作成に興味を持った方は以下のエントリーが参考になるかもです。良いものが作れたらぜひ<a href="https://chrome.google.com/webstore/category/extensions">ChromeWebStore</a>に公開しましょう。</p>
-
 <ul>
 <li><a href="https://oxynotes.com/?p=8836">初めてでも理解できるようになる「Google Chrome機能拡張の開発」 | OXY NOTES</a>
-
 <ul>
 <li>少し古いページですが、ChromeExtensionの情報を全体的に俯瞰して理解するにはよくまとまっているページです。</li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://qiita.com/yoichiro6642/items/d446256e0bd709e2d76b">2016年度版 僕が考えたChrome拡張機能を作るときのデザインパターン - Qiita</a>
-
 <ul>
 <li>ある程度Extensionに慣れて、ストア公開したいときなどに</li>
-</ul></li>
+</ul>
+</li>
 <li><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions">ブラウザー拡張機能 - Mozilla | MDN</a>
-
 <ul>
 <li>筆者はあまり明るくないのですが、WebExtension APIという機能群を使うことで、ChromeだけでなくFirefox, Edgeなどでも使える拡張機能がほぼ同じコードで作れるようです。(Firefoxがこれに対応したせいで、それまでの多くのFirefoxプラグインが使えなり話題になりましたね。)</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 
     </section>

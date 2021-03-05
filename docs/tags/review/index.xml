@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Review on WEBA</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>© weba 2017</copyright>
-    <lastBuildDate>Wed, 08 May 2019 08:45:17 +0900</lastBuildDate>
-    
-	<atom:link href="https://hirata.blog/tags/review/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 08 May 2019 08:45:17 +0900</lastBuildDate><atom:link href="https://hirata.blog/tags/review/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pixel3カメラの価値は「撮影の体験」にこそある</title>
       <link>https://hirata.blog/201905_pixel3-camera/</link>

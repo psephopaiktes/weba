@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://hirata.blog/categories/</loc>
     <lastmod>2019-05-08T08:45:17+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/categories/other/</loc>
+    <lastmod>2019-05-08T08:45:17+09:00</lastmod>
   </url>
   
   <url>
@@ -16,61 +20,46 @@
   <url>
     <loc>https://hirata.blog/tags/review/</loc>
     <lastmod>2019-05-08T08:45:17+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/tags/</loc>
     <lastmod>2019-05-08T08:45:17+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/tags/ux/</loc>
     <lastmod>2019-05-08T08:45:17+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/</loc>
     <lastmod>2019-05-08T08:45:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/categories/other/</loc>
-    <lastmod>2019-05-08T08:45:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/categories/design/</loc>
-    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/tags/figma/</loc>
-    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/tags/sketch/</loc>
-    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirata.blog/tags/xd/</loc>
-    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/tags/appservice/</loc>
     <lastmod>2019-04-22T08:45:17+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/categories/design/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/figma/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/sketch/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirata.blog/tags/xd/</loc>
+    <lastmod>2019-04-22T08:45:17+09:00</lastmod>
   </url>
   
   <url>
@@ -89,26 +78,23 @@
   </url>
   
   <url>
-    <loc>https://hirata.blog/tags/chrome/</loc>
+    <loc>https://hirata.blog/201809_chrome-stylize/</loc>
     <lastmod>2018-09-03T00:46:13+10:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hirata.blog/201809_chrome-stylize/</loc>
+    <loc>https://hirata.blog/tags/chrome/</loc>
     <lastmod>2018-09-03T00:46:13+10:00</lastmod>
   </url>
   
   <url>
     <loc>https://hirata.blog/categories/front-end/</loc>
     <lastmod>2018-09-03T00:46:13+10:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/tags/web-design/</loc>
     <lastmod>2018-09-03T00:46:13+10:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -124,13 +110,11 @@
   <url>
     <loc>https://hirata.blog/tags/javascript/</loc>
     <lastmod>2017-12-12T21:57:25+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/tags/task-runner/</loc>
     <lastmod>2017-12-12T21:57:25+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -146,13 +130,11 @@
   <url>
     <loc>https://hirata.blog/tags/python/</loc>
     <lastmod>2017-12-03T13:05:42+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hirata.blog/tags/design/</loc>
     <lastmod>2017-10-22T22:49:51+16:32</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -173,7 +155,6 @@
   <url>
     <loc>https://hirata.blog/tags/hugo/</loc>
     <lastmod>2017-10-01T00:46:13+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -194,7 +175,6 @@
   <url>
     <loc>https://hirata.blog/static/</loc>
     <lastmod>2017-07-29T19:09:51+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
